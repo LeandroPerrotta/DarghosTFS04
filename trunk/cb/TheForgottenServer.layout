@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="All" />
+	<File name="../databasemanager.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="37249" topLine="1055" />
+	</File>
+	<File name="../ioguild.cpp" open="1" top="1" tabpos="3">
+		<Cursor position="12817" topLine="403" />
+	</File>
+	<File name="../luascript.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="41921" topLine="1614" />
+	</File>
+</CodeBlocks_layout_file>
