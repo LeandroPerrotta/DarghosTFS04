@@ -1,0 +1,48 @@
+00:58:43 | [NOTIFY] NpcTasks:responseTask | A player talking with NPC about tasks... | Params: {[player] = GOD Bin Force, [npc] = Mereus, [startedTask] = 52100}
+00:58:43 | [NOTIFY] NpcTasks:responseTask | NPC will check if the player has ended the task.
+00:58:43 | [NOTIFY] NpcTasks:responseTask | All is ok! The player has done all requirements to complete task! We can now give the reward to him.
+00:58:43 | [NOTIFY] Task:setCompleted | Setting player to task completed! | Params: {[startedTask] = 52100, [player] = GOD Bin Force}
+00:58:43 | [NOTIFY] NpcTasks:responseTask | Not ends! Apparently we have an event! We will check it...
+00:58:43 | [NOTIFY] NpcTasks:responseTask | Yes! We have an onComplete event!
+00:58:43 | [NOTIFY] NpcTasks:responseTask | Ok, the event is an question!
+00:58:45 | [WARNING] Task:doPlayerAddReward | The Player are receiving reward! | Params: {[player] = GOD Bin Force, [taskid] = 52100}
+00:58:54 | [NOTIFY] NpcTasks:responseTask | Okey, the player has interacted with our onComplete event!
+00:58:54 | [NOTIFY] NpcTasks:responseTask | The solution of event is an action...
+00:58:54 | [NOTIFY] NpcTasks:responseTask | ... and the action is an callResponseTask (talk about anther task?)
+00:58:54 | [NOTIFY] NpcTasks:responseTask | A player talking with NPC about tasks... | Params: {[player] = GOD Bin Force, [npc] = Mereus, [startedTask] = -1}
+00:58:54 | [NOTIFY] NpcTasks:responseTask | The player has an started task that is not from this NPC.
+00:58:54 | [NOTIFY] NpcTasks:responseTask | NPC will verify if the player know something about our tasks. | Params: {[taskid] = 52100}
+00:58:54 | [NOTIFY] NpcTasks:responseTask | Oh shit! The player already know about this task... We go to next (if is necessary)
+00:58:54 | [NOTIFY] NpcTasks:responseTask | NPC will verify if the player know something about our tasks. | Params: {[taskid] = 52200}
+00:58:54 | [NOTIFY] NpcTasks:responseTask | Yeah... Player not know nothing about this task.
+00:58:54 | [NOTIFY] NpcTasks:responseTask | All is ok! Now we can talk to player about our task...
+00:58:54 | [ERROR] NpcTasks:responseTask | Player with a started task and this is not from the NPC has received description. | Params: {[startedTask] = -1, [player] = GOD Bin Force}
+01:00:20 | [NOTIFY] NpcTasks:responseTask | A player talking with NPC about tasks... | Params: {[player] = GOD Bin Force, [npc] = Mereus, [startedTask] = -1}
+01:00:20 | [NOTIFY] NpcTasks:responseTask | The player has an started task that is not from this NPC.
+01:00:20 | [NOTIFY] NpcTasks:responseTask | NPC will verify if the player know something about our tasks. | Params: {[taskid] = 52100}
+01:00:20 | [NOTIFY] NpcTasks:responseTask | Oh shit! The player already know about this task... We go to next (if is necessary)
+01:00:20 | [NOTIFY] NpcTasks:responseTask | NPC will verify if the player know something about our tasks. | Params: {[taskid] = 52200}
+01:00:20 | [NOTIFY] NpcTasks:responseTask | Yeah... Player not know nothing about this task.
+01:00:20 | [NOTIFY] NpcTasks:responseTask | All is ok! Now we can talk to player about our task...
+01:00:20 | [ERROR] NpcTasks:responseTask | Player with a started task and this is not from the NPC has received description. | Params: {[startedTask] = -1, [player] = GOD Bin Force}
+01:19:31 | [NOTIFY] NpcTasks:responseTask | A player talking with NPC about tasks... | Params: {[player] = GOD Bin Force, [npc] = Mereus, [startedTask] = -1}
+01:19:31 | [NOTIFY] NpcTasks:responseTask | NPC will talk to player about an task.
+01:19:31 | [NOTIFY] NpcTasks:responseTask | NPC will verify if the player know something about our tasks. | Params: {[taskid] = 52100}
+01:19:31 | [NOTIFY] NpcTasks:responseTask | Oh shit! The player already know about this task... We go to next (if is necessary)
+01:19:31 | [NOTIFY] NpcTasks:responseTask | NPC will verify if the player know something about our tasks. | Params: {[taskid] = 52200}
+01:19:31 | [NOTIFY] NpcTasks:responseTask | Yeah... Player not know nothing about this task.
+01:19:31 | [NOTIFY] NpcTasks:responseTask | All is ok! Now we can talk to player about our task...
+01:19:35 | [NOTIFY] NpcTasks:responseTask | Good! The player want help us! We will talk to him the task objetives!
+01:19:35 | [NOTIFY] NpcTasks:responseTask | The objectives is half, only one message needs!
+01:19:39 | [NOTIFY] NpcTasks:responseTask | Ok, the player has started our task! Good luck! | Params: {[startedTask] = 52200, [player] = GOD Bin Force}
+01:22:31 | [NOTIFY] NpcTasks:responseTask | A player talking with NPC about tasks... | Params: {[player] = GOD Bin Force, [npc] = Mereus, [startedTask] = 52200}
+01:22:31 | [NOTIFY] NpcTasks:responseTask | NPC will check if the player has ended the task.
+01:22:31 | [NOTIFY] NpcTasks:responseTask | All is ok! The player has done all requirements to complete task! We can now give the reward to him.
+01:22:31 | [NOTIFY] Task:setCompleted | Setting player to task completed! | Params: {[startedTask] = 52200, [player] = GOD Bin Force}
+01:22:31 | [NOTIFY] NpcTasks:responseTask | Not ends! Apparently we have an event! We will check it...
+01:22:31 | [NOTIFY] NpcTasks:responseTask | Yes! We have an onComplete event!
+01:22:31 | [NOTIFY] NpcTasks:responseTask | Ok, the event is an question!
+01:22:33 | [WARNING] Task:doPlayerAddReward | The Player are receiving reward! | Params: {[player] = GOD Bin Force, [taskid] = 52200}
+01:22:38 | [NOTIFY] NpcTasks:responseTask | Okey, the player has interacted with our onComplete event!
+01:22:38 | [NOTIFY] NpcTasks:responseTask | ... and the action is an teleport event! | Params: {[y] = 2190, [x] = 1231, [z] = 8}
+01:22:38 | [NOTIFY] NpcTasks:responseTask | Okey, we have an final message to player!

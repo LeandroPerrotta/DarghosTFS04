@@ -1,0 +1,23 @@
+01:37:39 | [NOTIFY] NpcTasks:responseTask | A player talking with NPC about tasks... | Params: {[player] = GOD Bin Force, [npc] = Mereus, [startedTask] = -1}
+01:37:39 | [NOTIFY] NpcTasks:responseTask | The player has an started task that is not from this NPC.
+01:37:39 | [NOTIFY] NpcTasks:responseTask | NPC will verify if the player know something about our tasks. | Params: {[taskid] = 52100}
+01:37:39 | [NOTIFY] NpcTasks:responseTask | Yeah... Player not know nothing about this task.
+01:37:39 | [NOTIFY] NpcTasks:responseTask | All is ok! Now we can talk to player about our task...
+01:37:39 | [ERROR] NpcTasks:responseTask | Player with a started task and this is not from the NPC has received description. | Params: {[startedTask] = -1, [player] = GOD Bin Force}
+01:58:04 | [NOTIFY] NpcTasks:responseTask | A player talking with NPC about tasks... | Params: {[player] = GOD Bin Force, [npc] = Mereus, [startedTask] = -1}
+01:58:04 | [NOTIFY] NpcTasks:responseTask | The player has an started task that is not from this NPC.
+01:58:04 | [NOTIFY] NpcTasks:responseTask | NPC will verify if the player know something about our tasks. | Params: {[taskid] = 52100}
+01:58:04 | [NOTIFY] NpcTasks:responseTask | Yeah... Player not know nothing about this task.
+01:58:04 | [NOTIFY] NpcTasks:responseTask | All is ok! Now we can talk to player about our task...
+01:58:04 | [ERROR] NpcTasks:responseTask | Player with a started task and this is not from the NPC has received description. | Params: {[startedTask] = -1, [player] = GOD Bin Force}
+13:25:50 | [NOTIFY] NpcTasks:responseTask | A player talking with NPC about tasks... | Params: {[player] = GOD Bin Force, [npc] = Mereus, [startedTask] = -1}
+13:25:50 | [NOTIFY] NpcTasks:responseTask | NPC will talk to player about an task.
+13:25:50 | [NOTIFY] NpcTasks:responseTask | NPC will verify if the player know something about our tasks. | Params: {[taskid] = 52100}
+13:25:50 | [NOTIFY] NpcTasks:responseTask | Yeah... Player not know nothing about this task.
+13:25:50 | [NOTIFY] NpcTasks:responseTask | All is ok! Now we can talk to player about our task...
+13:25:53 | [NOTIFY] NpcTasks:responseTask | Good! The player want help us! We will talk to him the task objetives!
+13:25:53 | [NOTIFY] NpcTasks:responseTask | The objectives is half, only one message needs!
+13:30:43 | [NOTIFY] NpcTasks:responseTask | Ok, the player has started our task! Good luck! | Params: {[startedTask] = 52100, [player] = GOD Bin Force}
+18:22:37 | [NOTIFY] NpcTasks:responseTask | A player talking with NPC about tasks... | Params: {[player] = GOD Bin Force, [npc] = Mereus, [startedTask] = 52100}
+18:22:37 | [NOTIFY] NpcTasks:responseTask | NPC will check if the player has ended the task.
+18:22:37 | [NOTIFY] NpcTasks:responseTask | Oh shit! The player not have kill all monsters needed to complete task... We need talk to him it.

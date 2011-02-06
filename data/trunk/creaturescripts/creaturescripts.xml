@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creaturescripts>
+	<event type="login" name="PlayerLogin" event="script" value="login.lua"/>
+
+	<event type="joinchannel" name="GuildMotd" event="script" value="guildmotd.lua"/>
+	<event type="receivemail" name="Mail" event="script" value="mail.lua"/>
+	<event type="reportbug" name="SaveReportBug" script="reportbug.lua"/>
+	<event type="advance" name="AdvanceSave" event="script" value="advancesave.lua"/>
+
+	<event type="think" name="Idle" event="script" value="idle.lua"/>
+	<event type="think" name="SkullCheck" event="script" value="skullcheck.lua"/>
+	
+	<!-- DARGHOS -->
+	<event type="login" name="CustomPlayerLogin" event="script" value="game/login.lua"/>
+	<event type="attack" name="CustomPlayerAttack" event="script" value="game/attack.lua"/>
+	<event type="death" name="CustomPlayerDeath" event="script" value="game/death.lua"/>
+	<event type="kill" name="Inquisition" event="script" value="game/inquisition.lua"/>
+	<event type="logout" name="CustomPlayerLogout" event="script" value="game/logout.lua"/>
+	<event type="kill" name="CustomBonartesTasks" event="script" value="game/onkillmission.lua"/>
+	<event type="kill" name="CustomTasks" event="script" value="game/tasks.lua"/>
+	<!--  <event type="advance" name="CustomStages" event="script" value="game/stages.lua"/> -->
+	
+</creaturescripts>

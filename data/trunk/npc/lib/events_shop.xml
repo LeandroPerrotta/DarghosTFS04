@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+
+<interaction>
+
+    <interact event="onPlayerShopSell">
+		<response>
+			<action name="price" value="|SELLPRICE|"/>
+			<action name="script">
+			<![CDATA[
+			if(doPlayerRemoveItem(cid, _state.itemid, _state.amount) == TRUE and doPlayerAddMoney(cid, _state.price * _state.amount) == TRUE) then
+				selfSay("Here you are.", cid)
+			else
+				selfSay("Sorry, you do not have one.", cid)
+			end
+			]]>
+			</action>
+		</response>
+    </interact>
+
+	<interact event="onPlayerShopBuy">
+		<response>
+			<action name="price" value="|BUYPRICE|"/>
+			<action name="script">
+			<![CDATA[
+				if(getPlayerMoney(cid) >= _state.amount * _state.price) then
+				
+					local npcname = getNpcName()
+					
+					if(_state.inbackpacks == 1) then
+						print("Here i am")
+					
+						local container = doCreateItemEx(1988, 1)
+						
+						if(isItemStackable(_state.itemid) == FALSE) then
+						
+							local total = _state.amount
+							local slot = 0
+							local usedbackpacks = 1
+							
+							while(total > 0) do
+									
+								local itemEx = doCreateItemEx(_state.itemid)
+								if(doAddContainerItemEx(container, itemEx) == LUA_ERROR) then
+									consoleLog(T_LOG_ERROR, npcname, "EventShop:parseBuyingWithBackpacks", "Cant add a item to container.", {player=getCreatureName(cid), itemid=_state.itemid, amount=_state.amount, pos=total})	
+								end								
+								
+								slot = slot + 1	
+								total = total - 1
+								
+								if(slot == 20) then
+									doPlayerAddItemEx(cid, container, TRUE)
+									container = doCreateItemEx(1988, 1);
+									slot = 0
+									usedbackpacks = usedbackpacks + 1
+								end			
+							end
+							
+							if(slot ~= 0) then
+								doPlayerAddItemEx(cid, container, TRUE)
+							end
+						else
+						
+							local itemEx = doCreateItemEx(_state.itemid, _state.amount)
+							if(doAddContainerItemEx(container, itemEx) == LUA_ERROR) then
+								consoleLog(T_LOG_ERROR, npcname, "EventShop:parseBuyingWithBackpacks", "Cant add a item (stack) to container.", {player=getCreatureName(cid), itemid=_state.itemid, amount=_state.amount})	
+							end
+							
+							doPlayerAddItemEx(cid, container, TRUE)							
+						end
+					else
+					
+						if(_state.itemid == 2197) then
+							local result = doPlayerGiveItem(cid, _state.itemid, 1, 5)
+						else
+							local result = doPlayerAddItem(cid, _state.itemid, _state.amount)
+						end
+						
+						if(result == -1) then
+								
+							selfSay("Sorry, but you don't have room to take it.", cid)
+							return
+						end					
+					end
+
+					selfSay("Here you are.", cid)
+					doPlayerRemoveMoney(cid, _state.price * _state.amount)						
+				else
+				
+					selfSay("Sorry, you do not have enough gold.", cid)
+				end
+			]]>
+			</action>
+		</response>
+	</interact>
+	
+    <interact event="onPlayerShopClose">
+		<response text="It was a pleasure to help you."/>
+    </interact>	
+</interaction>
