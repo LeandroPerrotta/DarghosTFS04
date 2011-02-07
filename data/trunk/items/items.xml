@@ -18576,4 +18576,18 @@
 	<item id="20042" name="health potion" />
 	<item id="20043" name="spirit potion" />
 	<item id="20047" name="mana potion" />
+
+	<item id="13332" article="a" name="dark dust">
+		<attribute key="description" value="ï¿œYou feel weak when you hold this dust"/>
+		<attribute key="weight" value="5"/>
+		<attribute key="showcount" value="0"/>
+	</item>	
+	<item id="13333" article="a" name="unholy sword">
+		<attribute key="description" value="Nothing in life is to be feared. It is only to be understood."/>
+		<attribute key="weight" value="2300"/>
+	</item>			
+	<item id="13334" article="a" name="teleport rune">
+		<attribute key="description" value="Esta runa magica é capaz de lhe transportar para sua cidade natal."/>
+		<attribute key="weight" value="120"/>
+	</item>
 </items>

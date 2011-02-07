@@ -2,11 +2,11 @@
 <actions>
 	<action default="yes" event="script" value="default.lua"/>
 
-	<action itemid="11754" script="game/teleport_rune.lua"/>
+	<action itemid="13334" script="game/teleport_rune.lua"/>
 
 	<!-- Divine Ankh -->
 	<action itemid="2193" script="game/ankh.lua"/>
-	<action itemid="11753" script="game/unholy_sword.lua"/>
+	<action itemid="13333" script="game/unholy_sword.lua"/>
 
 	<!-- Ariadne Quest -->
 	<action itemid="4875" script="game/hydra_nest.lua"/>
