@@ -52,25 +52,25 @@
 	</rune>
 
 	<!-- Attack Spells -->
-	<instant name="Death Strike" words="exori mort" lvl="16" mana="20" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="2000" needlearn="0" event="script" value="attack/death strike.lua">
+	<instant name="Death Strike" words="exori mort" lvl="16" mana="20" prem="0" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="2000" needlearn="0" event="script" value="attack/death strike.lua">
 		<vocation id="1"/>
 		<vocation id="2"/>
 		<vocation id="5"/>
 		<vocation id="6"/>
 	</instant>
-	<instant name="Flame Strike" words="exori flam" lvl="12" mana="20" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="2000" needlearn="0" event="script" value="attack/flame strike.lua">
+	<instant name="Flame Strike" words="exori flam" lvl="12" mana="20" prem="0" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="2000" needlearn="0" event="script" value="attack/flame strike.lua">
 		<vocation id="1"/>
 		<vocation id="2"/>
 		<vocation id="5"/>
 		<vocation id="6"/>
 	</instant>
-	<instant name="Energy Strike" words="exori vis" lvl="12" mana="20" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="2000" needlearn="0" event="script" value="attack/energy strike.lua">
+	<instant name="Energy Strike" words="exori vis" lvl="12" mana="20" prem="0" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="2000" needlearn="0" event="script" value="attack/energy strike.lua">
 		<vocation id="1"/>
 		<vocation id="2"/>
 		<vocation id="5"/>
 		<vocation id="6"/>
 	</instant>
-	<instant name="Whirlwind Throw" words="exori hur" lvl="15" mana="40" prem="1" range="5" needtarget="1" blockwalls="1" needweapon="1" exhaustion="2000" needlearn="0" event="script" value="attack/whirlwind throw.lua">
+	<instant name="Whirlwind Throw" words="exori hur" lvl="15" mana="40" prem="0" range="5" needtarget="1" blockwalls="1" needweapon="1" exhaustion="2000" needlearn="0" event="script" value="attack/whirlwind throw.lua">
 		<vocation id="4"/>
 		<vocation id="8"/>
 	</instant>
@@ -126,7 +126,7 @@
 		<vocation id="2"/>
 		<vocation id="6"/>
 	</instant>
-	<instant name="Ice Strike" words="exori frigo" lvl="15" mana="20" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="2000" needlearn="0" event="script" value="attack/ice strike.lua">
+	<instant name="Ice Strike" words="exori frigo" lvl="15" mana="20" prem="0" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="2000" needlearn="0" event="script" value="attack/ice strike.lua">
 		<vocation id="1"/>
 		<vocation id="5"/>
 		<vocation id="2"/>
@@ -136,7 +136,7 @@
 		<vocation id="2"/>
 		<vocation id="6"/>
 	</instant>
-	<instant name="Terra Strike" words="exori tera" lvl="13" mana="20" prem="1" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="2000" needlearn="0" event="script" value="attack/terra strike.lua">
+	<instant name="Terra Strike" words="exori tera" lvl="13" mana="20" prem="0" range="3" casterTargetOrDirection="1" blockwalls="1" exhaustion="2000" needlearn="0" event="script" value="attack/terra strike.lua">
 		<vocation id="1"/>
 		<vocation id="5"/>
 		<vocation id="2"/>
@@ -226,7 +226,7 @@
 		<vocation id="7"/>
 		<vocation id="8"/>
 	</instant> 
-	<instant name="Magic Rope" words="exani tera" lvl="9" mana="20" prem="1" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" event="script" value="support/magic rope.lua">
+	<instant name="Magic Rope" words="exani tera" lvl="9" mana="20" prem="0" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" event="script" value="support/magic rope.lua">
 		<vocation id="1"/>
 		<vocation id="2"/>
 		<vocation id="3"/>
@@ -236,7 +236,7 @@
 		<vocation id="7"/>
 		<vocation id="8"/>
 	</instant>
-	<instant name="Levitate" words="exani hur" lvl="12" mana="50" prem="1" aggressive="0" exhaustion="1000" params="1" needlearn="0" event="function" value="Levitate">
+	<instant name="Levitate" words="exani hur" lvl="12" mana="50" prem="0" aggressive="0" exhaustion="1000" params="1" needlearn="0" event="function" value="Levitate">
 		<vocation id="1"/>
 		<vocation id="2"/>
 		<vocation id="3"/>
@@ -264,7 +264,7 @@
 		<vocation id="6"/>
 		<vocation id="7"/>
 	</instant>
-	<instant name="Haste" words="utani hur" lvl="14" mana="60" prem="1" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" event="script" value="support/haste.lua">
+	<instant name="Haste" words="utani hur" lvl="14" mana="60" prem="0" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" event="script" value="support/haste.lua">
 		<vocation id="1"/>
 		<vocation id="2"/>
 		<vocation id="3"/>
@@ -285,7 +285,7 @@
 	<instant name="Challenge" words="exeta res" lvl="20" mana="30" prem="1" aggressive="0" exhaustion="1000" needlearn="0" event="script" value="support/challenge.lua">
 		<vocation id="8"/>
 	</instant>
-	<instant name="Strong Haste" words="utani gran hur" lvl="20" mana="100" prem="1" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" event="script" value="support/strong haste.lua">
+	<instant name="Strong Haste" words="utani gran hur" lvl="20" mana="100" prem="0" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" event="script" value="support/strong haste.lua">
 		<vocation id="1"/>
 		<vocation id="2"/>
 		<vocation id="5"/>
@@ -297,7 +297,7 @@
 		<vocation id="5"/>
 		<vocation id="6"/>
 	</instant>
-	<instant name="Ultimate Light" words="utevo vis lux" lvl="26" mana="140" prem="1" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" event="script" value="support/ultimate light.lua">
+	<instant name="Ultimate Light" words="utevo vis lux" lvl="26" mana="140" prem="0" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" event="script" value="support/ultimate light.lua">
 		<vocation id="1"/>
 		<vocation id="2"/>
 		<vocation id="5"/>
