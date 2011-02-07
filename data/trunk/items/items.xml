@@ -2268,17 +2268,16 @@
 		<attribute key="showattributes" value="1" />
 	</item>
 	<item id="2205" article="a" name="life ring">
-		<attribute key="weight" value="80" />
-		<attribute key="slotType" value="ring" />
-		<attribute key="decayTo" value="0" />
-		<attribute key="transformDeEquipTo" value="2168" />
-		<attribute key="duration" value="1200" />
-		<attribute key="healthGain" value="1" />
-		<attribute key="healthTicks" value="3000" />
-		<attribute key="manaGain" value="4" />
-		<attribute key="manaTicks" value="3000" />
-		<attribute key="showduration" value="1" />
-		<attribute key="showattributes" value="1" />
+		<attribute key="weight" value="80"/>
+		<attribute key="slotType" value="ring"/>
+		<attribute key="decayTo" value="0"/>
+		<attribute key="transformDeEquipTo" value="2168"/>
+		<attribute key="duration" value="1200"/>
+		<attribute key="healthGain" value="10"/>
+		<attribute key="healthTicks" value="3000"/>
+		<attribute key="manaGain" value="12"/>
+		<attribute key="manaTicks" value="6000"/>
+		<attribute key="showduration" value="1"/>
 	</item>
 	<item id="2206" article="a" name="time ring">
 		<attribute key="weight" value="90" />
@@ -2363,16 +2362,16 @@
 		<attribute key="showattributes" value="1" />
 	</item>
 	<item id="2216" article="a" name="ring of healing">
-		<attribute key="weight" value="100" />
-		<attribute key="decayTo" value="0" />
-		<attribute key="transformDeEquipTo" value="2214" />
-		<attribute key="duration" value="450" />
-		<attribute key="healthGain" value="1" />
-		<attribute key="healthTicks" value="1000" />
-		<attribute key="manaGain" value="4" />
-		<attribute key="manaTicks" value="1000" />
-		<attribute key="showduration" value="1" />
-		<attribute key="showattributes" value="1" />
+		<attribute key="weight" value="80"/>
+		<attribute key="slotType" value="ring"/>
+		<attribute key="decayTo" value="0"/>
+		<attribute key="transformDeEquipTo" value="2214"/>
+		<attribute key="duration" value="480"/>
+		<attribute key="healthGain" value="7"/>
+		<attribute key="healthTicks" value="1000"/>
+		<attribute key="manaGain" value="10"/>
+		<attribute key="manaTicks" value="1500"/>
+		<attribute key="showduration" value="1"/>
 	</item>
 	<item id="2217" article="a" name="spellbook">
 		<attribute key="weight" value="5800" />
@@ -3009,7 +3008,7 @@
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="spear" />
 		<attribute key="range" value="5" />
-		<attribute key="breakChance" value="3" />
+		<attribute key="breakChance" value="0" />
 		<attribute key="ammoAction" value="moveback" />
 	</item>
 	<item id="2390" article="a" name="magic longsword">

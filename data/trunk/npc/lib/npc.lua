@@ -1,4 +1,5 @@
 -- Include external classes.
+dofile(getDataDir() .. 'npc/lib/destinations.lua')
 dofile(getDataDir() .. 'npc/lib/npc_dialog.lua')
 dofile(getDataDir() .. 'npc/lib/npc_tasks.lua')
 dofile(getDataDir() .. 'npc/lib/npc_system.lua')
