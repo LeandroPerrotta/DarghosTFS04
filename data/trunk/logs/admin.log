@@ -35,3 +35,9 @@
 [5/2/2011 0:55:25] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
 [5/2/2011 1:33:20] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
 [5/2/2011 1:47:20] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[7/2/2011 0:26:50] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[7/2/2011 0:33:15] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[7/2/2011 0:53:57] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[7/2/2011 1:4:50] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[7/2/2011 13:36:18] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[7/2/2011 13:38:41] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use

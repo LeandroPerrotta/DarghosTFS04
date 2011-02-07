@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
-<npc name="Rei Ordon" floorchange="0" walkradius="2" walkinterval="4000" speed="220">
+<npc name="Rei Ordon" floorchange="0" walkradius="2" walkinterval="4000" speed="220" script="promote.lua">
 	<health now="150" max="150"/>
     <look type="332" head="21" body="87" legs="107" feet="95" addons="0"/>
   
+  	<!-- 
 	<interaction talkradius="3" range="3" idletime="30" idleinterval="300" defaultpublic="0">
     
 		<interact keywords="hi" focus="1">
@@ -33,6 +34,7 @@
 			</response>			
 		</interact>
 		
+	
 	<interact keywords="promot">
 		<keywords>promote</keywords>
 		<keywords>promotion</keywords>
@@ -66,6 +68,7 @@
         </action>
       </response>
     </interact>
+    
 		
 		<interact keywords="bye" focus="0">
 			<keywords>adeus</keywords>
@@ -128,7 +131,6 @@
 			<response>
 			<action name="script">
 			<![CDATA[	
-					-- topico de abertura da quest
 					if(_state.topic == 4) then
 					
 						level = getPlayerLevel(cid)
@@ -141,8 +143,6 @@
 							
 							setPlayerStorageValue(cid, QUESTLOG.ARIADNE.LAIR, 2)
 						end	
-					
-					-- topico da conclusão da primeira wing (língua de ghazran)
 					elseif(_state.topic == 5) then
 						
 						local haveGhazranTongue = (getPlayerStorageValue(cid, sid.ARIADNE_GHAZRAN_TONGUE) == 1)
@@ -183,5 +183,5 @@
 		</interact>		
 	
 	</interaction>
-  
+  	-->
 </npc>

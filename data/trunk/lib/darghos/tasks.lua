@@ -627,7 +627,7 @@ function Task:doPlayerAddRewardItems()
 		local ret = doPlayerAddItemEx(self.cid, _container, TRUE)
 		
 		if(ret ~= LUA_NO_ERROR) then
-			print("FODEU")
+			--print("FODEU")
 		end
 		
 		self.itemsStr = self.itemsStr .. "."

@@ -18,6 +18,6 @@
 	<event type="logout" name="CustomPlayerLogout" event="script" value="game/logout.lua"/>
 	<event type="kill" name="CustomBonartesTasks" event="script" value="game/onkillmission.lua"/>
 	<event type="kill" name="CustomTasks" event="script" value="game/tasks.lua"/>
-	<!--  <event type="advance" name="CustomStages" event="script" value="game/stages.lua"/> -->
+	<event type="advance" name="CustomStages" event="script" value="game/stages.lua"/>
 	
 </creaturescripts>

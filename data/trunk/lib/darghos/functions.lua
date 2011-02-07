@@ -380,7 +380,7 @@ function defineFirstItems(cid)
 	doAddContainerItem(item_backpack, 2554, 1) -- shovel	
 	doAddContainerItem(item_backpack, 2789, 100) -- brown mushroom
 	doAddContainerItem(item_backpack, 2152, 2) -- platinum coin
-	doAddContainerItem(item_backpack, 11754, 1) -- teleport rune
+	doAddContainerItem(item_backpack, CUSTOM_ITEMS.TELEPORT_RUNE, 1) -- teleport rune
 	
 	if(isSorcerer(cid)) then
 		item_armor = doCreateItemEx(getItemIdByName("magician's robe"), 1)
@@ -431,7 +431,7 @@ function setRateStage(cid, newlevel)
 		}
 	}
 	
-	function readStagesNode(node, cid, newlevel)
+	local function readStagesNode(node, cid, newlevel)
 		for k,v in pairs(node) do
 		
 			if(v.end_level == nil) then
@@ -456,16 +456,98 @@ function setRateStage(cid, newlevel)
 
 end
 
-function setLoginSkillRateStages(cid)
+function setLoginSkillsRateStage(cid)
 
-	setSkillRate(cid, LEVEL_SKILL_FIST, 30)
-	setSkillRate(cid, LEVEL_SKILL_CLUB, 30)
-	setSkillRate(cid, LEVEL_SKILL_SWORD, 30)
-	setSkillRate(cid, LEVEL_SKILL_AXE, 30)
-	setSkillRate(cid, LEVEL_SKILL_DISTANCE, 30)
-	setSkillRate(cid, LEVEL_SKILL_SHIELDING, 30)
-	setSkillRate(cid, LEVEL_SKILL_FISHING, 30)	
-	setSkillRate(cid, LEVEL_MAGIC, 1)				
+	local skills = {
+		normal = {
+			{end_level = 79, multipler = 30}, 
+			{start_level = 80, end_level = 89, multipler = 15}, 
+			{start_level = 90, end_level = 99, multipler = 10}, 
+			{start_level = 100, multipler = 5}
+		}
+	}
+	
+	local magic = {
+		normal = {
+			{end_level = 59, multipler = 15}, 
+			{start_level = 60, end_level = 79, multipler = 10}, 
+			{start_level = 80, end_level = 89, multipler = 5}, 
+			{start_level = 90, multipler = 3}
+		}
+	}	
+
+	local function readStagesNode(node, cid, newlevel, skillid)
+		for k,v in pairs(node) do
+		
+			if(v.end_level == nil) then
+				v.end_level = 999
+			end
+			
+			if(v.start_level == nil) then
+				v.start_level = 1
+			end
+		
+			if(newlevel >= v.start_level and newlevel <= v.end_level) then
+				setSkillRate(cid, skillid, v.multipler)
+				break
+			end	
+		end
+	end
+
+	readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, LEVEL_SKILL_FIST), LEVEL_SKILL_FIST)
+	readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, LEVEL_SKILL_CLUB), LEVEL_SKILL_CLUB)
+	readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, LEVEL_SKILL_SWORD), LEVEL_SKILL_SWORD)
+	readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, LEVEL_SKILL_AXE), LEVEL_SKILL_AXE)
+	readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, LEVEL_SKILL_DISTANCE), LEVEL_SKILL_DISTANCE)
+	readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, LEVEL_SKILL_SHIELDING), LEVEL_SKILL_SHIELDING)
+	readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, LEVEL_SKILL_FISHING), LEVEL_SKILL_FISHING)
+	
+	readStagesNode(magic.normal, cid, getPlayerMagLevel(cid), LEVEL_MAGIC)			
+end
+
+function setSkillStageOnAdvance(cid, skillid, newlevel)
+
+	local skills = {
+		normal = {
+			{end_level = 79, multipler = 30}, 
+			{start_level = 80, end_level = 89, multipler = 15}, 
+			{start_level = 90, end_level = 99, multipler = 10}, 
+			{start_level = 100, multipler = 5}
+		}
+	}
+	
+	local magic = {
+		normal = {
+			{end_level = 59, multipler = 15}, 
+			{start_level = 60, end_level = 79, multipler = 10}, 
+			{start_level = 80, end_level = 89, multipler = 5}, 
+			{start_level = 90, multipler = 3}
+		}
+	}	
+
+	local function readStagesNode(node, cid, newlevel, skillid)
+		for k,v in pairs(node) do
+		
+			if(v.end_level == nil) then
+				v.end_level = 999
+			end
+			
+			if(v.start_level == nil) then
+				v.start_level = 1
+			end
+		
+			if(newlevel >= v.start_level and newlevel <= v.end_level) then
+				setSkillRate(cid, skillid, v.multipler)
+				break
+			end	
+		end
+	end
+	
+	if(skillid == LEVEL_MAGIC) then
+		readStagesNode(magic.normal, cid, getPlayerMagLevel(cid), LEVEL_MAGIC)	
+	else
+		readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, skillid), skillid)
+	end
 end
 
 function playerRecord()

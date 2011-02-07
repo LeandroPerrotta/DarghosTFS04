@@ -1,7 +1,10 @@
 function onLogin(cid)
+
+	print("Custom login done!")
+
 	--Register the kill/die event
 	registerCreatureEvent(cid, "CustomPlayerDeath")
-	--registerCreatureEvent(cid, "CustomStages")
+	registerCreatureEvent(cid, "CustomStages")
 	registerCreatureEvent(cid, "Inquisition")
 	registerCreatureEvent(cid, "CustomPlayerAttack")
 	
@@ -12,7 +15,7 @@ function onLogin(cid)
 	playerRecord()
 	runPremiumSystem(cid)
 	setRateStage(cid, getPlayerLevel(cid))
-	setLoginSkillRateStages(cid)
+	setLoginSkillsRateStage(cid)
 	checkItemShop(cid)
 	OnKillCreatureMission(cid)
 	Dungeons.onLogin(cid)
