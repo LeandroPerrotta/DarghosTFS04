@@ -443,6 +443,7 @@ function setRateStage(cid, newlevel)
 			end
 		
 			if(newlevel >= v.start_level and newlevel <= v.end_level) then
+				--print("[" .. getCreatureName(cid) .. "] level " .. newlevel .. ", exp stage " .. v.multipler .. "x")
 				setExperienceRate(cid, v.multipler)
 				break
 			end	
@@ -488,6 +489,7 @@ function setLoginSkillsRateStage(cid)
 			end
 		
 			if(newlevel >= v.start_level and newlevel <= v.end_level) then
+				--print("[" .. getCreatureName(cid) .. "] skill type: " .. skillid .. ", level " .. newlevel .. ", stage " .. v.multipler .. "x")
 				setSkillRate(cid, skillid, v.multipler)
 				break
 			end	
@@ -537,6 +539,7 @@ function setSkillStageOnAdvance(cid, skillid, newlevel)
 			end
 		
 			if(newlevel >= v.start_level and newlevel <= v.end_level) then
+				--print("[" .. getCreatureName(cid) .. "] skill type: " .. skillid .. ", level " .. newlevel .. ", stage " .. v.multipler .. "x")
 				setSkillRate(cid, skillid, v.multipler)
 				break
 			end	

@@ -1,6 +1,6 @@
 function onLogin(cid)
 
-	print("Custom login done!")
+	--print("Custom login done!")
 
 	--Register the kill/die event
 	registerCreatureEvent(cid, "CustomPlayerDeath")

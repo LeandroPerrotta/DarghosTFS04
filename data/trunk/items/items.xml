@@ -4189,9 +4189,9 @@
 		<attribute key="decayTo" value="10021" />
 		<attribute key="transformDeEquipTo" value="6132" />
 		<attribute key="duration" value="14400" />
-		<attribute key="healthGain" value="1" />
+		<attribute key="healthGain" value="12" />
 		<attribute key="healthTicks" value="2000" />
-		<attribute key="manaGain" value="2" />
+		<attribute key="manaGain" value="18" />
 		<attribute key="manaTicks" value="1000" />
 		<attribute key="showduration" value="1" />
 		<attribute key="showattributes" value="1" />
