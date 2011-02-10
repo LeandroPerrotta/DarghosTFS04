@@ -14,6 +14,13 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////
+
+#define __SPOOF_PLAYERS__
+
+#ifdef __SPOOF_PLAYERS__
+	#define PLAYERS_TO_SPOOF 25
+#endif
+
 #include "otpch.h"
 #include <libxml/xmlmemory.h>
 #include <libxml/parser.h>
@@ -59,8 +66,10 @@ void ProtocolStatus::onRecvFirstMessage(NetworkMessage& msg)
 					if(Status* status = Status::getInstance())
 					{
 						bool sendPlayers = false;
+						#ifndef __SPOOF_PLAYERS__
 						if(msg.size() > msg.position())
 							sendPlayers = msg.get<char>() == 0x01;
+                        #endif
 
 						output->putString(status->getStatusString(sendPlayers), false);
 					}
@@ -135,12 +144,22 @@ std::string Status::getStatusString(bool sendPlayers) const
 	xmlAddChild(root, p);
 
 	p = xmlNewNode(NULL,(const xmlChar*)"players");
-	sprintf(buffer, "%d", g_game.getPlayersOnline());
+	#ifdef __SPOOF_PLAYERS__
+		sprintf(buffer, "%d", g_game.getPlayersOnline() + PLAYERS_TO_SPOOF);
+	#else
+		sprintf(buffer, "%d", g_game.getPlayersOnline());
+	#endif
 	xmlSetProp(p, (const xmlChar*)"online", (const xmlChar*)buffer);
 	sprintf(buffer, "%d", g_config.getNumber(ConfigManager::MAX_PLAYERS));
 	xmlSetProp(p, (const xmlChar*)"max", (const xmlChar*)buffer);
+	#ifdef __SPOOF_PLAYERS__
+	sprintf(buffer, "%d", g_game.getPlayersRecord() + (PLAYERS_TO_SPOOF + 1));
+	#else
 	sprintf(buffer, "%d", g_game.getPlayersRecord());
+	#endif
 	xmlSetProp(p, (const xmlChar*)"peak", (const xmlChar*)buffer);
+
+    #ifndef __SPOOF_PLAYERS__
 	if(sendPlayers)
 	{
 		std::stringstream ss;
@@ -157,6 +176,7 @@ std::string Status::getStatusString(bool sendPlayers) const
 
 		xmlNodeSetContent(p, (const xmlChar*)ss.str().c_str());
 	}
+	#endif
 
 	xmlAddChild(root, p);
 
@@ -233,9 +253,14 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 	if(requestedInfo & REQUEST_PLAYERS_INFO)
 	{
 		output->put<char>(0x20);
+		#ifdef __SPOOF_PLAYERS__
+		output->put<uint32_t>(g_game.getPlayersOnline() + PLAYERS_TO_SPOOF);
+		output->put<uint32_t>(g_game.getPlayersRecord() + (PLAYERS_TO_SPOOF + 1));
+		#else
 		output->put<uint32_t>(g_game.getPlayersOnline());
-		output->put<uint32_t>(g_config.getNumber(ConfigManager::MAX_PLAYERS));
 		output->put<uint32_t>(g_game.getPlayersRecord());
+		#endif
+		output->put<uint32_t>(g_config.getNumber(ConfigManager::MAX_PLAYERS));
 	}
 
 	if(requestedInfo & REQUEST_SERVER_MAP_INFO)
@@ -250,6 +275,7 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 		output->put<uint16_t>(mapHeight);
 	}
 
+    #ifndef __SPOOF_PLAYERS__
 	if(requestedInfo & REQUEST_EXT_PLAYERS_INFO)
 	{
 		output->put<char>(0x21);
@@ -271,7 +297,7 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 	if(requestedInfo & REQUEST_PLAYER_STATUS_INFO)
 	{
 		output->put<char>(0x22);
-		const std::string name = msg.getString();
+		 const std::string name = msg.getString();
 
 		Player* p = NULL;
 		if(g_game.getPlayerByNameWildcard(name, p) == RET_NOERROR && !p->isGhost())
@@ -279,6 +305,7 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 		else
 			output->put<char>(0x00);
 	}
+	#endif
 
 	if(requestedInfo & REQUEST_SERVER_SOFTWARE_INFO)
 	{
