@@ -8,37 +8,37 @@
 			
 			<item keywords="paralyze" id="2278" subtype="1" buyprice="700" name="paralyze"/>
 			<item keywords="animate;dead" id="2316" subtype="1" buyprice="375" name="animate dead"/>
-			<item keywords="magic;wall" id="2293" subtype="3" buyprice="350" name="magic wall"/>
-			<item keywords="energy;wall" id="2279" subtype="4" buyprice="340" name="energy wall"/>
-			<item keywords="energy;bomb" id="2262" subtype="2" buyprice="325" name="energy bomb"/>
-			<item keywords="sudden;death" id="2268" subtype="3" buyprice="325" name="sudden death"/>
-			<item keywords="wild;growth" id="2269" subtype="2" buyprice="320" name="wild growth"/>
-			<item keywords="fire;wall" id="2303" subtype="4" buyprice="245" name="fire wall"/>
-			<item keywords="fire;bomb" id="2305" subtype="2" buyprice="235" name="fire bomb"/>			
+			<item keywords="magic;wall" id="2293" subtype="1" buyprice="116" name="magic wall"/>
+			<item keywords="energy;wall" id="2279" subtype="1" buyprice="85" name="energy wall"/>
+			<item keywords="energy;bomb" id="2262" subtype="1" buyprice="162" name="energy bomb"/>
+			<item keywords="sudden;death" id="2268" subtype="1" buyprice="108" name="sudden death"/>
+			<item keywords="wild;growth" id="2269" subtype="1" buyprice="160" name="wild growth"/>
+			<item keywords="fire;wall" id="2303" subtype="1" buyprice="61" name="fire wall"/>
+			<item keywords="fire;bomb" id="2305" subtype="1" buyprice="117" name="fire bomb"/>			
 			<item keywords="chamaleon" id="2291" subtype="1" buyprice="210" name="chamaleon"/>
-			<item keywords="poison;wall" id="2289" subtype="4" buyprice="210" name="poison wall"/>
-			<item keywords="explosion" id="2313" subtype="6" buyprice="250" name="explosion"/>
-			<item keywords="avalanche" id="2274" subtype="4" buyprice="180" name="avalanche"/>
-			<item keywords="great;fireball" id="2304" subtype="4" buyprice="180" name="great fireball"/>
-			<item keywords="ultimate;healing" id="2273" subtype="3" buyprice="175" name="ultimate healing"/>
-			<item keywords="poison;bomb" id="2286" subtype="2" buyprice="170" name="poison bomb"/>
-			<item keywords="fireball" id="2302" subtype="5" buyprice="150" name="fireball"/>
-			<item keywords="icicle" id="2271" subtype="5" buyprice="150" name="icicle"/>
-			<item keywords="stone;shower" id="2288" subtype="4" buyprice="150" name="stone shower"/>
-			<item keywords="thunderstorm" id="2315" subtype="4" buyprice="150" name="thunderstorm"/>
-			<item keywords="soulfire" id="2308" subtype="3" buyprice="140" name="soulfire"/>
-			<item keywords="heavy;magic;missile" id="2311" subtype="10" buyprice="120" name="heavy magic missile"/>
-			<item keywords="stalagmite" id="2292" subtype="10" buyprice="120" name="stalagmite"/>
-			<item keywords="energy;field" id="2277" subtype="3" buyprice="115" name="energy field"/>
+			<item keywords="poison;wall" id="2289" subtype="1" buyprice="52" name="poison wall"/>
+			<item keywords="explosion" id="2313" subtype="1" buyprice="31" name="explosion"/>
+			<item keywords="avalanche" id="2274" subtype="1" buyprice="45" name="avalanche"/>
+			<item keywords="great;fireball" id="2304" subtype="1" buyprice="45" name="great fireball"/>
+			<item keywords="ultimate;healing" id="2273" subtype="1" buyprice="175" name="ultimate healing"/>
+			<item keywords="poison;bomb" id="2286" subtype="1" buyprice="85" name="poison bomb"/>
+			<item keywords="fireball" id="2302" subtype="1" buyprice="30" name="fireball"/>
+			<item keywords="icicle" id="2271" subtype="1" buyprice="30" name="icicle"/>
+			<item keywords="stone;shower" id="2288" subtype="1" buyprice="37" name="stone shower"/>
+			<item keywords="thunderstorm" id="2315" subtype="1" buyprice="37" name="thunderstorm"/>
+			<item keywords="soulfire" id="2308" subtype="1" buyprice="46" name="soulfire"/>
+			<item keywords="heavy;magic;missile" id="2311" subtype="1" buyprice="12" name="heavy magic missile"/>
+			<item keywords="stalagmite" id="2292" subtype="1" buyprice="12" name="stalagmite"/>
+			<item keywords="energy;field" id="2277" subtype="1" buyprice="38" name="energy field"/>
 			<item keywords="intense;healing" id="2265" subtype="1" buyprice="95" name="intense healing"/>
-			<item keywords="fire;field" id="2301" subtype="3" buyprice="85" name="fire field"/>
+			<item keywords="fire;field" id="2301" subtype="1" buyprice="28" name="fire field"/>
 			<item keywords="convince;creature" id="2290" subtype="1" buyprice="80" name="convince creature"/>
-			<item keywords="desintegrate" id="2310" subtype="3" buyprice="80" name="desintegrate"/>
-			<item keywords="holly;missile" id="2295" subtype="5" buyprice="80" name="holly missile"/>
+			<item keywords="desintegrate" id="2310" subtype="1" buyprice="26" name="desintegrate"/>
+			<item keywords="holly;missile" id="2295" subtype="1" buyprice="16" name="holly missile"/>
 			<item keywords="antidote" id="2266" subtype="1" buyprice="65" name="antidote"/>
-			<item keywords="poison;field" id="2285" subtype="3" buyprice="65" name="poison field"/>
-			<item keywords="destroy;field" id="2261" subtype="3" buyprice="45" name="destroy field"/>
-			<item keywords="light;magic;missile" id="2287" subtype="10" buyprice="40" name="light magic missile"/>
+			<item keywords="poison;field" id="2285" subtype="1" buyprice="21" name="poison field"/>
+			<item keywords="destroy;field" id="2261" subtype="1" buyprice="15" name="destroy field"/>
+			<item keywords="light;magic;missile" id="2287" subtype="1" buyprice="4" name="light magic missile"/>
 			
 			<!-- OUTRAS -->
 			<item keywords="blank;rune" id="2260" buyprice="10" name="blank rune"/>

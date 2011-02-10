@@ -6,7 +6,7 @@ function onLogin(cid)
 	registerCreatureEvent(cid, "CustomPlayerDeath")
 	registerCreatureEvent(cid, "CustomStages")
 	registerCreatureEvent(cid, "Inquisition")
-	registerCreatureEvent(cid, "CustomPlayerAttack")
+	registerCreatureEvent(cid, "CustomPlayerCombat")
 	
 	--if(tasks.hasStartedTask(cid)) then
 		registerCreatureEvent(cid, "CustomTasks")

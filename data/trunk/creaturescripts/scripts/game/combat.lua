@@ -1,6 +1,6 @@
-function onAttack(cid, target)
+function onCombat(cid, target)
 
-	if(isPlayer(cid) == TRUE and (getCreatureName(target) == "Marksman Target" or getCreatureName(target) == "Hitdoll")) then
+	if(isPlayer(cid) == TRUE and isMonster(target) and (getCreatureName(target) == "Marksman Target" or getCreatureName(target) == "Hitdoll")) then
 		startShieldTrain(cid, target)
 	end
 
@@ -17,15 +17,15 @@ function onAttack(cid, target)
 	if(isPlayer(target) == TRUE) then
 		player_target = target
 	elseif(isPlayer(getCreatureMaster(target)) == TRUE) then
-		player_target = getCreatureMaster(cid)
+		player_target = getCreatureMaster(target)
 	end
 
 	if(player_attacker ~= nil and player_target ~= nil) then
 		if(getPlayerTown(player_attacker) == towns.ISLAND_OF_PEACE or
 		   getPlayerTown(player_target) == towns.ISLAND_OF_PEACE) then
-			return FALSE
+			return false
 		end
 	end
 
-	return TRUE
+	return true
 end

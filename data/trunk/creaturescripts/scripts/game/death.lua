@@ -17,4 +17,6 @@ function onDeath(cid, corpse, deathList)
 			onLordVankynerDie()
 		end
 	end
+	
+	return true
 end 

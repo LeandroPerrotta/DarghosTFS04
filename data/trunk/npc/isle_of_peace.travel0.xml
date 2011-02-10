@@ -90,20 +90,8 @@
 		<response text="Eu não posso levar-lo a Thorn por que está cidade não possui um barco! Desculpe..."/>
 	</interact>		
 	
-	<interact keywords="aracura" topic="3">		
-		<response param="premium" text="Have a good luck in your new journey!">
-			<action name="idle" value="1"/>
-			<action name="teleport" value="3005;1119;6"/>
-			<action name="effect" value="teleport"/>
-			
-			<action name="script">
-			<![CDATA[
-			doPlayerSetTown(cid, 2)
-			]]>
-			</action>			
-		</response>
-
-		<response text="Only premium players can travel to this city."/>
+	<interact keywords="aracura" topic="3">	
+		<response text="Eu não posso levar-lo a Aracura por que foi visto uma enorme e perigosa besta na rota maritima para esta cidade..."/>
 	</interact>		
 
 	<interact keywords="salazart" topic="3">
@@ -123,18 +111,7 @@
 	</interact>	
 
 	<interact keywords="northrend" topic="3">		
-		<response param="premium" text="Have a good luck in your new journey!">
-			<action name="idle" value="1"/>
-			<action name="teleport" value="2025;1235;6"/>
-			<action name="effect" value="teleport"/>
-			
-			<action name="script">
-			<![CDATA[
-			doPlayerSetTown(cid, 7)
-			]]>
-			</action>			
-		</response>
-		<response text="Only premium players can travel to this city."/>
+		<response text="Eu não posso levar-lo a Northrend por que devido ao rigoroso inverno o mar está congelado, e o barco não pode chegar lá..."/>
 	</interact>	
 	
   </interaction>

@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talkactions>
+	<!-- Custom Commands -->
+	
+	<talkaction log="yes" words="/storagevalue" access="5" event="script" value="game/playerstorage.lua"/>
+	<talkaction log="yes" words="/help" access="5" event="script" value="game/help_manager.lua"/>
+	<talkaction words="/getoutfit" access="4" event="script" value="game/getoutfit.lua"/>
+	<talkaction log="yes" words="/poll" logged="1" access="5" event="script" value="game/createpoll.lua"/>
+	
+	<talkaction words="!blesses" access="0" event="script" value="game/bless.lua"/>	
+	<talkaction words="!vote" access="0" event="script" value="game/vote.lua"/>
+	<talkaction words="!voteinfo" access="0" event="script" value="game/voteinfo.lua"/>
+	<talkaction words="!aceitotp" access="0" event="script" value="game/accept_teleport.lua"/>
+	
+	<talkaction default="true" channel="9" event="script" value="game/help.lua"/> <!-- Help Channel -->	
+
 	<!-- Gods -->
 	<talkaction log="yes" words="/attr" access="5" event="function" value="thingProporties"/>
 	<talkaction log="yes" words="/serverdiag" access="5" event="function" value="diagnostics"/>
@@ -60,6 +74,7 @@
 	<talkaction log="yes" access="1" words="/pos;!pos" event="script" value="position.lua"/>
 
 	<!-- Players -->
+	
 	<talkaction words="!frags;/frags" event="script" value="frags.lua"/>
 	<talkaction words="!online;/online" event="script" value="online.lua"/>
 	<talkaction words="!uptime;/uptime" event="script" value="uptime.lua"/>

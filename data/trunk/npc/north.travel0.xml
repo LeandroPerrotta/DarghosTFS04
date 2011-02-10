@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<npc name="Captain Bonifacius" floorchange="0" walkinterval="4000" scripts="data/npc/scripts/game/boats/northrend.lua">
+<npc name="Captain Bonifacius" floorchange="0" walkinterval="4000" script="data/npc/scripts/game/boats/northrend.lua">
 	<health now="150" max="150"/>
 	<look type="152" head="18" body="88" legs="78" feet="68"/>  
 </npc>
