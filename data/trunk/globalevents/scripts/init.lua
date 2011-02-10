@@ -76,6 +76,8 @@ function onStartup()
 	end
 
 	db.executeQuery("UPDATE `players` SET `online` = 0 WHERE `world_id` = " .. getConfigValue('worldId') .. " AND `online` > 0;")
+	
+	spoofPlayers()
 	return true
 end
 
