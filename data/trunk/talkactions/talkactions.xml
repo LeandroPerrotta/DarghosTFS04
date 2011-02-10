@@ -11,6 +11,7 @@
 	<talkaction words="!vote" access="0" event="script" value="game/vote.lua"/>
 	<talkaction words="!voteinfo" access="0" event="script" value="game/voteinfo.lua"/>
 	<talkaction words="!aceitotp" access="0" event="script" value="game/accept_teleport.lua"/>
+	<talkaction words="!online;/online" event="script" value="game/online.lua"/>
 	
 	<talkaction default="true" channel="9" event="script" value="game/help.lua"/> <!-- Help Channel -->	
 
@@ -76,7 +77,7 @@
 	<!-- Players -->
 	
 	<talkaction words="!frags;/frags" event="script" value="frags.lua"/>
-	<talkaction words="!online;/online" event="script" value="online.lua"/>
+	<!-- <talkaction words="!online;/online" event="script" value="online.lua"/> -->
 	<talkaction words="!uptime;/uptime" event="script" value="uptime.lua"/>
 	<talkaction words="!deathlist;/deathlist" event="script" value="deathlist.lua"/>
 	<talkaction words="!pvp;/pvp" event="script" value="pvp.lua"/>

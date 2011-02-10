@@ -116,6 +116,7 @@
 			<item keywords="throwing;knife" id="2410" buyprice="25" name="throwing knife"/>
 			<item keywords="throwing;star" id="2399" buyprice="42" name="throwing star"/>
 			<item keywords="royal;spear" id="7378" buyprice="15" name="royal spear"/>
+			<item keywords="enchanted;spear" id="7367" buyprice="50" name="enchanted spear"/>
 		</itemlist> 	
 
 		<!--

@@ -19,3 +19,8 @@ darghos_use_reborn = false
 -- Sistema de recordes personalizado
 -- opções: true (ativo), false (desativo)
 darghos_use_record = false
+
+-- Darghos spoof players
+-- opções: true (ativo), false (desativo)
+darghos_spoof_players = true
+darghos_players_to_spoof = 25

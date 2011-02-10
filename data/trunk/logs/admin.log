@@ -49,3 +49,16 @@
 [9/2/2011 20:2:50] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
 [9/2/2011 21:47:39] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
 [9/2/2011 22:47:10] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 14:0:49] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 15:1:51] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 15:8:55] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 15:11:32] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 15:13:28] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 15:14:57] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 16:23:23] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 16:28:19] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 17:0:40] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 17:15:55] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 18:52:11] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 19:32:22] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[10/2/2011 19:35:18] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use

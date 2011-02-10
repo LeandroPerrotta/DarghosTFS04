@@ -1182,7 +1182,7 @@
     <monster name="Bog Raider" x="0" y="-1" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="2861" centery="1276" centerz="5" radius="5">
-    <monster name="bonelord" x="-2" y="0" z="5" spawntime="60"/>
+    <monster name="Beholder" x="-2" y="0" z="5" spawntime="60"/>
     <monster name="Ghoul" x="0" y="1" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="1723" centery="1281" centerz="5" radius="2">
@@ -1320,10 +1320,10 @@
     <npc name="thorn.princess" x="0" y="-1" z="5" spawntime="20"/>
   </spawn>
   <spawn centerx="1465" centery="1800" centerz="5" radius="1">
-    <monster name="bonelord" x="-1" y="1" z="5" spawntime="60"/>
+    <monster name="Beholder" x="-1" y="1" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="1473" centery="1800" centerz="5" radius="1">
-    <monster name="bonelord" x="1" y="-1" z="5" spawntime="60"/>
+    <monster name="Beholder" x="1" y="-1" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="1469" centery="1806" centerz="5" radius="1">
     <monster name="Priestess" x="-1" y="1" z="5" spawntime="60"/>
@@ -1338,7 +1338,7 @@
     <monster name="Valkyrie" x="0" y="1" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="1469" centery="1811" centerz="5" radius="1">
-    <monster name="elder bonelord" x="0" y="1" z="5" spawntime="60"/>
+    <monster name="Elder Beholder" x="0" y="1" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="2139" centery="1812" centerz="5" radius="3">
     <monster name="Minotaur guard" x="0" y="-2" z="5" spawntime="60"/>
@@ -1363,7 +1363,7 @@
     <monster name="Monk" x="0" y="-1" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="1469" centery="1822" centerz="5" radius="1">
-    <monster name="bonelord" x="-1" y="-1" z="5" spawntime="60"/>
+    <monster name="Beholder" x="-1" y="-1" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="2210" centery="1849" centerz="5" radius="5">
     <monster name="Valkyrie" x="2" y="-3" z="5" spawntime="60"/>
@@ -3221,8 +3221,8 @@
     <monster name="Hunter" x="0" y="-1" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="1466" centery="1810" centerz="6" radius="1">
-    <monster name="bonelord" x="-1" y="-1" z="6" spawntime="60"/>
-    <monster name="bonelord" x="0" y="1" z="6" spawntime="60"/>
+    <monster name="Beholder" x="-1" y="-1" z="6" spawntime="60"/>
+    <monster name="Beholder" x="0" y="1" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="2106" centery="1810" centerz="6" radius="5">
     <monster name="Orc" x="-3" y="-2" z="6" spawntime="60"/>
@@ -4363,10 +4363,10 @@
   <spawn centerx="2690" centery="2324" centerz="6" radius="20">
     <monster name="Behemoth" x="-1" y="-10" z="6" spawntime="120"/>
     <monster name="Lich" x="2" y="-10" z="6" spawntime="120"/>
-    <monster name="bonebeast" x="3" y="-10" z="6" spawntime="120"/>
+    <monster name="bone beast" x="3" y="-10" z="6" spawntime="120"/>
     <monster name="Warlock" x="-8" y="-8" z="6" spawntime="120"/>
     <monster name="Warlock" x="-2" y="-8" z="6" spawntime="120"/>
-    <monster name="bonebeast" x="0" y="-8" z="6" spawntime="120"/>
+    <monster name="bone beast" x="0" y="-8" z="6" spawntime="120"/>
     <monster name="Stone Golem" x="6" y="-8" z="6" spawntime="120"/>
     <monster name="Warlock" x="-7" y="-7" z="6" spawntime="120"/>
     <monster name="Lich" x="3" y="-7" z="6" spawntime="120"/>
@@ -4375,24 +4375,24 @@
     <monster name="Behemoth" x="0" y="-6" z="6" spawntime="120"/>
     <monster name="Lich" x="1" y="-6" z="6" spawntime="120"/>
     <monster name="Warlock" x="6" y="-6" z="6" spawntime="120"/>
-    <monster name="bonebeast" x="0" y="-4" z="6" spawntime="120"/>
+    <monster name="bone beast" x="0" y="-4" z="6" spawntime="120"/>
     <monster name="Behemoth" x="6" y="-4" z="6" spawntime="120"/>
     <monster name="Behemoth" x="-4" y="-3" z="6" spawntime="120"/>
-    <monster name="bonebeast" x="1" y="-3" z="6" spawntime="120"/>
+    <monster name="bone beast" x="1" y="-3" z="6" spawntime="120"/>
     <monster name="Lich" x="-6" y="-2" z="6" spawntime="120"/>
-    <monster name="bonebeast" x="0" y="-2" z="6" spawntime="120"/>
+    <monster name="bone beast" x="0" y="-2" z="6" spawntime="120"/>
     <monster name="Behemoth" x="7" y="-1" z="6" spawntime="120"/>
     <monster name="Behemoth" x="-12" y="0" z="6" spawntime="120"/>
     <monster name="Behemoth" x="-11" y="0" z="6" spawntime="120"/>
     <monster name="Lich" x="-9" y="0" z="6" spawntime="120"/>
-    <monster name="bonebeast" x="4" y="1" z="6" spawntime="120"/>
+    <monster name="bone beast" x="4" y="1" z="6" spawntime="120"/>
     <monster name="Behemoth" x="-12" y="2" z="6" spawntime="120"/>
     <monster name="Warlock" x="-11" y="2" z="6" spawntime="120"/>
-    <monster name="bonebeast" x="1" y="2" z="6" spawntime="120"/>
+    <monster name="bone beast" x="1" y="2" z="6" spawntime="120"/>
     <monster name="Lich" x="11" y="2" z="6" spawntime="120"/>
     <monster name="Stone Golem" x="-1" y="3" z="6" spawntime="120"/>
     <monster name="Stone Golem" x="1" y="3" z="6" spawntime="120"/>
-    <monster name="bonebeast" x="2" y="3" z="6" spawntime="120"/>
+    <monster name="bone beast" x="2" y="3" z="6" spawntime="120"/>
     <monster name="Warlock" x="4" y="3" z="6" spawntime="120"/>
     <monster name="Warlock" x="8" y="3" z="6" spawntime="120"/>
     <monster name="Behemoth" x="14" y="3" z="6" spawntime="120"/>
@@ -4401,7 +4401,7 @@
     <monster name="Lich" x="3" y="6" z="6" spawntime="120"/>
     <monster name="Warlock" x="10" y="7" z="6" spawntime="120"/>
     <monster name="Warlock" x="-9" y="8" z="6" spawntime="120"/>
-    <monster name="bonebeast" x="-7" y="8" z="6" spawntime="120"/>
+    <monster name="bone beast" x="-7" y="8" z="6" spawntime="120"/>
     <monster name="Lich" x="-1" y="8" z="6" spawntime="120"/>
     <monster name="Behemoth" x="8" y="8" z="6" spawntime="120"/>
     <monster name="Lich" x="2" y="9" z="6" spawntime="120"/>
@@ -4409,7 +4409,7 @@
     <monster name="Lich" x="8" y="9" z="6" spawntime="120"/>
     <monster name="Warlock" x="-4" y="10" z="6" spawntime="120"/>
     <monster name="Lich" x="-1" y="11" z="6" spawntime="120"/>
-    <monster name="bonebeast" x="-1" y="12" z="6" spawntime="120"/>
+    <monster name="bone beast" x="-1" y="12" z="6" spawntime="120"/>
     <monster name="Lich" x="3" y="14" z="6" spawntime="120"/>
   </spawn>
   <spawn centerx="1313" centery="2332" centerz="6" radius="5">
@@ -7420,18 +7420,18 @@
     <monster name="Minotaur guard" x="2" y="3" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="2320" centery="1822" centerz="7" radius="20">
-    <monster name="elder bonelord" x="-9" y="-15" z="7" spawntime="60"/>
-    <monster name="bonelord" x="18" y="-9" z="7" spawntime="60"/>
-    <monster name="bonelord" x="-12" y="-8" z="7" spawntime="60"/>
-    <monster name="bonelord" x="5" y="-6" z="7" spawntime="60"/>
-    <monster name="bonelord" x="-3" y="-3" z="7" spawntime="60"/>
-    <monster name="bonelord" x="8" y="0" z="7" spawntime="60"/>
-    <monster name="bonelord" x="15" y="5" z="7" spawntime="60"/>
-    <monster name="bonelord" x="-13" y="6" z="7" spawntime="60"/>
-    <monster name="bonelord" x="-3" y="7" z="7" spawntime="60"/>
-    <monster name="bonelord" x="7" y="11" z="7" spawntime="60"/>
-    <monster name="bonelord" x="-6" y="16" z="7" spawntime="60"/>
-    <monster name="elder bonelord" x="7" y="20" z="7" spawntime="60"/>
+    <monster name="Elder Beholder" x="-9" y="-15" z="7" spawntime="60"/>
+    <monster name="Beholder" x="18" y="-9" z="7" spawntime="60"/>
+    <monster name="Beholder" x="-12" y="-8" z="7" spawntime="60"/>
+    <monster name="Beholder" x="5" y="-6" z="7" spawntime="60"/>
+    <monster name="Beholder" x="-3" y="-3" z="7" spawntime="60"/>
+    <monster name="Beholder" x="8" y="0" z="7" spawntime="60"/>
+    <monster name="Beholder" x="15" y="5" z="7" spawntime="60"/>
+    <monster name="Beholder" x="-13" y="6" z="7" spawntime="60"/>
+    <monster name="Beholder" x="-3" y="7" z="7" spawntime="60"/>
+    <monster name="Beholder" x="7" y="11" z="7" spawntime="60"/>
+    <monster name="Beholder" x="-6" y="16" z="7" spawntime="60"/>
+    <monster name="Elder Beholder" x="7" y="20" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="2163" centery="1823" centerz="7" radius="5">
     <monster name="Minotaur archer" x="1" y="-2" z="7" spawntime="60"/>
@@ -7440,10 +7440,10 @@
     <monster name="Minotaur guard" x="1" y="4" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="2290" centery="1823" centerz="7" radius="10">
-    <monster name="bonelord" x="-5" y="-3" z="7" spawntime="60"/>
-    <monster name="bonelord" x="8" y="-3" z="7" spawntime="60"/>
-    <monster name="elder bonelord" x="-5" y="5" z="7" spawntime="60"/>
-    <monster name="bonelord" x="6" y="5" z="7" spawntime="60"/>
+    <monster name="Beholder" x="-5" y="-3" z="7" spawntime="60"/>
+    <monster name="Beholder" x="8" y="-3" z="7" spawntime="60"/>
+    <monster name="Elder Beholder" x="-5" y="5" z="7" spawntime="60"/>
+    <monster name="Beholder" x="6" y="5" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1419" centery="1824" centerz="7" radius="1">
     <monster name="Valkyrie" x="-1" y="1" z="7" spawntime="60"/>
@@ -9623,14 +9623,14 @@
     <monster name="Behemoth" x="-9" y="-13" z="7" spawntime="120"/>
     <monster name="Fire Elemental" x="9" y="-12" z="7" spawntime="120"/>
     <monster name="Behemoth" x="10" y="-12" z="7" spawntime="120"/>
-    <monster name="bonebeast" x="-10" y="-11" z="7" spawntime="120"/>
+    <monster name="bone beast" x="-10" y="-11" z="7" spawntime="120"/>
     <monster name="Dragon Lord" x="12" y="-11" z="7" spawntime="120"/>
     <monster name="Fire Elemental" x="-1" y="-10" z="7" spawntime="120"/>
     <monster name="Lich" x="-10" y="-9" z="7" spawntime="120"/>
     <monster name="Fire Elemental" x="-3" y="-9" z="7" spawntime="120"/>
     <monster name="Fire Elemental" x="-10" y="-8" z="7" spawntime="120"/>
     <monster name="Lich" x="-8" y="-7" z="7" spawntime="120"/>
-    <monster name="bonebeast" x="-13" y="-6" z="7" spawntime="120"/>
+    <monster name="bone beast" x="-13" y="-6" z="7" spawntime="120"/>
     <monster name="Behemoth" x="-12" y="-6" z="7" spawntime="120"/>
     <monster name="Lich" x="-8" y="-6" z="7" spawntime="120"/>
     <monster name="Demon" x="-13" y="-5" z="7" spawntime="360"/>
@@ -10406,23 +10406,23 @@
   <spawn centerx="1843" centery="1105" centerz="8" radius="30">
     <monster name="Demon Skeleton" x="-13" y="-8" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-14" y="-7" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-12" y="-7" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="9" y="-6" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-12" y="-7" z="8" spawntime="60"/>
+    <monster name="bone beast" x="9" y="-6" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="11" y="-6" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="8" y="-5" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-5" y="3" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-5" y="3" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-3" y="3" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-2" y="8" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="6" y="10" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="5" y="12" z="8" spawntime="60"/>
+    <monster name="bone beast" x="5" y="12" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="7" y="13" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="14" y="22" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="12" y="23" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-12" y="24" z="8" spawntime="60"/>
+    <monster name="bone beast" x="12" y="23" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-12" y="24" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="14" y="24" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-11" y="25" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-9" y="26" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="6" y="29" z="8" spawntime="60"/>
+    <monster name="bone beast" x="6" y="29" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="958" centery="1115" centerz="8" radius="1">
     <monster name="Bog Raider" x="-1" y="-1" z="8" spawntime="60"/>
@@ -10626,40 +10626,40 @@
     <monster name="Demon Skeleton" x="9" y="-30" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-14" y="-29" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-14" y="-28" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-13" y="-27" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-13" y="-27" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="11" y="-27" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-1" y="-20" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="3" y="-20" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="1" y="-18" z="8" spawntime="60"/>
+    <monster name="bone beast" x="1" y="-18" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="23" y="-18" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="21" y="-17" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="22" y="-16" z="8" spawntime="60"/>
+    <monster name="bone beast" x="21" y="-17" z="8" spawntime="60"/>
+    <monster name="bone beast" x="22" y="-16" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="14" y="-13" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="11" y="-11" z="8" spawntime="60"/>
+    <monster name="bone beast" x="11" y="-11" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="13" y="-11" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-23" y="-9" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-9" y="-9" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-26" y="-4" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-26" y="-4" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-12" y="-4" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-26" y="-2" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-27" y="-1" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="13" y="-1" z="8" spawntime="60"/>
+    <monster name="bone beast" x="13" y="-1" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-13" y="0" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="4" y="0" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="10" y="0" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="6" y="1" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-15" y="2" z="8" spawntime="60"/>
+    <monster name="bone beast" x="6" y="1" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-15" y="2" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-20" y="12" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-23" y="13" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-23" y="13" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-14" y="13" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="6" y="13" z="8" spawntime="60"/>
+    <monster name="bone beast" x="6" y="13" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="8" y="14" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="10" y="14" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-17" y="15" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-17" y="15" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-23" y="16" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-8" y="18" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-8" y="18" z="8" spawntime="60"/>
     <monster name="Demon Skeleton" x="-7" y="21" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-4" y="23" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-4" y="23" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="1196" centery="1169" centerz="8" radius="1">
     <monster name="Worker Golem" x="-1" y="-1" z="8" spawntime="60"/>
@@ -11704,7 +11704,7 @@
   </spawn>
   <spawn centerx="1502" centery="1776" centerz="8" radius="1">
     <monster name="Black Knight" x="-1" y="0" z="8" spawntime="60"/>
-    <monster name="bonelord" x="1" y="1" z="8" spawntime="60"/>
+    <monster name="Beholder" x="1" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="2330" centery="1776" centerz="8" radius="5">
     <monster name="Swamp Troll" x="-4" y="-3" z="8" spawntime="60"/>
@@ -11717,9 +11717,9 @@
   </spawn>
   <spawn centerx="1461" centery="1778" centerz="8" radius="1"/>
   <spawn centerx="1498" centery="1778" centerz="8" radius="1">
-    <monster name="bonelord" x="0" y="-1" z="8" spawntime="60"/>
+    <monster name="Beholder" x="0" y="-1" z="8" spawntime="60"/>
     <monster name="Black Knight" x="1" y="-1" z="8" spawntime="60"/>
-    <monster name="bonelord" x="-1" y="0" z="8" spawntime="60"/>
+    <monster name="Beholder" x="-1" y="0" z="8" spawntime="60"/>
     <monster name="Black Knight" x="1" y="0" z="8" spawntime="60"/>
     <monster name="Black Knight" x="0" y="1" z="8" spawntime="60"/>
   </spawn>
@@ -11775,7 +11775,7 @@
   </spawn>
   <spawn centerx="1494" centery="1782" centerz="8" radius="1">
     <monster name="Black Knight" x="0" y="-1" z="8" spawntime="60"/>
-    <monster name="bonelord" x="-1" y="1" z="8" spawntime="60"/>
+    <monster name="Beholder" x="-1" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="2449" centery="1783" centerz="8" radius="5">
     <monster name="Elf" x="-1" y="0" z="8" spawntime="60"/>
@@ -13754,8 +13754,8 @@
   </spawn>
   <spawn centerx="3411" centery="2090" centerz="8" radius="5">
     <monster name="Demon Skeleton" x="0" y="-1" z="8" spawntime="150"/>
-    <monster name="bonelord" x="2" y="0" z="8" spawntime="150"/>
-    <monster name="bonelord" x="-1" y="1" z="8" spawntime="150"/>
+    <monster name="Beholder" x="2" y="0" z="8" spawntime="150"/>
+    <monster name="Beholder" x="-1" y="1" z="8" spawntime="150"/>
   </spawn>
   <spawn centerx="2408" centery="2091" centerz="8" radius="1">
     <monster name="Slime" x="1" y="0" z="8" spawntime="120"/>
@@ -13822,7 +13822,7 @@
     <monster name="Slime" x="1" y="0" z="8" spawntime="120"/>
   </spawn>
   <spawn centerx="1941" centery="2104" centerz="8" radius="20">
-    <monster name="bonebeast" x="3" y="-15" z="8" spawntime="60"/>
+    <monster name="bone beast" x="3" y="-15" z="8" spawntime="60"/>
     <monster name="Ghoul" x="-7" y="-14" z="8" spawntime="60"/>
     <monster name="Skeleton" x="-4" y="-14" z="8" spawntime="60"/>
     <monster name="Ghoul" x="-3" y="-14" z="8" spawntime="60"/>
@@ -13925,22 +13925,22 @@
   </spawn>
   <spawn centerx="2120" centery="2116" centerz="8" radius="5">
     <monster name="Deathslicer" x="-4" y="-4" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="1" y="-4" z="8" spawntime="60"/>
+    <monster name="bone beast" x="1" y="-4" z="8" spawntime="60"/>
     <monster name="Hand of Cursed Fate" x="-1" y="-3" z="8" spawntime="60"/>
     <monster name="Nightmare" x="-4" y="0" z="8" spawntime="60"/>
     <monster name="Lost Soul" x="-2" y="0" z="8" spawntime="60"/>
     <monster name="Lost Soul" x="5" y="1" z="8" spawntime="60"/>
     <monster name="Lost Soul" x="-5" y="2" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="-2" y="3" z="8" spawntime="60"/>
+    <monster name="bone beast" x="-2" y="3" z="8" spawntime="60"/>
     <monster name="Hand of Cursed Fate" x="2" y="3" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="5" y="3" z="8" spawntime="60"/>
+    <monster name="bone beast" x="5" y="3" z="8" spawntime="60"/>
     <monster name="Deathslicer" x="-5" y="4" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="2131" centery="2116" centerz="8" radius="5">
     <monster name="Deathslicer" x="-3" y="-4" z="8" spawntime="60"/>
     <monster name="Nightmare" x="-1" y="-4" z="8" spawntime="60"/>
     <monster name="Lost Soul" x="2" y="-3" z="8" spawntime="60"/>
-    <monster name="bonebeast" x="0" y="-2" z="8" spawntime="60"/>
+    <monster name="bone beast" x="0" y="-2" z="8" spawntime="60"/>
     <monster name="Hand of Cursed Fate" x="1" y="0" z="8" spawntime="60"/>
     <monster name="Deathslicer" x="-4" y="1" z="8" spawntime="60"/>
     <monster name="Lost Soul" x="-2" y="3" z="8" spawntime="60"/>
@@ -14386,25 +14386,25 @@
     <monster name="Serpent Spawn" x="-8" y="-9" z="8" spawntime="120"/>
     <monster name="Hydra" x="4" y="-9" z="8" spawntime="120"/>
     <monster name="Hydra" x="10" y="-6" z="8" spawntime="120"/>
-    <monster name="bonebeast" x="0" y="-5" z="8" spawntime="120"/>
+    <monster name="bone beast" x="0" y="-5" z="8" spawntime="120"/>
     <monster name="Lich" x="-2" y="-4" z="8" spawntime="120"/>
-    <monster name="bonebeast" x="-1" y="-4" z="8" spawntime="120"/>
+    <monster name="bone beast" x="-1" y="-4" z="8" spawntime="120"/>
     <monster name="Lich" x="0" y="-4" z="8" spawntime="120"/>
     <monster name="Hydra" x="-1" y="-2" z="8" spawntime="120"/>
-    <monster name="bonebeast" x="-2" y="3" z="8" spawntime="120"/>
+    <monster name="bone beast" x="-2" y="3" z="8" spawntime="120"/>
     <monster name="Lich" x="-2" y="4" z="8" spawntime="120"/>
-    <monster name="bonebeast" x="-1" y="4" z="8" spawntime="120"/>
+    <monster name="bone beast" x="-1" y="4" z="8" spawntime="120"/>
     <monster name="Serpent Spawn" x="-2" y="5" z="8" spawntime="120"/>
-    <monster name="bonebeast" x="-2" y="6" z="8" spawntime="120"/>
+    <monster name="bone beast" x="-2" y="6" z="8" spawntime="120"/>
     <monster name="Serpent Spawn" x="0" y="6" z="8" spawntime="120"/>
-    <monster name="bonebeast" x="8" y="6" z="8" spawntime="120"/>
+    <monster name="bone beast" x="8" y="6" z="8" spawntime="120"/>
     <monster name="Serpent Spawn" x="9" y="6" z="8" spawntime="120"/>
     <monster name="Lich" x="-5" y="7" z="8" spawntime="120"/>
     <monster name="Serpent Spawn" x="-1" y="7" z="8" spawntime="120"/>
     <monster name="Lich" x="8" y="7" z="8" spawntime="120"/>
     <monster name="Serpent Spawn" x="10" y="7" z="8" spawntime="120"/>
     <monster name="Lich" x="-2" y="8" z="8" spawntime="120"/>
-    <monster name="bonebeast" x="-1" y="8" z="8" spawntime="120"/>
+    <monster name="bone beast" x="-1" y="8" z="8" spawntime="120"/>
     <monster name="Hydra" x="3" y="8" z="8" spawntime="120"/>
     <monster name="Hydra" x="-8" y="9" z="8" spawntime="120"/>
   </spawn>
@@ -15726,17 +15726,17 @@
     <monster name="Adept of the Cult" x="2" y="0" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="1845" centery="1087" centerz="9" radius="15">
-    <monster name="bonelord" x="-12" y="-10" z="9" spawntime="60"/>
-    <monster name="elder bonelord" x="-6" y="-10" z="9" spawntime="60"/>
-    <monster name="bonelord" x="0" y="-8" z="9" spawntime="60"/>
-    <monster name="elder bonelord" x="4" y="-7" z="9" spawntime="60"/>
-    <monster name="bonelord" x="9" y="-7" z="9" spawntime="60"/>
-    <monster name="bonelord" x="-12" y="-2" z="9" spawntime="60"/>
-    <monster name="elder bonelord" x="-7" y="-2" z="9" spawntime="60"/>
-    <monster name="elder bonelord" x="9" y="0" z="9" spawntime="60"/>
-    <monster name="bonelord" x="2" y="1" z="9" spawntime="60"/>
-    <monster name="elder bonelord" x="3" y="6" z="9" spawntime="60"/>
-    <monster name="bonelord" x="7" y="10" z="9" spawntime="60"/>
+    <monster name="Beholder" x="-12" y="-10" z="9" spawntime="60"/>
+    <monster name="Elder Beholder" x="-6" y="-10" z="9" spawntime="60"/>
+    <monster name="Beholder" x="0" y="-8" z="9" spawntime="60"/>
+    <monster name="Elder Beholder" x="4" y="-7" z="9" spawntime="60"/>
+    <monster name="Beholder" x="9" y="-7" z="9" spawntime="60"/>
+    <monster name="Beholder" x="-12" y="-2" z="9" spawntime="60"/>
+    <monster name="Elder Beholder" x="-7" y="-2" z="9" spawntime="60"/>
+    <monster name="Elder Beholder" x="9" y="0" z="9" spawntime="60"/>
+    <monster name="Beholder" x="2" y="1" z="9" spawntime="60"/>
+    <monster name="Elder Beholder" x="3" y="6" z="9" spawntime="60"/>
+    <monster name="Beholder" x="7" y="10" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="1159" centery="1089" centerz="9" radius="1">
     <monster name="Worker Golem" x="-1" y="0" z="9" spawntime="60"/>
@@ -18331,7 +18331,7 @@
     <monster name="Dragon Lord" x="-3" y="5" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="2093" centery="1938" centerz="9" radius="5">
-    <monster name="bonelord" x="-1" y="1" z="9" spawntime="60"/>
+    <monster name="Beholder" x="-1" y="1" z="9" spawntime="60"/>
     <monster name="Ghoul" x="0" y="3" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="2103" centery="1939" centerz="9" radius="5">
@@ -19537,7 +19537,7 @@
     <monster name="Dragon" x="-1" y="1" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="2133" centery="2334" centerz="9" radius="7">
-    <monster name="bonebeast" x="7" y="0" z="9" spawntime="60"/>
+    <monster name="bone beast" x="7" y="0" z="9" spawntime="60"/>
     <monster name="Necromancer" x="-5" y="4" z="9" spawntime="60"/>
   </spawn>
   <spawn centerx="2154" centery="2334" centerz="9" radius="7">
@@ -21182,7 +21182,7 @@
   </spawn>
   <spawn centerx="2891" centery="1344" centerz="10" radius="8">
     <monster name="Black Knight" x="6" y="-3" z="10" spawntime="60"/>
-    <monster name="bonelord" x="2" y="-1" z="10" spawntime="60"/>
+    <monster name="Beholder" x="2" y="-1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2716" centery="1347" centerz="10" radius="10">
     <monster name="Hero" x="0" y="-9" z="10" spawntime="60"/>
@@ -21190,7 +21190,7 @@
   </spawn>
   <spawn centerx="2859" centery="1354" centerz="10" radius="8">
     <monster name="Black Knight" x="0" y="-7" z="10" spawntime="60"/>
-    <monster name="bonelord" x="-2" y="-6" z="10" spawntime="60"/>
+    <monster name="Beholder" x="-2" y="-6" z="10" spawntime="60"/>
     <monster name="Black Knight" x="2" y="-1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2826" centery="1355" centerz="10" radius="8">
@@ -21216,7 +21216,7 @@
   </spawn>
   <spawn centerx="2890" centery="1360" centerz="10" radius="8">
     <monster name="Black Knight" x="-2" y="-1" z="10" spawntime="60"/>
-    <monster name="bonelord" x="3" y="0" z="10" spawntime="60"/>
+    <monster name="Beholder" x="3" y="0" z="10" spawntime="60"/>
     <monster name="Black Knight" x="3" y="5" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2869" centery="1364" centerz="10" radius="8">
@@ -21233,7 +21233,7 @@
   </spawn>
   <spawn centerx="2844" centery="1368" centerz="10" radius="8">
     <monster name="Black Knight" x="-4" y="-8" z="10" spawntime="60"/>
-    <monster name="bonelord" x="-1" y="-7" z="10" spawntime="60"/>
+    <monster name="Beholder" x="-1" y="-7" z="10" spawntime="60"/>
     <monster name="Black Knight" x="8" y="3" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="1945" centery="1371" centerz="10" radius="30">
@@ -21254,7 +21254,7 @@
     <monster name="Hero" x="4" y="2" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2820" centery="1372" centerz="10" radius="8">
-    <monster name="bonelord" x="-3" y="0" z="10" spawntime="60"/>
+    <monster name="Beholder" x="-3" y="0" z="10" spawntime="60"/>
     <monster name="Black Knight" x="-5" y="1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2875" centery="1372" centerz="10" radius="8">
@@ -21296,7 +21296,7 @@
     <monster name="Hero" x="4" y="6" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2853" centery="1385" centerz="10" radius="8">
-    <monster name="bonelord" x="-2" y="1" z="10" spawntime="60"/>
+    <monster name="Beholder" x="-2" y="1" z="10" spawntime="60"/>
     <monster name="Black Knight" x="1" y="1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2718" centery="1396" centerz="10" radius="10">
@@ -22623,8 +22623,8 @@
     <monster name="Dragon Lord" x="-4" y="29" z="10" spawntime="180"/>
   </spawn>
   <spawn centerx="2018" centery="1946" centerz="10" radius="5">
-    <monster name="bonelord" x="-3" y="0" z="10" spawntime="60"/>
-    <monster name="bonelord" x="3" y="0" z="10" spawntime="60"/>
+    <monster name="Beholder" x="-3" y="0" z="10" spawntime="60"/>
+    <monster name="Beholder" x="3" y="0" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2038" centery="1946" centerz="10" radius="5">
     <monster name="Vampire" x="-3" y="-1" z="10" spawntime="60"/>
@@ -22700,7 +22700,7 @@
     <monster name="Cultist Master" x="1" y="1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2007" centery="1971" centerz="10" radius="5">
-    <monster name="bonelord" x="1" y="-1" z="10" spawntime="60"/>
+    <monster name="Beholder" x="1" y="-1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2510" centery="1971" centerz="10" radius="5">
     <monster name="Cultist Warden" x="2" y="0" z="10" spawntime="60"/>
@@ -22811,8 +22811,8 @@
     <monster name="Fire Elemental" x="4" y="-4" z="10" spawntime="60"/>
     <monster name="Fire Elemental" x="-3" y="7" z="10" spawntime="60"/>
     <monster name="Fire Elemental" x="4" y="7" z="10" spawntime="60"/>
-    <monster name="bonelord" x="-4" y="8" z="10" spawntime="60"/>
-    <monster name="bonelord" x="6" y="8" z="10" spawntime="60"/>
+    <monster name="Beholder" x="-4" y="8" z="10" spawntime="60"/>
+    <monster name="Beholder" x="6" y="8" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="3384" centery="1983" centerz="10" radius="5">
     <monster name="Skeleton" x="2" y="-2" z="10" spawntime="120"/>
@@ -24148,9 +24148,9 @@
     <monster name="Demon" x="-2" y="20" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2108" centery="2325" centerz="10" radius="7">
-    <monster name="bonebeast" x="3" y="-3" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="-3" y="-1" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="3" y="-1" z="10" spawntime="60"/>
+    <monster name="bone beast" x="3" y="-3" z="10" spawntime="60"/>
+    <monster name="bone beast" x="-3" y="-1" z="10" spawntime="60"/>
+    <monster name="bone beast" x="3" y="-1" z="10" spawntime="60"/>
     <monster name="Lich" x="4" y="-1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="1353" centery="2328" centerz="10" radius="10">
@@ -24187,25 +24187,25 @@
   </spawn>
   <spawn centerx="2136" centery="2338" centerz="10" radius="7">
     <monster name="Lich" x="-1" y="-2" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="0" y="-2" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="-2" y="-1" z="10" spawntime="60"/>
+    <monster name="bone beast" x="0" y="-2" z="10" spawntime="60"/>
+    <monster name="bone beast" x="-2" y="-1" z="10" spawntime="60"/>
     <monster name="Lich" x="-2" y="2" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2125" centery="2340" centerz="10" radius="7">
-    <monster name="bonebeast" x="-3" y="-2" z="10" spawntime="60"/>
+    <monster name="bone beast" x="-3" y="-2" z="10" spawntime="60"/>
     <monster name="Lich" x="-2" y="0" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="-4" y="1" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="-2" y="5" z="10" spawntime="60"/>
+    <monster name="bone beast" x="-4" y="1" z="10" spawntime="60"/>
+    <monster name="bone beast" x="-2" y="5" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2146" centery="2340" centerz="10" radius="7">
-    <monster name="bonebeast" x="1" y="-6" z="10" spawntime="60"/>
+    <monster name="bone beast" x="1" y="-6" z="10" spawntime="60"/>
     <monster name="Lich" x="2" y="-2" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="4" y="1" z="10" spawntime="60"/>
+    <monster name="bone beast" x="4" y="1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2141" centery="2355" centerz="10" radius="7">
-    <monster name="bonebeast" x="0" y="-5" z="10" spawntime="60"/>
+    <monster name="bone beast" x="0" y="-5" z="10" spawntime="60"/>
     <monster name="Lich" x="0" y="2" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="-1" y="5" z="10" spawntime="60"/>
+    <monster name="bone beast" x="-1" y="5" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2541" centery="2359" centerz="10" radius="30">
     <monster name="Quara Pincher" x="-16" y="-26" z="10" spawntime="10"/>
@@ -24284,10 +24284,10 @@
     <monster name="Quara Pincher" x="-16" y="30" z="10" spawntime="10"/>
   </spawn>
   <spawn centerx="2139" centery="2372" centerz="10" radius="7">
-    <monster name="bonebeast" x="3" y="-6" z="10" spawntime="60"/>
+    <monster name="bone beast" x="3" y="-6" z="10" spawntime="60"/>
     <monster name="Lich" x="3" y="-1" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="-3" y="1" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="5" y="1" z="10" spawntime="60"/>
+    <monster name="bone beast" x="-3" y="1" z="10" spawntime="60"/>
+    <monster name="bone beast" x="5" y="1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2093" centery="2373" centerz="10" radius="7">
     <monster name="Demon" x="-2" y="-5" z="10" spawntime="60"/>
@@ -24461,8 +24461,8 @@
     <monster name="Ancient Scarab" x="1" y="2" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2296" centery="2481" centerz="10" radius="10">
-    <monster name="bonebeast" x="-1" y="8" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="0" y="9" z="10" spawntime="60"/>
+    <monster name="bone beast" x="-1" y="8" z="10" spawntime="60"/>
+    <monster name="bone beast" x="0" y="9" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2265" centery="2484" centerz="10" radius="10">
     <monster name="Vampire" x="2" y="0" z="10" spawntime="60"/>
@@ -24511,11 +24511,11 @@
   </spawn>
   <spawn centerx="2289" centery="2511" centerz="10" radius="10">
     <monster name="Necromancer" x="-4" y="-8" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="6" y="-6" z="10" spawntime="60"/>
+    <monster name="bone beast" x="6" y="-6" z="10" spawntime="60"/>
     <monster name="Crypt shambler" x="-4" y="2" z="10" spawntime="60"/>
     <monster name="Crypt shambler" x="8" y="2" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="-4" y="9" z="10" spawntime="60"/>
-    <monster name="bonebeast" x="6" y="9" z="10" spawntime="60"/>
+    <monster name="bone beast" x="-4" y="9" z="10" spawntime="60"/>
+    <monster name="bone beast" x="6" y="9" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2309" centery="2511" centerz="10" radius="10">
     <monster name="Necromancer" x="-8" y="-7" z="10" spawntime="60"/>
@@ -25977,11 +25977,11 @@
     <monster name="Hero" x="7" y="-1" z="11" spawntime="60"/>
     <monster name="Hero" x="8" y="-1" z="11" spawntime="60"/>
     <monster name="Fire Elemental" x="-3" y="9" z="11" spawntime="60"/>
-    <monster name="elder bonelord" x="3" y="9" z="11" spawntime="60"/>
-    <monster name="elder bonelord" x="-4" y="12" z="11" spawntime="60"/>
-    <monster name="elder bonelord" x="-5" y="13" z="11" spawntime="60"/>
+    <monster name="Elder Beholder" x="3" y="9" z="11" spawntime="60"/>
+    <monster name="Elder Beholder" x="-4" y="12" z="11" spawntime="60"/>
+    <monster name="Elder Beholder" x="-5" y="13" z="11" spawntime="60"/>
     <monster name="Fire Elemental" x="1" y="14" z="11" spawntime="60"/>
-    <monster name="elder bonelord" x="2" y="14" z="11" spawntime="60"/>
+    <monster name="Elder Beholder" x="2" y="14" z="11" spawntime="60"/>
     <monster name="Fire Elemental" x="-2" y="19" z="11" spawntime="60"/>
     <monster name="Fire Elemental" x="1" y="20" z="11" spawntime="60"/>
     <monster name="Fire Elemental" x="-9" y="21" z="11" spawntime="60"/>
@@ -27280,15 +27280,15 @@
     <monster name="Necromancer" x="-19" y="16" z="12" spawntime="10"/>
   </spawn>
   <spawn centerx="2263" centery="1700" centerz="12" radius="7">
-    <monster name="bonelord" x="1" y="-7" z="12" spawntime="60"/>
+    <monster name="Beholder" x="1" y="-7" z="12" spawntime="60"/>
     <monster name="Black Knight" x="0" y="1" z="12" spawntime="60"/>
-    <monster name="bonelord" x="-5" y="2" z="12" spawntime="60"/>
-    <monster name="bonelord" x="6" y="2" z="12" spawntime="60"/>
+    <monster name="Beholder" x="-5" y="2" z="12" spawntime="60"/>
+    <monster name="Beholder" x="6" y="2" z="12" spawntime="60"/>
   </spawn>
   <spawn centerx="2264" centery="1727" centerz="12" radius="7">
-    <monster name="bonelord" x="0" y="-5" z="12" spawntime="60"/>
-    <monster name="bonelord" x="-5" y="-4" z="12" spawntime="60"/>
-    <monster name="bonelord" x="6" y="-4" z="12" spawntime="60"/>
+    <monster name="Beholder" x="0" y="-5" z="12" spawntime="60"/>
+    <monster name="Beholder" x="-5" y="-4" z="12" spawntime="60"/>
+    <monster name="Beholder" x="6" y="-4" z="12" spawntime="60"/>
   </spawn>
   <spawn centerx="2264" centery="1739" centerz="12" radius="3">
     <monster name="Demon Skeleton" x="-3" y="-1" z="12" spawntime="60"/>
@@ -27495,7 +27495,7 @@
     <monster name="Cave Rat" x="-1" y="-1" z="12" spawntime="60"/>
   </spawn>
   <spawn centerx="1452" centery="1929" centerz="12" radius="1">
-    <monster name="elder bonelord" x="0" y="-1" z="12" spawntime="60"/>
+    <monster name="Elder Beholder" x="0" y="-1" z="12" spawntime="60"/>
     <monster name="Cave Rat" x="1" y="-1" z="12" spawntime="60"/>
     <monster name="Cave Rat" x="-1" y="1" z="12" spawntime="60"/>
   </spawn>
@@ -27587,21 +27587,21 @@
     <monster name="Dragon Lord" x="-10" y="22" z="12" spawntime="60"/>
   </spawn>
   <spawn centerx="1258" centery="2077" centerz="12" radius="30">
-    <monster name="elder bonelord" x="-16" y="-14" z="12" spawntime="60"/>
-    <monster name="bonelord" x="-11" y="-13" z="12" spawntime="60"/>
-    <monster name="elder bonelord" x="-13" y="-12" z="12" spawntime="60"/>
-    <monster name="bonelord" x="-15" y="-11" z="12" spawntime="60"/>
-    <monster name="bonelord" x="-29" y="-4" z="12" spawntime="60"/>
-    <monster name="elder bonelord" x="-24" y="-2" z="12" spawntime="60"/>
-    <monster name="elder bonelord" x="-2" y="-2" z="12" spawntime="60"/>
+    <monster name="Elder Beholder" x="-16" y="-14" z="12" spawntime="60"/>
+    <monster name="Beholder" x="-11" y="-13" z="12" spawntime="60"/>
+    <monster name="Elder Beholder" x="-13" y="-12" z="12" spawntime="60"/>
+    <monster name="Beholder" x="-15" y="-11" z="12" spawntime="60"/>
+    <monster name="Beholder" x="-29" y="-4" z="12" spawntime="60"/>
+    <monster name="Elder Beholder" x="-24" y="-2" z="12" spawntime="60"/>
+    <monster name="Elder Beholder" x="-2" y="-2" z="12" spawntime="60"/>
     <monster name="Braindeath" x="-10" y="-1" z="12" spawntime="60"/>
-    <monster name="bonelord" x="-1" y="-1" z="12" spawntime="60"/>
-    <monster name="bonelord" x="-29" y="0" z="12" spawntime="60"/>
-    <monster name="elder bonelord" x="-14" y="1" z="12" spawntime="60"/>
-    <monster name="bonelord" x="-13" y="1" z="12" spawntime="60"/>
-    <monster name="bonelord" x="-14" y="9" z="12" spawntime="60"/>
-    <monster name="elder bonelord" x="-11" y="9" z="12" spawntime="60"/>
-    <monster name="bonelord" x="-17" y="10" z="12" spawntime="60"/>
+    <monster name="Beholder" x="-1" y="-1" z="12" spawntime="60"/>
+    <monster name="Beholder" x="-29" y="0" z="12" spawntime="60"/>
+    <monster name="Elder Beholder" x="-14" y="1" z="12" spawntime="60"/>
+    <monster name="Beholder" x="-13" y="1" z="12" spawntime="60"/>
+    <monster name="Beholder" x="-14" y="9" z="12" spawntime="60"/>
+    <monster name="Elder Beholder" x="-11" y="9" z="12" spawntime="60"/>
+    <monster name="Beholder" x="-17" y="10" z="12" spawntime="60"/>
   </spawn>
   <spawn centerx="2162" centery="2103" centerz="12" radius="5">
     <monster name="Nightmare" x="-2" y="5" z="12" spawntime="60"/>
