@@ -2,80 +2,80 @@
 <movements>
 
 	<!-- SPECIAL QUEST TILES -->
-	<movevent event="StepIn" actionid="7400" script="game/dungeons.lua"/>		
-	<movevent event="StepIn" actionid="7401" script="game/dungeons.lua"/>		
+	<movevent type="StepIn" actionid="7400" event="script" value="game/dungeons.lua"/>		
+	<movevent type="StepIn" actionid="7401" event="script" value="game/dungeons.lua"/>		
 
 	<!-- FIELD DAMAGE -->
-	<movevent event="StepIn" actionid="8300" script="game/field_damage.lua"/>	
-	<movevent event="StepIn" actionid="8301" script="game/field_damage.lua"/>	
-	<movevent event="StepIn" actionid="8302" script="game/field_damage.lua"/>	
-	<movevent event="StepIn" actionid="8303" script="game/field_damage.lua"/>	
-	<movevent event="StepIn" actionid="8304" script="game/field_damage.lua"/>	
-	<movevent event="StepIn" actionid="8305" script="game/field_damage.lua"/>
+	<movevent type="StepIn" actionid="8300" event="script" value="game/field_damage.lua"/>	
+	<movevent type="StepIn" actionid="8301" event="script" value="game/field_damage.lua"/>	
+	<movevent type="StepIn" actionid="8302" event="script" value="game/field_damage.lua"/>	
+	<movevent type="StepIn" actionid="8303" event="script" value="game/field_damage.lua"/>	
+	<movevent type="StepIn" actionid="8304" event="script" value="game/field_damage.lua"/>	
+	<movevent type="StepIn" actionid="8305" event="script" value="game/field_damage.lua"/>
 
 	<!-- INQUISITION QUEST -->
 	
-	<movevent event="StepIn" actionid="4033" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" actionid="4034" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" actionid="4035" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" actionid="4036" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" actionid="4037" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" uniqueid="1017" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" uniqueid="1019" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" uniqueid="1021" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" uniqueid="1023" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" uniqueid="1025" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" uniqueid="1027" script="game/inquisition_hall.lua"/>		
-	<movevent event="StepIn" uniqueid="1034" script="game/inquisition_hall.lua"/>
+	<movevent type="StepIn" actionid="4033" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" actionid="4034" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" actionid="4035" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" actionid="4036" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" actionid="4037" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" uniqueid="1017" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" uniqueid="1019" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" uniqueid="1021" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" uniqueid="1023" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" uniqueid="1025" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" uniqueid="1027" event="script" value="game/inquisition_hall.lua"/>		
+	<movevent type="StepIn" uniqueid="1034" event="script" value="game/inquisition_hall.lua"/>
 
 	<!-- MEDUSA TP -->	
-	<movevent event="StepIn" actionid="4040" script="game/medusa_tp.lua"/>
+	<movevent type="StepIn" actionid="4040" event="script" value="game/medusa_tp.lua"/>
 	
 	
 	<!-- POI QUEST -->
-	<movevent event="StepIn" actionid="250" script="game/poi.quest/tps.lua"/>
-	<movevent event="StepIn" actionid="251" script="game/poi.quest/tps.lua"/>
-	<movevent event="StepIn" actionid="252" script="game/poi.quest/tps.lua"/>
-	<movevent event="StepIn" actionid="253" script="game/poi.quest/tps.lua"/>
-	<movevent event="StepIn" actionid="254" script="game/poi.quest/tps.lua"/>
-	<movevent event="StepIn" actionid="255" script="game/poi.quest/tps.lua"/>
-	<movevent event="StepIn" actionid="256" script="game/poi.quest/tps.lua"/>
-	<movevent event="StepIn" actionid="257" script="game/poi.quest/tps.lua"/>
-	<movevent event="StepIn" actionid="260" script="game/poi.quest/tps.lua"/>
-	<movevent event="StepIn" actionid="4016" script="game/poi.quest/tps.lua"/>	
-	<movevent event="StepIn" actionid="4017" script="game/poi.quest/tps.lua"/>
+	<movevent type="StepIn" actionid="250" event="script" value="game/poi.quest/tps.lua"/>
+	<movevent type="StepIn" actionid="251" event="script" value="game/poi.quest/tps.lua"/>
+	<movevent type="StepIn" actionid="252" event="script" value="game/poi.quest/tps.lua"/>
+	<movevent type="StepIn" actionid="253" event="script" value="game/poi.quest/tps.lua"/>
+	<movevent type="StepIn" actionid="254" event="script" value="game/poi.quest/tps.lua"/>
+	<movevent type="StepIn" actionid="255" event="script" value="game/poi.quest/tps.lua"/>
+	<movevent type="StepIn" actionid="256" event="script" value="game/poi.quest/tps.lua"/>
+	<movevent type="StepIn" actionid="257" event="script" value="game/poi.quest/tps.lua"/>
+	<movevent type="StepIn" actionid="260" event="script" value="game/poi.quest/tps.lua"/>
+	<movevent type="StepIn" actionid="4016" event="script" value="game/poi.quest/tps.lua"/>	
+	<movevent type="StepIn" actionid="4017" event="script" value="game/poi.quest/tps.lua"/>
 	
-	<movevent event="StepIn" actionid="4018" script="game/poi.quest/tronos.lua"/>	
-	<movevent event="StepIn" actionid="4019" script="game/poi.quest/tronos.lua"/>	
-	<movevent event="StepIn" actionid="4020" script="game/poi.quest/tronos.lua"/>	
-	<movevent event="StepIn" actionid="4021" script="game/poi.quest/tronos.lua"/>	
-	<movevent event="StepIn" actionid="4022" script="game/poi.quest/tronos.lua"/>	
-	<movevent event="StepIn" actionid="4023" script="game/poi.quest/tronos.lua"/>
+	<movevent type="StepIn" actionid="4018" event="script" value="game/poi.quest/tronos.lua"/>	
+	<movevent type="StepIn" actionid="4019" event="script" value="game/poi.quest/tronos.lua"/>	
+	<movevent type="StepIn" actionid="4020" event="script" value="game/poi.quest/tronos.lua"/>	
+	<movevent type="StepIn" actionid="4021" event="script" value="game/poi.quest/tronos.lua"/>	
+	<movevent type="StepIn" actionid="4022" event="script" value="game/poi.quest/tronos.lua"/>	
+	<movevent type="StepIn" actionid="4023" event="script" value="game/poi.quest/tronos.lua"/>
 	
-	<movevent event="StepIn" actionid="4024" script="game/poi.quest/verification.lua"/>
-	<movevent event="StepIn" actionid="4025" script="game/poi.quest/verification.lua"/>
-	<movevent event="StepIn" actionid="4026" script="game/poi.quest/verification.lua"/>
-	<movevent event="StepIn" actionid="4027" script="game/poi.quest/verification.lua"/>
-	<movevent event="StepIn" actionid="4028" script="game/poi.quest/verification.lua"/>
-	<movevent event="StepIn" actionid="4029" script="game/poi.quest/verification.lua"/>
+	<movevent type="StepIn" actionid="4024" event="script" value="game/poi.quest/verification.lua"/>
+	<movevent type="StepIn" actionid="4025" event="script" value="game/poi.quest/verification.lua"/>
+	<movevent type="StepIn" actionid="4026" event="script" value="game/poi.quest/verification.lua"/>
+	<movevent type="StepIn" actionid="4027" event="script" value="game/poi.quest/verification.lua"/>
+	<movevent type="StepIn" actionid="4028" event="script" value="game/poi.quest/verification.lua"/>
+	<movevent type="StepIn" actionid="4029" event="script" value="game/poi.quest/verification.lua"/>
 	
 	
 	<!-- POI QUEST -->
 	
 	
 	<!-- BANSHEE QUEST -->
-	<movevent event="StepIn" actionid="4002" script="game/banshee.lua"/>
-	<movevent event="StepIn" actionid="4003" script="game/banshee.lua"/>
-	<movevent event="StepIn" actionid="4004" script="game/banshee.lua"/>
-	<movevent event="StepIn" actionid="4005" script="game/banshee.lua"/>
-	<movevent event="StepIn" actionid="4006" script="game/banshee.lua"/>
-	<movevent event="StepIn" actionid="4007" script="game/banshee.lua"/>
-	<movevent event="StepIn" actionid="4008" script="game/banshee.lua"/>
-	<movevent event="StepIn" actionid="4009" script="game/banshee.lua"/>		
+	<movevent type="StepIn" actionid="4002" event="script" value="game/banshee.lua"/>
+	<movevent type="StepIn" actionid="4003" event="script" value="game/banshee.lua"/>
+	<movevent type="StepIn" actionid="4004" event="script" value="game/banshee.lua"/>
+	<movevent type="StepIn" actionid="4005" event="script" value="game/banshee.lua"/>
+	<movevent type="StepIn" actionid="4006" event="script" value="game/banshee.lua"/>
+	<movevent type="StepIn" actionid="4007" event="script" value="game/banshee.lua"/>
+	<movevent type="StepIn" actionid="4008" event="script" value="game/banshee.lua"/>
+	<movevent type="StepIn" actionid="4009" event="script" value="game/banshee.lua"/>		
 	
 	<!-- BANSHEE QUEST -->
 
-	<movevent event="StepIn" itemid="1387" script="game/teleport.lua"/>		
+	<movevent type="StepIn" itemid="1387" event="script" value="game/teleport.lua"/>		
 
 	<!-- Decaying tiles -->
 	<movevent type="StepIn" itemid="293" event="script" value="decay.lua"/>
