@@ -3,61 +3,20 @@
 	<health now="150" max="150"/>
 	<look type="136" head="59" body="86" legs="106" feet="115" addons="0"/>
 
-  <interaction talkradius="3" range="3" idletime="30" idleinterval="300" defaultpublic="0">
-    <include file="postman.xml"/>
-    
-    <interact keywords="hi" focus="1">
-      <keywords>hello</keywords>
-      
-      <response text="Hello. How may I help you |NAME|?"/>
-    </interact>
+	<parameters>
+		<parameter key="module_shop" value="1"/>
+		<parameter key="module_keywords" value="1" />
+       	<parameter key="message_greet" value="Hello. How may I help you |PLAYERNAME|? Ask me for a {trade} if you want to buy something. I can also explain the {mail} system." />
+		<parameter key="keywords" value="mail;letters;explain letters;parcels;explain parcels;label;city" />
+		<parameter key="shop_buyable" value="parcel,2595,14;letter,2597,10;label,2599,1" />
 
-    <interact keywords="bye" focus="0">
-      <keywords>farewell</keywords>
-      
-      <response text="It was a pleasure to help you."/>
-    </interact>
-
-    <interact event="onPlayerLeave" focus="0">
-      <response text="It was a pleasure to help you |NAME|."/>
-    </interact>
-    
-    <interact keywords="name">
-      <response text="My name is |NPCNAME|."/>
-    </interact>
-
-    <interact keywords="tarefa">
-         <response>
-       	 <action name="script"> 
-         <![CDATA[
-		
-		task = Task:new()
-		task:loadById(CAP_ONE.QUENDOR.TRAVELER_IOP)
-		task:setPlayer(cid)
-		task:setNpcName(getNpcName())
-		
-		print("Value:" .. task:getState())
-		
-		if(task:getState() ~= taskStats.COMPLETED and task:checkPlayerRequirements()) then
-			dialog:say("Oh, claro! Mészáros havia me falado sobre você, o bravo matador de dragões, e pediu que lhe desse este premio por você ter o ajudado:",cid)
-			task:doPlayerAddReward()			
-			task:doPlayerAddRewardItems()		
-			task:setCompleted()
-			dialog:say("Ele havia dito que esperava que você gostasse. Deve ter o ajudado em algo muito perigoso, pois é uma generosa recompensa. Bom, se ver-lo por ai mande lembranças. Boa sorte bravo guerreiro!",cid)
-		else
-			dialog:say("Sempre fale com os habitantes das cidades sobre tarefas e missões. Algumas podem dar ótimas recompensas!",cid)
-		end
-		
-        ]]> 
-        
-        </action>
-        </response>
-	</interact>
-
-    <interact keywords="job">
-      <response text="I am working here at the post office. If you have questions about the Royal Tibia Mail System or the depots ask me."/>
-    </interact>
-   
-  </interaction>
+		<parameter key="keyword_reply1" value="With our mail system you can send {letters} and {parcels} to other Tibians. I can either explain how {letters} and {parcels} work orsell them to you if you ask me for a {trade}." />
+		<parameter key="keyword_reply2" value="If you want to buy a letter, ask me for a {trade}. Or do you want me to {explain letters} how letters work?" />
+		<parameter key="keyword_reply3" value="With a letter you can send a message to another Tibian's depot. If you want to send it to 'Ben' in 'Thais', use the letter - sothat a form opens - and write 'Ben' in the first line and 'Erembor' in the second line. Write your message below that." />
+		<parameter key="keyword_reply4" value="If you want to buy a parcel, ask me for a {trade}. Or do you want me to {explain parcels} how parcels work?" />
+		<parameter key="keyword_reply5" value="In a parcel you can send items to another Tibian's depot. Put your items into the parcel and also place a completed {label} withthe name and the {city} of the receiver inside. Then drag your parcel on one of the blue mailboxes here to send it." />
+		<parameter key="keyword_reply6" value="Including a label in your parcel is important. Imagine you want to send it to 'Ben' in 'Erembor'. Use the label - so that a formopens - and write 'Ben' in the first line and 'Erembor' in the second line. Check the spelling and put it in your parcel!" />
+		<parameter key="keyword_reply7" value="The depots you can send parcels or letters to are in the following cities: Erembor." />
+	</parameters>
   
 </npc>

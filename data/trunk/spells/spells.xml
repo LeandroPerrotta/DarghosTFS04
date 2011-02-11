@@ -124,11 +124,7 @@
 	<conjure name="Poison Field" words="adevo grav pox" lvl="14" mana="200" soul="1" aggressive="0" reagentId="2260" conjureId="2285" conjureCount="3" function="conjureRune">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/> 
-	</conjure>
-	<conjure name="Food" words="exevo pan" lvl="14" mana="120" soul="1" selftarget="1" function="conjureFood">
-		<vocation name="Druid"/>    <vocation name="Elder Druid"/> 
-		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/> 
-	</conjure>
+	</conjure>>
 	<conjure name="Intense Healing Rune" words="adura gran" lvl="15" mana="120" soul="2" reagentId="2260" conjureId="2265" conjureCount="1" function="conjureRune">
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/> 
 	</conjure>
@@ -228,6 +224,10 @@
 	</conjure>
 
 	<!-- Instant Spells -->
+	<instant name="Food" words="exevo pan" lvl="14" mana="120" soul="1" aggressive="0" selftarget="1" exhaustion="1000" event="script" value="support/conjure food.lua">
+		<vocation name="Druid"/>    <vocation name="Elder Druid"/> 
+		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/> 
+	</instant>
 	<instant name="Light" words="utevo lux" lvl="8" mana="20" selftarget="1" aggressive="0" script="support/light.lua">
 	</instant>
 	<instant name="Find Person" words="exiva" lvl="8" mana="20" params="1" function="searchPlayer">
