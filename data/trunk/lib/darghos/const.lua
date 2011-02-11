@@ -2,6 +2,8 @@
  * Contem todas constantes referentes ao Darghos, podem estar divididas por Arrays!
 ]]--
 
+	ACCESS_PLAYER				= 0
+	ACCESS_TUTOR				= 1
 	ACCESS_GAME_MASTER			= 3
 	ACCESS_COMMUNITY_MANAGER	= 4
 	ACCESS_ADMIN				= 5
