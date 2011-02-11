@@ -30,7 +30,7 @@ function onSay(cid, words, param, channel)
 
 	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, (#onlineList) .. " player" .. (#onlineList > 1 and "s" or "") .. " online:")
 	
-	local str, i = "", 1;
+	local str, i, pos = "", 1, 1;
 	
 	for _, info in ipairs(onlineList) do
 	
@@ -45,19 +45,29 @@ function onSay(cid, words, param, channel)
 		end
 	
 		if(canAdd) then
-			str = str .. info.name .. " [" .. info.level .. "]"	
-		
+			if(pos < 20) then
+				str = str .. info.name .. " [" .. info.level .. "]"
+				pos = pos + 1
+			else
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, str)
+				
+				str = info.name .. " [" .. info.level .. "]"
+				pos = 1
+			end		
+			
 			if(i == #onlineList) then
 				str = str .. "."
 			else
 				str = str .. ", "
-			end
-		end
+			end				
+		end		
 		
 		i = i + 1
 	end
-	
-	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, str)
 
+	if(pos > 1) then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, str)
+	end
+	
 	return true
 end
