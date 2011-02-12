@@ -21,14 +21,14 @@ function onStepIn(cid, item, position, fromPosition)
 			return TRUE
 		end
 		
-		print("Church portal")
+		--print("Church portal")
 		
 		destPos = getThingPos(uid.CHURCH_PORTAL_FAIL)
 		
 		doTeleportThing(cid, destPos)
 		doSendMagicEffect(destPos, CONST_ME_MAGIC_BLUE)	
 		
-		doPlayerSendCancel(cid, "Você não pode passar por aqui.")
+		doPlayerSendCancel(cid, "Vocï¿½ nï¿½o pode passar por aqui.")
 	end
 	
 	return TRUE

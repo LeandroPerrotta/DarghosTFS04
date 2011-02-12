@@ -81,6 +81,10 @@
 			<action name="script">
 			<![CDATA[
 			doPlayerSetTown(cid, 1)
+			
+			if(darghos_distro == DISTROS_TFS) then
+					doPlayerSetGroupId(cid, GROUP_PLAYER)
+			end			
 			]]>
 			</action>			
 		</response>

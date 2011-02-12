@@ -643,7 +643,7 @@ function Task:parseVocationItems(node, container)
 			if(value.id ~= nil) then
 				internalContainer = doCreateItemEx(value.id, 1)
 			else
-				print("[WARNING] Task:parseVocationItems :: Internal id to container not found")
+				--print("[WARNING] Task:parseVocationItems :: Internal id to container not found")
 			end
 		
 			self:parseInternalContainer(value, internalContainer)

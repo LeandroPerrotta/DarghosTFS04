@@ -216,7 +216,7 @@ function Dungeons.onLogin(cid)
 		
 		doTeleportThing(cid, HELL_POS)
 		
-		print("[Dungeons.onLogin] " .. getPlayerName(cid) .. " dungeon info cleaned.")
+		--print("[Dungeons.onLogin] " .. getPlayerName(cid) .. " dungeon info cleaned.")
 	end
 end
 
@@ -236,7 +236,7 @@ function Dungeons.updateEntranceDescription(dungeonId)
 	
 	-- Atualizamos a descri��o da porta
 	local dungeonInfo = dungeonList[dungeonId]
-	print("jogadores na quest: " .. Dungeons.getPlayersIn(dungeonId) .. "/" .. dungeonInfo.maxPlayers .. ", uid: " .. dungeonId)
+	--print("jogadores na quest: " .. Dungeons.getPlayersIn(dungeonId) .. "/" .. dungeonInfo.maxPlayers .. ", uid: " .. dungeonId)
 	--doSetItemSpecialDescription(dungeonId, "[Esta dungeon possui " .. Dungeons.getPlayersIn(dungeonId) .. " jogadores de um maximo de " .. dungeonInfo.maxPlayers .. ".]")
 end
 

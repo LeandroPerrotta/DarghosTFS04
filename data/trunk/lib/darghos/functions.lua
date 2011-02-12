@@ -127,7 +127,7 @@ function addShieldTrie(cid, target)
 	local cTarget = getCreatureTarget(cid)
 	
 	if(cTarget == FALSE) then
-		print("Alvo não encontrado, limpando... ")
+		--print("Alvo não encontrado, limpando... ")
 		setPlayerStorageValue(cid, sid.TRAINING_SHIELD, 0)
 		return
 	else 

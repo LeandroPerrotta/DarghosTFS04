@@ -27,7 +27,6 @@
 					local npcname = getNpcName()
 					
 					if(_state.inbackpacks == 1) then
-						print("Here i am")
 					
 						local container = doCreateItemEx(1988, 1)
 						

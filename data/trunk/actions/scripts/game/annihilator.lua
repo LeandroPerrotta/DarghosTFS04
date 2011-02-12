@@ -38,7 +38,7 @@ local function loadValues(actionid)
 		table.insert(demons, uid.ANIHI_ARACURA_DEMON6)		
 		table.insert(demons, uid.ANIHI_ARACURA_DEMON7)		
 	else
-		debugPrint("Unknown actionid type.")
+		--debugPrint("Unknown actionid type.")
 	end
 
 end
@@ -87,7 +87,7 @@ function canTeleportPlayers(cid)
 			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "Its nescessary four players to own this quest.")
 		else
 			doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, "For an unknown reason can not be make this action. An log has been reported to admin.")
-			debugPrint("Unknown error code for checking players.")
+			--debugPrint("Unknown error code for checking players.")
 		end
 		
 		return false
@@ -134,7 +134,7 @@ end
 function onUse(cid, item, frompos, item2, topos)
 
 	if item.itemid ~= 1945 and item.itemid ~= 1946 then
-		debugPrint("Wrong item id?")
+		--debugPrint("Wrong item id?")
 		return TRUE
 	end
 

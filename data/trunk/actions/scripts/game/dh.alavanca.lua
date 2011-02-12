@@ -17,7 +17,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		_teleport_pos = getThingPos(uid.AARAGON_DH_TELEPORT)
 		_teleport_dest = getThingPos(uid.AARAGON_DH_TELEPORT_DEST)
 	else
-		debugPrint("Unknown actionid type.")
+		--debugPrint("Unknown actionid type.")
 		return
 	end
 	
@@ -27,22 +27,22 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 	local stone = getThingFromPos(_stone)
 	local teleport = getThingFromPos(_teleport_pos)
 	
-	print(table.show(stone))
-	print(table.show(teleport))
+	--print(table.show(stone))
+	--print(table.show(teleport))
 	
 	if (item.itemid == 1945) then
 		if(stone.itemid == STONE_ID) then
 			doRemoveItem(stone.uid)
 			doCreateTeleport(TELEPORT_ID, _teleport_dest, _teleport_pos)
 		else
-			debugPrint("The stone can not found to be removed.")
+			--debugPrint("The stone can not found to be removed.")
 		end
 	elseif (item.itemid == 1946) then
 		if(stone.itemid == 0 and teleport.itemid == TELEPORT_ID) then
 			doCreateItem(STONE_ID, 1, _stone)
 			doRemoveItem(teleport.uid)
 		else
-			debugPrint("The stone already exists or teleport can not found to be removed.")
+			--debugPrint("The stone already exists or teleport can not found to be removed.")
 		end
 	end	
 end

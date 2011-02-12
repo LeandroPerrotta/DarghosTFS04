@@ -29,7 +29,7 @@
 
 	
 	<!-- Quests -->
-	<action uniqueid="2001-2085" script="game/quests/chest.lua"/>
+	<action uniqueid="2001-2088" script="game/quests/chest.lua"/>
 
 	<!-- Quests -->
 	<!--  

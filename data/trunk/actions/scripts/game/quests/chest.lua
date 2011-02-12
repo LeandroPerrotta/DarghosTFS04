@@ -489,9 +489,6 @@ local quests =
 
 function useQuestChest(cid, quest, questActionId)
 
-	print("RewardId: " .. getItemNameById(quest.rewardId))
-	doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You have found a " .. getItemNameById(quest.rewardId) .. ".")
-
 	local queststatus = getPlayerStorageValue(cid, quest.storageId)
 	if queststatus == -1 then
 	
@@ -505,7 +502,7 @@ function useQuestChest(cid, quest, questActionId)
 			-- Verificamos se o container de reward items est� em ordem!!
 			if(quest.rewardContainerItems == nil) then
 			
-				debugPrint("QuestChest: Reward container items not found.")
+				--debugPrint("QuestChest: Reward container items not found.")
 				return
 			end		
 			
@@ -516,7 +513,7 @@ function useQuestChest(cid, quest, questActionId)
 			
 				if(containerItems[key].itemid == nil) then
 				
-					debugPrint("QuestChest: container item [" .. value.itemid .. "] not have proprieties found.")
+					--debugPrint("QuestChest: container item [" .. value.itemid .. "] not have proprieties found.")
 					return				
 				end
 					
