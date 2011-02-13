@@ -16,6 +16,9 @@ local function pushBack(cid, position, fromPosition, displayMessage)
 end
 
 function onStepIn(cid, item, position, fromPosition)
+
+	movementTileOnStepIn(cid, item, position, fromPosition)
+
 	if(not increasingItems[item.itemid]) then
 		return false
 	end
@@ -129,6 +132,9 @@ function onStepIn(cid, item, position, fromPosition)
 end
 
 function onStepOut(cid, item, position, fromPosition)
+
+	movementTileOnStepOut(cid, item, position, fromPosition)
+
 	if(not decreasingItems[item.itemid]) then
 		return false
 	end

@@ -1,3 +1,32 @@
+function movementTileOnStepIn(cid, item, position, fromPosition)
+
+	-- special depot tile (non walkover)
+	if(item.itemid == 11062) then
+		doUpdateCreatureImpassable(cid)
+	end
+end
+
+function movementTileOnStepOut(cid, item, position, fromPosition)
+
+	-- special depot tile (non walkover)
+	if(item.itemid == 11063) then
+		doUpdateCreatureImpassable(cid)
+	end
+end
+
+function doUpdateCreatureImpassable(cid)
+	
+	if(getPlayerTown(cid) ~= towns.ISLAND_OF_PEACE) then
+		return
+	end
+	
+	if(getPlayerGroupId(cid) == GROUP_PLAYER_NON_PVP) then
+		doPlayerSetGroupId(cid, GROUP_PLAYER)
+	elseif(getPlayerGroupId(cid) == GROUP_PLAYER) then
+		doPlayerSetGroupId(cid, GROUP_PLAYER_NON_PVP)
+	end
+end
+
 function getLuaFunctions()-- by Mock
 	local str = ""
 	for f,k in pairs(_G) do
