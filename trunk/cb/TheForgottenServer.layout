@@ -1,40 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="All" />
-	<File name="../beds.cpp" open="1" top="0" tabpos="9">
+	<File name="../beds.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="2368" topLine="78" />
 	</File>
-	<File name="../chat.cpp" open="1" top="0" tabpos="6">
-		<Cursor position="34053" topLine="1063" />
+	<File name="../chat.cpp" open="1" top="0" tabpos="13">
+		<Cursor position="34346" topLine="1065" />
 	</File>
-	<File name="../combat.cpp" open="1" top="0" tabpos="11">
+	<File name="../combat.cpp" open="0" top="0" tabpos="11">
 		<Cursor position="5247" topLine="206" />
 	</File>
 	<File name="../configmanager.cpp" open="1" top="0" tabpos="4">
-		<Cursor position="13203" topLine="201" />
+		<Cursor position="13603" topLine="206" />
 	</File>
-	<File name="../creature.cpp" open="1" top="1" tabpos="12">
-		<Cursor position="5683" topLine="218" />
+	<File name="../creature.cpp" open="1" top="0" tabpos="14">
+		<Cursor position="4604" topLine="170" />
 	</File>
-	<File name="../creatureevent.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="35043" topLine="1266" />
+	<File name="../creatureevent.cpp" open="1" top="0" tabpos="15">
+		<Cursor position="32383" topLine="1155" />
 	</File>
 	<File name="../databasemanager.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="37249" topLine="1055" />
 	</File>
-	<File name="../game.cpp" open="1" top="0" tabpos="7">
-		<Cursor position="98647" topLine="3681" />
+	<File name="../exception.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="1308" topLine="30" />
+	</File>
+	<File name="../game.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="163654" topLine="6241" />
+	</File>
+	<File name="../game.h" open="1" top="0" tabpos="11">
+		<Cursor position="2485" topLine="88" />
+	</File>
+	<File name="../globalevent.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="7820" topLine="287" />
 	</File>
 	<File name="../ioguild.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="9495" topLine="290" />
 	</File>
-	<File name="../luascript.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="61665" topLine="2080" />
+	<File name="../luascript.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="39898" topLine="1565" />
 	</File>
-	<File name="../npc.cpp" open="1" top="0" tabpos="8">
+	<File name="../npc.cpp" open="1" top="0" tabpos="5">
 		<Cursor position="54243" topLine="1952" />
 	</File>
-	<File name="../player.cpp" open="1" top="0" tabpos="10">
+	<File name="../otserv.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="6030" topLine="199" />
+	</File>
+	<File name="../player.cpp" open="1" top="0" tabpos="6">
 		<Cursor position="129419" topLine="4907" />
+	</File>
+	<File name="../status.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="1431" topLine="0" />
+	</File>
+	<File name="../status.h" open="1" top="0" tabpos="8">
+		<Cursor position="2162" topLine="64" />
+	</File>
+	<File name="../talkaction.cpp" open="1" top="0" tabpos="12">
+		<Cursor position="22111" topLine="715" />
 	</File>
 </CodeBlocks_layout_file>
