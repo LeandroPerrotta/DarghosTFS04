@@ -1,46 +1,33 @@
-function onSay(cid, words, param)
-
-
-
-	if(getPlayerBless(cid, 0) == TRUE) then
-		first = "Completed"
-	else
-		first = "Non-Completed"
+function onSay(cid, words, param)	
+	local blesses = {
+		{name="First", location="Quendor"},
+		{name="Second", location="Thorn"},
+		{name="Third", location="Aaragon"},
+		{name="Fourth", location="Thaun"},
+		{name="Fifth", location="Salazart"}
+	}
+	
+	local totalBlesses = 0
+	
+	local message = "Here you can see if you have completed the blesses, or no.\n\n"
+	
+	for k,v in pairs(blesses) do
+	
+		if(getPlayerBless(cid, k)) then
+			message = message .. v.name .. " (" .. v.location .. "): Completed\n"
+			totalBlesses = totalBlesses + 1
+		else
+			message = message .. v.name .. " (" .. v.location .. "): n/a\n"
+		end
 	end
 	
-	if(getPlayerBless(cid, 1) == TRUE) then
-		second = "Completed"
-	else
-		second = "Non-Completed"
-	end
+	message = message .. "\nItems drop: "
 	
-	if(getPlayerBless(cid, 2) == TRUE) then
-		third = "Completed"
-	else
-		third = "Non-Completed"
-	end	
-	
-	if(getPlayerBless(cid, 3) == TRUE) then
-		fourth = "Completed"
-	else
-		fourth = "Non-Completed"
-	end	
-	
-	if(getPlayerBless(cid, 4) == TRUE) then
-		fifth = "Completed"
-	else
-		fifth = "Non-Completed"
-	end	
-	
-	if (getPlayerBless(cid, 0) == TRUE) and (getPlayerBless(cid, 1) == TRUE) and (getPlayerBless(cid, 2) == TRUE) and (getPlayerBless(cid, 3) == TRUE) and (getPlayerBless(cid, 4) == TRUE) then
-		aol = "You have all blesses and your item/backpack loss is FULL SECURE!"
+	if (totalBlesses == #blesses) then
+		message = message .. "You have all blesses and your item/backpack loss is FULL SECURE!"
 	else	
-		aol = "You dont have all blesses and your item/back not is secure, and go drop when you die."
+		message = message .. "You dont have all blesses and your item/back not is secure, and go drop when you die."
 	end
 	
-	local message = "Here you can see if you have completed the blesses, or no.\n\nFirst Bless      = "..first.."(Quendor)\n\nSecond Bless      = "..second.."(Thorn)\n\nThird Bless      = "..third.."(Aracura)\n\nFourth Bless      = "..fourth.."(Thaun)\n\nFifth Bless      = "..fifth.."(Salazart)\n\nItem drop:\n"..aol..""
-	
-	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, message)
-
-	
+	doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, message)	
 end
