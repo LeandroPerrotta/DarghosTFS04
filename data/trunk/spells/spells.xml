@@ -273,7 +273,7 @@
 	<instant name="Wrath of Nature" words="exevo gran mas tera" lvl="55" prem="1" exhaustion="2000" mana="770" selftarget="1" script="attack/wrath_of_nature.lua">
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>			
 	</instant>
-	<instant name="Eternal Winter" words="exevo gran mas frigo" lvl="60" prem="1" exhaustion="2000" mana="1200" selftarget="1" prem="1" script="attack/eternal_winter.lua">
+	<instant name="Eternal Winter" words="exevo gran mas frigo" lvl="60" prem="1" exhaustion="2000" mana="1200" selftarget="1" script="attack/eternal_winter.lua">
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>			
 	</instant>
 	<instant name="Hell's Core" words="exevo gran mas flam" lvl="60" exhaustion="2000" mana="1200" selftarget="1" prem="1" script="attack/hells_core.lua">
