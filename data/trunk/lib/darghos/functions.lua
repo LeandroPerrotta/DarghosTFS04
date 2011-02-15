@@ -1,17 +1,26 @@
 function movementTileOnStepIn(cid, item, position, fromPosition)
 
-	-- special depot tile (non walkover)
-	if(item.itemid == 11062) then
-		doUpdateCreatureImpassable(cid)
+	local creature = getTopCreature(position)
+
+	if(item.itemid == 11062 and creature.uid ~= FALSE and isPlayer(creature) and getPlayerTown(cid) == towns.ISLAND_OF_PEACE) then
+		pushBack(cid, position, fromPosition, true)
+		
+		return true
 	end
+
+	return false
 end
 
 function movementTileOnStepOut(cid, item, position, fromPosition)
 
 	-- special depot tile (non walkover)
+	--[[
 	if(item.itemid == 11063) then
 		doUpdateCreatureImpassable(cid)
 	end
+	]]--
+	
+	return false
 end
 
 function doUpdateCreatureImpassable(cid)

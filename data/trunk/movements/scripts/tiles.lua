@@ -17,14 +17,16 @@ end
 
 function onStepIn(cid, item, position, fromPosition)
 
-	movementTileOnStepIn(cid, item, position, fromPosition)
-
 	if(not increasingItems[item.itemid]) then
 		return false
 	end
 
 	if(not isPlayerGhost(cid)) then
 		doTransformItem(item.uid, increasingItems[item.itemid])
+	end
+
+	if(movementTileOnStepIn(cid, item, position, fromPosition)) then
+		return true
 	end
 
 	if(item.actionid >= 194 and item.actionid <= 196) then
@@ -133,14 +135,16 @@ end
 
 function onStepOut(cid, item, position, fromPosition)
 
-	movementTileOnStepOut(cid, item, position, fromPosition)
-
 	if(not decreasingItems[item.itemid]) then
 		return false
 	end
 
 	if(not isPlayerGhost(cid)) then
 		doTransformItem(item.uid, decreasingItems[item.itemid])
+		return true
+	end
+	
+	if(movementTileOnStepOut(cid, item, position, fromPosition)) then
 		return true
 	end
 
