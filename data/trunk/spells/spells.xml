@@ -234,31 +234,31 @@
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>			
 	</instant>
-	<instant name="Fire Wave" words="exevo flam hur" lvl="18" exhaustion="2000" mana="25" direction="1" script="attack/fire_wave.lua">
+	<instant name="Fire Wave" words="exevo flam hur" lvl="18" prem="1" exhaustion="2000" mana="25" direction="1" script="attack/fire_wave.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 	</instant>	
-	<instant name="Ice Wave" words="exevo frigo hur" lvl="18" exhaustion="2000" mana="25" direction="1" script="attack/ice_wave.lua">
+	<instant name="Ice Wave" words="exevo frigo hur" lvl="18" prem="1" exhaustion="2000" mana="25" direction="1" script="attack/ice_wave.lua">
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>			
 	</instant>	
-	<instant name="Energy Beam" words="exevo vis lux" lvl="23" exhaustion="2000" mana="40" direction="1" script="attack/energy_beam.lua">
+	<instant name="Energy Beam" words="exevo vis lux" lvl="23" prem="1" exhaustion="2000" mana="40" direction="1" script="attack/energy_beam.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 	</instant>
-	<instant name="Ethereal Spear" words="exori con" lvl="23" range="7" exhaustion="2000" mana="25" prem="0" needtarget="1" aggressive="1" script="attack/ethereal_spear.lua">
+	<instant name="Ethereal Spear" words="exori con" lvl="23" range="7" prem="1" exhaustion="2000" mana="25" needtarget="1" aggressive="1" script="attack/ethereal_spear.lua">
 		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/>		
 	</instant>
-	<instant name="Great Energy Beam" words="exevo gran vis lux" lvl="29" exhaustion="2000" mana="110" direction="1" script="attack/great_energy_beam.lua">
+	<instant name="Great Energy Beam" words="exevo gran vis lux" lvl="29" prem="1" exhaustion="2000" mana="110" direction="1" script="attack/great_energy_beam.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 	</instant>
-	<instant name="Groundshaker" words="exori mas" lvl="33" exhaustion="2000" mana="180" selftarget="1" script="attack/groundshaker.lua">
+	<instant name="Groundshaker" words="exori mas" lvl="33" prem="1" exhaustion="2000" mana="180" selftarget="1" script="attack/groundshaker.lua">
 		<vocation name="Knight"/>   <vocation name="Elite Knight"/>			
 	</instant>
 	<instant name="Berserk" words="exori" lvl="35" exhaustion="2000" mana="115" selftarget="1" script="attack/berserk.lua">
 		<vocation name="Knight"/>   <vocation name="Elite Knight"/>			
 	</instant>	
-	<instant name="Energy Wave" words="exevo vis hur" lvl="38" exhaustion="2000" mana="170" direction="1" script="attack/energy_wave.lua">
+	<instant name="Energy Wave" words="exevo vis hur" lvl="38" prem="1" exhaustion="2000" mana="170" direction="1" script="attack/energy_wave.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 	</instant>
-	<instant name="Terra Wave" words="exevo tera hur" lvl="38" exhaustion="2000" mana="210" direction="1" script="attack/terra_wave.lua">
+	<instant name="Terra Wave" words="exevo tera hur" lvl="38" prem="1" exhaustion="2000" mana="210" direction="1" script="attack/terra_wave.lua">
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>			
 	</instant>
 	<instant name="Divine Missile" words="exori san" lvl="40" range="4" exhaustion="2000" mana="20" casterTargetOrDirection="1" script="attack/divine_missile.lua">
@@ -270,10 +270,10 @@
 	<instant name="Rage of the Skies" words="exevo gran mas vis" lvl="55" exhaustion="2000" mana="650" selftarget="1" prem="1" script="attack/rage_of_the_skies.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 	</instant>
-	<instant name="Wrath of Nature" words="exevo gran mas tera" lvl="55" exhaustion="2000" mana="770" selftarget="1" script="attack/wrath_of_nature.lua">
+	<instant name="Wrath of Nature" words="exevo gran mas tera" lvl="55" prem="1" exhaustion="2000" mana="770" selftarget="1" script="attack/wrath_of_nature.lua">
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>			
 	</instant>
-	<instant name="Eternal Winter" words="exevo gran mas frigo" lvl="60" exhaustion="2000" mana="1200" selftarget="1" prem="1" script="attack/eternal_winter.lua">
+	<instant name="Eternal Winter" words="exevo gran mas frigo" lvl="60" prem="1" exhaustion="2000" mana="1200" selftarget="1" prem="1" script="attack/eternal_winter.lua">
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>			
 	</instant>
 	<instant name="Hell's Core" words="exevo gran mas flam" lvl="60" exhaustion="2000" mana="1200" selftarget="1" prem="1" script="attack/hells_core.lua">
@@ -328,7 +328,7 @@
 	</instant>
 	
 	<instant name="Haste" words="utani hur" lvl="14" exhaustion="1000" mana="60" selftarget="1" aggressive="0" script="support/haste.lua"/>
-	<instant name="Strong Haste" words="utani gran hur" lvl="20" exhaustion="1000" mana="100" selftarget="1" aggressive="0" script="support/strong_haste.lua">
+	<instant name="Strong Haste" words="utani gran hur" lvl="20" prem="1" exhaustion="1000" mana="100" selftarget="1" aggressive="0" script="support/strong_haste.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>			
 	</instant>
@@ -354,31 +354,31 @@
 		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/>		
 	</instant>
 	
-  	<instant name="Train Party" words="utito mas sio" lvl="32" exhaustion="1000" mana="0" aggressive="0" selftarget="1" script="support/party_knight.lua">
+  	<instant name="Train Party" words="utito mas sio" lvl="32" prem="1" exhaustion="1000" mana="0" aggressive="0" selftarget="1" script="support/party_knight.lua">
     		<vocation name="Knight" /> <vocation name="Elite Knight" />		
   	</instant>
-	<instant name="Protect Party" words="utamo mas sio" lvl="32" exhaustion="1000" mana="0" aggressive="0" selftarget="1" script="support/party_paladin.lua">
+	<instant name="Protect Party" words="utamo mas sio" lvl="32" prem="1" exhaustion="1000" mana="0" aggressive="0" selftarget="1" script="support/party_paladin.lua">
     		<vocation name="Paladin" /> <vocation name="Royal Paladin" />	
   	</instant>
-	<instant name="Heal Party" words="utura mas sio" lvl="32" exhaustion="1000" mana="0" aggressive="0" selftarget="1" script="support/party_druid.lua">
+	<instant name="Heal Party" words="utura mas sio" lvl="32" prem="1" exhaustion="1000" mana="0" aggressive="0" selftarget="1" script="support/party_druid.lua">
     		<vocation name="Druid" /> <vocation name="Elder Druid" />		
   	</instant>
-	<instant name="Enchant Party" words="utori mas sio" lvl="32" exhaustion="1000" mana="0" aggressive="0" selftarget="1" script="support/party_sorcerer.lua">
+	<instant name="Enchant Party" words="utori mas sio" lvl="32" prem="1" exhaustion="1000" mana="0" aggressive="0" selftarget="1" script="support/party_sorcerer.lua">
     		<vocation name="Sorcerer" /> <vocation name="Master Sorcerer" />	
   	</instant>
-	<instant name="Protector" words="utamo tempo" lvl="55" exhaustion="1000" mana="200" selftarget="1" script="support/protector.lua">
+	<instant name="Protector" words="utamo tempo" lvl="55" prem="1" exhaustion="1000" mana="200" selftarget="1" script="support/protector.lua">
 		<vocation name="Knight"/>   <vocation name="Elite Knight"/>			
 	</instant>
-	<instant name="Blood Rage" words="utito tempo" lvl="60" exhaustion="1000" mana="290" selftarget="1" script="support/blood_rage.lua">
+	<instant name="Blood Rage" words="utito tempo" lvl="60" prem="1" exhaustion="1000" mana="290" selftarget="1" script="support/blood_rage.lua">
 		<vocation name="Knight"/>   <vocation name="Elite Knight"/>			
 	</instant>
-	<instant name="Charge" words="utani tempo hur" lvl="25" exhaustion="1000" mana="100" selftarget="1" aggressive="0" script="support/charge.lua">
+	<instant name="Charge" words="utani tempo hur" lvl="25" prem="1" exhaustion="1000" mana="100" selftarget="1" aggressive="0" script="support/charge.lua">
 		<vocation name="Knight"/>   <vocation name="Elite Knight"/>			
 	</instant>
-	<instant name="Swift Foot" words="utamo tempo san" lvl="55" exhaustion="1000" mana="400" selftarget="1" aggressive="0" script="support/swift_foot.lua">
+	<instant name="Swift Foot" words="utamo tempo san" lvl="55" prem="1" exhaustion="1000" mana="400" selftarget="1" aggressive="0" script="support/swift_foot.lua">
 		<vocation name="Paladin"/>   <vocation name="Royal Paladin"/>		
 	</instant>
-	<instant name="Sharpshooter" words="utito tempo san" lvl="60" exhaustion="1000" mana="450" selftarget="1" aggressive="0" script="support/sharpshooter.lua">
+	<instant name="Sharpshooter" words="utito tempo san" lvl="60" prem="1" exhaustion="1000" mana="450" selftarget="1" aggressive="0" script="support/sharpshooter.lua">
 		<vocation name="Paladin"/>   <vocation name="Royal Paladin"/>		
 	</instant>
 	
