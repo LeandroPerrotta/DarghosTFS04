@@ -86,7 +86,7 @@
 	<conjure name="Energy Wall" words="adevo mas grav vis" lvl="41" mana="1000" exhaustion="1000" soul="5" reagentId="2260" conjureId="2279" conjureCount="4" function="conjureRune">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>
 	</conjure>
-	<conjure name="Enchant Spear" words="exeta con" lvl="45" mana="350" exhaustion="1000" soul="3" reagentId="2389" conjureId="7367" function="conjureItem">
+	<conjure name="Enchant Spear" words="exeta con" lvl="45" prem="1" mana="350" exhaustion="1000" soul="3" reagentId="2389" conjureId="7367" function="conjureItem">
 		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/> 
 	</conjure>
 	<conjure name="Sudden Death" words="adori gran mort" lvl="45" mana="985" exhaustion="1000" soul="5" reagentId="2260" conjureId="2268" conjureCount="3" function="conjureRune">
@@ -243,7 +243,7 @@
 	<instant name="Energy Beam" words="exevo vis lux" lvl="23" prem="0" exhaustion="2000" mana="40" direction="1" script="attack/energy_beam.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 	</instant>
-	<instant name="Ethereal Spear" words="exori con" lvl="23" range="7" prem="1" exhaustion="2000" mana="25" needtarget="1" aggressive="1" script="attack/ethereal_spear.lua">
+	<instant name="Ethereal Spear" words="exori con" lvl="23" range="7" prem="0" exhaustion="2000" mana="25" needtarget="1" aggressive="1" script="attack/ethereal_spear.lua">
 		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/>		
 	</instant>
 	<instant name="Great Energy Beam" words="exevo gran vis lux" lvl="29" prem="0" exhaustion="2000" mana="110" direction="1" script="attack/great_energy_beam.lua">
