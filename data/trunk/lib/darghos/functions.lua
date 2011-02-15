@@ -1,6 +1,6 @@
 function movementTileOnStepIn(cid, item, position, fromPosition)
 
-	if(item.itemid == 11062) then
+	if(item.itemid == 11062 or item.itemid == 11063) then
 		doUpdateCreatureImpassable(cid)
 	end
 
@@ -10,8 +10,8 @@ end
 function movementTileOnStepOut(cid, item, position, fromPosition)
 
 	-- special depot tile (non walkover)[
-	if(item.itemid == 11063) then
-		doUpdateCreatureImpassable(cid)
+	if(item.itemid == 11062 or item.itemid == 11063 ) then
+		doUpdateCreaturePassable(cid)
 	end
 	
 	return false
@@ -23,11 +23,16 @@ function doUpdateCreatureImpassable(cid)
 		return
 	end
 	
-	if(getPlayerGroupId(cid) == GROUP_PLAYER_NON_PVP) then
-		doPlayerSetGroupId(cid, GROUP_PLAYER)
-	elseif(getPlayerGroupId(cid) == GROUP_PLAYER) then
-		doPlayerSetGroupId(cid, GROUP_PLAYER_NON_PVP)
+	doPlayerSetGroupId(cid, GROUP_PLAYER)
+end
+
+function doUpdateCreaturePassable(cid)
+
+	if(getPlayerTown(cid) ~= towns.ISLAND_OF_PEACE) then
+		return
 	end
+	
+	doPlayerSetGroupId(cid, GROUP_PLAYER_NON_PVP)	
 end
 
 function getLuaFunctions()-- by Mock

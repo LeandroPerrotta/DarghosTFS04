@@ -141,10 +141,11 @@ function onStepOut(cid, item, position, fromPosition)
 
 	if(not isPlayerGhost(cid)) then
 		doTransformItem(item.uid, decreasingItems[item.itemid])
-		return true
-	end
-	
-	if(movementTileOnStepOut(cid, item, position, fromPosition)) then
+		
+		if(movementTileOnStepOut(cid, item, position, fromPosition)) then
+			return true
+		end		
+		
 		return true
 	end
 

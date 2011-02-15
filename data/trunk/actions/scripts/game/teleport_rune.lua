@@ -9,12 +9,12 @@ local TELEPORT_USAGE_INTERVAL = 60 * 30 -- 30 minutos
 function onUse(cid, item, frompos, item2, topos)
 
 	if(hasCondition(cid, CONDITION_INFIGHT) == TRUE) then
-		doPlayerSendCancel(cid, "Você não pode usar este item enquanto estiver em batalha!")
+		doPlayerSendCancel(cid, "VocÃª nÃ£o pode usar este item enquanto estiver em batalha!")
 		return
 	end
 	
 	if(getPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE) ~= STATE_NONE) then
-		doPlayerSendCancel(cid, "A carga já sendo carregada, tenha paciencia!")
+		doPlayerSendCancel(cid, "A carga jÃ¡ sendo carregada, tenha paciencia!")
 		return	
 	end
 	
@@ -23,12 +23,12 @@ function onUse(cid, item, frompos, item2, topos)
 		local secondsLeft = (lastTeleportRuneUsage + TELEPORT_USAGE_INTERVAL) - os.time()
 		
 		if(secondsLeft >= 60) then
-			doPlayerSendCancel(cid, "Você deve aguardar " .. math.floor(secondsLeft / 60) .. " minutos para que sua teleport rune descançe e possa usar-la novamente.")
+			doPlayerSendCancel(cid, "VocÃª deve aguardar " .. math.floor(secondsLeft / 60) .. " minutos para que sua teleport rune descanÃ§e e possa usar-la novamente.")
 		else
-			doPlayerSendCancel(cid, "Você deve aguardar menos de um minuto para que sua teleport rune termine de descançar e possa usar-la novamente.")
+			doPlayerSendCancel(cid, "VocÃª deve aguardar menos de um minuto para que sua teleport rune termine de descanÃ§ar e possa usar-la novamente.")
 		end
 		
-		doPlayerSendCancel(cid, "Você deve aguardar " .. math.ceil(((lastTeleportRuneUsage + TELEPORT_USAGE_INTERVAL) - os.time()) / 60) .. " minutos para que sua teleport rune descançe e possa usar-la novamente.")
+		doPlayerSendCancel(cid, "VocÃª deve aguardar " .. math.ceil(((lastTeleportRuneUsage + TELEPORT_USAGE_INTERVAL) - os.time()) / 60) .. " minutos para que sua teleport rune descanÃ§e e possa usar-la novamente.")
 		return	
 	end
 	
