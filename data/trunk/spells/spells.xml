@@ -234,19 +234,19 @@
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>			
 	</instant>
-	<instant name="Fire Wave" words="exevo flam hur" lvl="18" prem="1" exhaustion="2000" mana="25" direction="1" script="attack/fire_wave.lua">
+	<instant name="Fire Wave" words="exevo flam hur" lvl="18" prem="0" exhaustion="2000" mana="25" direction="1" script="attack/fire_wave.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 	</instant>	
-	<instant name="Ice Wave" words="exevo frigo hur" lvl="18" prem="1" exhaustion="2000" mana="25" direction="1" script="attack/ice_wave.lua">
+	<instant name="Ice Wave" words="exevo frigo hur" lvl="18" prem="0" exhaustion="2000" mana="25" direction="1" script="attack/ice_wave.lua">
 		<vocation name="Druid"/>    <vocation name="Elder Druid"/>			
 	</instant>	
-	<instant name="Energy Beam" words="exevo vis lux" lvl="23" prem="1" exhaustion="2000" mana="40" direction="1" script="attack/energy_beam.lua">
+	<instant name="Energy Beam" words="exevo vis lux" lvl="23" prem="0" exhaustion="2000" mana="40" direction="1" script="attack/energy_beam.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 	</instant>
 	<instant name="Ethereal Spear" words="exori con" lvl="23" range="7" prem="1" exhaustion="2000" mana="25" needtarget="1" aggressive="1" script="attack/ethereal_spear.lua">
 		<vocation name="Paladin"/>  <vocation name="Royal Paladin"/>		
 	</instant>
-	<instant name="Great Energy Beam" words="exevo gran vis lux" lvl="29" prem="1" exhaustion="2000" mana="110" direction="1" script="attack/great_energy_beam.lua">
+	<instant name="Great Energy Beam" words="exevo gran vis lux" lvl="29" prem="0" exhaustion="2000" mana="110" direction="1" script="attack/great_energy_beam.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 	</instant>
 	<instant name="Groundshaker" words="exori mas" lvl="33" prem="1" exhaustion="2000" mana="180" selftarget="1" script="attack/groundshaker.lua">
@@ -255,7 +255,7 @@
 	<instant name="Berserk" words="exori" lvl="35" exhaustion="2000" mana="115" selftarget="1" script="attack/berserk.lua">
 		<vocation name="Knight"/>   <vocation name="Elite Knight"/>			
 	</instant>	
-	<instant name="Energy Wave" words="exevo vis hur" lvl="38" prem="1" exhaustion="2000" mana="170" direction="1" script="attack/energy_wave.lua">
+	<instant name="Energy Wave" words="exevo vis hur" lvl="38" prem="0" exhaustion="2000" mana="170" direction="1" script="attack/energy_wave.lua">
 		<vocation name="Sorcerer"/> <vocation name="Master Sorcerer"/>		
 	</instant>
 	<instant name="Terra Wave" words="exevo tera hur" lvl="38" prem="1" exhaustion="2000" mana="210" direction="1" script="attack/terra_wave.lua">
