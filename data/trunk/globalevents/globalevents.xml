@@ -3,7 +3,7 @@
 	<globalevent name="spoof" interval="150000" event="script" value="game/spoof.lua"/> <!-- a cada 2 minutos e meio -->
 	
 	<globalevent name="save" interval="3600000" event="script" value="save.lua"/>
-	<globalevent name="clean" interval="21600000" event="script" value="clean.lua"/>
+	<globalevent name="clean" interval="43200000" event="script" value="clean.lua"/>
 
 	<globalevent name="init" type="startup" event="script" value="init.lua"/>
 	<globalevent name="globalsave" type="globalsave" event="script" value="init.lua"/>
