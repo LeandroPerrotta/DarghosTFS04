@@ -1,4 +1,4 @@
-﻿﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Frost Dragon" nameDescription="a frost dragon" race="undead" experience="2100" speed="260" manacost="390">
 	<health now="1800" max="1800"/>
 	<look type="248" head="0" body="0" legs="0" feet="0" corpse="7091"/>
