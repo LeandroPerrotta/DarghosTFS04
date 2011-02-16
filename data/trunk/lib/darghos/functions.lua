@@ -229,7 +229,7 @@ function addShieldTrie(cid, target)
 	--print("Training: " .. getCreatureName(cid) .. " value: " .. getPlayerStorageValue(cid, sid.TRAINING_SHIELD))
 	local cTarget = getCreatureTarget(cid)
 	
-	if(not cTarget) then
+	if(cTarget == 0) then
 		--print("Alvo não encontrado, limpando... ")
 		setPlayerStorageValue(cid, sid.TRAINING_SHIELD, 0)
 		return

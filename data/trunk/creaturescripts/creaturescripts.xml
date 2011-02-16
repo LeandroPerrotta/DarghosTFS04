@@ -12,7 +12,8 @@
 	
 	<!-- DARGHOS -->
 	<event type="login" name="CustomPlayerLogin" event="script" value="game/login.lua"/>
-	<event type="combat" name="CustomPlayerCombat" event="script" value="game/combat.lua"/>
+	<!-- <event type="combat" name="CustomPlayerCombat" event="script" value="game/combat.lua"/>  -->
+	<event type="target" name="CustomPlayerTarget" event="script" value="game/target.lua"/>
 	<event type="death" name="CustomPlayerDeath" event="script" value="game/death.lua"/>
 	<event type="kill" name="Inquisition" event="script" value="game/inquisition.lua"/>
 	<event type="logout" name="CustomPlayerLogout" event="script" value="game/logout.lua"/>
