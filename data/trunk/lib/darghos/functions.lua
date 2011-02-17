@@ -582,6 +582,12 @@ function setRateStage(cid, newlevel)
 			{start_level = 180, end_level = 199, multipler = 1.5}, 
 			{start_level = 200, end_level = 239, multipler = 1}, 
 			{start_level = 240, multipler = 0.5}, 
+		},
+		
+		secure = {
+			{end_level = 49, multipler = 50}, 
+			{start_level = 50, end_level = 79, multipler = 25}, 
+			{start_level = 80, multipler = 1}, 			
 		}
 	}
 	
@@ -605,6 +611,11 @@ function setRateStage(cid, newlevel)
 	end
 	
 	local stageNode = stages.normal
+	
+	if(getPlayerTown(cid) == towns.ISLAND_OF_PEACE) then
+		stageNode = stages.secure
+	end
+	
 	readStagesNode(stageNode, cid, newlevel)
 	
 	return LUA_TRUE
@@ -615,10 +626,11 @@ function setLoginSkillsRateStage(cid)
 
 	local skills = {
 		normal = {
-			{end_level = 79, multipler = 30}, 
-			{start_level = 80, end_level = 89, multipler = 15}, 
-			{start_level = 90, end_level = 99, multipler = 10}, 
-			{start_level = 100, multipler = 5}
+			{end_level = 79, multipler = 50}, 
+			{start_level = 80, end_level = 89, multipler = 30}, 
+			{start_level = 90, end_level = 99, multipler = 15}, 
+			{start_level = 100, end_level = 109, multipler = 10}, 
+			{start_level = 110, multipler = 5}
 		}
 	}
 	
@@ -639,7 +651,7 @@ function setLoginSkillsRateStage(cid)
 			end
 			
 			if(v.start_level == nil) then
-				v.start_level = 1
+				v.start_level = 0
 			end
 		
 			if(newlevel >= v.start_level and newlevel <= v.end_level) then
@@ -665,10 +677,11 @@ function setSkillStageOnAdvance(cid, skillid, newlevel)
 
 	local skills = {
 		normal = {
-			{end_level = 79, multipler = 30}, 
-			{start_level = 80, end_level = 89, multipler = 15}, 
-			{start_level = 90, end_level = 99, multipler = 10}, 
-			{start_level = 100, multipler = 5}
+			{end_level = 79, multipler = 50}, 
+			{start_level = 80, end_level = 89, multipler = 30}, 
+			{start_level = 90, end_level = 99, multipler = 15}, 
+			{start_level = 100, end_level = 109, multipler = 10}, 
+			{start_level = 110, multipler = 5}
 		}
 	}
 	
@@ -689,7 +702,7 @@ function setSkillStageOnAdvance(cid, skillid, newlevel)
 			end
 			
 			if(v.start_level == nil) then
-				v.start_level = 1
+				v.start_level = 0
 			end
 		
 			if(newlevel >= v.start_level and newlevel <= v.end_level) then
