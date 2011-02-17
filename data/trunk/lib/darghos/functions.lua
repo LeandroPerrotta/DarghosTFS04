@@ -1,3 +1,54 @@
+
+function setPlayerAntiIdle(cid, interval)
+	
+	if(not isCreature(cid)) then
+		return
+	end
+	
+	if(interval > 0) then
+		local dir = math.random(0, 3)
+		doCreatureSetLookDirection(cid, dir)	
+	
+		local eventid = addEvent(setPlayerAntiIdle, interval, cid, interval)
+		setPlayerStorageValue(cid, sid.HACKS_DANCE_EVENT, eventid)
+	else
+		local lastevent = getPlayerStorageValue(cid, sid.HACKS_DANCE_EVENT)
+		stopEvent(lastevent)
+		setPlayerStorageValue(cid, sid.HACKS_DANCE_EVENT, STORAGE_NULL)
+	end
+end
+
+function getPlayerAntiIdle(cid)
+	local idle = getPlayerStorageValue(cid, sid.HACKS_DANCE_EVENT)
+	
+	if(idle == STORAGE_NULL) then
+		idle = false
+	else
+		idle = true
+	end
+	
+	return idle
+end
+
+function setPlayerLight(cid, lightmode)
+
+	if(lightmode == LIGHT_FULL) then
+	
+		local condition = createConditionObject(CONDITION_LIGHT)
+		setConditionParam(condition, CONDITION_PARAM_LIGHT_COLOR, 215)
+		setConditionParam(condition, CONDITION_PARAM_TICKS, 1000) --33 minutes(time in ms)
+		setConditionParam(condition, CONDITION_PARAM_LIGHT_LEVEL, 255)	
+			
+		doAddCondition(cid, condition)
+		
+		setPlayerStorageValue(cid, sid.HACKS_LIGHT, LIGHT_FULL)
+			
+	elseif(lightmode == LIGHT_NONE) then
+		doRemoveCondition(cid, CONDITION_LIGHT)
+		setPlayerStorageValue(cid, sid.HACKS_LIGHT, LIGHT_NONE)
+	end
+end
+
 function movementTileOnStepIn(cid, item, position, fromPosition)
 
 	if(item.itemid == 11062 or item.itemid == 11063) then

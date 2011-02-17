@@ -688,7 +688,7 @@ function Task:parseMeleeWeapon(node, container)
 			else
 				consoleLog(T_LOG_ERROR, self.npcname, "Task:parseMeleeWeapon", "Can not add player melee weapon (club).", {taskid=self.taskid, player=getCreatureName(self.cid), itemid=value})
 			end
-		elseif(key == "axe" and killid == LEVEL_SKILL_AXE) then	
+		elseif(key == "axe" and skillid == LEVEL_SKILL_AXE) then	
 			if(doAddContainerItem(container, value) ~= LUA_ERROR) then
 				self:addItemToString(value)
 			else

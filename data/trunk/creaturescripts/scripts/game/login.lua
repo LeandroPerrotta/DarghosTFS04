@@ -12,6 +12,8 @@ function onLogin(cid)
 		registerCreatureEvent(cid, "CustomTasks")
 	--end
 	
+	registerCreatureEvent(cid, "Hacks")
+	
 	playerRecord()
 	runPremiumSystem(cid)
 	setRateStage(cid, getPlayerLevel(cid))
@@ -29,7 +31,10 @@ function onLogin(cid)
 	end
 	
 	setPlayerStorageValue(cid, sid.TRAINING_SHIELD, 0)
-	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, -1)
+	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, STORAGE_NULL)
+	setPlayerStorageValue(cid, sid.HACKS_LIGHT, LIGHT_NONE)
+	setPlayerStorageValue(cid, sid.HACKS_DANCE_EVENT, STORAGE_NULL)
+	setPlayerStorageValue(cid, sid.HACKS_CASTMANA, STORAGE_NULL)
 	
 	return TRUE
 end

@@ -10,6 +10,7 @@ if(darghos_distro == DISTROS_TFS) then
 	doPlayerAddHealth = doCreatureAddHealth
 	getPlayerBless = getPlayerBlessing
 	doPlayerAddBless = doPlayerAddBlessing
+	doPlayerAddManaSpent = doPlayerAddSpentMana
 	
 	function setExperienceRate(cid, value)
 		return doPlayerSetRate(cid, LEVEL_EXPERIENCE, value)
