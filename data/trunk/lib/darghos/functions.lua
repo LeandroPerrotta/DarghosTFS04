@@ -626,9 +626,9 @@ function setLoginSkillsRateStage(cid)
 
 	local skills = {
 		normal = {
-			{end_level = 79, multipler = 50}, 
-			{start_level = 80, end_level = 89, multipler = 30}, 
-			{start_level = 90, end_level = 99, multipler = 15}, 
+			{end_level = 79, multipler = 80}, 
+			{start_level = 80, end_level = 89, multipler = 50}, 
+			{start_level = 90, end_level = 99, multipler = 25}, 
 			{start_level = 100, end_level = 109, multipler = 10}, 
 			{start_level = 110, multipler = 5}
 		}
@@ -677,9 +677,9 @@ function setSkillStageOnAdvance(cid, skillid, newlevel)
 
 	local skills = {
 		normal = {
-			{end_level = 79, multipler = 50}, 
-			{start_level = 80, end_level = 89, multipler = 30}, 
-			{start_level = 90, end_level = 99, multipler = 15}, 
+			{end_level = 79, multipler = 80}, 
+			{start_level = 80, end_level = 89, multipler = 50}, 
+			{start_level = 90, end_level = 99, multipler = 25}, 
 			{start_level = 100, end_level = 109, multipler = 10}, 
 			{start_level = 110, multipler = 5}
 		}

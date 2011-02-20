@@ -2,58 +2,63 @@ local combat = createCombatObject()
 local area = createCombatArea(AREA_CROSS5X5)
 setCombatArea(combat, area)
 setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_MAGIC_RED)
-setCombatParam(combat, COMBAT_PARAM_AGGRESSIVE, FALSE)
+setCombatParam(combat, COMBAT_PARAM_AGGRESSIVE, false)
 
 local condition = createConditionObject(CONDITION_ATTRIBUTES)
 setConditionParam(condition, CONDITION_PARAM_SUBID, 1)
-setConditionParam(condition, CONDITION_PARAM_BUFF_SPELL, TRUE)
+setConditionParam(condition, CONDITION_PARAM_BUFF, true)
 setConditionParam(condition, CONDITION_PARAM_TICKS, 2 * 60 * 1000)
 setConditionParam(condition, CONDITION_PARAM_SKILL_MELEE, 3)
 setConditionParam(condition, CONDITION_PARAM_SKILL_DISTANCE, 3)
 
-local baseMana = 60
+local config = {
+        baseMana = 60,
+        hardcoreManaSpent = getConfigValue("addManaSpentInPvPZone")
+}
 
 function onCastSpell(cid, var)
-	local pos = getCreaturePosition(cid)
+        local pos, membersList = getCreaturePosition(cid), getPartyMembers(cid)
+        if(membersList == nil or type(membersList) ~= 'table' or table.maxn(membersList) <= 1) then
+                doPlayerSendDefaultCancel(cid, RETURNVALUE_NOPARTYMEMBERSINRANGE)
+                doSendMagicEffect(pos, CONST_ME_POFF)
+                return false
+        end
 
-	local membersList = getPartyMembers(cid)
-	if(membersList == nil or type(membersList) ~= 'table' or #membersList <= 1) then
-		doPlayerSendCancel(cid, "You have to be in a party to cast this spell.")
-		doSendMagicEffect(pos, CONST_ME_POFF)
-		return LUA_ERROR
-	end
+        local affectedList = {}
+        for _, pid in ipairs(membersList) do
+                if(getDistanceBetween(getCreaturePosition(pid), pos) <= 36) then
+                        table.insert(affectedList, pid)
+                end
+        end
 
-	local affectedList = {}
-	for _, pid in ipairs(membersList) do
-		if(getDistanceBetween(getCreaturePosition(pid), pos) <= 36) then
-			table.insert(affectedList, pid)
-		end
-	end
+        local tmp = table.maxn(affectedList)
+        if(tmp <= 1) then
+                doPlayerSendDefaultCancel(cid, RETURNVALUE_NOPARTYMEMBERSINRANGE)
+                doSendMagicEffect(pos, CONST_ME_POFF)
+                return false
+        end
 
-	if(#affectedList <= 1) then
-		doPlayerSendCancel(cid, "No party members in range.")
-		doSendMagicEffect(pos, CONST_ME_POFF)
-		return LUA_ERROR
-	end
+        local mana = math.ceil((0.9 ^ (tmp - 1) * config.baseMana) * tmp)
+        if(getCreatureMana(cid) < mana) then
+                doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTENOUGHMANA)
+                doSendMagicEffect(pos, CONST_ME_POFF)
+                return false
+        end
 
-	local mana = math.ceil((0.9 ^ (#membersList - 1) * baseMana) * #affectedList)
-	if(getPlayerMana(cid) < mana) then
-		doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTENOUGHMANA)
-		doSendMagicEffect(pos, CONST_ME_POFF)
-		return LUA_ERROR
-	end
+        if(not doCombat(cid, combat, var)) then
+                doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTPOSSIBLE)
+                doSendMagicEffect(pos, CONST_ME_POFF)
+                return false
+        end
 
-	if(doCombat(cid, combat, var) ~= LUA_NO_ERROR) then
-		doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTPOSSIBLE)
-		doSendMagicEffect(pos, CONST_ME_POFF)
-		return LUA_ERROR
-	end
+        doCreatureAddMana(cid, -(mana - config.baseMana), false)
+        if(not getPlayerFlagValue(cid, PlayerFlag_NotGainMana) and (not getTileInfo(getThingPosition(cid)).hardcore or config.hardcoreManaSpent)) then
+                doPlayerAddSpentMana(cid, (mana - config.baseMana))
+        end
 
-	doPlayerAddMana(cid, -(mana))
-	doPlayerAddManaSpent(cid, mana)
-	for _, pid in ipairs(affectedList) do
-		doAddCondition(pid, condition)
-	end
+        for _, pid in ipairs(affectedList) do
+                doAddCondition(pid, condition)
+        end
 
-	return LUA_NO_ERROR
+        return true
 end

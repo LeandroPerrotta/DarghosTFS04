@@ -9207,64 +9207,6 @@
     <monster name="Dwarf" x="-1" y="0" z="7" spawntime="60"/>
     <monster name="Dwarf" x="0" y="1" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="2255" centery="2234" centerz="7" radius="30">
-    <monster name="Tortoise" x="-2" y="-30" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-4" y="-27" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="25" y="-26" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-13" y="-24" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="17" y="-22" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-4" y="-20" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="8" y="-20" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="20" y="-20" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="22" y="-20" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-20" y="-19" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="8" y="-18" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="-18" y="-17" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="-7" y="-17" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="15" y="-16" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="27" y="-16" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-23" y="-13" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-1" y="-13" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-12" y="-10" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="15" y="-10" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="0" y="-8" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="23" y="-8" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="25" y="-8" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-26" y="-7" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="10" y="-7" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="-7" y="-6" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-18" y="-5" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="10" y="-5" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-28" y="-3" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="23" y="-3" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="-21" y="-2" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-9" y="-2" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-1" y="-2" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="26" y="-1" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="10" y="1" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-18" y="2" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="16" y="2" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="6" y="3" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-6" y="4" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="26" y="4" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-16" y="5" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-30" y="6" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="21" y="8" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="-9" y="9" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="-2" y="10" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="21" y="10" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-12" y="11" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-5" y="14" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-30" y="15" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="-23" y="18" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-6" y="20" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-27" y="21" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="-8" y="21" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-18" y="22" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-13" y="27" z="7" spawntime="10"/>
-    <monster name="Thornback Tortoise" x="0" y="28" z="7" spawntime="10"/>
-    <monster name="Tortoise" x="-7" y="30" z="7" spawntime="10"/>
-  </spawn>
   <spawn centerx="1260" centery="2235" centerz="7" radius="2">
     <npc name="isle_of_peace.food" x="0" y="-1" z="7" spawntime="60"/>
   </spawn>
@@ -10218,6 +10160,272 @@
   <spawn centerx="2118" centery="2564" centerz="7" radius="10">
     <monster name="Hyaena" x="-4" y="-6" z="7" spawntime="60"/>
     <monster name="Hyaena" x="-6" y="5" z="7" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2783" centery="2673" centerz="7" radius="27">
+    <monster name="Toad" x="-3" y="-24" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-2" y="-17" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="-15" y="-16" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-2" y="-16" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-18" y="-15" z="7" spawntime="60"/>
+    <monster name="Toad" x="-4" y="-15" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="-16" y="-14" z="7" spawntime="60"/>
+    <monster name="Toad" x="-14" y="-14" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="-9" y="-14" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-18" y="-10" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-11" y="-10" z="7" spawntime="33554432"/>
+    <monster name="Crimson Frog" x="-2" y="-10" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-27" y="-9" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-8" y="-9" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="-18" y="-8" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-1" y="-8" z="7" spawntime="60"/>
+    <monster name="Toad" x="-4" y="-7" z="7" spawntime="60"/>
+    <monster name="Toad" x="4" y="-6" z="7" spawntime="60"/>
+    <monster name="Toad" x="-16" y="-3" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="-3" y="-3" z="7" spawntime="33554432"/>
+    <monster name="Green Frog" x="-1" y="-3" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="19" y="0" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="-25" y="1" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-19" y="1" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="20" y="2" z="7" spawntime="60"/>
+    <monster name="Toad" x="23" y="2" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="19" y="3" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="1" y="6" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="3" y="7" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="10" y="8" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-19" y="9" z="7" spawntime="60"/>
+    <monster name="Toad" x="-2" y="9" z="7" spawntime="60"/>
+    <monster name="Toad" x="6" y="9" z="7" spawntime="33554432"/>
+    <monster name="Crimson Frog" x="9" y="11" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-7" y="12" z="7" spawntime="33554432"/>
+    <monster name="Green Frog" x="-6" y="12" z="7" spawntime="60"/>
+    <monster name="Toad" x="25" y="12" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-7" y="13" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="12" y="16" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="22" y="16" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="13" y="20" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="21" y="20" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-6" y="21" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="3" y="24" z="7" spawntime="60"/>
+    <monster name="Toad" x="4" y="25" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="15" y="25" z="7" spawntime="60"/>
+    <monster name="Toad" x="17" y="25" z="7" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2688" centery="2692" centerz="7" radius="30">
+    <monster name="Tortoise" x="-14" y="-13" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-25" y="-10" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-22" y="-9" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-15" y="-9" z="7" spawntime="60"/>
+    <monster name="Toad" x="-21" y="-8" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="3" y="-7" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-29" y="-6" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="-16" y="-6" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="1" y="-6" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="-28" y="-4" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-20" y="-3" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="-3" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-27" y="-2" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-3" y="-2" z="7" spawntime="60"/>
+    <monster name="Toad" x="7" y="-2" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-26" y="2" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="2" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="3" y="3" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="9" y="3" z="7" spawntime="33554432"/>
+    <monster name="Tortoise" x="8" y="4" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="4" y="5" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="-26" y="6" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="11" y="7" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="14" y="7" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="-24" y="8" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="11" y="8" z="7" spawntime="33554432"/>
+    <monster name="Tortoise" x="2" y="9" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="9" y="9" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="1" y="12" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="21" y="12" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-23" y="14" z="7" spawntime="60"/>
+    <monster name="Toad" x="2" y="14" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="26" y="15" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="17" y="16" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="22" y="16" z="7" spawntime="33554432"/>
+    <monster name="Crimson Frog" x="1" y="17" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-23" y="19" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="2" y="19" z="7" spawntime="32256"/>
+    <monster name="Crimson Frog" x="-1" y="22" z="7" spawntime="33554432"/>
+    <monster name="Orchid Frog" x="-19" y="23" z="7" spawntime="33554432"/>
+    <monster name="Green Frog" x="23" y="23" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="27" y="23" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-17" y="24" z="7" spawntime="33554432"/>
+    <monster name="Tortoise" x="24" y="24" z="7" spawntime="60"/>
+    <monster name="Toad" x="11" y="25" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="26" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="15" y="26" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="24" y="27" z="7" spawntime="32256"/>
+    <monster name="Tortoise" x="25" y="27" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="4" y="28" z="7" spawntime="60"/>
+    <monster name="Toad" x="-2" y="29" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="3" y="29" z="7" spawntime="33554432"/>
+    <monster name="Tortoise" x="-18" y="30" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="30" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="-4" y="30" z="7" spawntime="60"/>
+    <monster name="Toad" x="5" y="30" z="7" spawntime="33554432"/>
+  </spawn>
+  <spawn centerx="2647" centery="2700" centerz="7" radius="30">
+    <monster name="Tortoise" x="7" y="-13" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="5" y="-11" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="-7" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="-6" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="10" y="-6" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="3" y="7" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-3" y="8" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="-2" y="8" z="7" spawntime="33554432"/>
+    <monster name="Crimson Frog" x="-5" y="9" z="7" spawntime="60"/>
+    <monster name="Toad" x="2" y="9" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="7" y="10" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="8" y="15" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-16" y="17" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-15" y="17" z="7" spawntime="32256"/>
+    <monster name="Tortoise" x="-1" y="17" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="18" z="7" spawntime="60"/>
+    <monster name="Toad" x="-2" y="19" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-17" y="21" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-16" y="21" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-13" y="22" z="7" spawntime="33554432"/>
+    <monster name="Tortoise" x="-12" y="22" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="5" y="22" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-2" y="23" z="7" spawntime="33554432"/>
+    <monster name="Tortoise" x="1" y="23" z="7" spawntime="60"/>
+    <monster name="Toad" x="7" y="23" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="17" y="23" z="7" spawntime="33554432"/>
+    <monster name="Crimson Frog" x="2" y="24" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="12" y="24" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="22" y="24" z="7" spawntime="60"/>
+    <monster name="Toad" x="15" y="25" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-20" y="26" z="7" spawntime="32256"/>
+    <monster name="Tortoise" x="-19" y="26" z="7" spawntime="32256"/>
+    <monster name="Tortoise" x="-20" y="27" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="24" y="30" z="7" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2699" centery="2719" centerz="7" radius="30">
+    <monster name="Tortoise" x="5" y="4" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="9" y="4" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-6" y="6" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-1" y="8" z="7" spawntime="60"/>
+    <monster name="Toad" x="-1" y="9" z="7" spawntime="33554432"/>
+    <monster name="Toad" x="14" y="9" z="7" spawntime="33554432"/>
+    <monster name="Toad" x="16" y="10" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="19" y="12" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="11" y="13" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="12" y="13" z="7" spawntime="60"/>
+    <monster name="Toad" x="-28" y="15" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-4" y="15" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-23" y="16" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="3" y="16" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-3" y="18" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-24" y="19" z="7" spawntime="60"/>
+    <monster name="Toad" x="-7" y="19" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="5" y="19" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="21" y="19" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-27" y="22" z="7" spawntime="33554432"/>
+    <monster name="Toad" x="-21" y="22" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-13" y="22" z="7" spawntime="60"/>
+    <monster name="Toad" x="5" y="22" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="23" y="22" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-8" y="23" z="7" spawntime="60"/>
+    <monster name="Toad" x="-14" y="24" z="7" spawntime="33554432"/>
+    <monster name="Toad" x="21" y="25" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-11" y="27" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="6" y="27" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-6" y="28" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-6" y="29" z="7" spawntime="33554432"/>
+    <monster name="Tortoise" x="1" y="29" z="7" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2677" centery="2724" centerz="7" radius="30">
+    <monster name="Tortoise" x="-25" y="10" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-25" y="11" z="7" spawntime="32256"/>
+    <monster name="Toad" x="-24" y="12" z="7" spawntime="60"/>
+    <monster name="Crimson Frog" x="-22" y="12" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-21" y="14" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-29" y="17" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-28" y="17" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="-16" y="17" z="7" spawntime="33554432"/>
+    <monster name="Tortoise" x="-19" y="21" z="7" spawntime="60"/>
+    <monster name="Green Frog" x="18" y="26" z="7" spawntime="33554432"/>
+    <monster name="Green Frog" x="23" y="27" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="28" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="27" y="28" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="29" y="28" z="7" spawntime="60"/>
+    <monster name="Orchid Frog" x="19" y="29" z="7" spawntime="33554432"/>
+  </spawn>
+  <spawn centerx="2635" centery="2735" centerz="7" radius="30">
+    <monster name="Crimson Frog" x="11" y="-3" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="4" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="1" y="8" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="5" y="8" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="3" y="9" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="24" y="21" z="7" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2703" centery="2743" centerz="7" radius="30">
+    <monster name="Tortoise" x="19" y="8" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="7" y="9" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="22" y="10" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-15" y="16" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="19" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="20" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="9" y="22" z="7" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2811" centery="2759" centerz="7" radius="27">
+    <monster name="Coral Frog" x="4" y="-22" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="10" y="-22" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-14" y="-20" z="7" spawntime="60"/>
+    <monster name="Toad" x="-11" y="-20" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="1" y="-20" z="7" spawntime="60"/>
+    <monster name="Toad" x="4" y="-20" z="7" spawntime="60"/>
+    <monster name="Toad" x="9" y="-20" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-8" y="-19" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="13" y="-19" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="1" y="-18" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="-6" y="-17" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="-16" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="15" y="-14" z="7" spawntime="60"/>
+    <monster name="Toad" x="18" y="-13" z="7" spawntime="33554432"/>
+    <monster name="Toad" x="1" y="-11" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="14" y="-10" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="-1" y="-9" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="3" y="-9" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="17" y="-9" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-20" y="-8" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="-21" y="-7" z="7" spawntime="60"/>
+    <monster name="Toad" x="-13" y="-7" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="18" y="-7" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="-17" y="-6" z="7" spawntime="60"/>
+    <monster name="Toad" x="-2" y="-5" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="0" y="-4" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="25" y="-4" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-8" y="-2" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="2" y="-2" z="7" spawntime="60"/>
+    <monster name="Toad" x="-6" y="-1" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="18" y="-1" z="7" spawntime="60"/>
+    <monster name="Toad" x="20" y="-1" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-23" y="0" z="7" spawntime="60"/>
+    <monster name="Toad" x="5" y="2" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="5" y="4" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="14" y="5" z="7" spawntime="60"/>
+    <monster name="Toad" x="16" y="5" z="7" spawntime="60"/>
+    <monster name="Toad" x="-11" y="6" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="6" y="6" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-20" y="7" z="7" spawntime="60"/>
+    <monster name="Toad" x="-15" y="8" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="10" z="7" spawntime="60"/>
+    <monster name="Tortoise" x="13" y="10" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="17" y="10" z="7" spawntime="60"/>
+    <monster name="Amazon" x="-6" y="11" z="7" spawntime="60"/>
+    <monster name="Amazon" x="0" y="15" z="7" spawntime="60"/>
+    <monster name="Toad" x="14" y="18" z="7" spawntime="60"/>
+    <monster name="Amazon" x="-5" y="20" z="7" spawntime="60"/>
+    <monster name="Amazon" x="7" y="20" z="7" spawntime="60"/>
+    <monster name="Amazon" x="1" y="22" z="7" spawntime="33554432"/>
+    <monster name="Toad" x="-4" y="23" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="-8" y="24" z="7" spawntime="60"/>
+    <monster name="Coral Frog" x="7" y="24" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="418" centery="381" centerz="8" radius="5">
     <monster name="Hellfire Fighter" x="0" y="1" z="8" spawntime="60"/>
@@ -15508,6 +15716,189 @@
     <monster name="Larva" x="4" y="0" z="8" spawntime="60"/>
     <monster name="Larva" x="-4" y="9" z="8" spawntime="60"/>
   </spawn>
+  <spawn centerx="2785" centery="2675" centerz="8" radius="27">
+    <monster name="Thornback Tortoise" x="-12" y="-24" z="8" spawntime="60"/>
+    <monster name="Toad" x="-10" y="-23" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-14" y="-22" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-12" y="-22" z="8" spawntime="60"/>
+    <monster name="Toad" x="-13" y="-20" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-11" y="-20" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="9" y="-19" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="13" y="-19" z="8" spawntime="60"/>
+    <monster name="Toad" x="16" y="-19" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="11" y="-18" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="-15" z="8" spawntime="33554432"/>
+    <monster name="Tortoise" x="8" y="-14" z="8" spawntime="60"/>
+    <monster name="Toad" x="4" y="-11" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-20" y="-9" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-22" y="-8" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-18" y="-8" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-19" y="-7" z="8" spawntime="60"/>
+    <monster name="Toad" x="-17" y="-7" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-21" y="-6" z="8" spawntime="60"/>
+    <monster name="Toad" x="-19" y="-5" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-20" y="-3" z="8" spawntime="60"/>
+    <monster name="Toad" x="-1" y="-3" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-4" y="0" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-2" y="1" z="8" spawntime="60"/>
+    <monster name="Toad" x="15" y="4" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="10" y="6" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="12" y="6" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="14" y="6" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-12" y="13" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-15" y="14" z="8" spawntime="60"/>
+    <monster name="Toad" x="-19" y="15" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-19" y="16" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-16" y="16" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="6" y="16" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="3" y="17" z="8" spawntime="60"/>
+    <monster name="Toad" x="-17" y="18" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="5" y="18" z="8" spawntime="60"/>
+    <monster name="Toad" x="3" y="19" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="1" y="20" z="8" spawntime="60"/>
+    <monster name="Toad" x="1" y="24" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2655" centery="2705" centerz="8" radius="27">
+    <monster name="Thornback Tortoise" x="-8" y="-18" z="8" spawntime="60"/>
+    <monster name="Toad" x="10" y="-18" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="5" y="-15" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="6" y="-15" z="8" spawntime="32256"/>
+    <monster name="Toad" x="13" y="-15" z="8" spawntime="33554432"/>
+    <monster name="Toad" x="-6" y="-14" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="8" y="-14" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-8" y="-13" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="15" y="-13" z="8" spawntime="60"/>
+    <monster name="Toad" x="-9" y="-11" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-9" y="-2" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="25" y="-2" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="25" y="-1" z="8" spawntime="32256"/>
+    <monster name="Thornback Tortoise" x="24" y="0" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="1" z="8" spawntime="32256"/>
+    <monster name="Tortoise" x="-10" y="2" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="2" z="8" spawntime="32256"/>
+    <monster name="Thornback Tortoise" x="17" y="2" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-1" y="4" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="25" y="5" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="25" y="7" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-3" y="10" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-21" y="16" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-20" y="16" z="8" spawntime="60"/>
+    <monster name="Toad" x="-20" y="19" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="19" z="8" spawntime="60"/>
+    <monster name="Toad" x="9" y="21" z="8" spawntime="60"/>
+    <monster name="Toad" x="14" y="21" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="15" y="21" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-21" y="22" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-20" y="22" z="8" spawntime="32256"/>
+    <monster name="Tortoise" x="-4" y="23" z="8" spawntime="60"/>
+    <monster name="Toad" x="11" y="23" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="13" y="23" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="8" y="24" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-14" y="27" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-13" y="27" z="8" spawntime="32256"/>
+  </spawn>
+  <spawn centerx="2696" centery="2706" centerz="8" radius="27">
+    <monster name="Toad" x="0" y="-22" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-2" y="-21" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="-21" z="8" spawntime="32256"/>
+    <monster name="Toad" x="5" y="-20" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="-20" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="4" y="-19" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="10" y="-18" z="8" spawntime="60"/>
+    <monster name="Toad" x="8" y="-17" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-12" y="-16" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="-16" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="7" y="-15" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-10" y="-14" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="-13" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-12" y="-8" z="8" spawntime="60"/>
+    <monster name="Toad" x="1" y="5" z="8" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="3" y="5" z="8" spawntime="60"/>
+    <monster name="Toad" x="0" y="6" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-2" y="9" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="14" z="8" spawntime="60"/>
+    <monster name="Toad" x="-2" y="15" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-1" y="16" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="19" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-2" y="25" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2655" centery="2729" centerz="8" radius="27">
+    <monster name="Tortoise" x="-5" y="4" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="10" y="6" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-4" y="9" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="3" y="12" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="2" y="13" z="8" spawntime="60"/>
+    <monster name="Toad" x="23" y="13" z="8" spawntime="60"/>
+    <monster name="Toad" x="0" y="14" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="25" y="17" z="8" spawntime="60"/>
+    <monster name="Toad" x="23" y="20" z="8" spawntime="60"/>
+    <monster name="Toad" x="-1" y="22" z="8" spawntime="60"/>
+    <monster name="Toad" x="21" y="24" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2692" centery="2746" centerz="8" radius="27">
+    <monster name="Tortoise" x="0" y="-4" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="7" y="-2" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-3" y="-1" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-8" y="0" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="11" y="2" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="6" y="10" z="8" spawntime="60"/>
+    <monster name="Toad" x="25" y="10" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="14" y="11" z="8" spawntime="60"/>
+    <monster name="Toad" x="23" y="11" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="24" y="11" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="19" y="12" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="1" y="13" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-1" y="16" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-3" y="18" z="8" spawntime="60"/>
+    <monster name="Toad" x="-1" y="19" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="19" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2815" centery="2747" centerz="8" radius="27">
+    <monster name="Tortoise" x="-20" y="-18" z="8" spawntime="60"/>
+    <monster name="Toad" x="-22" y="-17" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-17" y="-17" z="8" spawntime="60"/>
+    <monster name="Toad" x="-19" y="-16" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-21" y="-14" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="2" y="-13" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="2" y="-11" z="8" spawntime="60"/>
+    <monster name="Toad" x="4" y="-9" z="8" spawntime="60"/>
+    <monster name="Toad" x="2" y="-7" z="8" spawntime="60"/>
+    <monster name="Toad" x="-23" y="-6" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="0" y="-2" z="8" spawntime="60"/>
+    <monster name="Toad" x="2" y="-2" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-16" y="3" z="8" spawntime="60"/>
+    <monster name="Toad" x="6" y="6" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="0" y="7" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="9" y="13" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="12" y="13" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-27" y="17" z="8" spawntime="60"/>
+    <monster name="Toad" x="-11" y="17" z="8" spawntime="60"/>
+    <monster name="Toad" x="-25" y="19" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-19" y="19" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="11" y="19" z="8" spawntime="60"/>
+    <monster name="Toad" x="9" y="20" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-7" y="21" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-5" y="23" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="24" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="10" y="26" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2795" centery="2748" centerz="8" radius="27">
+    <monster name="Toad" x="-15" y="-2" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-13" y="-2" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-17" y="-1" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-15" y="0" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-10" y="15" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-10" y="19" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2700" centery="2751" centerz="8" radius="27"/>
+  <spawn centerx="2805" centery="2772" centerz="8" radius="27">
+    <monster name="Tortoise" x="-12" y="11" z="8" spawntime="60"/>
+    <monster name="Toad" x="-13" y="13" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="10" y="15" z="8" spawntime="60"/>
+    <monster name="Toad" x="-11" y="16" z="8" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-9" y="18" z="8" spawntime="60"/>
+    <monster name="Tortoise" x="-11" y="19" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="412" centery="427" centerz="9" radius="5">
     <monster name="Blightwalker" x="-3" y="-3" z="9" spawntime="60"/>
     <monster name="Blightwalker" x="3" y="-1" z="9" spawntime="60"/>
@@ -20359,6 +20750,245 @@
     <monster name="Giant Spider" x="-1" y="3" z="9" spawntime="60"/>
     <monster name="Giant Spider" x="4" y="3" z="9" spawntime="60"/>
   </spawn>
+  <spawn centerx="2769" centery="2669" centerz="9" radius="27">
+    <monster name="Tortoise" x="-21" y="-16" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-14" y="-16" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-14" y="-15" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-8" y="-14" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-19" y="-13" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-7" y="-12" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="-17" y="-11" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="4" y="-9" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="2" y="-8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="10" y="-7" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="13" y="-4" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="4" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="5" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-21" y="6" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="6" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-19" y="8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="26" y="8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="13" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="25" y="14" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-23" y="15" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-25" y="17" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-25" y="19" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="20" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="23" y="20" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="22" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-2" y="23" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="23" y="23" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-4" y="26" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2681" centery="2674" centerz="9" radius="27">
+    <monster name="Tortoise" x="5" y="-15" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="9" y="-14" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="3" y="-11" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="12" y="-11" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="8" y="-10" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="7" y="-9" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="11" y="-9" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="7" y="-8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="6" y="0" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="4" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="6" y="9" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="2" y="16" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="17" y="16" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-10" y="17" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-16" y="18" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-14" y="20" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-13" y="20" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-12" y="20" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="3" y="25" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="18" y="25" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="22" y="25" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2797" centery="2683" centerz="9" radius="27">
+    <monster name="Tortoise" x="-10" y="26" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2742" centery="2694" centerz="9" radius="27">
+    <monster name="Thornback Tortoise" x="-15" y="-8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-12" y="-8" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-16" y="9" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-7" y="9" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-6" y="9" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-16" y="11" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-13" y="11" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-11" y="13" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="12" y="22" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="17" y="22" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="9" y="23" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="12" y="26" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2656" centery="2699" centerz="9" radius="27">
+    <monster name="Thornback Tortoise" x="-13" y="-9" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-18" y="-8" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-17" y="-8" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="-15" y="-8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-14" y="-7" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="-16" y="-6" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-14" y="-6" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-19" y="-5" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-16" y="-4" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="-16" y="-3" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-18" y="5" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="23" y="6" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-21" y="10" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="20" y="10" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="20" y="11" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="15" y="13" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="15" y="14" z="9" spawntime="32256"/>
+    <monster name="Tortoise" x="9" y="17" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="5" y="18" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="0" y="19" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="20" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-1" y="21" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="21" z="9" spawntime="32256"/>
+    <monster name="Tortoise" x="-20" y="22" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="1" y="22" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-25" y="23" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-23" y="23" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-24" y="24" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-23" y="24" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="-4" y="24" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-25" y="27" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="-21" y="27" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2686" centery="2699" centerz="9" radius="27">
+    <monster name="Tortoise" x="16" y="6" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="16" y="9" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="14" y="10" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="15" y="10" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="17" y="10" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="13" y="14" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="14" y="27" z="9" spawntime="32256"/>
+    <monster name="Tortoise" x="15" y="27" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2695" centery="2717" centerz="9" radius="27">
+    <monster name="Thornback Tortoise" x="-10" y="10" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-7" y="10" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="11" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-11" y="13" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-7" y="15" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-25" y="21" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="10" y="21" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-27" y="22" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="-27" y="26" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-22" y="27" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2781" centery="2717" centerz="9" radius="27">
+    <monster name="Thornback Tortoise" x="4" y="-6" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="3" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="13" y="4" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="10" y="5" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-25" y="6" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-22" y="6" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="-3" y="8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-4" y="14" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="15" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="16" y="19" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-4" y="21" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="17" y="21" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="19" y="21" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="16" y="25" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2647" centery="2718" centerz="9" radius="27">
+    <monster name="Tortoise" x="-15" y="9" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-11" y="9" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="10" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-14" y="12" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-12" y="17" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-11" y="20" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="12" y="20" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="20" y="21" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="23" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="-9" y="24" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="15" y="24" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="16" y="25" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="18" y="25" z="9" spawntime="33554432"/>
+  </spawn>
+  <spawn centerx="2760" centery="2736" centerz="9" radius="27">
+    <monster name="Thornback Tortoise" x="18" y="11" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="22" y="11" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="13" y="14" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="19" y="14" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="22" y="14" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="22" y="16" z="9" spawntime="32256"/>
+    <monster name="Tortoise" x="23" y="16" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="6" y="17" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="1" y="20" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="2" y="20" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="-4" y="22" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="4" y="22" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-2" y="24" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2640" centery="2747" centerz="9" radius="27">
+    <monster name="Tortoise" x="26" y="-1" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="2" y="4" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-4" y="5" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-3" y="5" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="-1" y="5" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="2" y="5" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="27" y="5" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-4" y="6" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="3" y="7" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-7" y="8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="9" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="20" y="16" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="20" y="17" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="21" y="17" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="22" y="19" z="9" spawntime="33554432"/>
+  </spawn>
+  <spawn centerx="2713" centery="2748" centerz="9" radius="27">
+    <monster name="Tortoise" x="-4" y="2" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="7" y="4" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="2" y="5" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-2" y="6" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-17" y="8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-16" y="8" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="-12" y="8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="3" y="8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="5" y="8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="11" y="8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-18" y="9" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-6" y="9" z="9" spawntime="32256"/>
+  </spawn>
+  <spawn centerx="2680" centery="2751" centerz="9" radius="27">
+    <monster name="Tortoise" x="-11" y="1" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-7" y="8" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-7" y="9" z="9" spawntime="32256"/>
+    <monster name="Tortoise" x="-6" y="9" z="9" spawntime="32256"/>
+    <monster name="Tortoise" x="-6" y="12" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2802" centery="2753" centerz="9" radius="27">
+    <monster name="Tortoise" x="-6" y="-3" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-6" y="2" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-5" y="3" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-5" y="4" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="-2" y="4" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="-1" y="4" z="9" spawntime="33554432"/>
+    <monster name="Tortoise" x="-3" y="5" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-2" y="5" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="0" y="6" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="4" y="7" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="2" y="8" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-3" y="9" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-18" y="16" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="4" y="16" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-10" y="17" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-18" y="19" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="20" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-3" y="21" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-19" y="23" z="9" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2774" centery="2754" centerz="9" radius="27"/>
+  <spawn centerx="2792" centery="2771" centerz="9" radius="27">
+    <monster name="Thornback Tortoise" x="-2" y="17" z="9" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="-1" y="17" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="19" z="9" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-3" y="20" z="9" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="24" z="9" spawntime="60"/>
+  </spawn>
   <spawn centerx="382" centery="345" centerz="10" radius="5">
     <monster name="Phantasm" x="-2" y="1" z="10" spawntime="60"/>
     <monster name="Hand of Cursed Fate" x="2" y="1" z="10" spawntime="60"/>
@@ -24586,6 +25216,141 @@
     <monster name="Scarab" x="0" y="4" z="10" spawntime="33554432"/>
     <monster name="Scarab" x="1" y="4" z="10" spawntime="60"/>
   </spawn>
+  <spawn centerx="2693" centery="2665" centerz="10" radius="27">
+    <monster name="Tortoise" x="-10" y="-5" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="-5" z="10" spawntime="32256"/>
+    <monster name="Tortoise" x="1" y="-4" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-12" y="-3" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-1" y="-2" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-5" y="-1" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-8" y="1" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-3" y="3" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-7" y="6" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-6" y="6" z="10" spawntime="33554432"/>
+    <monster name="Tortoise" x="-3" y="10" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-4" y="12" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-4" y="13" z="10" spawntime="33554432"/>
+    <monster name="Blood Crab" x="9" y="16" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-27" y="21" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-27" y="23" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="10" y="25" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="13" y="25" z="10" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2653" centery="2697" centerz="10" radius="27">
+    <monster name="Tortoise" x="-12" y="-14" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-12" y="-13" z="10" spawntime="32256"/>
+    <monster name="Blood Crab" x="12" y="-12" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-16" y="-11" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-11" y="-10" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="-9" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="10" y="-9" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="11" y="-9" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-17" y="-8" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-14" y="-8" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-17" y="-7" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-12" y="-5" z="10" spawntime="33554432"/>
+    <monster name="Blood Crab" x="-12" y="-4" z="10" spawntime="33554432"/>
+    <monster name="Blood Crab" x="-11" y="-4" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-13" y="-1" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="23" y="4" z="10" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="24" y="4" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="23" y="7" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-4" y="10" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="24" y="10" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="26" y="10" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-8" y="12" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-7" y="12" z="10" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="-4" y="14" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="15" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="16" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-3" y="16" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-5" y="21" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-8" y="23" z="10" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2690" centery="2711" centerz="10" radius="27">
+    <monster name="Tortoise" x="13" y="-17" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-9" y="-11" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-4" y="-11" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-7" y="-10" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-6" y="-7" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="10" y="-3" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="15" y="10" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="10" y="13" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="15" y="14" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="3" y="18" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="11" y="18" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="12" y="18" z="10" spawntime="33554432"/>
+  </spawn>
+  <spawn centerx="2698" centery="2720" centerz="10" radius="27">
+    <monster name="Tortoise" x="-27" y="19" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-24" y="24" z="10" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2741" centery="2721" centerz="10" radius="27">
+    <monster name="Tortoise" x="-8" y="-23" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-13" y="-21" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="5" y="-18" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-8" y="-17" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="0" y="-14" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-12" y="-13" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-5" y="-13" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="-13" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-10" y="-11" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="0" y="-11" z="10" spawntime="33554432"/>
+    <monster name="Blood Crab" x="4" y="-10" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="7" y="-10" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-9" y="-9" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-3" y="-7" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="9" y="-6" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="4" y="-4" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-4" y="-3" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="11" y="-3" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="7" y="2" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-9" y="16" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-7" y="17" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-10" y="18" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-5" y="19" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-13" y="21" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-7" y="22" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-11" y="25" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="27" z="10" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2661" centery="2725" centerz="10" radius="27">
+    <monster name="Blood Crab" x="-13" y="4" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-10" y="5" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-11" y="11" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="9" y="14" z="10" spawntime="32256"/>
+    <monster name="Blood Crab" x="-7" y="16" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-6" y="16" z="10" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="3" y="16" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-4" y="17" z="10" spawntime="33554432"/>
+    <monster name="Tortoise" x="0" y="18" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="7" y="18" z="10" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="8" y="19" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="6" y="22" z="10" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2741" centery="2740" centerz="10" radius="27">
+    <monster name="Tortoise" x="10" y="13" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="13" y="14" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="10" y="19" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="11" y="20" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="13" y="23" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="8" y="24" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="11" y="26" z="10" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2703" centery="2752" centerz="10" radius="27">
+    <monster name="Blood Crab" x="-5" y="1" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="0" y="1" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="3" y="2" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-3" y="3" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-7" y="5" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="0" y="6" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="4" y="6" z="10" spawntime="60"/>
+    <monster name="Blood Crab" x="-5" y="8" z="10" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2757" centery="2764" centerz="10" radius="27">
+    <monster name="Tortoise" x="-9" y="4" z="10" spawntime="60"/>
+    <monster name="Tortoise" x="-8" y="4" z="10" spawntime="32256"/>
+  </spawn>
   <spawn centerx="398" centery="431" centerz="11" radius="5">
     <monster name="Destroyer" x="-3" y="-3" z="11" spawntime="60"/>
     <monster name="Spectre" x="3" y="-1" z="11" spawntime="60"/>
@@ -26621,6 +27386,95 @@
     <monster name="Banshee" x="-1" y="-3" z="11" spawntime="60"/>
     <monster name="Banshee" x="0" y="-3" z="11" spawntime="60"/>
     <monster name="Banshee" x="1" y="-3" z="11" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2662" centery="2679" centerz="11" radius="27">
+    <monster name="Thornback Tortoise" x="22" y="-18" z="11" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="23" y="-18" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="22" y="-17" z="11" spawntime="33554432"/>
+    <monster name="Tortoise" x="24" y="-17" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="23" y="-14" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="23" y="-11" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="23" y="-8" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="22" y="-2" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="20" y="3" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-19" y="4" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-23" y="5" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="17" y="5" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="-19" y="6" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="-3" y="6" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-19" y="7" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-14" y="7" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="7" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="12" y="7" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-14" y="8" z="11" spawntime="32256"/>
+    <monster name="Thornback Tortoise" x="-6" y="8" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="9" y="8" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-4" y="9" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="27" y="15" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="24" y="19" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="25" y="19" z="11" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="26" y="19" z="11" spawntime="33554432"/>
+    <monster name="Blood Crab" x="19" y="20" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="17" y="23" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="18" y="23" z="11" spawntime="32256"/>
+  </spawn>
+  <spawn centerx="2673" centery="2689" centerz="11" radius="27">
+    <monster name="Blood Crab" x="23" y="2" z="11" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="26" y="2" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="21" y="4" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="27" y="4" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="19" y="8" z="11" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2692" centery="2694" centerz="11" radius="27">
+    <monster name="Blood Crab" x="11" y="-3" z="11" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2754" centery="2698" centerz="11" radius="27">
+    <monster name="Tortoise" x="-1" y="-13" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="-4" y="-9" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-1" y="-9" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-3" y="-6" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-1" y="-3" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="2" y="2" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-10" y="3" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-11" y="6" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-10" y="6" z="11" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="-9" y="6" z="11" spawntime="33554432"/>
+    <monster name="Tortoise" x="-3" y="7" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="2" y="7" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-12" y="8" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="-7" y="8" z="11" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2690" centery="2738" centerz="11" radius="27">
+    <monster name="Blood Crab" x="-6" y="-9" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="-5" y="-9" z="11" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="-2" y="-9" z="11" spawntime="33554432"/>
+    <monster name="Tortoise" x="2" y="-9" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="-2" y="-8" z="11" spawntime="33554432"/>
+    <monster name="Thornback Tortoise" x="-10" y="-6" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="0" y="-5" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="1" y="-5" z="11" spawntime="33554432"/>
+    <monster name="Blood Crab" x="-13" y="-4" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-16" y="-3" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="3" y="-2" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="-19" y="0" z="11" spawntime="32256"/>
+    <monster name="Tortoise" x="-19" y="1" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="4" y="1" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="8" y="6" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="26" y="7" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="27" y="8" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="11" y="10" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="24" y="10" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="19" y="11" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="20" y="11" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="15" y="15" z="11" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2712" centery="2740" centerz="11" radius="27">
+    <monster name="Tortoise" x="18" y="-2" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="14" y="1" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="18" y="1" z="11" spawntime="60"/>
+    <monster name="Thornback Tortoise" x="16" y="2" z="11" spawntime="60"/>
+    <monster name="Blood Crab" x="10" y="3" z="11" spawntime="60"/>
+    <monster name="Tortoise" x="8" y="5" z="11" spawntime="60"/>
   </spawn>
   <spawn centerx="440" centery="417" centerz="12" radius="5">
     <monster name="Spectre" x="-4" y="-2" z="12" spawntime="60"/>
