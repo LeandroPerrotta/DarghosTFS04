@@ -21,17 +21,17 @@
   <attacks>
     <attack name="melee" interval="2000" min="-100" max="-210"/>
     <attack name="physical" interval="1000" chance="100" min="-72" max="-130">
-	    <attribute key="shootEffect" value="spear"/>
+      <attribute key="shootEffect" value="spear"/>
     </attack>
   </attacks>
   <defenses armor="30" defense="31">
-	<defense name="healing" interval="6000" chance="65" min="20" max="50">
-		<attribute key="areaEffect" value="blueshimmer"/>
-	</defense>
+    <defense name="healing" interval="6000" chance="65" min="20" max="50">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
   </defenses>
   <elements>
-	<element icePercent="33"/>
-	<element firePercent="-11"/>
+    <element icePercent="33"/>
+    <element firePercent="-11"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>

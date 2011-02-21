@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="diabolic imp" nameDescription="a diabolic imp" race="blood" experience="1950" speed="360" manacost="0">
   <health now="1950" max="1950"/>
   <look type="237" corpse="6364"/>
@@ -40,38 +40,67 @@
     </defense>
   </defenses>
   <elements>
-	<element firePercent="100"/>
-	<element earthPercent="30"/>
-	<element deathPercent="25"/>
-	<element icePercent="-25"/>
-	<element holyPercent="-12"/>
+    <element firePercent="100"/>
+    <element earthPercent="30"/>
+    <element deathPercent="25"/>
+    <element icePercent="-25"/>
+    <element holyPercent="-12"/>
   </elements>
   <immunities>
     <immunity paralyze="1"/>
     <immunity invisible="1"/>
   </immunities>
   <voices interval="5000" chance="10">
-	<voice sentence="Muahaha!"/>
+    <voice sentence="Muahaha!"/>
     <voice sentence="He he he!"/>
   </voices>
   <loot>
-   <item id="2148" countmax="79" chance1="100000" chancemax="0"/>
-   <item id="2050" chance="15000"/>
-   <item id="6558" chance="2222"/>
-   <item id="2260" chance="18000"/>
-   <item id="6300" chance="999"/>
-   <item id="2465" chance="6577"/>
-   <item id="1987" chance="100000">
-		<inside>
-			<item id="2548" chance="20000"/>
-			<item id="2465" chance="6577"/>
-			<item id="2185" chance="833"/>
-			<item id="2464" chance="7887"/>
-			<item id="5944" chance="5666"/>
-			<item id="6500" countmax="1" chance1="7777" chancemax="0"/>
-			<item id="2150" countmax="1" chance1="8888" chancemax="0"/>
-			<item id="2165" chance="4555"/>
-		</inside>
-	</item>
+    <item id="2148" countmax="79" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2050" chance="15000">
+      <!--torch-->
+    </item>
+    <item id="6558" chance="2222">
+      <!--concentrated demonic blood-->
+    </item>
+    <item id="2260" chance="18000">
+      <!--blank rune-->
+    </item>
+    <item id="6300" chance="999">
+      <!--death ring-->
+    </item>
+    <item id="2465" chance="6577">
+      <!--brass armor-->
+    </item>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="2548" chance="20000">
+          <!--pitch fork-->
+        </item>
+        <item id="2465" chance="6577">
+          <!--brass armor-->
+        </item>
+        <item id="2185" chance="833">
+          <!--necrotic rod-->
+        </item>
+        <item id="2464" chance="7887">
+          <!--chain armor-->
+        </item>
+        <item id="5944" chance="5666">
+          <!--soul orb-->
+        </item>
+        <item id="6500" countmax="1" chance1="7777" chancemax="0">
+          <!--demonic essence-->
+        </item>
+        <item id="2150" countmax="1" chance1="8888" chancemax="0">
+          <!--small amethyst-->
+        </item>
+        <item id="2165" chance="4555">
+          <!--stealth ring-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
   </loot>
 </monster>

@@ -24,8 +24,8 @@
   </attacks>
   <defenses armor="25" defense="27"/>
   <elements>
-	<element icePercent="100"/>
-	<element deathPercent="-9"/>
+    <element icePercent="100"/>
+    <element deathPercent="-9"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
@@ -34,7 +34,7 @@
     <voice sentence="I'll extinguish you warmbloods."/>
     <voice sentence="REVENGE!"/>
     <voice sentence="Far too hot."/>
-	<voice sentence="DISGUSTING WARMBLOODS!"/>
-	<voice sentence="Revenge is sweetest when served cold."/>
+    <voice sentence="DISGUSTING WARMBLOODS!"/>
+    <voice sentence="Revenge is sweetest when served cold."/>
   </voices>
 </monster>

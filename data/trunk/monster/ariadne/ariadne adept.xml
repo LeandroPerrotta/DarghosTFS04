@@ -28,10 +28,10 @@
   </attacks>
   <defenses armor="8" defense="12"/>
   <elements>
-	<element energyPercent="100"/>
-	<element earthPercent="30"/>
-	<element deathPercent="-5"/>
-	<element physicalPercent="-14"/>
+    <element energyPercent="100"/>
+    <element earthPercent="30"/>
+    <element deathPercent="-5"/>
+    <element physicalPercent="-14"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
@@ -41,11 +41,23 @@
     <voice sentence="Crrrraaaakatum!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2129" chance="10000"/>
-    <item id="2185" chance="833"/> -- volcanic rod
-    <item id="2643" chance="10000"/>
-    <item id="2651" chance="5000"/>
-    <item id="2696" chance="33333"/>
+    <item id="2148" countmax="20" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2129" chance="10000">
+      <!--wolf tooth chain-->
+    </item>
+    <item id="2185" chance="833">
+      <!--necrotic rod-->
+    </item>
+    <item id="2643" chance="10000">
+      <!--leather boots-->
+    </item>
+    <item id="2651" chance="5000">
+      <!--coat-->
+    </item>
+    <item id="2696" chance="33333">
+      <!--cheese-->
+    </item>
   </loot>
 </monster>

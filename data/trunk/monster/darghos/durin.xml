@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Durin" nameDescription="The King of Dwarfs" race="blood" experience="1000000" speed="700" manacost="650">
   <health now="900000" max="900000"/>
   <look type="70" head="20" body="30" legs="40" feet="50" corpse="6013"/>
@@ -19,15 +19,15 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" min="-900" max="-2000"/>
-	<attack name="melee" interval="3000" chance="15" range="7" radius="3" target="0" min="-500" max="-1250">
-    <attribute key="areaEffect" value="blackspark"/>
-   </attack>
-	<attack name="melee" interval="3000" chance="15" range="7" radius="5" target="0" min="-100" max="-300">
-    <attribute key="areaEffect" value="groundshaker"/>
-   </attack>
-   	<attack name="melee" interval="3000" chance="15" range="7" target="1" min="-200" max="-500">
-    <attribute key="shootEffect" value="whirlwindclub"/>
-   </attack>
+    <attack name="melee" interval="3000" chance="15" range="7" radius="3" target="0" min="-500" max="-1250">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <attack name="melee" interval="3000" chance="15" range="7" radius="5" target="0" min="-100" max="-300">
+      <attribute key="areaEffect" value="groundshaker"/>
+    </attack>
+    <attack name="melee" interval="3000" chance="15" range="7" target="1" min="-200" max="-500">
+      <attribute key="shootEffect" value="whirlwindclub"/>
+    </attack>
   </attacks>
   <defenses armor="500" defense="300">
     <defense name="healing" interval="1000" chance="25" min="513" max="1587">
@@ -52,20 +52,43 @@
     <voice sentence="Your King shall fall!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="2483" chance="20000"/>
-    <item id="2417" chance="33333"/>
-    <item id="2387" chance="25000"/>
-    <item id="2787" countmax="3" chance1="33333" chancemax="0"/>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2483" chance="20000">
+      <!--scale armor-->
+    </item>
+    <item id="2417" chance="33333">
+      <!--battle hammer-->
+    </item>
+    <item id="2387" chance="25000">
+      <!--double axe-->
+    </item>
+    <item id="2787" countmax="3" chance1="33333" chancemax="0">
+      <!--white mushroom-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="5880" chance="3000" countmax="100" /> -- iron ore
-        <item id="2148" countmax="15" chance1="90000" chancemax="0"/>
-        <item id="2513" chance="6666"/>
-		<item id="2415" countmax="1" chance="6000"/> //g axe	
-        <item id="2208" chance="1000"/>
-        <item id="2150" countmax="100" chance1="4000" chancemax="0"/>
+        <item id="5880" chance="3000" countmax="100">
+          <!--iron ore-->
+        </item>
+        <item id="2148" countmax="15" chance1="90000" chancemax="0">
+          <!--gold coin-->
+        </item>
+        <item id="2513" chance="6666">
+          <!--battle shield-->
+        </item>
+        <item id="2415" countmax="1" chance="6000">
+          <!--great axe-->
+        </item>
+        <item id="2208" chance="1000">
+          <!--axe ring-->
+        </item>
+        <item id="2150" countmax="100" chance1="4000" chancemax="0">
+          <!--small amethyst-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

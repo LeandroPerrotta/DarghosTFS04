@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="orc rider" nameDescription="a orc rider" race="blood" experience="110" speed="340" manacost="0">
   <health now="180" max="180"/>
   <look type="4" head="20" body="30" legs="40" feet="50" corpse="6010"/>
@@ -26,31 +26,49 @@
     </defense>
   </defenses>
   <elements>
-	<element energyPercent="20"/>
-	<element holyPercent="10"/>
-	<element earthPercent="-10"/>
-	<element deathPercent="-5"/>
+    <element energyPercent="20"/>
+    <element holyPercent="10"/>
+    <element earthPercent="-10"/>
+    <element deathPercent="-5"/>
   </elements>
   <voices interval="5000" chance="10">
     <voice sentence="Grrrrrrr"/>
     <voice sentence="Orc arga Huummmak!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2666" countmax="3" chance1="50000" chancemax="0"/>
-    <item id="2129" chance="10000"/>
+    <item id="2148" countmax="20" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2666" countmax="3" chance1="50000" chancemax="0">
+      <!--meat-->
+    </item>
+    <item id="2129" chance="10000">
+      <!--wolf tooth chain-->
+    </item>
     <item id="1988" chance="20000">
       <inside>
-        <item id="2148" countmax="1" chance1="20000" chancemax="0"/>
+        <item id="2148" countmax="1" chance1="20000" chancemax="0">
+          <!--gold coin-->
+        </item>
       </inside>
+      <!--backpack-->
     </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2428" chance="2500"/>
-        <item id="2480" chance="10000"/>
-        <item id="2425" chance="2000"/>
-        <item id="2513" chance="6666"/>
+        <item id="2428" chance="2500">
+          <!--orcish axe-->
+        </item>
+        <item id="2480" chance="10000">
+          <!--legion helmet-->
+        </item>
+        <item id="2425" chance="2000">
+          <!--obsidian lance-->
+        </item>
+        <item id="2513" chance="6666">
+          <!--battle shield-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

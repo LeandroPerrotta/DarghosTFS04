@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="sibang" nameDescription="a sibang" race="blood" experience="115" speed="220" manacost="0">
   <health now="225" max="225"/>
   <look type="118" head="20" body="30" legs="40" feet="50" corpse="6045"/>
@@ -28,12 +28,12 @@
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
-    <elements>
-		<element firePercent="25"/>
-		<element holyPercent="10"/>
-		<element icePercent="-15"/>
-		<element deathPercent="-5"/>
-	</elements>
+  <elements>
+    <element firePercent="25"/>
+    <element holyPercent="10"/>
+    <element icePercent="-15"/>
+    <element deathPercent="-5"/>
+  </elements>
   <immunities>
     <immunity invisible="1"/>
   </immunities>
@@ -42,16 +42,29 @@
     <voice sentence="Huh! Huh! Huh!"/>
     <voice sentence="Ahhuuaaa!"/>
   </voices>
-	<loot>
-		<item id="2678" chance="3000" countmax="5" /> -- coconut
-		<item id="5883" chance="1500" countmax="1" /> -- ape fur
-		<item id="2148" chance="100000" countmax="20" /> -- gold coin
-		<item id="2675" chance="6667" countmax="5" /> -- orange
-		<item id="1987" chance="100000" > -- bag
-			<inside>
-				<item id="2682" chance="6980" /> -- melon
-				<item id="1294" chance="3500" countmax="3" /> -- small stone
-			</inside>
-		</item>
-	</loot>
+  <loot>
+    <item id="2678" chance="3000" countmax="5">
+      <!--coconut-->
+    </item>
+    <item id="5883" chance="1500" countmax="1">
+      <!--ape fur-->
+    </item>
+    <item id="2148" chance="100000" countmax="20">
+      <!--gold coin-->
+    </item>
+    <item id="2675" chance="6667" countmax="5">
+      <!--orange-->
+    </item>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="2682" chance="6980">
+          <!--melon-->
+        </item>
+        <item id="1294" chance="3500" countmax="3">
+          <!--small stone-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
+  </loot>
 </monster>

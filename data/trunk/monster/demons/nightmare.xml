@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Nightmare" nameDescription="a nightmare" race="blood" experience="2150" speed="330" manacost="0">
   <health now="2750" max="2750"/>
   <look type="245" corpse="6340"/>
@@ -19,17 +19,14 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" attack="68" skill="68"/>
-
     <attack name="death" interval="2000" chance="20" range="7" target="1" min="-130" max="-170">
       <attribute key="shootEffect" value="suddendeath"/>
       <attribute key="areaEffect" value="mortarea"/>
     </attack>
-
     <attack name="earth" interval="2000" chance="15" range="7" radius="4" target="1" min="-250" max="-350">
       <attribute key="shootEffect" value="poison"/>
       <attribute key="areaEffect" value="poison"/>
     </attack>
-
   </attacks>
   <defenses armor="25" defense="25">
     <defense name="healing" interval="3000" chance="18" min="200" max="395">
@@ -39,12 +36,12 @@
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
-    <elements>
-		<element energyPercent="20"/>
-		<element icePercent="10"/>
-		<element holyPercent="-25"/>
-		<element firePercent="25"/>
-	</elements>
+  <elements>
+    <element energyPercent="20"/>
+    <element icePercent="10"/>
+    <element holyPercent="-25"/>
+    <element firePercent="25"/>
+  </elements>
   <immunities>
     <immunity earth="1"/>
     <immunity death="1"/>
@@ -55,32 +52,73 @@
     <voice sentence="Close your eyes... I want to show you something!"/>
     <voice sentence="I will haunt you forever!"/>
     <voice sentence="I will make you scream!"/>
-	<voice sentence="Take a ride with me."/>
+    <voice sentence="Take a ride with me."/>
   </voices>
   <loot>
-	<item id="2148" countmax="50" chance1="100000"/> -- gold coin
-    <item id="2148" countmax="80" chance1="100000"/> --Gold Coin
-	<item id="2152" chance="9500" countmax="4" /> -- platinum coin
-	<item id="2666" chance="20000" countmax="4" /> -- meat
-	<item id="2671" chance="50000" countmax="2" /> -- ham
-	<item id="2230" chance="19500" /> -- bone
-	<item id="6558" chance="12000" /> -- Concentrated Demonic Blood
-	<item id="6558" chance="7000" /> -- Concentrated Demonic Blood
-	<item id="2532" chance="6700" /> -- ancient shield
-	<item id="6500" chance1="6500" countmax="1" /> -- demonic essence
-	<item id="2387" chance="7777" /> -- double axe
-	<item id="1987" chance="100000" > -- bag
-		<inside>
-			<item id="2491" chance="5700" /> --Crown Helmet
-			<item id="7419" chance="1100" /> -- dreaded claver
-			<item id="5944" chance1="7500" countmax="1" /> -- soul orb
-			<item id="2457" chance="9850" /> -- steel helmet
-			<item id="6300" chance="1500" /> -- death ring
-			<item id="2477" chance="1000" /> -- knight legs
-			<item id="2195" chance="800" /> -- boots of haste
-			<item id="6526" chance="600" /> -- skeleton decoration
-			<item id="5810" chance="200" /> -- voodoo skull
-		</inside>
-	</item>
+    <item id="2148" countmax="50" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2148" countmax="80" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2152" chance="9500" countmax="4">
+      <!--platinum coin-->
+    </item>
+    <item id="2666" chance="20000" countmax="4">
+      <!--meat-->
+    </item>
+    <item id="2671" chance="50000" countmax="2">
+      <!--ham-->
+    </item>
+    <item id="2230" chance="19500">
+      <!--bone-->
+    </item>
+    <item id="6558" chance="12000">
+      <!--concentrated demonic blood-->
+    </item>
+    <item id="6558" chance="7000">
+      <!--concentrated demonic blood-->
+    </item>
+    <item id="2532" chance="6700">
+      <!--ancient shield-->
+    </item>
+    <item id="6500" chance1="6500" countmax="1">
+      <!--demonic essence-->
+    </item>
+    <item id="2387" chance="7777">
+      <!--double axe-->
+    </item>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="2491" chance="5700">
+          <!--crown helmet-->
+        </item>
+        <item id="7419" chance="1100">
+          <!--dreaded cleaver-->
+        </item>
+        <item id="5944" chance1="7500" countmax="1">
+          <!--soul orb-->
+        </item>
+        <item id="2457" chance="9850">
+          <!--steel helmet-->
+        </item>
+        <item id="6300" chance="1500">
+          <!--death ring-->
+        </item>
+        <item id="2477" chance="1000">
+          <!--knight legs-->
+        </item>
+        <item id="2195" chance="800">
+          <!--boots of haste-->
+        </item>
+        <item id="6526" chance="600">
+          <!--skeleton decoration-->
+        </item>
+        <item id="5810" chance="200">
+          <!--pirate voodoo doll-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
   </loot>
 </monster>

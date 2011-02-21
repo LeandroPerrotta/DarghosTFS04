@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="pirate marauder" nameDescription="a pirate marauder" race="blood" experience="125" speed="230" manacost="490">
   <health now="210" max="210"/>
   <look type="93" head="0" body="0" legs="0" feet="0" corpse="6080"/>
@@ -18,44 +18,69 @@
     <flag targetdistance="1"/>
     <flag runonhealth="25"/>
   </flags>
-<attacks>
+  <attacks>
     <attack name="melee" interval="2000" min="-0" max="-140"/>
     <attack name="physical" interval="2000" chance="20" range="7" min="-0" max="-65">
       <attribute key="shootEffect" value="spear"/>
     </attack>
-</attacks>
+  </attacks>
   <defenses armor="15" defense="20"/>
   <elements>
-	<element earthPercent="16"/>
-	<element holyPercent="15"/>
-	<element deathPercent="-7"/>
-	<element firePercent="-8"/>
-	<element energyPercent="-10"/>
+    <element earthPercent="16"/>
+    <element holyPercent="15"/>
+    <element deathPercent="-7"/>
+    <element firePercent="-8"/>
+    <element energyPercent="-10"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
   </immunities>
   <voices interval="5000" chance="10">
     <voice sentence="Plundeeeeer!"/>
-	<voice sentence="Give up!"/>
-	<voice sentence="Hiyaa!"/>
+    <voice sentence="Give up!"/>
+    <voice sentence="Hiyaa!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="80" chance1="42000" chancemax="183"/>
-    <item id="2376" chance="15000"/>
-    <item id="2050" chance="18000"/>
-    <item id="5917" chance="916"/>
-    <item id="2464" chance="6666"/>
-    <item id="6098" countmax="1" chance1="5000" chancemax="0"/>
-    <item id="6095" chance="5000"/>
+    <item id="2148" countmax="80" chance1="42000" chancemax="183">
+      <!--gold coin-->
+    </item>
+    <item id="2376" chance="15000">
+      <!--sword-->
+    </item>
+    <item id="2050" chance="18000">
+      <!--torch-->
+    </item>
+    <item id="5917" chance="916">
+      <!--bandana-->
+    </item>
+    <item id="2464" chance="6666">
+      <!--chain armor-->
+    </item>
+    <item id="6098" countmax="1" chance1="5000" chancemax="0">
+      <!--eye patch-->
+    </item>
+    <item id="6095" chance="5000">
+      <!--pirate shirt-->
+    </item>
     <item id="5926" chance="100000">
       <inside>
-        <item id="5091" chance="1666"/>
-        <item id="5792" chance="3333"/>
-        <item id="6126" countmax="1" chance1="1428" chancemax="0"/>
-        <item id="6098" countmax="1" chance1="1428" chancemax="0"/>
-        <item id="6097" countmax="1" chance1="1428" chancemax="0"/>
+        <item id="5091" chance="1666">
+          <!--treasure map-->
+        </item>
+        <item id="5792" chance="3333">
+          <!--dice-->
+        </item>
+        <item id="6126" countmax="1" chance1="1428" chancemax="0">
+          <!--peg leg-->
+        </item>
+        <item id="6098" countmax="1" chance1="1428" chancemax="0">
+          <!--eye patch-->
+        </item>
+        <item id="6097" countmax="1" chance1="1428" chancemax="0">
+          <!--hook-->
+        </item>
       </inside>
+      <!--pirate backpack-->
     </item>
   </loot>
 </monster>

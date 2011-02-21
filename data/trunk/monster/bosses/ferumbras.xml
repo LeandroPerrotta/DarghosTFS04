@@ -1,139 +1,212 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Ferumbras" nameDescription="Ferumbras" race="VENOM" experience="12000" speed="320" manacost="0">
-	<health now="35000" max="35000" />
-	<look type="229" head="20" body="30" legs="40" feet="50" corpse="6078" />
-	<targetchange interval="5000" chance="8" />
-	<strategy attack="100" defense="0" />
-	<flags>
-		<flag summonable="0" />
-		<flag attackable="1" />
-		<flag hostile="1" />
-		<flag illusionable="0" />
-		<flag convinceable="0" />
-		<flag pushable="0" />
-		<flag canpushitems="1" />
-		<flag canpushcreatures="1" />
-		<flag targetdistance="2" />
-		<flag staticattack="90" />
-		<flag runonhealth="2500" />
-	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="80" attack="50" poison="200" />
-		
-		<!-- Mana Drain -->
-		<attack name="manadrain" interval="2000" chance="20" range="7" min="-500" max="-700">
-			<attribute key="areaEffect" value="redshimmer" />
-		</attack>
-
-		<!-- Great Life Bomb -->
-		<attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-250" max="-350">
-			<attribute key="areaEffect" value="redspark" />
-		</attack>		
-		
-		<!-- Great Smoke Bomb -->
-		<attack name="physical" interval="2000" chance="20" radius="6" target="0" min="-350" max="-470">
-			<attribute key="areaEffect" value="poff" />
-		</attack>	
-	
-		<!-- Poison Explosion -->
-		<attack name="poison" interval="2000" chance="20" radius="6" target="0" min="-350" max="-550">
-			<attribute key="areaEffect" value="poison" />
-		</attack>
-		
-		<!-- Great Berserk -->
-		<attack name="physical" interval="2000" chance="15" radius="5" target="0" min="0" max="-900">
-			<attribute key="areaEffect" value="blackspark" />
-		</attack>		
-		
-		<!-- Energy Explosion -->
-		<attack name="energy" interval="2000" chance="18" radius="10" target="0" min="-300" max="-400">
-			<attribute key="areaEffect" value="energy" />
-		</attack>		
-	</attacks>
-	<defenses armor="50" defense="50">
-		<defense name="healing" interval="2000" chance="10" min="200" max="400">
-			<attribute key="areaEffect" value="greenshimmer" />
-		</defense>
-		<defense name="invisible" interval="4000" chance="20" duration="5000">
-			<attribute key="areaEffect" value="blueshimmer" />
-		</defense>
-	</defenses>
-	<elements>
-		<element firePercent="90" />
-	</elements>
-	<immunities>
-		<immunity lifedrain="1" />
-		<immunity paralyze="1" />
-		<immunity outfit="1" />
-		<immunity drunk="1" />
-		<immunity invisible="1" />
-	</immunities>
-	<summons maxSummons="3">
-		<summon name="demon" interval="3000" chance="12" max="3" />
-	</summons>
-	<voices interval="5000" chance="20">
-		<voice sentence="NOONE WILL STOP ME THIS TIME!" yell="1" />
-		<voice sentence="THE POWER IS MINE!" yell="1" />
-	</voices>
-	<loot>
-		<item id="2148" countmax="100" chance="100000" /> -- gold
-		<item id="2148" countmax="70" chance="100000" />
-		
-		<item id="5903" chance="100000" /> -- ferumbras' hat
-		
-		
-		<item id="2539" chance="40000" /> -- phoenix shield
-		<item id="2470" chance="32000" /> -- golden legs
-		<item id="8885" chance="25000" /> -- Divine Plate
-		<item id="2127" chance="25000" /> -- Emerald Bangle
-		<item id="8924" chance="25000" /> -- Hellforged Axe
-		<item id="8902" chance="25000" /> -- Spellbook of Mind Control
-		<item id="8926" chance="18000" /> -- Demonwing Axe
-		<item id="7407" chance="18000" /> -- Haunted Blade
-		<item id="7435" chance="18000" /> -- Impaler
-		<item id="2472" chance="18000" /> -- Magic Plate Armor
-		<item id="8928" chance="18000" /> -- Obsidian Truncheon
-		<item id="7414" chance="12000" /> -- Abyss Hammer
-		<item id="7403" chance="12000" /> -- Berserker
-		<item id="2415" chance="12000" /> -- Great Axe
-		<item id="8869" chance="12000" /> -- Greenwood Coat
-		<item id="7405" chance="12000" /> -- Havoc Blade
-		<item id="7418" chance="12000" /> -- Nightmare Blade
-
-		
-		<item id="1987" chance="100000">
-			<inside>
-				<item id="2678" countmax="3" chance="20000"/> -- coconut
-				<item id="2148" countmax="100" chance="100000"/> -- gold
-				<item id="2151" countmax="4" chance="12000"/> -- talon
-				<item id="2149" countmax="3" chance="15000"/> -- small emerald				
-			</inside>
-		</item>
-		
-		<item id="1987" chance="100000">
-			<inside>
-				<item id="7894" chance="12000" /> -- Magma Legs
-				<item id="8903" chance="18000" /> -- Spellbook of Lost Souls
-				<item id="8930" chance="18000" /> -- Emerald Sword
-				<item id="7422" chance="18000" /> -- Jade Hammer
-				<item id="2514" chance="18000" /> -- Mastermind Shield	
-				<item id="7896" chance="25000" /> -- Glacier Kilt
-				<item id="2466" chance="25000" /> -- Golden Armor
-				<item id="2522" chance="25000" /> -- Great Shield						
-			</inside>
-		</item>	
-		
-		<item id="1987" chance="100000">
-			<inside>
-				<item id="7451" chance="32000" /> -- shadow spectre
-				<item id="8904" chance="32000" /> -- Spellscroll of Prophecies	
-				<item id="7895" chance="40000" /> -- lightning legs	
-				<item id="7417" chance="12000" /> -- Runed Sword
-				<item id="8918" chance="12000" /> -- Spellbook of Dark Mysteries
-				<item id="8868" chance="25000" /> -- velvet mantle
-				<item id="2520" chance="18000" /> -- Demon Shield
-				<item id="7382" chance="18000" /> -- Demonrage Sword											
-			</inside>
-		</item>			
-	</loot>
+  <health now="35000" max="35000"/>
+  <look type="229" head="20" body="30" legs="40" feet="50" corpse="6078"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="2"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="2500"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="80" attack="50" poison="200"/>
+    <!-- Mana Drain -->
+    <attack name="manadrain" interval="2000" chance="20" range="7" min="-500" max="-700">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </attack>
+    <!-- Great Life Bomb -->
+    <attack name="lifedrain" interval="2000" chance="21" radius="6" target="0" min="-250" max="-350">
+      <attribute key="areaEffect" value="redspark"/>
+    </attack>
+    <!-- Great Smoke Bomb -->
+    <attack name="physical" interval="2000" chance="20" radius="6" target="0" min="-350" max="-470">
+      <attribute key="areaEffect" value="poff"/>
+    </attack>
+    <!-- Poison Explosion -->
+    <attack name="poison" interval="2000" chance="20" radius="6" target="0" min="-350" max="-550">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <!-- Great Berserk -->
+    <attack name="physical" interval="2000" chance="15" radius="5" target="0" min="0" max="-900">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+    <!-- Energy Explosion -->
+    <attack name="energy" interval="2000" chance="18" radius="10" target="0" min="-300" max="-400">
+      <attribute key="areaEffect" value="energy"/>
+    </attack>
+  </attacks>
+  <defenses armor="50" defense="50">
+    <defense name="healing" interval="2000" chance="10" min="200" max="400">
+      <attribute key="areaEffect" value="greenshimmer"/>
+    </defense>
+    <defense name="invisible" interval="4000" chance="20" duration="5000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+  <elements>
+    <element firePercent="90"/>
+  </elements>
+  <immunities>
+    <immunity lifedrain="1"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="3">
+    <summon name="demon" interval="3000" chance="12" max="3"/>
+  </summons>
+  <voices interval="5000" chance="20">
+    <voice sentence="NO ONE WILL STOP ME THIS TIME!" yell="1"/>
+    <voice sentence="THE POWER IS MINE!" yell="1"/>
+    <voice sentence="I returned from death and you dream about defeating me?" yell="1"/>
+    <voice sentence="Witness the first seconds of my eternal world domination!" yell="1"/>
+    <voice sentence="Even in my weakened state I will crush you all!" yell="1"/>
+  </voices>
+  <loot>
+    <item id="2148" countmax="100" chance="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2148" countmax="70" chance="100000">
+      <!--gold coin-->
+    </item>
+    <item id="5903" chance="100000">
+      <!--ferumbras' hat-->
+    </item>
+    <item id="2539" chance="40000">
+      <!--phoenix shield-->
+    </item>
+    <item id="2470" chance="32000">
+      <!--golden legs-->
+    </item>
+    <item id="8885" chance="25000">
+      <!--divine plate-->
+    </item>
+    <item id="2127" chance="25000">
+      <!--emerald bangle-->
+    </item>
+    <item id="8924" chance="25000">
+      <!--hellforged axe-->
+    </item>
+    <item id="8902" chance="25000">
+      <!--spellbook of mind control-->
+    </item>
+    <item id="8926" chance="18000">
+      <!--demonwing axe-->
+    </item>
+    <item id="7407" chance="18000">
+      <!--haunted blade-->
+    </item>
+    <item id="7435" chance="18000">
+      <!--impaler-->
+    </item>
+    <item id="2472" chance="18000">
+      <!--magic plate armor-->
+    </item>
+    <item id="8928" chance="18000">
+      <!--obsidian truncheon-->
+    </item>
+    <item id="7414" chance="12000">
+      <!--abyss hammer-->
+    </item>
+    <item id="7403" chance="12000">
+      <!--berserker-->
+    </item>
+    <item id="2415" chance="12000">
+      <!--great axe-->
+    </item>
+    <item id="8869" chance="12000">
+      <!--greenwood coat-->
+    </item>
+    <item id="7405" chance="12000">
+      <!--havoc blade-->
+    </item>
+    <item id="7418" chance="12000">
+      <!--nightmare blade-->
+    </item>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="2678" countmax="3" chance="20000">
+          <!--coconut-->
+        </item>
+        <item id="2148" countmax="100" chance="100000">
+          <!--gold coin-->
+        </item>
+        <item id="2151" countmax="4" chance="12000">
+          <!--talon-->
+        </item>
+        <item id="2149" countmax="3" chance="15000">
+          <!--small emerald-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="7894" chance="12000">
+          <!--magma legs-->
+        </item>
+        <item id="8903" chance="18000">
+          <!--spellbook of lost souls-->
+        </item>
+        <item id="8930" chance="18000">
+          <!--emerald sword-->
+        </item>
+        <item id="7422" chance="18000">
+          <!--jade hammer-->
+        </item>
+        <item id="2514" chance="18000">
+          <!--mastermind shield-->
+        </item>
+        <item id="7896" chance="25000">
+          <!--glacier kilt-->
+        </item>
+        <item id="2466" chance="25000">
+          <!--golden armor-->
+        </item>
+        <item id="2522" chance="25000">
+          <!--great shield-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="7451" chance="32000">
+          <!--shadow sceptre-->
+        </item>
+        <item id="8904" chance="32000">
+          <!--spellscroll of prophecies-->
+        </item>
+        <item id="7895" chance="40000">
+          <!--lightning legs-->
+        </item>
+        <item id="7417" chance="12000">
+          <!--runed sword-->
+        </item>
+        <item id="8918" chance="12000">
+          <!--spellbook of dark mysteries-->
+        </item>
+        <item id="8868" chance="25000">
+          <!--velvet mantle-->
+        </item>
+        <item id="2520" chance="18000">
+          <!--demon shield-->
+        </item>
+        <item id="7382" chance="18000">
+          <!--demonrage sword-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
+  </loot>
 </monster>

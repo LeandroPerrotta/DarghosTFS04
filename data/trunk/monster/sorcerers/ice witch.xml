@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Ice Witch" nameDescription="an ice witch" race="undead" experience="580" speed="188" manacost="0">
   <health now="540" max="540"/>
   <look type="149" head="0" body="47" legs="105" feet="105" addons="0" corpse="6081"/>
@@ -21,9 +21,9 @@
   <attacks>
     <attack name="melee" interval="2000" skill="45" attack="30"/>
     <attack name="outfit" interval="1000" chance="10" range="7" item="7172" duration="8000">
-       <attribute key="areaEffect" value="blueshimmer"/>
-     </attack>
-	<attack name="ice" interval="1000" chance="7" length="6" spread="3" min="0" max="-100">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </attack>
+    <attack name="ice" interval="1000" chance="7" length="6" spread="3" min="0" max="-100">
       <attribute key="areaEffect" value="iceattack"/>
     </attack>
     <attack name="ice" interval="2000" chance="15" length="4" spread="2" min="-50" max="-110">
@@ -31,7 +31,7 @@
     </attack>
     <attack name="ice" interval="1000" chance="9" range="7" target="1" min="-30" max="-110">
       <attribute key="shootEffect" value="snowball"/>
-	  <attribute key="areaEffect" value="iceattack"/>
+      <attribute key="areaEffect" value="iceattack"/>
     </attack>
     <attack name="speed" interval="1000" chance="11" range="7" speedchange="-700" duration="20000">
       <attribute key="areaEffect" value="redshimmer"/>
@@ -43,11 +43,11 @@
     </defense>
   </defenses>
   <elements>
-  <element firePercent="50"/>
-  <element earth="40"/>
-  <element holyPercent="30"/>
-  <element energyPercent="-10"/>
-  <element deathPercent="-10"/>
+    <element firePercent="50"/>
+    <element earth="40"/>
+    <element holyPercent="30"/>
+    <element energyPercent="-10"/>
+    <element deathPercent="-10"/>
   </elements>
   <immunities>
     <immunity ice="1"/>
@@ -60,19 +60,37 @@
     <voice sentence="Freeze!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="80" chance1="100000" chancemax="0"/> --Gold Coins
-    <item id="7449" chance="1222"/> --Crystal Sword
-    <item id="7441" chance="5555"/> --Ice Cube
-    <item id="7387" chance="1444"/> --Diamond Sceptre
-    <item id="1987" chance="100000"> --Bag
+    <item id="2148" countmax="80" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="7449" chance="1222">
+      <!--crystal sword-->
+    </item>
+    <item id="7441" chance="5555">
+      <!--ice cube-->
+    </item>
+    <item id="7387" chance="1444">
+      <!--diamond sceptre-->
+    </item>
+    <item id="1987" chance="100000">
       <inside>
-        <item id="7896" chance="1900"/> --Glacier Kilt
-        <item id="2423" chance="3333"/> --Clerical Mace
-        <item id="2796" countmax="3" chance1="9999" chancemax="0"/> --Green Mushrooms
-        <item id="2663" chance="1222"/> --Mystic Turban
-        <item id="7459" chance="1000"/> --Ear Muffs
+        <item id="7896" chance="1900">
+          <!--glacier kilt-->
+        </item>
+        <item id="2423" chance="3333">
+          <!--clerical mace-->
+        </item>
+        <item id="2796" countmax="3" chance1="9999" chancemax="0">
+          <!--green mushroom-->
+        </item>
+        <item id="2663" chance="1222">
+          <!--mystic turban-->
+        </item>
+        <item id="7459" chance="1000">
+          <!--earmuffs-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>
-

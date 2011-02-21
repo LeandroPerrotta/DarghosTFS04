@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="lion" nameDescription="a lion" race="blood" experience="30" speed="180" manacost="320">
   <health now="80" max="80"/>
   <look type="41" head="20" body="30" legs="40" feet="50" corpse="5986"/>
@@ -22,17 +22,23 @@
   </attacks>
   <defenses armor="6" defense="13"/>
   <elements>
-	<element earthPercent="22"/>
-	<element holyPercent="17"/>
-	<element icePercent="-8"/>
-	<element deathPercent="-5"/>
+    <element earthPercent="22"/>
+    <element holyPercent="17"/>
+    <element icePercent="-8"/>
+    <element deathPercent="-5"/>
   </elements>
   <voices interval="5000" chance="10">
     <voice sentence="Groarrr!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2671" countmax="3" chance1="80000" chancemax="0"/>
-    <item id="2671" countmax="2" chance1="80000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2671" countmax="3" chance1="80000" chancemax="0">
+      <!--ham-->
+    </item>
+    <item id="2671" countmax="2" chance1="80000" chancemax="0">
+      <!--ham-->
+    </item>
   </loot>
 </monster>

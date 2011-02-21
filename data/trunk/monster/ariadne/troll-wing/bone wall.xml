@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Bone Wall" nameDescription="a bone wall" race="undead" experience="1" speed="0" manacost="0">
   <health now="30050" max="30050"/>
-<look typeex="6397" corpse="2252" />
+  <look typeex="6397" corpse="2252"/>
   <targetchange interval="5000" chance="35"/>
   <strategy attack="100" defense="0"/>
   <flags>
@@ -22,15 +22,17 @@
   </attacks>
   <defenses armor="6" defense="12"/>
   <elements>
-	<element energyPercent="20"/>
-	<element holyPercent="10"/>
-	<element earthPercent="-10"/>
-	<element deathPercent="-5"/>
+    <element energyPercent="20"/>
+    <element holyPercent="10"/>
+    <element earthPercent="-10"/>
+    <element deathPercent="-5"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
-  </immunities> 
+  </immunities>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
   </loot>
 </monster>

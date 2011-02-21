@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Jelly Wrist Pete" nameDescription="a Jelly Wrist Pete" race="blood" experience="5700" speed="290" manacost="0">
   <health now="5800" max="5800"/>
   <look type="98" head="0" body="0" legs="0" feet="0" corpse="6080"/>
@@ -17,18 +17,18 @@
     <flag targetdistance="1"/>
     <flag runonhealth="0"/>
   </flags>
-<attacks>
+  <attacks>
     <attack name="melee" interval="2000" min="-210" max="-470"/>
     <attack name="physical" interval="3000" chance="32" range="7" min="-50" max="-650">
       <attribute key="shootEffect" value="onyxarrow"/>
     </attack>
-<attack name="melee" interval="2000" chance="27" range="7" radius="4" target="1" min="-310" max="-380">
-  <attribute key="areaEffect" value="redspark"/>
-</attack>
-<attack name="melee" interval="3000" chance="30" range="7" radius="5" target="1" min="-210" max="-320">
-  <attribute key="areaEffect" value="blackspark"/>
-</attack>
-</attacks>
+    <attack name="melee" interval="2000" chance="27" range="7" radius="4" target="1" min="-310" max="-380">
+      <attribute key="areaEffect" value="redspark"/>
+    </attack>
+    <attack name="melee" interval="3000" chance="30" range="7" radius="5" target="1" min="-210" max="-320">
+      <attribute key="areaEffect" value="blackspark"/>
+    </attack>
+  </attacks>
   <defenses armor="25" defense="20"/>
   <immunities>
     <immunity physical="0"/>
@@ -42,22 +42,49 @@
     <immunity invisible="1"/>
   </immunities>
   <loot>
-    <item id="2148" countmax="74" chance1="40000" chancemax="108"/>
-    <item id="2385" chance="10321"/>
-    <item id="2114" chance="833"/>
-    <item id="2489" chance="1333"/>
-    <item id="2521" chance="1000"/>
-    <item id="6096" chance="909"/>
-    <item id="6095" chance="5000"/>
+    <item id="2148" countmax="74" chance1="40000" chancemax="108">
+      <!--gold coin-->
+    </item>
+    <item id="2385" chance="10321">
+      <!--sabre-->
+    </item>
+    <item id="2114" chance="833">
+      <!--piggy bank-->
+    </item>
+    <item id="2489" chance="1333">
+      <!--dark armor-->
+    </item>
+    <item id="2521" chance="1000">
+      <!--dark shield-->
+    </item>
+    <item id="6096" chance="909">
+      <!--pirate hat-->
+    </item>
+    <item id="6095" chance="5000">
+      <!--pirate shirt-->
+    </item>
     <item id="5926" chance="15000">
       <inside>
-        <item id="5091" chance="1666"/>
-        <item id="5462" chance="450"/>
-        <item id="5792" chance="3333"/>
-        <item id="2376" chance="6666"/>
-        <item id="6098" countmax="1" chance1="5000" chancemax="0"/>
-        <item id="2410" countmax="4" chance1="15000" chancemax="0"/>
+        <item id="5091" chance="1666">
+          <!--treasure map-->
+        </item>
+        <item id="5462" chance="450">
+          <!--pirate boots-->
+        </item>
+        <item id="5792" chance="3333">
+          <!--dice-->
+        </item>
+        <item id="2376" chance="6666">
+          <!--sword-->
+        </item>
+        <item id="6098" countmax="1" chance1="5000" chancemax="0">
+          <!--eye patch-->
+        </item>
+        <item id="2410" countmax="4" chance1="15000" chancemax="0">
+          <!--throwing knife-->
+        </item>
       </inside>
+      <!--pirate backpack-->
     </item>
   </loot>
 </monster>

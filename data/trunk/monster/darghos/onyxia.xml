@@ -18,7 +18,7 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" skill="370" attack="180"/>
-	<attack name="manadrain" interval="1000" chance="5" range="7" min="-20" max="-4000"/>
+    <attack name="manadrain" interval="1000" chance="5" range="7" min="-20" max="-4000"/>
     <attack name="fire" interval="1000" chance="50" range="10" radius="10" target="1" min="-20" max="-70">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
@@ -55,50 +55,133 @@
     <voice sentence="Don't hurt my babies!" yell="1"/>
   </voices>
   <loot capacity="1500">
-    <item id="1976" countmax="1" chance="9000"/> //gemmed book
-	<item id="2546" countmax="6" chance="7500"/> //burst arrow
-	<item id="2509" countmax="1" chance="3500"/> //steel shield
-	<item id="2457" countmax="1" chance="4000"/> //steel helmet
-	<item id="2145" countmax="4" chance="7000"/> //small diamond
-	<item id="2146" countmax="4" chance="7000"/> //small sapphire
-	<item id="2434" countmax="1" chance="10000"/> //dragon hammer
-	<item id="2647" countmax="1" chance="10000"/> //plate legs
-	<item id="2409" countmax="1" chance="10000"/>//serpent sword
-	<item id="2472" countmax="1" chance="600"/>
-    <item id="2672" countmax="10" chance="25000"/> //dragon ham    
-    <item id="2167" countmax="1" chance="5000"/> //energy ring
-    <item id="2392" countmax="1" chance="6000"/> //fire sword
-    <item id="2148" countmax="100" chance="100000"/> //gold coin
-    <item id="2148" countmax="100" chance="100000"/> //gold coin
-    <item id="2033" countmax="1" chance="6000"/> //golden mug
-    <item id="2796" countmax="4" chance="24000"/> //green mushroom
-    <item id="2177" countmax="1" chance="1200"/> //life crystal
-    <item id="2547" countmax="1" chance="16000"/> //power bolt
-	<item id="2498" countmax="1" chance="4000"/> //royal helmet  
-    <item id="2479" countmax="1" chance="2000"/> //strange helmet
-	<item id="2413" countmax="1" chance="3500"/>//broad sword    
-	<item id="2387" countmax="1" chance="16000"/>//double axe
-	<item id="2455" countmax="1" chance="12000"/>//crossbow
-	<item id="2397" countmax="1" chance="12000"/>//longsword  
-	<item id="2406" countmax="1" chance="25000"/>//short sword	
-	<item id="1987" countmax="1" chance="100000">
-		<inside>
-			<item id="2148" countmax="90" chance="65000"/> //gold coin
-			<item id="2516" countmax="1" chance="10000"/> //dragon shield
-			<item id="2187" countmax="1" chance="10000"/>//wand of Inferno
-			<item id="2398" countmax="1" chance="60000"/>//mace
-			<item id="5948" countmax="1" chance="20000"/>//red dragon leather
-			<item id="7314" countmax="1" chance="10000"/>//red dragon scale
-			<item id="2492" countmax="1" chance="2500"/> //dragon scale mail	
-			<item id="2528" countmax="1" chance="7500"/> //tower shield		
-			<item id="2033" countmax="1" chance="6000"/>//golden mug	
-			<item id="2191" countmax="1" chance="7000"/>//wand of dragonbreath	
-			<item id="5919" countmax="1" chance="5000"/>//dragon claw	
-			<item id="2514" countmax="1" chance="550"/>
-			<item id="2470" countmax="1" chance="500"/>
-			<item id="2432" countmax="1" chance="550"/>
-			<item id="2195" countmax="1" chance="300"/>
-		</inside>
-	</item>		
+    <item id="1976" countmax="1" chance="9000">
+      <!--gemmed book-->
+    </item>
+    <item id="2546" countmax="6" chance="7500">
+      <!--burst arrow-->
+    </item>
+    <item id="2509" countmax="1" chance="3500">
+      <!--steel shield-->
+    </item>
+    <item id="2457" countmax="1" chance="4000">
+      <!--steel helmet-->
+    </item>
+    <item id="2145" countmax="4" chance="7000">
+      <!--small diamond-->
+    </item>
+    <item id="2146" countmax="4" chance="7000">
+      <!--small sapphire-->
+    </item>
+    <item id="2434" countmax="1" chance="10000">
+      <!--dragon hammer-->
+    </item>
+    <item id="2647" countmax="1" chance="10000">
+      <!--plate legs-->
+    </item>
+    <item id="2409" countmax="1" chance="10000">
+      <!--serpent sword-->
+    </item>
+    <item id="2472" countmax="1" chance="600">
+      <!--magic plate armor-->
+    </item>
+    <item id="2672" countmax="10" chance="25000">
+      <!--dragon ham-->
+    </item>
+    <item id="2167" countmax="1" chance="5000">
+      <!--energy ring-->
+    </item>
+    <item id="2392" countmax="1" chance="6000">
+      <!--fire sword-->
+    </item>
+    <item id="2148" countmax="100" chance="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2148" countmax="100" chance="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2033" countmax="1" chance="6000">
+      <!--golden mug-->
+    </item>
+    <item id="2796" countmax="4" chance="24000">
+      <!--green mushroom-->
+    </item>
+    <item id="2177" countmax="1" chance="1200">
+      <!--life crystal-->
+    </item>
+    <item id="2547" countmax="1" chance="16000">
+      <!--power bolt-->
+    </item>
+    <item id="2498" countmax="1" chance="4000">
+      <!--royal helmet-->
+    </item>
+    <item id="2479" countmax="1" chance="2000">
+      <!--strange helmet-->
+    </item>
+    <item id="2413" countmax="1" chance="3500">
+      <!--broadsword-->
+    </item>
+    <item id="2387" countmax="1" chance="16000">
+      <!--double axe-->
+    </item>
+    <item id="2455" countmax="1" chance="12000">
+      <!--crossbow-->
+    </item>
+    <item id="2397" countmax="1" chance="12000">
+      <!--longsword-->
+    </item>
+    <item id="2406" countmax="1" chance="25000">
+      <!--short sword-->
+    </item>
+    <item id="1987" countmax="1" chance="100000">
+      <inside>
+        <item id="2148" countmax="90" chance="65000">
+          <!--gold coin-->
+        </item>
+        <item id="2516" countmax="1" chance="10000">
+          <!--dragon shield-->
+        </item>
+        <item id="2187" countmax="1" chance="10000">
+          <!--wand of inferno-->
+        </item>
+        <item id="2398" countmax="1" chance="60000">
+          <!--mace-->
+        </item>
+        <item id="5948" countmax="1" chance="20000">
+          <!--red dragon leather-->
+        </item>
+        <item id="7314" countmax="1" chance="10000">
+          <!--red dragon scale-->
+        </item>
+        <item id="2492" countmax="1" chance="2500">
+          <!--dragon scale mail-->
+        </item>
+        <item id="2528" countmax="1" chance="7500">
+          <!--tower shield-->
+        </item>
+        <item id="2033" countmax="1" chance="6000">
+          <!--golden mug-->
+        </item>
+        <item id="2191" countmax="1" chance="7000">
+          <!--wand of dragonbreath-->
+        </item>
+        <item id="5919" countmax="1" chance="5000">
+          <!--dragon claw-->
+        </item>
+        <item id="2514" countmax="1" chance="550">
+          <!--mastermind shield-->
+        </item>
+        <item id="2470" countmax="1" chance="500">
+          <!--golden legs-->
+        </item>
+        <item id="2432" countmax="1" chance="550">
+          <!--fire axe-->
+        </item>
+        <item id="2195" countmax="1" chance="300">
+          <!--boots of haste-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
   </loot>
 </monster>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="behemoth" nameDescription="a behemoth" race="blood" experience="2500" speed="280" manacost="0">
   <health now="4000" max="4000"/>
   <look type="55" head="0" body="0" legs="0" feet="0" corpse="5999"/>
@@ -28,14 +28,14 @@
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
-	<elements>
-		<element physicalPercent="10"/>
-		<element earthPercent="80"/>
-		<element icePercent="-10"/>
-		<element holyPercent="30"/>
-		<element deathPercent="-5"/>
-		<element firePercent="30"/>
-	</elements>
+  <elements>
+    <element physicalPercent="10"/>
+    <element earthPercent="80"/>
+    <element icePercent="-10"/>
+    <element holyPercent="30"/>
+    <element deathPercent="-5"/>
+    <element firePercent="30"/>
+  </elements>
   <immunities>
     <immunity physical="0"/>
     <immunity energy="0"/>
@@ -53,33 +53,82 @@
     <voice sentence="Crush the intruders!" yell="1"/>
   </voices>
   <loot>
-    <item id="2148" countmax="70" chance="100000"/>
-    <item id="2671" countmax="3" chance="10000"/>
-    <item id="2023" chance="11000"/>
-    <item id="7368" countmax="4" chance="1200"/>
-    <item id="2174" countmax="1" chance="800"/>
-    <item id="2387" chance="2000"/>
-    <item id="2377" chance="4000"/>
-    <item id="2231" countmax="1" chance="7000"/>
-    <item id="5930" countmax="1" chance="2500"/>
-    <item id="2393" chance="688"/>
-    <item id="2454" chance="488"/>
-    <item id="2150" countmax="2" chance="4000"/>
+    <item id="2148" countmax="70" chance="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2671" countmax="3" chance="10000">
+      <!--ham-->
+    </item>
+    <item id="2023" chance="11000">
+      <!--amphora-->
+    </item>
+    <item id="7368" countmax="4" chance="1200">
+      <!--assassin star-->
+    </item>
+    <item id="2174" countmax="1" chance="800">
+      <!--strange symbol-->
+    </item>
+    <item id="2387" chance="2000">
+      <!--double axe-->
+    </item>
+    <item id="2377" chance="4000">
+      <!--two handed sword-->
+    </item>
+    <item id="2231" countmax="1" chance="7000">
+      <!--big bone-->
+    </item>
+    <item id="5930" countmax="1" chance="2500">
+      <!--behemoth claw-->
+    </item>
+    <item id="2393" chance="688">
+      <!--giant sword-->
+    </item>
+    <item id="2454" chance="488">
+      <!--war axe-->
+    </item>
+    <item id="2150" countmax="2" chance="4000">
+      <!--small amethyst-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2463" countmax="1" chance="2000"/>
-        <item id="2553" countmax="1" chance="6000"/>
-        <item id="2666" countmax="6" chance="40000"/>
-        <item id="2489" countmax="1" chance="3000"/>
-        <item id="2125" chance="300"/>
-        <item id="2148" countmax="40" chance="100000"/>
-        <item id="2416" countmax="1" chance="15000"/>
-        <item id="2645" chance="400"/>
-        <item id="2188" chance="1000"/>
-        <item id="2161" chance="3333"/>
-        <item id="5930" countmax="1" chance="1500"/>
-        <item id="5893" countmax="1" chance="1200"/>
+        <item id="2463" countmax="1" chance="2000">
+          <!--plate armor-->
+        </item>
+        <item id="2553" countmax="1" chance="6000">
+          <!--pick-->
+        </item>
+        <item id="2666" countmax="6" chance="40000">
+          <!--meat-->
+        </item>
+        <item id="2489" countmax="1" chance="3000">
+          <!--dark armor-->
+        </item>
+        <item id="2125" chance="300">
+          <!--crystal necklace-->
+        </item>
+        <item id="2148" countmax="40" chance="100000">
+          <!--gold coin-->
+        </item>
+        <item id="2416" countmax="1" chance="15000">
+          <!--crowbar-->
+        </item>
+        <item id="2645" chance="400">
+          <!--steel boots-->
+        </item>
+        <item id="2188" chance="1000">
+          <!--wand of decay-->
+        </item>
+        <item id="2161" chance="3333">
+          <!--strange talisman-->
+        </item>
+        <item id="5930" countmax="1" chance="1500">
+          <!--behemoth claw-->
+        </item>
+        <item id="5893" countmax="1" chance="1200">
+          <!--perfect behemoth fang-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

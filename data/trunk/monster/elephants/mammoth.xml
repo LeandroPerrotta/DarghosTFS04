@@ -17,24 +17,30 @@
     <flag targetdistance="1"/>
     <flag runonhealth="0"/>
   </flags>
-<attacks>
+  <attacks>
     <attack name="melee" interval="2000" skill="45" attack="45"/>
-</attacks>
+  </attacks>
   <defenses armor="40" defense="57"/>
   <elements>
-	<element earthPercent="20"/>
-	<element icePercent="20"/>
-	<element physicalPercent="17"/>
-	<element firePercent="-10"/>
+    <element earthPercent="20"/>
+    <element icePercent="20"/>
+    <element physicalPercent="17"/>
+    <element firePercent="-10"/>
   </elements>
   <voices interval="5000" chance="10">
     <voice sentence="Troooooot!"/>
-	<voice sentence="Hooooot-Toooooot!"/>
-	<voice sentence="Tooooot."/>
+    <voice sentence="Hooooot-Toooooot!"/>
+    <voice sentence="Tooooot."/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2666" countmax="15" chance1="33333" chancemax="0"/>
-    <item id="2686" countmax="10" chance1="10000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2666" countmax="15" chance1="33333" chancemax="0">
+      <!--meat-->
+    </item>
+    <item id="2686" countmax="10" chance1="10000" chancemax="0">
+      <!--corncob-->
+    </item>
   </loot>
 </monster>

@@ -68,16 +68,38 @@
     <voice sentence="Who is the real one?!"/>
   </voices>
   <loot capacity="400">
-    <item id="6529" countmax="1" chance="100"/>
-    <item id="6529" countmax="1" chance="100"/>
-    <item id="6529" countmax="24" chance="90000"/>
-    <item id="6529" countmax="32" chance="80000"/>
-    <item id="6529" countmax="35" chance="70000"/>
-    <item id="6529" countmax="1" chance="12000"/>
-    <item id="7438" countmax="1" chance="12000"/> 
- <item id="2394" countmax="1" chance="10000"/>
-    <item id="6529" countmax="1" chance="1000"/>
-    <item id="6529" countmax="1" chance="6000"/>
-    <item id="6529" countmax="1" chance="6000"/>
+    <item id="6529" countmax="1" chance="100">
+      <!--infernal bolt-->
+    </item>
+    <item id="6529" countmax="1" chance="100">
+      <!--infernal bolt-->
+    </item>
+    <item id="6529" countmax="24" chance="90000">
+      <!--infernal bolt-->
+    </item>
+    <item id="6529" countmax="32" chance="80000">
+      <!--infernal bolt-->
+    </item>
+    <item id="6529" countmax="35" chance="70000">
+      <!--infernal bolt-->
+    </item>
+    <item id="6529" countmax="1" chance="12000">
+      <!--infernal bolt-->
+    </item>
+    <item id="7438" countmax="1" chance="12000">
+      <!--elvish bow-->
+    </item>
+    <item id="2394" countmax="1" chance="10000">
+      <!--morning star-->
+    </item>
+    <item id="6529" countmax="1" chance="1000">
+      <!--infernal bolt-->
+    </item>
+    <item id="6529" countmax="1" chance="6000">
+      <!--infernal bolt-->
+    </item>
+    <item id="6529" countmax="1" chance="6000">
+      <!--infernal bolt-->
+    </item>
   </loot>
 </monster>

@@ -23,6 +23,6 @@
   <defenses armor="3" defense="2"/>
   <voices interval="2000" chance="50">
     <voice sentence="Ribbit! Ribbit"/>
-	<voice sentence="Nao me mate!"/>
+    <voice sentence="Nao me mate!"/>
   </voices>
 </monster>

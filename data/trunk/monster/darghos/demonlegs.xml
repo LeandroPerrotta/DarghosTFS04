@@ -56,7 +56,9 @@
     <voice sentence="Your resistance is futile!"/>
     <voice sentence="Your soul will be mine!" yell="1"/>
   </voices>
-  <loot capacity="800">   
-	<item id="5906" countmax="2" chance="300"/>	
+  <loot capacity="800">
+    <item id="5906" countmax="2" chance="300">
+      <!--demon dust-->
+    </item>
   </loot>
 </monster>

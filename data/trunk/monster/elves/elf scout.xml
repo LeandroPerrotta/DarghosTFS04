@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="elf scout" nameDescription="a elf scout" race="blood" experience="75" speed="225" manacost="360">
   <health now="160" max="160"/>
   <look type="64" head="20" body="30" legs="40" feet="50" corpse="6012"/>
@@ -25,8 +25,8 @@
   </attacks>
   <defenses armor="7" defense="18"/>
   <elements>
-	<element holyPercent="30"/>
-	<element deathPercent="-10"/>
+    <element holyPercent="30"/>
+    <element deathPercent="-10"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
@@ -39,19 +39,40 @@
     <voice sentence="Your existence will end here!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="10" chance1="100000" chancemax="0"/>
-    <item id="2544" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2484" chance="10000"/>
-    <item id="2456" chance="10000"/>
-    <item id="2681" chance="20000"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2148" countmax="10" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2544" countmax="10" chance1="50000" chancemax="0">
+      <!--arrow-->
+    </item>
+    <item id="2484" chance="10000">
+      <!--studded armor-->
+    </item>
+    <item id="2456" chance="10000">
+      <!--bow-->
+    </item>
+    <item id="2681" chance="20000">
+      <!--grapes-->
+    </item>
     <item id="1987" chance="6666">
       <inside>
-        <item id="2148" countmax="5" chance1="80000" chancemax="0"/>
-        <item id="2642" chance="5500"/>
-        <item id="2397" chance="4000"/>
-        <item id="5921" countmax="1" chance1="5000" chancemax="0"/>
+        <item id="2148" countmax="5" chance1="80000" chancemax="0">
+          <!--gold coin-->
+        </item>
+        <item id="2642" chance="5500">
+          <!--sandals-->
+        </item>
+        <item id="2397" chance="4000">
+          <!--longsword-->
+        </item>
+        <item id="5921" countmax="1" chance1="5000" chancemax="0">
+          <!--heaven blossom-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

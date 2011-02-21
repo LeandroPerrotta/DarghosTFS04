@@ -20,22 +20,22 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" min="-1" max="-120"/>
-	<attack name="poisonfield" interval="1000" chance="50">
-		<attribute key="shootEffect" value="poison"/>
-	</attack>
-	<attack name="physical" spread="3" change="40" interval="2000" min="-1" max="-120">
-		<attribute key="areaEffect" value="bluebubble"/>
+    <attack name="poisonfield" interval="1000" chance="50">
+      <attribute key="shootEffect" value="poison"/>
     </attack>
- </attacks>
+    <attack name="physical" spread="3" change="40" interval="2000" min="-1" max="-120">
+      <attribute key="areaEffect" value="bluebubble"/>
+    </attack>
+  </attacks>
   <defenses armor="0" defense="0"/>
   <elements>
-	<element firePercent="100"/>
-	<element energyPercent="-10"/>
+    <element firePercent="100"/>
+    <element energyPercent="-10"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
   </immunities>
   <voices interval="5000" chance="5">
-	<voice sentence="Blubb"/>
+    <voice sentence="Blubb"/>
   </voices>
 </monster>

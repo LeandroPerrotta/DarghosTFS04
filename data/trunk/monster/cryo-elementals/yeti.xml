@@ -29,28 +29,52 @@
   </attacks>
   <defenses armor="28" defense="33"/>
   <elements>
-	<element energyPercent="100"/>
-	<element earthPercent="-20"/>
+    <element energyPercent="100"/>
+    <element earthPercent="-20"/>
   </elements>
   <immunities>
-	<immunity invisible="1"/>
+    <immunity invisible="1"/>
   </immunities>
   <voices interval="5000" chance="10">
     <voice sentence="Yooodelaaahooohooo!"/>
     <voice sentence="Yooodelaaaheeeheee!"/>
   </voices>
   <loot>
-    <item id="2671" countmax="3" chance1="10000" chancemax="0"/>
-    <item id="2148" countmax="70" chance1="100000" chancemax="0"/>
-    <item id="2666" countmax="5" chance1="33333" chancemax="0"/>
-    <item id="2111" countmax="5" chance1="10000" chancemax="0"/>
-    <item id="2425" chance="1333"/>
-    <item id="4848" chance="600"/>
-    <item id="2197" chance="700"/>
-    <item id="2381" chance="6666"/>
-    <item id="2177" chance="2500"/>
-    <item id="2044" chance="10000"/>
-    <item id="2448" chance="10000"/>
-    <item id="2688" countmax="4" chance1="2500" chancemax="0"/>
+    <item id="2671" countmax="3" chance1="10000" chancemax="0">
+      <!--ham-->
+    </item>
+    <item id="2148" countmax="70" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2666" countmax="5" chance1="33333" chancemax="0">
+      <!--meat-->
+    </item>
+    <item id="2111" countmax="5" chance1="10000" chancemax="0">
+      <!--snowball-->
+    </item>
+    <item id="2425" chance="1333">
+      <!--obsidian lance-->
+    </item>
+    <item id="4848" chance="600">
+      <!--icicle-->
+    </item>
+    <item id="2197" chance="700">
+      <!--stone skin amulet-->
+    </item>
+    <item id="2381" chance="6666">
+      <!--halberd-->
+    </item>
+    <item id="2177" chance="2500">
+      <!--life crystal-->
+    </item>
+    <item id="2044" chance="10000">
+      <!--lamp-->
+    </item>
+    <item id="2448" chance="10000">
+      <!--studded club-->
+    </item>
+    <item id="2688" countmax="4" chance1="2500" chancemax="0">
+      <!--candy cane-->
+    </item>
   </loot>
 </monster>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="bandit" nameDescription="a bandit" race="blood" experience="65" speed="180" manacost="450">
   <health now="245" max="245"/>
   <look type="129" head="58" body="59" legs="45" feet="114" corpse="6080"/>
@@ -22,25 +22,42 @@
   </attacks>
   <defenses armor="11" defense="15"/>
   <elements>
-	<element physicalPercent="-12"/>
-	<element deathPercent="-5"/>
+    <element physicalPercent="-12"/>
+    <element deathPercent="-5"/>
   </elements>
   <voices interval="5000" chance="10">
     <voice sentence="Your money or your life!"/>
     <voice sentence="Hand me your purse!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-    <item id="2388" chance="6666"/>
-    <item id="2386" chance="5000"/>
-    <item id="2484" chance="20000"/>
-    <item id="2530" chance="6666"/>
-    <item id="2649" chance="10000"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="2148" countmax="15" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2388" chance="6666">
+      <!--hatchet-->
+    </item>
+    <item id="2386" chance="5000">
+      <!--axe-->
+    </item>
+    <item id="2484" chance="20000">
+      <!--studded armor-->
+    </item>
+    <item id="2530" chance="6666">
+      <!--copper shield-->
+    </item>
+    <item id="2649" chance="10000">
+      <!--leather legs-->
+    </item>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2787" countmax="2" chance1="20000" chancemax="0"/>
+        <item id="2787" countmax="2" chance1="20000" chancemax="0">
+          <!--white mushroom-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

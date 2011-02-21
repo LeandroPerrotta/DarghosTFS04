@@ -22,13 +22,15 @@
   </attacks>
   <defenses armor="4" defense="8"/>
   <elements>
-	<element earthPercent="100"/>
-	<element firePercent="-10"/>
+    <element earthPercent="100"/>
+    <element firePercent="-10"/>
   </elements>
   <voices interval="5000" chance="100">
     <voice sentence="Bssssss"/>
   </voices>
   <loot>
-    <item id="5902" countmax="1" chance1="5000" chancemax="0"/>
+    <item id="5902" countmax="1" chance1="5000" chancemax="0">
+      <!--honeycomb-->
+    </item>
   </loot>
 </monster>

@@ -22,8 +22,8 @@
   </attacks>
   <defenses armor="6" defense="10"/>
   <elements>
-	<element earthPercent="20"/>
-	<element firePercent="-10"/>
+    <element earthPercent="20"/>
+    <element firePercent="-10"/>
   </elements>
   <voices interval="5000" chance="10">
     <voice sentence="Grrrr"/>
@@ -31,15 +31,28 @@
     <voice sentence="Me strong! Me ate spinach!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="12" chance1="100000" chancemax="0"/>
-    <item id="2667" countmax="1" chance1="90000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2148" countmax="12" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2667" countmax="1" chance1="90000" chancemax="0">
+      <!--fish-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2643" chance="20000"/>
-        <item id="2050" chance="20000"/>
-        <item id="2580" chance="20000"/>
+        <item id="2643" chance="20000">
+          <!--leather boots-->
+        </item>
+        <item id="2050" chance="20000">
+          <!--torch-->
+        </item>
+        <item id="2580" chance="20000">
+          <!--fishing rod-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

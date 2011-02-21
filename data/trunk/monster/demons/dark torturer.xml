@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="dark torturer" nameDescription="a dark torturer" race="blood" experience="3500" speed="250" manacost="0">
   <health now="7350" max="7350"/>
   <look type="234" corpse="6328"/>
@@ -18,13 +18,13 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-	<attack name="melee" interval="2000" min="-0" max="-600"/>
-      <attack name="physical" interval="3000" chance="17" range="7" min="-60" max="-600">
-		<attribute key="shootEffect" value="throwingknife"/>
-      </attack>
-	<attack name="physical" interval="3000" chance="17" length="4" spread="3" min="-0" max="-0">
-		<attribute key="areaEffect" value="purplenote"/>
-	</attack>
+    <attack name="melee" interval="2000" min="-0" max="-600"/>
+    <attack name="physical" interval="3000" chance="17" range="7" min="-60" max="-600">
+      <attribute key="shootEffect" value="throwingknife"/>
+    </attack>
+    <attack name="physical" interval="3000" chance="17" length="4" spread="3" min="-0" max="-0">
+      <attribute key="areaEffect" value="purplenote"/>
+    </attack>
   </attacks>
   <defenses armor="25" defense="35">
     <defense name="healing" interval="1000" chance="50" min="75" max="125">
@@ -32,35 +32,58 @@
     </defense>
   </defenses>
   <elements>
-	<element firePercent="100"/>
-	<element earthPercent="50"/>
-	<element energyPercent="40"/>
-	<element deathPercent="35"/>
-	<element icePercent="-20"/>
-	<element holyPercent="-17"/>
+    <element firePercent="100"/>
+    <element earthPercent="50"/>
+    <element energyPercent="40"/>
+    <element deathPercent="35"/>
+    <element icePercent="-20"/>
+    <element holyPercent="-17"/>
   </elements>
   <immunities>
-	<immunity invisible="1"/>
+    <immunity invisible="1"/>
   </immunities>
   <voices interval="3000" chance="30">
     <voice sentence="You like it, don't you?"/>
     <voice sentence="IahaEhheAie!"/>
   </voices>
   <loot>
-	<item id="2148" countmax="76" chance1="100000" chancemax="0"/>
-	<item id="2671" countmax="5" chance1="33333" chancemax="0"/>
-	<item id="2470" chance="2000"/>
-	<item id="6300" chance="2066"/>
-	<item id="1987" chance="100000">
-		<inside>
-			<item id="2513" chance="9999"/>
-			<item id="6500" countmax="3" chance1="4555" chancemax="0"/>
-			<item id="2557" chance="12000"/>
-			<item id="2558" chance="11000"/>
-			<item id="5944" chance="5555"/>
-			<item id="5801" chance="1800"/>
-			<item id="5480" chance="1666"/>
-		</inside>
-	</item>
+    <item id="2148" countmax="76" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2671" countmax="5" chance1="33333" chancemax="0">
+      <!--ham-->
+    </item>
+    <item id="2470" chance="2000">
+      <!--golden legs-->
+    </item>
+    <item id="6300" chance="2066">
+      <!--death ring-->
+    </item>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="2513" chance="9999">
+          <!--battle shield-->
+        </item>
+        <item id="6500" countmax="3" chance1="4555" chancemax="0">
+          <!--demonic essence-->
+        </item>
+        <item id="2557" chance="12000">
+          <!--carpenter hammer-->
+        </item>
+        <item id="2558" chance="11000">
+          <!--saw-->
+        </item>
+        <item id="5944" chance="5555">
+          <!--soul orb-->
+        </item>
+        <item id="5801" chance="1800">
+          <!--key ring-->
+        </item>
+        <item id="5480" chance="1666">
+          <!--cat's paw-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
   </loot>
 </monster>

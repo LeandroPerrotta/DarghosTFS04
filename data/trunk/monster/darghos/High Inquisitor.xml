@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="High Inquisitor" nameDescription="monk" race="VENOM" experience="100000" speed="320" manacost="0">
   <health now="500000" max="500000"/>
   <look type="9" head="100" body="150" legs="10" feet="150" corpse="3058"/>
@@ -44,7 +44,6 @@
     <attack name="lifedrain" interval="2000" chance="25" length="8" spread="0" min="-50" max="-250">
       <attribute key="areaEffect" value="greenspark"/>
     </attack>
-
   </attacks>
   <defenses armor="100" defense="120">
     <defense name="healing" interval="2000" chance="10" min="900" max="1500">
@@ -80,33 +79,77 @@
     <voice sentence="SEE THIS DEMONS?!"/>
     <voice sentence="I never lose!"/>
   </voices>
-<loot>
- 	<item id="2148" countmax="100" chance1="100000" chancemax="0"/>
- 	<item id="2148" countmax="25" chance1="100000" chancemax="0"/> 
- 	<item id="2421" chance="1000"/>
- 	<item id="2471" chance="1000"/>
-	<item id="2493" chance="1000"/>
-	<item id="2195" chance="1000"/>
-	<item id="2195" chance="1000"/>
-	<item id="2656" chance="1000"/>
-	<item id="2656" chance="1000"/>
-	<item id="2488" chance="1500"/>
-	<item id="2491" chance="34700"/>
-	<item id="2488" chance="34700"/>
-	<item id="2519" chance="34700"/>
-	<item id="2494" chance="500"/>
-
- 	<item id="1987" chance="100000">
- 	<inside>
-  	<item id="2268" countmax="100" chance1="24600" chancemax="0"/> --small amethyst
-	<item id="2268" countmax="100" chance1="19700" chancemax="0"/> --small sapphire
-	<item id="5880" countmax="50" chance1="12000" chancemax="0"/> --small diamond
- 	<item id="2268" countmax="60" chance1="100000" chancemax="0"/> --gold	
-	<item id="2268" countmax="50" chance1="24600" chancemax="0"/>
-	<item id="2268" countmax="20" chance1="24600" chancemax="0"/>
-	<item id="2268" countmax="15" chance1="24600" chancemax="0"/>
-	<item id="2268" countmax="70" chance1="24600" chancemax="0"/>
- 	</inside>
- 	</item>
-</loot>
+  <loot>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2148" countmax="25" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2421" chance="1000">
+      <!--thunder hammer-->
+    </item>
+    <item id="2471" chance="1000">
+      <!--golden helmet-->
+    </item>
+    <item id="2493" chance="1000">
+      <!--demon helmet-->
+    </item>
+    <item id="2195" chance="1000">
+      <!--boots of haste-->
+    </item>
+    <item id="2195" chance="1000">
+      <!--boots of haste-->
+    </item>
+    <item id="2656" chance="1000">
+      <!--blue robe-->
+    </item>
+    <item id="2656" chance="1000">
+      <!--blue robe-->
+    </item>
+    <item id="2488" chance="1500">
+      <!--crown legs-->
+    </item>
+    <item id="2491" chance="34700">
+      <!--crown helmet-->
+    </item>
+    <item id="2488" chance="34700">
+      <!--crown legs-->
+    </item>
+    <item id="2519" chance="34700">
+      <!--crown shield-->
+    </item>
+    <item id="2494" chance="500">
+      <!--demon armor-->
+    </item>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="2268" countmax="100" chance1="24600" chancemax="0">
+          <!--sudden death rune-->
+        </item>
+        <item id="2268" countmax="100" chance1="19700" chancemax="0">
+          <!--sudden death rune-->
+        </item>
+        <item id="5880" countmax="50" chance1="12000" chancemax="0">
+          <!--iron ore-->
+        </item>
+        <item id="2268" countmax="60" chance1="100000" chancemax="0">
+          <!--sudden death rune-->
+        </item>
+        <item id="2268" countmax="50" chance1="24600" chancemax="0">
+          <!--sudden death rune-->
+        </item>
+        <item id="2268" countmax="20" chance1="24600" chancemax="0">
+          <!--sudden death rune-->
+        </item>
+        <item id="2268" countmax="15" chance1="24600" chancemax="0">
+          <!--sudden death rune-->
+        </item>
+        <item id="2268" countmax="70" chance1="24600" chancemax="0">
+          <!--sudden death rune-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
+  </loot>
 </monster>

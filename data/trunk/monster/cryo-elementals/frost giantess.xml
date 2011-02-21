@@ -23,11 +23,11 @@
   </attacks>
   <defenses armor="22" defense="23"/>
   <elements>
-	<element icePercent="100"/>
-	<element firePercent="20"/>
-	<element holyPercent="10"/>
-	<element energyPercent="-10"/>
-	<element deathPercent="-5"/>
+    <element icePercent="100"/>
+    <element firePercent="20"/>
+    <element holyPercent="10"/>
+    <element energyPercent="-10"/>
+    <element deathPercent="-5"/>
   </elements>
   <voices interval="2000" chance="5">
     <voice sentence="Ymirs Mjalle!"/>
@@ -37,20 +37,43 @@
     <voice sentence="Come kiss the cook!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="10" chance1="100000" chancemax="0"/> --Gold Coins
-    <item id="2406" chance="25000"/> --Short Sword
-    <item id="2381" chance="1955"/> --Halberd
-    <item id="2209" chance="2055"/> --Club Ring
-    <item id="2510" chance="5333"/> --Plate Shield
-    <item id="7290" chance="4444"/> --Shard
-    <item id="2490" chance="2777"/> --Dark Helmet
-    <item id="2666" countmax="2" chance1="33333" chancemax="0"/> --Meat
-    <item id="1987" chance="100000"> --Bag
+    <item id="2148" countmax="10" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2406" chance="25000">
+      <!--short sword-->
+    </item>
+    <item id="2381" chance="1955">
+      <!--halberd-->
+    </item>
+    <item id="2209" chance="2055">
+      <!--club ring-->
+    </item>
+    <item id="2510" chance="5333">
+      <!--plate shield-->
+    </item>
+    <item id="7290" chance="4444">
+      <!--shard-->
+    </item>
+    <item id="2490" chance="2777">
+      <!--dark helmet-->
+    </item>
+    <item id="2666" countmax="2" chance1="33333" chancemax="0">
+      <!--meat-->
+    </item>
+    <item id="1987" chance="100000">
       <inside>
-        <item id="2513" chance="2500"/> --Battle Shield
-        <item id="7441" chance="3444"/> --Ice Cube
-        <item id="2671" countmax="2" chance1="33333" chancemax="0"/> --Ham
+        <item id="2513" chance="2500">
+          <!--battle shield-->
+        </item>
+        <item id="7441" chance="3444">
+          <!--ice cube-->
+        </item>
+        <item id="2671" countmax="2" chance1="33333" chancemax="0">
+          <!--ham-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

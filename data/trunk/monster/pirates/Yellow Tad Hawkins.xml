@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Yellow Tad Hawkins" nameDescription="a Yellow Tad Hawkins" race="UNDEAD" experience="4800" speed="230" manacost="0">
   <health now="2600" max="2600"/>
   <look type="196" head="0" body="0" legs="0" feet="0" corpse="6071"/>
@@ -17,17 +17,15 @@
     <flag targetdistance="1"/>
     <flag runonhealth="0"/>
   </flags>
-<attacks>
-    <attack name="melee" interval="2000" min="-150" max="-210" />
-
+  <attacks>
+    <attack name="melee" interval="2000" min="-150" max="-210"/>
     <attack name="fire" interval="2000" chance="24" radius="3" target="1" min="-300" max="-780">
       <attribute key="areaEffect" value="explosionarea"/>
     </attack>
     <attack name="lifedrain" interval="1000" chance="20" range="7" radius="4" target="1" min="-230" max="-650">
-        <attribute key="areaEffect" value="yellowenergy"/>
+      <attribute key="areaEffect" value="yellowenergy"/>
     </attack>
-
-</attacks>
+  </attacks>
   <defenses armor="20" defense="25">
     <defense name="healing" interval="1000" chance="15" min="40" max="70">
       <attribute key="areaEffect" value="blueshimmer"/>
@@ -49,12 +47,26 @@
     <voice sentence="Hell is waiting for You!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="45" chance1="52000" chancemax="0"/>
-    <item id="2655" chance="1000"/>
-    <item id="2237" chance="7000"/>
-    <item id="2236" chance="4000"/>
-    <item id="2165" chance="1000"/>
-    <item id="2383" chance="1000"/>
-    <item id="1951" chance="1000"/>
+    <item id="2148" countmax="45" chance1="52000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2655" chance="1000">
+      <!--red robe-->
+    </item>
+    <item id="2237" chance="7000">
+      <!--dirty cape-->
+    </item>
+    <item id="2236" chance="4000">
+      <!--torn book-->
+    </item>
+    <item id="2165" chance="1000">
+      <!--stealth ring-->
+    </item>
+    <item id="2383" chance="1000">
+      <!--spike sword-->
+    </item>
+    <item id="1951" chance="1000">
+      <!--parchment-->
+    </item>
   </loot>
 </monster>

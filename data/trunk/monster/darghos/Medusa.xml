@@ -42,42 +42,75 @@
     </defense>
   </defenses>
   <elements>
-	<element earthPercent="100"/>
-	<element icePercent="40"/>
-	<element holyPercent="25"/>
-	<element physicalPercent="-15"/>
-	<element energyPercent="-10"/>
+    <element earthPercent="100"/>
+    <element icePercent="40"/>
+    <element holyPercent="25"/>
+    <element physicalPercent="-15"/>
+    <element energyPercent="-10"/>
   </elements>
   <immunities>
     <immunity lifedrain="1"/>
     <immunity paralyze="1"/>
     <immunity invisible="1"/>
   </immunities>
-    <voices interval="5000" chance="10">
-      <voice sentence="You will make sssuch a fine ssstatue!" yell="1"/>
-      <voice sentence="There isss no chhhanccce of essscape" yell="1"/>
-      <voice sentence="Are you tired or why are you moving thhat ssslow" yell="1"/>
-    </voices>
+  <voices interval="5000" chance="10">
+    <voice sentence="You will make sssuch a fine ssstatue!" yell="1"/>
+    <voice sentence="There isss no chhhanccce of essscape" yell="1"/>
+    <voice sentence="Are you tired or why are you moving thhat ssslow" yell="1"/>
+  </voices>
   <loot>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="2148" countmax="80" chance1="100000" chancemax="0"/>
-    <item id="2671" countmax="3" chance="60000"/>
-    <item id="7590" countmax="2" chance="60000"/>
-    <item id="2476" chance="1000"/>
-    <item id="2536" chance="1000"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2149" countmax="3" chance="5000"/>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2148" countmax="80" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2671" countmax="3" chance="60000">
+      <!--ham-->
+    </item>
+    <item id="7590" countmax="2" chance="60000">
+      <!--great mana potion-->
+    </item>
+    <item id="2476" chance="1000">
+      <!--knight armor-->
+    </item>
+    <item id="2536" chance="1000">
+      <!--medusa shield-->
+    </item>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2149" countmax="3" chance="5000">
+      <!--small emerald-->
+    </item>
     <item id="2004" chance="100000">
       <inside>
-        <item id="2152" countmax="2" chance="50000"/>
-        <item id="9808" chance="400"/>
-        <item id="7887" chance="700"/>
-        <item id="7885" chance="100"/>
-        <item id="7884" chance="100"/>
-        <item id="7413" chance="300"/>
-        <item id="8473" countmax="2" chance1="50000" chancemax="0"/>
-        <item id="2143" countmax="2" chance1="50000" chancemax="0"/>
+        <item id="2152" countmax="2" chance="50000">
+          <!--platinum coin-->
+        </item>
+        <item id="9808" chance="400">
+          <!--rusty armor-->
+        </item>
+        <item id="7887" chance="700">
+          <!--terra amulet-->
+        </item>
+        <item id="7885" chance="100">
+          <!--terra legs-->
+        </item>
+        <item id="7884" chance="100">
+          <!--terra mantle-->
+        </item>
+        <item id="7413" chance="300">
+          <!--titan axe-->
+        </item>
+        <item id="8473" countmax="2" chance1="50000" chancemax="0">
+          <!--ultimate health potion-->
+        </item>
+        <item id="2143" countmax="2" chance1="50000" chancemax="0">
+          <!--white pearl-->
+        </item>
       </inside>
+      <!--golden backpack-->
     </item>
   </loot>
 </monster>

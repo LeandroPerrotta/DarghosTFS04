@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="orc shaman" nameDescription="a orc shaman" race="blood" experience="110" speed="180" manacost="0">
   <health now="115" max="115"/>
   <look type="6" head="0" body="0" legs="0" feet="0" corpse="5978"/>
@@ -34,10 +34,10 @@
     </defense>
   </defenses>
   <elements>
-	<element energyPercent="50"/>
-	<element holyPercent="25"/>
-	<element earthPercent="-5"/>
-	<element deathPercent="-5"/>
+    <element energyPercent="50"/>
+    <element holyPercent="25"/>
+    <element earthPercent="-5"/>
+    <element deathPercent="-5"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
@@ -49,17 +49,34 @@
     <summon name="snake" interval="1000" chance="25" max="4"/>
   </summons>
   <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2401" chance="2222"/>
-    <item id="2458" chance="2222"/>
+    <item id="2148" countmax="20" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2401" chance="2222">
+      <!--staff-->
+    </item>
+    <item id="2458" chance="2222">
+      <!--chain helmet-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2817" chance="5000"/>
-        <item id="2389" countmax="1" chance1="4000" chancemax="0"/>
-        <item id="2079" chance="3333"/>
-        <item id="2190" chance="1538"/>
-        <item id="2188" chance="1000"/> -- wand of plague
+        <item id="2817" chance="5000">
+          <!--dead snake-->
+        </item>
+        <item id="2389" countmax="1" chance1="4000" chancemax="0">
+          <!--spear-->
+        </item>
+        <item id="2079" chance="3333">
+          <!--horn-->
+        </item>
+        <item id="2190" chance="1538">
+          <!--wand of vortex-->
+        </item>
+        <item id="2188" chance="1000">
+          <!--wand of decay-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

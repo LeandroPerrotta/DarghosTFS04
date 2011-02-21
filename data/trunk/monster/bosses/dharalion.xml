@@ -60,28 +60,67 @@
     <voice sentence="My powers are divine!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="1949" chance="10000"/>
-    <item id="2578" chance="5000"/>
-    <item id="2260" chance="4000"/>
-    <item id="2401" chance="3000"/>
-    <item id="2642" chance="20000"/>
-    <item id="2682" chance="6666"/>
-    <item id="2802" countmax="1" chance1="10000" chancemax="0"/>
-    <item id="2600" chance="33333"/>
-    <item id="2177" chance="2857"/>
-    <item id="2689" countmax="3" chance1="20000" chancemax="0"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="2148" countmax="20" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="1949" chance="10000">
+      <!--scroll-->
+    </item>
+    <item id="2578" chance="5000">
+      <!--closed trap-->
+    </item>
+    <item id="2260" chance="4000">
+      <!--blank rune-->
+    </item>
+    <item id="2401" chance="3000">
+      <!--staff-->
+    </item>
+    <item id="2642" chance="20000">
+      <!--sandals-->
+    </item>
+    <item id="2682" chance="6666">
+      <!--melon-->
+    </item>
+    <item id="2802" countmax="1" chance1="10000" chancemax="0">
+      <!--sling herb-->
+    </item>
+    <item id="2600" chance="33333">
+      <!--inkwell-->
+    </item>
+    <item id="2177" chance="2857">
+      <!--life crystal-->
+    </item>
+    <item id="2689" countmax="3" chance1="20000" chancemax="0">
+      <!--bread-->
+    </item>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2652" chance="5000"/>
-        <item id="2544" countmax="10" chance1="20000" chancemax="0"/>
-        <item id="2456" chance="10000"/>
-        <item id="2032" chance="4000"/>
-        <item id="2062" chance="2857"/>
-        <item id="2125" chance="1818"/>
-        <item id="2154" chance="1333"/>
+        <item id="2652" chance="5000">
+          <!--green tunic-->
+        </item>
+        <item id="2544" countmax="10" chance1="20000" chancemax="0">
+          <!--arrow-->
+        </item>
+        <item id="2456" chance="10000">
+          <!--bow-->
+        </item>
+        <item id="2032" chance="4000">
+          <!--bowl-->
+        </item>
+        <item id="2062" chance="2857">
+          <!--small oil lamp-->
+        </item>
+        <item id="2125" chance="1818">
+          <!--crystal necklace-->
+        </item>
+        <item id="2154" chance="1333">
+          <!--yellow gem-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

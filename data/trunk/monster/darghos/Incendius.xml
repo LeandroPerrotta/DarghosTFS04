@@ -23,7 +23,7 @@
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-	<attack name="manadrain" interval="1000" chance="5" range="7" min="-20" max="-40"/>
+    <attack name="manadrain" interval="1000" chance="5" range="7" min="-20" max="-40"/>
     <attack name="fire" interval="1000" chance="20" range="10" radius="4" target="1" min="-500" max="-1200">
       <attribute key="shootEffect" value="fire"/>
       <attribute key="areaEffect" value="firearea"/>
@@ -34,16 +34,16 @@
     <attack name="fire" interval="1000" chance="16" length="8" spread="3" min="-500" max="-1000">
       <attribute key="areaEffect" value="firearea"/>
     </attack>
-	</attacks>
+  </attacks>
   <defenses armor="35" defense="35">
 
   </defenses>
   <elements>
-		<element physicalPercent="75"/>
-		<element energyPercent="25"/>
-		<element icePercent="-15"/>
-		<element deathPercent="20"/>
-</elements>
+    <element physicalPercent="75"/>
+    <element energyPercent="25"/>
+    <element icePercent="-15"/>
+    <element deathPercent="20"/>
+  </elements>
   <immunities>
     <immunity physical="0"/>
     <immunity energy="0"/>
@@ -57,9 +57,10 @@
   </immunities>
   <voices interval="5000" chance="10">
     <voice sentence="Fire!"/>
-
   </voices>
-	<loot>
-		<item id="2187" chance="2111" /> -- wand of Inferno
-	</loot>
+  <loot>
+    <item id="2187" chance="2111">
+      <!--wand of inferno-->
+    </item>
+  </loot>
 </monster>

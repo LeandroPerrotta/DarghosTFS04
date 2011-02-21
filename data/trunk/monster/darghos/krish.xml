@@ -41,22 +41,46 @@
     <voice sentence="Orc arga Huummmak!"/>
   </voices>
   <loot capacity="500">
-    <item id="1988" countmax="1" chance="30000"/>//backpack
-	<item id="2393" countmax="3" chance="30000"/>//meat        
-    <item id="2148" countmax="70" chance="50000"/>//gold
-    <item id="2666" countmax="3" chance="30000"/>//meat    
-    <item id="2428" countmax="1" chance="15000"/>//orcish axe
-    
-    <item id="2482" countmax="1" chance="15000"/>//studded helmet
-    <item id="2050" countmax="1" chance="8000"/>//torch
-    <item id="2129" countmax="1" chance="10000"/>//wolf tooth chain
-	<item id="1987" countmax="1" chance="100000">
-		<inside>
-			<item id="2148" countmax="17" chance="70000"/>//gold
-			<item id="2513" countmax="1" chance="1000"/>//battle shield
-			<item id="2483" countmax="1" chance="500"/>//scale armor
-			<item id="2425" countmax="1" chance="900"/>//obsidian lance
-		</inside>
-	</item>		
+    <item id="1988" countmax="1" chance="30000">
+      <!--backpack-->
+    </item>
+    <item id="2393" countmax="3" chance="30000">
+      <!--giant sword-->
+    </item>
+    <item id="2148" countmax="70" chance="50000">
+      <!--gold coin-->
+    </item>
+    <item id="2666" countmax="3" chance="30000">
+      <!--meat-->
+    </item>
+    <item id="2428" countmax="1" chance="15000">
+      <!--orcish axe-->
+    </item>
+    <item id="2482" countmax="1" chance="15000">
+      <!--studded helmet-->
+    </item>
+    <item id="2050" countmax="1" chance="8000">
+      <!--torch-->
+    </item>
+    <item id="2129" countmax="1" chance="10000">
+      <!--wolf tooth chain-->
+    </item>
+    <item id="1987" countmax="1" chance="100000">
+      <inside>
+        <item id="2148" countmax="17" chance="70000">
+          <!--gold coin-->
+        </item>
+        <item id="2513" countmax="1" chance="1000">
+          <!--battle shield-->
+        </item>
+        <item id="2483" countmax="1" chance="500">
+          <!--scale armor-->
+        </item>
+        <item id="2425" countmax="1" chance="900">
+          <!--obsidian lance-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
   </loot>
 </monster>

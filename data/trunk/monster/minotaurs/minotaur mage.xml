@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="minotaur mage" nameDescription="a minotaur mage" race="blood" experience="150" speed="170" manacost="0">
   <health now="155" max="155"/>
   <look type="23" head="20" body="30" legs="40" feet="50" corpse="5981"/>
@@ -33,11 +33,11 @@
   </attacks>
   <defenses armor="18" defense="20"/>
   <elements>
-	<element energyPercent="20"/>
-	<element earthPercent="15"/>
-	<element holyPercent="10"/>
-	<element icePercent="-5"/>
-	<element deathPercent="-5"/>
+    <element energyPercent="20"/>
+    <element earthPercent="15"/>
+    <element holyPercent="10"/>
+    <element icePercent="-5"/>
+    <element deathPercent="-5"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
@@ -47,23 +47,52 @@
     <voice sentence="Kaplar!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2050" chance="10000"/>
-    <item id="2461" chance="8000"/>
-    <item id="2649" chance="8000"/>
-    <item id="5878" countmax="1" chance1="5000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2148" countmax="20" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2050" chance="10000">
+      <!--torch-->
+    </item>
+    <item id="2461" chance="8000">
+      <!--leather helmet-->
+    </item>
+    <item id="2649" chance="8000">
+      <!--leather legs-->
+    </item>
+    <item id="5878" countmax="1" chance1="5000" chancemax="0">
+      <!--minotaur leather-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2189" chance="1333"/> -- wand of cosmic energy
-        <item id="2404" chance="10000"/>
-        <item id="2362" countmax="5" chance1="20000" chancemax="0"/>
-        <item id="2817" chance="10000"/>
-        <item id="2311" chance="2857"/>
-        <item id="2465" chance="4000"/>
-        <item id="2648" chance="4000"/>
-        <item id="7425" chance="1000"/>
+        <item id="2189" chance="1333">
+          <!--wand of cosmic energy-->
+        </item>
+        <item id="2404" chance="10000">
+          <!--combat knife-->
+        </item>
+        <item id="2362" countmax="5" chance1="20000" chancemax="0">
+          <!--carrot of doom-->
+        </item>
+        <item id="2817" chance="10000">
+          <!--dead snake-->
+        </item>
+        <item id="2311" chance="2857">
+          <!--heavy magic missile rune-->
+        </item>
+        <item id="2465" chance="4000">
+          <!--brass armor-->
+        </item>
+        <item id="2648" chance="4000">
+          <!--chain legs-->
+        </item>
+        <item id="7425" chance="1000">
+          <!--taurus mace-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="merlkin" nameDescription="a merlkin" race="blood" experience="145" speed="200" manacost="0">
   <health now="230" max="230"/>
   <look type="117" head="20" body="30" legs="40" feet="50" corpse="6044"/>
@@ -37,11 +37,11 @@
     </defense>
   </defenses>
   <elements>
-	<element firePercent="20"/>
-	<element energyPercent="10"/>
-	<element holyPercent="10"/>
-	<element icePercent="-15"/>
-	<element deathPercent="-5"/>
+    <element firePercent="20"/>
+    <element energyPercent="10"/>
+    <element holyPercent="10"/>
+    <element icePercent="-15"/>
+    <element deathPercent="-5"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
@@ -51,19 +51,35 @@
     <voice sentence="Holy banana!"/>
     <voice sentence="Chakka! Chakka!"/>
   </voices>
-<loot>
-	<item id="2148" chance="100000" countmax="62" /> -- gold coin
-	<item id="2150" chance="1538" countmax="1" /> -- small amethyst
-	<item id="2675" chance="10000" countmax="5" /> -- orange
-	<item id="5883" chance="1000" countmax="1" /> -- ape fur
-	<item id="2676" chance="8000" coountmax="12"/> --Bananas
-	<item id="1987" chance="50000">
-		<inside>
-			<item id="3966" chance="2333" /> -- banana staff
-			<item id="2188" chance="3038" /> -- wand of decay
-			<item id="2162" chance="6222" /> -- magic lightwand
-		</inside>
-	</item>
-</loot>
-
+  <loot>
+    <item id="2148" chance="100000" countmax="62">
+      <!--gold coin-->
+    </item>
+    <item id="2150" chance="1538" countmax="1">
+      <!--small amethyst-->
+    </item>
+    <item id="2675" chance="10000" countmax="5">
+      <!--orange-->
+    </item>
+    <item id="5883" chance="1000" countmax="1">
+      <!--ape fur-->
+    </item>
+    <item id="2676" chance="8000" coountmax="12">
+      <!--banana-->
+    </item>
+    <item id="1987" chance="50000">
+      <inside>
+        <item id="3966" chance="2333">
+          <!--banana staff-->
+        </item>
+        <item id="2188" chance="3038">
+          <!--wand of decay-->
+        </item>
+        <item id="2162" chance="6222">
+          <!--magic lightwand-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
+  </loot>
 </monster>

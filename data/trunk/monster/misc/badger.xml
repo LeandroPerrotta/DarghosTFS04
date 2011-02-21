@@ -22,7 +22,11 @@
   </attacks>
   <defenses armor="1" defense="3"/>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2671" countmax="1" chance1="50000" chancemax="1"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2671" countmax="1" chance1="50000" chancemax="1">
+      <!--ham-->
+    </item>
   </loot>
 </monster>

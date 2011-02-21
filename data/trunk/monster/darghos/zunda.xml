@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Zunda-Burs" nameDescription="a Zunda-Burs" race="blood" experience="700" speed="250" manacost="590">
   <health now="7000" max="7000"/>
   <look type="59" head="20" body="30" legs="40" feet="50" corpse="6001"/>
@@ -35,17 +35,34 @@
     <voice sentence="NAZ ZU!" yell="1"/>
   </voices>
   <loot>
-    <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-    <item id="2666" countmax="3" chance1="33333" chancemax="0"/>
-    <item id="2393" chance="1200"/>
-    <item id="3965" chance="6666"/>
+    <item id="2148" countmax="15" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2666" countmax="3" chance1="33333" chancemax="0">
+      <!--meat-->
+    </item>
+    <item id="2393" chance="1200">
+      <!--giant sword-->
+    </item>
+    <item id="3965" chance="6666">
+      <!--hunting spear-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2464" chance="10000"/>
-        <item id="2458" chance="10000"/>
-        <item id="2044" chance="5000"/>
-        <item id="2378" chance="5000"/>
+        <item id="2464" chance="10000">
+          <!--chain armor-->
+        </item>
+        <item id="2458" chance="10000">
+          <!--chain helmet-->
+        </item>
+        <item id="2044" chance="5000">
+          <!--lamp-->
+        </item>
+        <item id="2378" chance="5000">
+          <!--battle axe-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

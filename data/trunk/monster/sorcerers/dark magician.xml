@@ -35,12 +35,12 @@
     </defense>
   </defenses>
   <elements>
-	<element firePercent="10"/>
-	<element earthPercent="8"/>
-	<element energyPercent="8"/>
-	<element icePercent="8"/>
-	<element holyPercent="5"/>
-	<element deathPercent="-6"/>
+    <element firePercent="10"/>
+    <element earthPercent="8"/>
+    <element energyPercent="8"/>
+    <element icePercent="8"/>
+    <element holyPercent="5"/>
+    <element deathPercent="-6"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
@@ -51,10 +51,20 @@
     <voice sentence="My secrets are mine alone!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="2260" chance="1300"/>
-    <item id="7620" chance="1200"/>
-    <item id="6079" chance="1200"/>
-    <item id="2188" chance="800"/>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2260" chance="1300">
+      <!--blank rune-->
+    </item>
+    <item id="7620" chance="1200">
+      <!--mana potion-->
+    </item>
+    <item id="6079" chance="1200">
+      <!--dead frog-->
+    </item>
+    <item id="2188" chance="800">
+      <!--wand of decay-->
+    </item>
   </loot>
 </monster>

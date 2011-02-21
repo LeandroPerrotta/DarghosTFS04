@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="ghoul" nameDescription="a ghoul" race="blood" experience="85" speed="144" manacost="450">
   <health now="100" max="100"/>
   <look type="18" head="20" body="30" legs="40" feet="50" corpse="5976"/>
@@ -27,11 +27,11 @@
     </defense>
   </defenses>
   <elements>
-	<element deathPercent="100"/>
-	<element energyPercent="20"/>
-	<element earthPercent="20"/>
-	<element icePercent="10"/>
-	<element holyPercent="-25"/>
+    <element deathPercent="100"/>
+    <element energyPercent="20"/>
+    <element earthPercent="20"/>
+    <element icePercent="10"/>
+    <element holyPercent="-25"/>
   </elements>
   <immunities>
     <immunity lifedrain="1"/>
@@ -39,21 +39,46 @@
     <immunity invisible="1"/>
   </immunities>
   <loot>
-    <item id="2148" countmax="64" chance1="100000" chancemax="0"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="30" chance1="100000" chancemax="0"/>
-    <item id="2050" chance="20000"/>
-    <item id="2483" chance="10000"/>
-    <item id="2473" chance="6666"/>
-    <item id="2398" chance="20000"/>
-    <item id="5913" countmax="1" chance1="5000" chancemax="0"/>
+    <item id="2148" countmax="64" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2148" countmax="30" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2050" chance="20000">
+      <!--torch-->
+    </item>
+    <item id="2483" chance="10000">
+      <!--scale armor-->
+    </item>
+    <item id="2473" chance="6666">
+      <!--viking helmet-->
+    </item>
+    <item id="2398" chance="20000">
+      <!--mace-->
+    </item>
+    <item id="5913" countmax="1" chance1="5000" chancemax="0">
+      <!--brown piece of cloth-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2460" chance="6666"/>
-        <item id="2229" countmax="2" chance1="20000" chancemax="0"/>
-        <item id="2403" chance="10000"/>
-        <item id="2168" chance="2500"/>
+        <item id="2460" chance="6666">
+          <!--brass helmet-->
+        </item>
+        <item id="2229" countmax="2" chance1="20000" chancemax="0">
+          <!--skull-->
+        </item>
+        <item id="2403" chance="10000">
+          <!--knife-->
+        </item>
+        <item id="2168" chance="2500">
+          <!--life ring-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

@@ -54,25 +54,58 @@
     <summon name="giant spider" interval="1000" chance="13" max="2"/>
   </summons>
   <loot>
-    <item id="2148" countmax="50" chance1="100000" chancemax="0"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="5879" countmax="20" chance1="5000" chancemax="0"/>
-    <item id="5879" countmax="30" chance1="5000" chancemax="0"/>
-    <item id="5879" countmax="40" chance1="5000" chancemax="0"/>
-    <item id="5879" countmax="50" chance1="5000" chancemax="0"/>
+    <item id="2148" countmax="50" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="5879" countmax="20" chance1="5000" chancemax="0">
+      <!--giant spider silk-->
+    </item>
+    <item id="5879" countmax="30" chance1="5000" chancemax="0">
+      <!--giant spider silk-->
+    </item>
+    <item id="5879" countmax="40" chance1="5000" chancemax="0">
+      <!--giant spider silk-->
+    </item>
+    <item id="5879" countmax="50" chance1="5000" chancemax="0">
+      <!--giant spider silk-->
+    </item>
     <item id="1988" chance="100000">
       <inside>
-        <item id="2457" countmax="1" chance="10000"/>
-        <item id="2148" countmax="40" chance1="100000" chancemax="0"/>
-        <item id="2476" chance="100000"/>
-        <item id="2477" chance="100000"/>
-        <item id="2476" chance="100000"/>
-        <item id="2477" chance="100000"/>
-        <item id="2476" chance="100000"/>
-        <item id="2477" chance="100000"/>
-        <item id="2476" chance="100000"/>
-        <item id="2477" chance="100000"/>
+        <item id="2457" countmax="1" chance="10000">
+          <!--steel helmet-->
+        </item>
+        <item id="2148" countmax="40" chance1="100000" chancemax="0">
+          <!--gold coin-->
+        </item>
+        <item id="2476" chance="100000">
+          <!--knight armor-->
+        </item>
+        <item id="2477" chance="100000">
+          <!--knight legs-->
+        </item>
+        <item id="2476" chance="100000">
+          <!--knight armor-->
+        </item>
+        <item id="2477" chance="100000">
+          <!--knight legs-->
+        </item>
+        <item id="2476" chance="100000">
+          <!--knight armor-->
+        </item>
+        <item id="2477" chance="100000">
+          <!--knight legs-->
+        </item>
+        <item id="2476" chance="100000">
+          <!--knight armor-->
+        </item>
+        <item id="2477" chance="100000">
+          <!--knight legs-->
+        </item>
       </inside>
+      <!--backpack-->
     </item>
   </loot>
 </monster>

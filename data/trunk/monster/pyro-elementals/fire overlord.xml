@@ -20,22 +20,22 @@
   <attacks>
     <attack name="melee" interval="2000" skill="70" attack="90" fire="650"/>
     <attack name="firefield" interval="2000" chance="15" range="7" radius="4" target="1">
-    <attribute key="shootEffect" value="fire"/>
+      <attribute key="shootEffect" value="fire"/>
     </attack>
     <attack name="fire" interval="1000" chance="15" length="1" min="-300" max="-900">
-	<attribute key="areaEffect" value="fireattack"/>
-	</attack>
+      <attribute key="areaEffect" value="fireattack"/>
+    </attack>
     <attack name="fire" interval="1000" chance="13" target="1" radius="4" min="-200" max="-350">
-    <attribute key="areaEffect" value="firearea"/>
+      <attribute key="areaEffect" value="firearea"/>
     </attack>
   </attacks>
   <defenses armor="25" defense="25"/>
   <elements>
-		<element physicalPercent="15"/>
-		<element energyPercent="25"/>
-		<element icePercent="-15"/>
-		<element deathPercent="20"/>
-</elements>
+    <element physicalPercent="15"/>
+    <element energyPercent="25"/>
+    <element icePercent="-15"/>
+    <element deathPercent="20"/>
+  </elements>
   <immunities>
     <immunity physical="0"/>
     <immunity energy="0"/>
@@ -48,10 +48,20 @@
     <immunity invisible="1"/>
   </immunities>
   <loot>
-   <item id="2148" countmax="100" chance1="100000" chancemax="0"/> --Gold Coin
-   <item id="2152" countmax="4" chance1="8888" chancemax="0"/> --Small Ruby 
-   <item id="8304" chance="2200"/> --Soul Orb
-   <item id="8877" chance="900"/> --Lavos Armor
-   <item id="7899" chance="1210"/> --Magma Coat
-   </loot>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2152" countmax="4" chance1="8888" chancemax="0">
+      <!--platinum coin-->
+    </item>
+    <item id="8304" chance="2200">
+      <!--eternal flames-->
+    </item>
+    <item id="8877" chance="900">
+      <!--lavos armor-->
+    </item>
+    <item id="7899" chance="1210">
+      <!--magma coat-->
+    </item>
+  </loot>
 </monster>

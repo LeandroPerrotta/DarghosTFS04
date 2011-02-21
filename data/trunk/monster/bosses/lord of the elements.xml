@@ -18,44 +18,46 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-  	<attack name="melee" interval="2000" skill="110" attack="115"/>
+    <attack name="melee" interval="2000" skill="110" attack="115"/>
   </attacks>
   <defenses armor="30" defense="30">
     <defense name="healing" interval="1000" chance="25" min="100" max="195">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-	    <defense name="outfit" interval="1500" chance="40" monster="Energy Overlord" duration="3000">
+    <defense name="outfit" interval="1500" chance="40" monster="Energy Overlord" duration="3000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
     <defense name="outfit" interval="1500" chance="40" monster="Fire Overlord" duration="3000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-	    <defense name="outfit" interval="1500" chance="40" monster="Earth Overlord" duration="3000">
+    <defense name="outfit" interval="1500" chance="40" monster="Earth Overlord" duration="3000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
     <defense name="outfit" interval="1500" chance="40" monster="Ice Overlord" duration="3000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
-	<elements>
-		<element icePercent="30"/>
-		<element energyPercent="30"/>
-	</elements>
+  <elements>
+    <element icePercent="30"/>
+    <element energyPercent="30"/>
+  </elements>
   <immunities>
-  <immunity holy="1"/>
-  <immunity earth="1"/>
-  <immunity physical="1"/>
-  <immunity fire="1"/>
+    <immunity holy="1"/>
+    <immunity earth="1"/>
+    <immunity physical="1"/>
+    <immunity fire="1"/>
     <immunity death="1"/>
     <immunity invisible="1"/>
   </immunities>
-    <summons maxSummons="2">
+  <summons maxSummons="2">
     <summon name="Blistering Fire fire elemental" interval="4000" chance="50"/>
-	<summon name="Jagged Earth Elemental" interval="4000" chance="50"/>
-	<summon name="Roaring Water Elemental" interval="4000" chance="50"/>
-	<summon name="Overcharged Energy Elemental" interval="4000" chance="50"/>
+    <summon name="Jagged Earth Elemental" interval="4000" chance="50"/>
+    <summon name="Roaring Water Elemental" interval="4000" chance="50"/>
+    <summon name="Overcharged Energy Elemental" interval="4000" chance="50"/>
   </summons>
- <loot>
-    <item id="2152" countmax="7" chance1="40000" chancemax="0"/>
- </loot>
+  <loot>
+    <item id="2152" countmax="7" chance1="40000" chancemax="0">
+      <!--platinum coin-->
+    </item>
+  </loot>
 </monster>

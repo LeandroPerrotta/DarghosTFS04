@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Demodras" nameDescription="Demodras" race="blood" experience="4000" speed="230" manacost="0">
   <health now="4500" max="4500"/>
   <look type="204" head="20" body="30" legs="40" feet="50" corpse="5984"/>
@@ -36,8 +36,8 @@
     </defense>
   </defenses>
   <elements>
-	<element firePercent="100"/>
-	<element earthPercent="100"/>
+    <element firePercent="100"/>
+    <element earthPercent="100"/>
   </elements>
   <immunities>
     <immunity paralyze="1"/>
@@ -51,28 +51,67 @@
     <voice sentence="I WILL PROTECT MY BROOD!" yell="1"/>
   </voices>
   <loot>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="2672" countmax="2" chance1="20000" chancemax="0"/>
-    <item id="2033" chance="1818"/>
-    <item id="1976" chance="3333"/>
-    <item id="2413" chance="5000"/>
-    <item id="2498" chance="588"/>
-    <item id="2492" chance="333"/>
-    <item id="2547" countmax="10" chance1="2222" chancemax="0"/>
-    <item id="2546" countmax="5" chance1="2222" chancemax="0"/>
-    <item id="2796" countmax="1" chance1="6666" chancemax="0"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2672" countmax="2" chance1="20000" chancemax="0">
+      <!--dragon ham-->
+    </item>
+    <item id="2033" chance="1818">
+      <!--golden mug-->
+    </item>
+    <item id="1976" chance="3333">
+      <!--gemmed book-->
+    </item>
+    <item id="2413" chance="5000">
+      <!--broadsword-->
+    </item>
+    <item id="2498" chance="588">
+      <!--royal helmet-->
+    </item>
+    <item id="2492" chance="333">
+      <!--dragon scale mail-->
+    </item>
+    <item id="2547" countmax="10" chance1="2222" chancemax="0">
+      <!--power bolt-->
+    </item>
+    <item id="2546" countmax="5" chance1="2222" chancemax="0">
+      <!--burst arrow-->
+    </item>
+    <item id="2796" countmax="1" chance1="6666" chancemax="0">
+      <!--green mushroom-->
+    </item>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-        <item id="2149" countmax="2" chance1="833" chancemax="0"/>
-        <item id="2392" chance="1428"/>
-        <item id="2146" countmax="2" chance1="2222" chancemax="0"/>
-        <item id="2528" chance="1333"/>
-        <item id="5948" countmax="1" chance1="5000" chancemax="0"/>
-        <item id="5882" countmax="1" chance1="5000" chancemax="0"/>
-        <item id="5919" chance="100000"/>
+        <item id="2148" countmax="100" chance1="100000" chancemax="0">
+          <!--gold coin-->
+        </item>
+        <item id="2149" countmax="2" chance1="833" chancemax="0">
+          <!--small emerald-->
+        </item>
+        <item id="2392" chance="1428">
+          <!--fire sword-->
+        </item>
+        <item id="2146" countmax="2" chance1="2222" chancemax="0">
+          <!--small sapphire-->
+        </item>
+        <item id="2528" chance="1333">
+          <!--tower shield-->
+        </item>
+        <item id="5948" countmax="1" chance1="5000" chancemax="0">
+          <!--red dragon leather-->
+        </item>
+        <item id="5882" countmax="1" chance1="5000" chancemax="0">
+          <!--red dragon scale-->
+        </item>
+        <item id="5919" chance="100000">
+          <!--dragon claw-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

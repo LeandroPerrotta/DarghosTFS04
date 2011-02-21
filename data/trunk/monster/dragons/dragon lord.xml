@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="dragon lord" nameDescription="a dragon lord" race="blood" experience="2100" speed="245" manacost="0">
   <health now="1900" max="1900"/>
   <look type="39" head="20" body="30" legs="40" feet="50" corpse="5984"/>
@@ -36,9 +36,9 @@
     </defense>
   </defenses>
   <elements>
-	<element energyPercent="20"/>
-	<element icePercent="-10"/>
-	<element earthPercent="80"/>
+    <element energyPercent="20"/>
+    <element icePercent="-10"/>
+    <element earthPercent="80"/>
   </elements>
   <immunities>
     <immunity fire="1"/>
@@ -50,32 +50,76 @@
     <voice sentence="YOU WILL BURN!" yell="1"/>
   </voices>
   <loot>
-    <item id="2148" countmax="70" chance1="100000"/> -- Gold
-    <item id="2148" countmax="80" chance1="100000"/>
-    
-    <item id="2672" countmax="5" chance1="50000"/> -- dragon ham
-    <item id="2033" chance="2450"/> -- golden mug
-    <item id="1976" chance="2300"/> -- gemmed book
-    <item id="2413" chance="5000"/> -- broad sword
-    <item id="2498" chance="100"/> -- royal helmet
-    <item id="2492" chance="100"/> -- dragon scale mail
-    <item id="7588" chance="940"/> -- strong health potion
-    <item id="7378" countmax="3" chance1="16000"/> -- royal spear
-    <item id="2547" countmax="7" chance1="25000"/> -- power bolt
-    <item id="2796" countmax="1" chance1="12000"/> -- green mushroom
-    <item id="5948" countmax="1" chance1="940"/> -- red dragon leather
+    <item id="2148" countmax="70" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2148" countmax="80" chance1="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2672" countmax="5" chance1="50000">
+      <!--dragon ham-->
+    </item>
+    <item id="2033" chance="2450">
+      <!--golden mug-->
+    </item>
+    <item id="1976" chance="2300">
+      <!--gemmed book-->
+    </item>
+    <item id="2413" chance="5000">
+      <!--broadsword-->
+    </item>
+    <item id="2498" chance="100">
+      <!--royal helmet-->
+    </item>
+    <item id="2492" chance="100">
+      <!--dragon scale mail-->
+    </item>
+    <item id="7588" chance="940">
+      <!--strong health potion-->
+    </item>
+    <item id="7378" countmax="3" chance1="16000">
+      <!--royal spear-->
+    </item>
+    <item id="2547" countmax="7" chance1="25000">
+      <!--power bolt-->
+    </item>
+    <item id="2796" countmax="1" chance1="12000">
+      <!--green mushroom-->
+    </item>
+    <item id="5948" countmax="1" chance1="940">
+      <!--red dragon leather-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2148" countmax="100" chance1="100000"/> -- gold coin
-        <item id="2392" chance="260"/> -- fire sword 
-        <item id="2146" countmax="1" chance1="4850"/> -- small sapphire
-        <item id="2479" chance="420"/> -- strange helmet
-        <item id="2177" chance="780"/> -- life crystal
-        <item id="2167" chance="5000"/> -- energy ring
-        <item id="2528" chance="160"/> -- tower shield
-        <item id="7402" chance="50"/> -- dragon slayer
-        <item id="5882" countmax="1" chance1="1410"/> -- red dragon scale
+        <item id="2148" countmax="100" chance1="100000">
+          <!--gold coin-->
+        </item>
+        <item id="2392" chance="260">
+          <!--fire sword-->
+        </item>
+        <item id="2146" countmax="1" chance1="4850">
+          <!--small sapphire-->
+        </item>
+        <item id="2479" chance="420">
+          <!--strange helmet-->
+        </item>
+        <item id="2177" chance="780">
+          <!--life crystal-->
+        </item>
+        <item id="2167" chance="5000">
+          <!--energy ring-->
+        </item>
+        <item id="2528" chance="160">
+          <!--tower shield-->
+        </item>
+        <item id="7402" chance="50">
+          <!--dragon slayer-->
+        </item>
+        <item id="5882" countmax="1" chance1="1410">
+          <!--red dragon scale-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

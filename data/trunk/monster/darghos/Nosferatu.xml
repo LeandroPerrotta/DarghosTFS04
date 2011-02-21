@@ -30,12 +30,11 @@
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
   </attacks>
-
   <defenses armor="17" defense="23">
-     <defense name="healing" interval="1000" chance="50" min="2000" max="2000">
+    <defense name="healing" interval="1000" chance="50" min="2000" max="2000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-     <defense name="speed" interval="1500" chance="120" range="7" speedchange="500" duration="30000">
+    <defense name="speed" interval="1500" chance="120" range="7" speedchange="500" duration="30000">
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
@@ -50,35 +49,68 @@
     <immunity drunk="1"/>
     <immunity invisible="1"/>
   </immunities>
-    <summons maxSummons="30">
-	<summon name="vampire" interval="2000" chance="100" max="10"/>
-    </summons>
-  <voices interval="5000" chance="100"> 
+  <summons maxSummons="30">
+    <summon name="vampire" interval="2000" chance="100" max="10"/>
+  </summons>
+  <voices interval="5000" chance="100">
     <voice sentence="BLOOD!" yell="1"/>
     <voice sentence="Let me kiss your neck."/>
     <voice sentence="I smell warm blood."/>
     <voice sentence="I call you, my bats! Come!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="9" chance1="100000" chancemax="0"/>
-    <item id="2193" chance="8000"/> 
-    <item id="2193" chance="1666"/>
-    <item id="2193" chance="4000"/>
-    <item id="5905" countmax="1" chance1="2000" chancemax="0"/>
-    <item id="2172" chance="200"/> --bronze amulet
-    <item id="2127" countmax="1" chance="200"/> --esmeralde blange
+    <item id="2148" countmax="9" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2193" chance="8000">
+      <!--ankh-->
+    </item>
+    <item id="2193" chance="1666">
+      <!--ankh-->
+    </item>
+    <item id="2193" chance="4000">
+      <!--ankh-->
+    </item>
+    <item id="5905" countmax="1" chance1="2000" chancemax="0">
+      <!--vampire dust-->
+    </item>
+    <item id="2172" chance="200">
+      <!--bronze amulet-->
+    </item>
+    <item id="2127" countmax="1" chance="200">
+      <!--emerald bangle-->
+    </item>
     <item id="1994" chance="100000">
       <inside>
-        <item id="5905" countmax="4" chance1="2500" chancemax="0"/>
-        <item id="2032" chance="10000"/>
-        <item id="5905" countmax="3" chance1="10000" chancemax="0"/>
-        <item id="2412" chance="15000"/>
-        <item id="2747" chance="18000"/>
-        <item id="2646" chance="500"/>
-        <item id="2656" chance="600"/>
-        <item id="5905" countmax="3" chance1="1538" chancemax="0"/>
-        <item id="2479" chance="1428"/>
+        <item id="5905" countmax="4" chance1="2500" chancemax="0">
+          <!--vampire dust-->
+        </item>
+        <item id="2032" chance="10000">
+          <!--bowl-->
+        </item>
+        <item id="5905" countmax="3" chance1="10000" chancemax="0">
+          <!--vampire dust-->
+        </item>
+        <item id="2412" chance="15000">
+          <!--katana-->
+        </item>
+        <item id="2747" chance="18000">
+          <!--grave flower-->
+        </item>
+        <item id="2646" chance="500">
+          <!--golden boots-->
+        </item>
+        <item id="2656" chance="600">
+          <!--blue robe-->
+        </item>
+        <item id="5905" countmax="3" chance1="1538" chancemax="0">
+          <!--vampire dust-->
+        </item>
+        <item id="2479" chance="1428">
+          <!--strange helmet-->
+        </item>
       </inside>
+      <!--purple bag-->
     </item>
   </loot>
 </monster>

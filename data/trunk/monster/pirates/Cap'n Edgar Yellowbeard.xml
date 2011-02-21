@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Cap'n Edgar Yellowbeard" nameDescription="a Cap'n Edgar Yellowbeard" race="blood" experience="4600" speed="270" manacost="0">
   <health now="5200" max="5200"/>
   <look type="96" head="0" body="0" legs="0" feet="0" corpse="6080"/>
@@ -17,15 +17,15 @@
     <flag targetdistance="1"/>
     <flag runonhealth="0"/>
   </flags>
-<attacks>
+  <attacks>
     <attack name="melee" interval="2000" min="-210" max="-375"/>
     <attack name="lifedrain" interval="3000" chance="35" range="1" radius="6" target="0" min="-320" max="-510">
-	<attribute key="areaEffect" value="smallclouds"/>
+      <attribute key="areaEffect" value="smallclouds"/>
     </attack>
-	    <attack name="lifedrain" interval="3000" chance="34" range="1" radius="5" target="0" min="-180" max="-210">
-	<attribute key="areaEffect" value="poff"/>
+    <attack name="lifedrain" interval="3000" chance="34" range="1" radius="5" target="0" min="-180" max="-210">
+      <attribute key="areaEffect" value="poff"/>
     </attack>
-</attacks>
+  </attacks>
   <defenses armor="25" defense="23"/>
   <immunities>
     <immunity physical="0"/>
@@ -39,25 +39,58 @@
     <immunity invisible="1"/>
   </immunities>
   <loot>
-    <item id="2148" countmax="53" chance1="50000" chancemax="0"/>
-    <item id="2483" chance="10000"/>
-    <item id="5918" chance="6666"/>
-    <item id="6095" chance="5000"/>
-    <item id="5710" chance="2500"/>
-    <item id="5553" chance="2500"/>
-    <item id="2396" chance="2500"/>
+    <item id="2148" countmax="53" chance1="50000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2483" chance="10000">
+      <!--scale armor-->
+    </item>
+    <item id="5918" chance="6666">
+      <!--pirate knee breeches-->
+    </item>
+    <item id="6095" chance="5000">
+      <!--pirate shirt-->
+    </item>
+    <item id="5710" chance="2500">
+      <!--light shovel-->
+    </item>
+    <item id="5553" chance="2500">
+      <!--rum flask-->
+    </item>
+    <item id="2396" chance="2500">
+      <!--ice rapier-->
+    </item>
     <item id="5927" chance="100000">
       <inside>
-        <item id="5091" chance="1666"/>
-        <item id="2463" chance="5000"/>
-        <item id="2647" chance="5000"/>
-        <item id="2509" chance="4000"/>
-        <item id="5792" chance="3333"/>
-        <item id="2376" chance="6666"/>
-        <item id="6126" countmax="1" chance1="5000" chancemax="0"/>
-        <item id="6098" countmax="1" chance1="5000" chancemax="0"/>
-        <item id="6097" countmax="1" chance1="5000" chancemax="0"/>
+        <item id="5091" chance="1666">
+          <!--treasure map-->
+        </item>
+        <item id="2463" chance="5000">
+          <!--plate armor-->
+        </item>
+        <item id="2647" chance="5000">
+          <!--plate legs-->
+        </item>
+        <item id="2509" chance="4000">
+          <!--steel shield-->
+        </item>
+        <item id="5792" chance="3333">
+          <!--dice-->
+        </item>
+        <item id="2376" chance="6666">
+          <!--sword-->
+        </item>
+        <item id="6126" countmax="1" chance1="5000" chancemax="0">
+          <!--peg leg-->
+        </item>
+        <item id="6098" countmax="1" chance1="5000" chancemax="0">
+          <!--eye patch-->
+        </item>
+        <item id="6097" countmax="1" chance1="5000" chancemax="0">
+          <!--hook-->
+        </item>
       </inside>
+      <!--pirate bag-->
     </item>
   </loot>
 </monster>

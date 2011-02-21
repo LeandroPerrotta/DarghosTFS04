@@ -29,8 +29,11 @@
     <immunity invisible="0"/>
   </immunities>
   <loot capacity="500">
-    <item id="2553" countmax="1" chance="20000"/>
-    <item id="2554" countmax="3" chance="20000"/>
+    <item id="2553" countmax="1" chance="20000">
+      <!--pick-->
+    </item>
+    <item id="2554" countmax="3" chance="20000">
+      <!--shovel-->
+    </item>
   </loot>
 </monster>
-

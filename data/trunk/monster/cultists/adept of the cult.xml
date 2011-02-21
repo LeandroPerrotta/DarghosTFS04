@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="adept of the cult" nameDescription="an adept of the cult" race="blood" experience="400" speed="210" manacost="0">
   <health now="430" max="430"/>
   <look type="194" head="114" body="94" legs="94" feet="57" corpse="6080"/>
@@ -17,17 +17,15 @@
     <flag targetdistance="4"/>
     <flag runonhealth="0"/>
   </flags>
-<attacks>
+  <attacks>
     <attack name="melee" interval="2000" skill="40" attack="40"/>
-
     <attack name="lifedrain" interval="2000" chance="34" radius="1" target="0" min="-50" max="-250">
       <attribute key="areaEffect" value="poison"/>
     </attack>
-
     <attack name="drunk" interval="1000" chance="15" range="7" radius="1" target="1">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-</attacks>
+  </attacks>
   <defenses armor="20" defense="20">
     <defense name="healing" interval="1000" chance="25" min="50" max="70">
       <attribute key="areaEffect" value="blueshimmer"/>
@@ -37,11 +35,11 @@
     </defense>
   </defenses>
   <elements>
-	<element holyPercent="30"/>
-	<element earthPercent="15"/>
-	<element icePercent="15"/>
-	<element energyPercent="-6"/>
-	<element deathPercent="-5"/>
+    <element holyPercent="30"/>
+    <element earthPercent="15"/>
+    <element icePercent="15"/>
+    <element energyPercent="-6"/>
+    <element deathPercent="-5"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
@@ -50,22 +48,49 @@
     <summon name="Ghoul" interval="2000" chance="10000"/>
   </summons>
   <loot>
-    <item id="2148" countmax="47" chance1="100000" chancemax="0"/>
-    <item id="2147" countmax="2" chance1="4000" chancemax="0"/>
-    <item id="2169" chance="1000"/>
-    <item id="2169" chance="2222"/>
-    <item id="2423" chance="3333"/>
-    <item id="5801" chance="100"/>
-    <item id="2655" chance="1428"/>
-    <item id="7451" chance="828"/>
+    <item id="2148" countmax="47" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2147" countmax="2" chance1="4000" chancemax="0">
+      <!--small ruby-->
+    </item>
+    <item id="2169" chance="1000">
+      <!--time ring-->
+    </item>
+    <item id="2169" chance="2222">
+      <!--time ring-->
+    </item>
+    <item id="2423" chance="3333">
+      <!--clerical mace-->
+    </item>
+    <item id="5801" chance="100">
+      <!--key ring-->
+    </item>
+    <item id="2655" chance="1428">
+      <!--red robe-->
+    </item>
+    <item id="7451" chance="828">
+      <!--shadow sceptre-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="5810" chance="555"/>
-        <item id="7426" chance="933"/>
-        <item id="6087" chance="1428"/>
-        <item id="5801" chance="909"/>
-        <item id="2183" chance="1000"/> -- tempest rod
+        <item id="5810" chance="555">
+          <!--pirate voodoo doll-->
+        </item>
+        <item id="7426" chance="933">
+          <!--amber staff-->
+        </item>
+        <item id="6087" chance="1428">
+          <!--music sheet-->
+        </item>
+        <item id="5801" chance="909">
+          <!--key ring-->
+        </item>
+        <item id="2183" chance="1000">
+          <!--hailstorm rod-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

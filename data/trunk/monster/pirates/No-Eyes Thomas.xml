@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="No-Eyes Thomas" nameDescription="a No-Eyes Thomas" race="blood" experience="4400" speed="230" manacost="0">
   <health now="6100" max="6100"/>
   <look type="93" head="0" body="0" legs="0" feet="0" corpse="6080"/>
@@ -18,12 +18,12 @@
     <flag targetdistance="1"/>
     <flag runonhealth="0"/>
   </flags>
-<attacks>
+  <attacks>
     <attack name="melee" interval="2000" min="-210" max="-440"/>
     <attack name="physical" interval="2000" chance="25" range="7" min="-280" max="-320">
       <attribute key="shootEffect" value="infernalbolt"/>
     </attack>
-</attacks>
+  </attacks>
   <defenses armor="15" defense="20"/>
   <immunities>
     <immunity physical="0"/>
@@ -40,20 +40,43 @@
     <voice sentence="Plundeeeeer!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="60" chance1="42000" chancemax="183"/>
-    <item id="2376" chance="15000"/>
-    <item id="2050" chance="18000"/>
-    <item id="5917" chance="1000"/>
-    <item id="6098" countmax="1" chance1="5000" chancemax="0"/>
-    <item id="6095" chance="5000"/>
+    <item id="2148" countmax="60" chance1="42000" chancemax="183">
+      <!--gold coin-->
+    </item>
+    <item id="2376" chance="15000">
+      <!--sword-->
+    </item>
+    <item id="2050" chance="18000">
+      <!--torch-->
+    </item>
+    <item id="5917" chance="1000">
+      <!--bandana-->
+    </item>
+    <item id="6098" countmax="1" chance1="5000" chancemax="0">
+      <!--eye patch-->
+    </item>
+    <item id="6095" chance="5000">
+      <!--pirate shirt-->
+    </item>
     <item id="5926" chance="100000">
       <inside>
-        <item id="5091" chance="1500"/>
-        <item id="5792" chance="4000"/>
-        <item id="6126" countmax="1" chance1="1500" chancemax="0"/>
-        <item id="2377" chance="5000"/>
-        <item id="6097" countmax="1" chance1="1500" chancemax="0"/>
+        <item id="5091" chance="1500">
+          <!--treasure map-->
+        </item>
+        <item id="5792" chance="4000">
+          <!--dice-->
+        </item>
+        <item id="6126" countmax="1" chance1="1500" chancemax="0">
+          <!--peg leg-->
+        </item>
+        <item id="2377" chance="5000">
+          <!--two handed sword-->
+        </item>
+        <item id="6097" countmax="1" chance1="1500" chancemax="0">
+          <!--hook-->
+        </item>
       </inside>
+      <!--pirate backpack-->
     </item>
   </loot>
 </monster>

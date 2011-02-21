@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Macrocheira" nameDescription="a giant spider" race="VENOM" experience="90000" speed="380" manacost="0">
   <health now="36000" max="36000"/>
   <look type="38" head="0" body="0" legs="0" feet="0" corpse="5977"/>
@@ -29,10 +29,10 @@
     </defense>
   </defenses>
   <elements>
-	<element earthPercent="100"/>
-	<element energyPercent="20"/>
-	<element icePercent="6"/>
-	<element firePercent="-10"/>
+    <element earthPercent="100"/>
+    <element energyPercent="20"/>
+    <element icePercent="6"/>
+    <element firePercent="-10"/>
   </elements>
   <immunities>
     <immunity lifedrain="0"/>
@@ -45,21 +45,46 @@
     <summon name="Giant Spider" interval="1000" chance="30" max="2"/>
   </summons>
   <loot>
-    <item id="2169" chance="700"/>
-    <item id="2148" countmax="50" chance1="100000" chancemax="0"/>
-    <item id="2463" chance="4000"/>
-    <item id="2171" chance="400"/>
-    <item id="2459" chance="20000"/>
-    <item id="5879" countmax="1" chance1="5000" chancemax="0"/>
+    <item id="2169" chance="700">
+      <!--time ring-->
+    </item>
+    <item id="2148" countmax="50" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2463" chance="4000">
+      <!--plate armor-->
+    </item>
+    <item id="2171" chance="400">
+      <!--platinum amulet-->
+    </item>
+    <item id="2459" chance="20000">
+      <!--iron helmet-->
+    </item>
+    <item id="5879" countmax="1" chance1="5000" chancemax="0">
+      <!--giant spider silk-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2148" countmax="40" chance1="100000" chancemax="0"/>
-        <item id="2457" chance="10000"/>
-        <item id="2476" chance="10000"/>
-        <item id="2477" chance="10000"/>
-        <item id="2478" chance="10000"/>
-        <item id="2169" chance="10000"/>
+        <item id="2148" countmax="40" chance1="100000" chancemax="0">
+          <!--gold coin-->
+        </item>
+        <item id="2457" chance="10000">
+          <!--steel helmet-->
+        </item>
+        <item id="2476" chance="10000">
+          <!--knight armor-->
+        </item>
+        <item id="2477" chance="10000">
+          <!--knight legs-->
+        </item>
+        <item id="2478" chance="10000">
+          <!--brass legs-->
+        </item>
+        <item id="2169" chance="10000">
+          <!--time ring-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

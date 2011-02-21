@@ -62,55 +62,141 @@
     <voice sentence="SOULS FOR ORSHABAAL!" yell="1"/>
   </voices>
   <loot capacity="5000">
-    <item id="2152" countmax="7" chance="100000"/> //platinum
-    <item id="2148" countmax="100" chance="100000"/> //gold  
-    <item id="2151" countmax="10" chance="25000"/> //talons	
-    <item id="2158" countmax="1" chance="1500"/> //blue gem
-    <item id="2195" countmax="1" chance="5000"/> //boots of haste
-	<item id="2678" countmax="4" chance="5000"/> //coconut
-    <item id="2520" countmax="1" chance="15500"/> //demon shield
-	<item id="6300" countmax="1" chance="8000"/> //death ring
-    <item id="2462" countmax="1" chance="11000"/> //devil helmet
-    <item id="2387" countmax="1" chance="20000"/> //double axe
-    <item id="2167" countmax="1" chance="13500"/> //energy ring
-    <item id="2432" countmax="1" chance="17000"/> //fire axe
-    <item id="2393" countmax="1" chance="12500"/> //giant sword
-    <item id="2179" countmax="1" chance="8000"/> //gold ring
-    <item id="2033" countmax="1" chance="7500"/> //golden mug
-    <item id="2418" countmax="1" chance="4500"/> //golden sickle
-    <item id="2182" countmax="1" chance="3500"/> //snakebite rod
-    <item id="2188" countmax="1" chance="2500"/> //wand of plague
-    <item id="2396" countmax="1" chance="7500"/> //ice rapier
-    <item id="2164" countmax="1" chance="5000"/> //might ring
-    <item id="2178" countmax="1" chance="4000"/> //mind stone
-    <item id="2176" countmax="1" chance="12000"/> //orb
-	<item id="5808" countmax="1" chance="12000"/> //orshabaal brain
-    <item id="2171" countmax="1" chance="4500"/> //platinum amulet
-    <item id="1982" countmax="1" chance="2600"/> //purple tome
-    <item id="2214" countmax="1" chance="13000"/> //ring of healing
-    <item id="2123" countmax="1" chance="3500"/> //ring of the sky
-    <item id="2402" countmax="1" chance="15500"/> //silver dagger
-    <item id="2436" countmax="1" chance="5000"/> //skull staff
-    <item id="2165" countmax="1" chance="9500"/> //stealth ring
-    <item id="2174" countmax="1" chance="2500"/> //strange symbol
-    <item id="2112" countmax="1" chance="14500"/> //teddy bear   
-    <item id="2377" countmax="1" chance="20000"/> //two handed sword
-	<item id="1995" countmax="1" chance="100000">
-		<inside>
-			<item id="2144" countmax="15" chance="15000"/> //black pearls
-			<item id="2150" countmax="20" chance="13500"/> //small amethysts	
-			<item id="2145" countmax="5" chance="9500"/> //small diamonds
-			<item id="2149" countmax="10" chance="15500"/> //small emeralds
-			<item id="2146" countmax="10" chance="13500"/> //small sapphire			
-		</inside>
-	</item>		
-	<item id="5949" countmax="1" chance="100000">
-		<inside>
-			<item id="2472" countmax="1" chance="7500"/> //magic plate armor
-			<item id="2514" countmax="1" chance="9500"/> //mastermind shield
-			<item id="2421" countmax="1" chance="24500"/> //thunder hammer	
-			<item id="2470" countmax="1" chance="5000"/> //golden legs
-		</inside>
-	</item>			
+    <item id="2152" countmax="7" chance="100000">
+      <!--platinum coin-->
+    </item>
+    <item id="2148" countmax="100" chance="100000">
+      <!--gold coin-->
+    </item>
+    <item id="2151" countmax="10" chance="25000">
+      <!--talon-->
+    </item>
+    <item id="2158" countmax="1" chance="1500">
+      <!--blue gem-->
+    </item>
+    <item id="2195" countmax="1" chance="5000">
+      <!--boots of haste-->
+    </item>
+    <item id="2678" countmax="4" chance="5000">
+      <!--coconut-->
+    </item>
+    <item id="2520" countmax="1" chance="15500">
+      <!--demon shield-->
+    </item>
+    <item id="6300" countmax="1" chance="8000">
+      <!--death ring-->
+    </item>
+    <item id="2462" countmax="1" chance="11000">
+      <!--devil helmet-->
+    </item>
+    <item id="2387" countmax="1" chance="20000">
+      <!--double axe-->
+    </item>
+    <item id="2167" countmax="1" chance="13500">
+      <!--energy ring-->
+    </item>
+    <item id="2432" countmax="1" chance="17000">
+      <!--fire axe-->
+    </item>
+    <item id="2393" countmax="1" chance="12500">
+      <!--giant sword-->
+    </item>
+    <item id="2179" countmax="1" chance="8000">
+      <!--gold ring-->
+    </item>
+    <item id="2033" countmax="1" chance="7500">
+      <!--golden mug-->
+    </item>
+    <item id="2418" countmax="1" chance="4500">
+      <!--golden sickle-->
+    </item>
+    <item id="2182" countmax="1" chance="3500">
+      <!--snakebite rod-->
+    </item>
+    <item id="2188" countmax="1" chance="2500">
+      <!--wand of decay-->
+    </item>
+    <item id="2396" countmax="1" chance="7500">
+      <!--ice rapier-->
+    </item>
+    <item id="2164" countmax="1" chance="5000">
+      <!--might ring-->
+    </item>
+    <item id="2178" countmax="1" chance="4000">
+      <!--mind stone-->
+    </item>
+    <item id="2176" countmax="1" chance="12000">
+      <!--orb-->
+    </item>
+    <item id="5808" countmax="1" chance="12000">
+      <!--orshabaal's brain-->
+    </item>
+    <item id="2171" countmax="1" chance="4500">
+      <!--platinum amulet-->
+    </item>
+    <item id="1982" countmax="1" chance="2600">
+      <!--purple tome-->
+    </item>
+    <item id="2214" countmax="1" chance="13000">
+      <!--ring of healing-->
+    </item>
+    <item id="2123" countmax="1" chance="3500">
+      <!--ring of the sky-->
+    </item>
+    <item id="2402" countmax="1" chance="15500">
+      <!--silver dagger-->
+    </item>
+    <item id="2436" countmax="1" chance="5000">
+      <!--skull staff-->
+    </item>
+    <item id="2165" countmax="1" chance="9500">
+      <!--stealth ring-->
+    </item>
+    <item id="2174" countmax="1" chance="2500">
+      <!--strange symbol-->
+    </item>
+    <item id="2112" countmax="1" chance="14500">
+      <!--teddy bear-->
+    </item>
+    <item id="2377" countmax="1" chance="20000">
+      <!--two handed sword-->
+    </item>
+    <item id="1995" countmax="1" chance="100000">
+      <inside>
+        <item id="2144" countmax="15" chance="15000">
+          <!--black pearl-->
+        </item>
+        <item id="2150" countmax="20" chance="13500">
+          <!--small amethyst-->
+        </item>
+        <item id="2145" countmax="5" chance="9500">
+          <!--small diamond-->
+        </item>
+        <item id="2149" countmax="10" chance="15500">
+          <!--small emerald-->
+        </item>
+        <item id="2146" countmax="10" chance="13500">
+          <!--small sapphire-->
+        </item>
+      </inside>
+      <!--blue bag-->
+    </item>
+    <item id="5949" countmax="1" chance="100000">
+      <inside>
+        <item id="2472" countmax="1" chance="7500">
+          <!--magic plate armor-->
+        </item>
+        <item id="2514" countmax="1" chance="9500">
+          <!--mastermind shield-->
+        </item>
+        <item id="2421" countmax="1" chance="24500">
+          <!--thunder hammer-->
+        </item>
+        <item id="2470" countmax="1" chance="5000">
+          <!--golden legs-->
+        </item>
+      </inside>
+      <!--beach backpack-->
+    </item>
   </loot>
 </monster>

@@ -37,9 +37,17 @@
     <voice sentence="cluck cluck"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2695" countmax="4" chance1="20000" chancemax="0"/>
-    <item id="3976" countmax="18" chance1="50000" chancemax="0"/>
-    <item id="5890" countmax="1" chance1="5000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2695" countmax="4" chance1="20000" chancemax="0">
+      <!--egg-->
+    </item>
+    <item id="3976" countmax="18" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="5890" countmax="1" chance1="5000" chancemax="0">
+      <!--chicken feather-->
+    </item>
   </loot>
 </monster>

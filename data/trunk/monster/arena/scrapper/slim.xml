@@ -18,20 +18,20 @@
     <flag targetdistance="1"/>
     <flag runonhealth="0"/>
   </flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="-54" max="-170"/>
-		<attack name="poisonfield" interval="1000" chance="50">
-			<attribute key="shootEffect" value="poison"/>
-		</attack>
-		<attack name="physical" interval="3049" chance="40" min="-10" max="-50">
-			<attribute key="areaEffect" value="blackSpark"/>
-		</attack>
-	</attacks>
+  <attacks>
+    <attack name="melee" interval="2000" min="-54" max="-170"/>
+    <attack name="poisonfield" interval="1000" chance="50">
+      <attribute key="shootEffect" value="poison"/>
+    </attack>
+    <attack name="physical" interval="3049" chance="40" min="-10" max="-50">
+      <attribute key="areaEffect" value="blackSpark"/>
+    </attack>
+  </attacks>
   <defenses armor="36" defense="38"/>
   <elements>
-	<element deathPercent="100"/>
-	<element firePercent="-10"/>
-	<element holyPercent="-6"/>
+    <element deathPercent="100"/>
+    <element firePercent="-10"/>
+    <element holyPercent="-6"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>

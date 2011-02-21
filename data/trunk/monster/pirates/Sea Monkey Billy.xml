@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Sea Monkey Billy" nameDescription="a Sea Monkey Billy" race="UNDEAD" experience="3800" speed="230" manacost="0">
   <health now="4500" max="4500"/>
   <look type="195" head="0" body="0" legs="0" feet="0" corpse="6070"/>
@@ -17,17 +17,17 @@
     <flag targetdistance="1"/>
     <flag runonhealth="0"/>
   </flags>
-<attacks>
+  <attacks>
     <attack name="melee" interval="2000" min="-340" max="-500"/>
-	     <attack name="physical" interval="2000" chance="30" range="4" min="-250" max="-370">
-        <attribute key="shootEffect" value="throwingknife"/>
-		<attribute key="areaEffect" value="stun"/>
-      </attack>
-	  	     <attack name="lifedrain" interval="2000" chance="15" range="4" radius="4" target="1" min="-120" max="-210">
-        <attribute key="shootEffect" value="throwingstar"/>
-		<attribute key="areaEffect" value="groundshaker"/>
-      </attack>
-</attacks>
+    <attack name="physical" interval="2000" chance="30" range="4" min="-250" max="-370">
+      <attribute key="shootEffect" value="throwingknife"/>
+      <attribute key="areaEffect" value="stun"/>
+    </attack>
+    <attack name="lifedrain" interval="2000" chance="15" range="4" radius="4" target="1" min="-120" max="-210">
+      <attribute key="shootEffect" value="throwingstar"/>
+      <attribute key="areaEffect" value="groundshaker"/>
+    </attack>
+  </attacks>
   <defenses armor="18" defense="19"/>
   <immunities>
     <immunity physical="0"/>
@@ -41,14 +41,25 @@
     <immunity invisible="1"/>
   </immunities>
   <loot>
-    <item id="2148" countmax="25" chance1="40000" chancemax="108"/>
-    <item id="2231" chance="4000"/>
-    <item id="2406" chance="10000"/>
+    <item id="2148" countmax="25" chance1="40000" chancemax="108">
+      <!--gold coin-->
+    </item>
+    <item id="2231" chance="4000">
+      <!--big bone-->
+    </item>
+    <item id="2406" chance="10000">
+      <!--short sword-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2376" chance="18402"/>
-        <item id="2449" chance="8491"/>
+        <item id="2376" chance="18402">
+          <!--sword-->
+        </item>
+        <item id="2449" chance="8491">
+          <!--bone club-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

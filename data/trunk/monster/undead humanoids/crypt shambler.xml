@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="crypt shambler" nameDescription="a crypt shambler" race="UNDEAD" experience="195" speed="180" manacost="0">
   <health now="330" max="330"/>
   <look type="100" head="20" body="30" legs="40" feet="50" corpse="6029"/>
@@ -23,9 +23,9 @@
   </attacks>
   <defenses armor="15" defense="10"/>
   <elements>
-	<element deathPercent="100"/>
-	<element earthPercent="100"/>
-	<element holyPercent="-25"/>
+    <element deathPercent="100"/>
+    <element earthPercent="100"/>
+    <element holyPercent="-25"/>
   </elements>
   <immunities>
     <immunity lifedrain="1"/>
@@ -38,17 +38,34 @@
     <voice sentence="Chhhhhhh!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-    <item id="2671" countmax="2" chance1="33333" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2148" countmax="15" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2671" countmax="2" chance1="33333" chancemax="0">
+      <!--ham-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2377" chance="2857"/>
-        <item id="2399" countmax="2" chance1="33333" chancemax="0"/>
-        <item id="2450" chance="5000"/>
-        <item id="2482" chance="20000"/>
-        <item id="2541" chance="2000"/>
+        <item id="2377" chance="2857">
+          <!--two handed sword-->
+        </item>
+        <item id="2399" countmax="2" chance1="33333" chancemax="0">
+          <!--throwing star-->
+        </item>
+        <item id="2450" chance="5000">
+          <!--bone sword-->
+        </item>
+        <item id="2482" chance="20000">
+          <!--studded helmet-->
+        </item>
+        <item id="2541" chance="2000">
+          <!--bone shield-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

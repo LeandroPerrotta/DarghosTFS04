@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Dark General" nameDescription="a elite warrior" race="blood" experience="2755000" speed="20" manacost="0">
   <health now="900000" max="900000"/>
   <look type="268" head="80" body="95" legs="80" feet="95" addons="3" corpse="6080"/>
@@ -43,7 +43,7 @@
     <immunity drunk="1"/>
     <immunity invisible="1"/>
   </immunities>
-    <summons maxSummons="30">
+  <summons maxSummons="30">
     <summon name="dark warrior" interval="500" chance="50" max="10"/>
     <summon name="dark archer" interval="500" chance="100" max="10"/>
   </summons>
@@ -52,18 +52,37 @@
     <voice sentence="Heal Me!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2673" countmax="3" chance1="6666" chancemax="0"/>
-    <item id="5880" countmax="1" chance1="2000" chancemax="0"/>
-    <item id="2260" chance="4000"/>
-    <item id="2649" chance="10000"/>
-    <item id="2643" chance="20000"/>
+    <item id="2148" countmax="20" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2673" countmax="3" chance1="6666" chancemax="0">
+      <!--pear-->
+    </item>
+    <item id="5880" countmax="1" chance1="2000" chancemax="0">
+      <!--iron ore-->
+    </item>
+    <item id="2260" chance="4000">
+      <!--blank rune-->
+    </item>
+    <item id="2649" chance="10000">
+      <!--leather legs-->
+    </item>
+    <item id="2643" chance="20000">
+      <!--leather boots-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2162" chance="2500"/>
-        <item id="7886" chance="800"/>
-        <item id="2787" countmax="3" chance1="20000" chancemax="0"/>
+        <item id="2162" chance="2500">
+          <!--magic lightwand-->
+        </item>
+        <item id="7886" chance="800">
+          <!--terra boots-->
+        </item>
+        <item id="2787" countmax="3" chance1="20000" chancemax="0">
+          <!--white mushroom-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

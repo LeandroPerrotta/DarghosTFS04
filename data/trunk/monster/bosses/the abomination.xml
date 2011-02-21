@@ -20,19 +20,19 @@
   <attacks>
     <attack name="melee" interval="2000" skill="90" attack="120"/>
     <attack name="speed" interval="1000" chance="12" radius="6" target="0" speedchange="-800" duration="10000">
-    <attribute key="areaEffect" value="poison"/>
+      <attribute key="areaEffect" value="poison"/>
     </attack>
-	<attack name="earth" interval="1000" chance="9" target="0" radius="4" min="-200" max="-650">
-	<attribute key="areaEffect" value="poison"/>
-	</attack>
-	<attack name="lifedrain" interval="1000" chance="11" target="1" radius="4" min="-400" max="-900">
-	<attribute key="areaEffect" value="greennote"/>
-	<attribute key="shootEffect" value="poison"/>
-	</attack>
+    <attack name="earth" interval="1000" chance="9" target="0" radius="4" min="-200" max="-650">
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <attack name="lifedrain" interval="1000" chance="11" target="1" radius="4" min="-400" max="-900">
+      <attribute key="areaEffect" value="greennote"/>
+      <attribute key="shootEffect" value="poison"/>
+    </attack>
     <attack name="physical" interval="2000" chance="19" length="7" min="-350" max="-850">
       <attribute key="shootEffect" value="poison"/>
     </attack>
-    </attacks>
+  </attacks>
   <defenses armor="25" defense="25">
     <defense name="healing" interval="1000" chance="75" min="505" max="605">
       <attribute key="areaEffect" value="blueshimmer"/>
@@ -53,9 +53,17 @@
     <voice sentence="Blubb"/>
   </voices>
   <loot>
-   <item id="2148" countmax="100" chance1="100000" chancemax="0"/> --Gold Coins
-   <item id="2152" countmax="3" chance1="10000" chancemax="0"/> --Platinum Coin
-   <item id="6500" countmax="1" chance1="2857" chancemax="0"/> --Demonic Essence
-   <item id="5944" chance="2500"/> --Soul Orb
- </loot>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2152" countmax="3" chance1="10000" chancemax="0">
+      <!--platinum coin-->
+    </item>
+    <item id="6500" countmax="1" chance1="2857" chancemax="0">
+      <!--demonic essence-->
+    </item>
+    <item id="5944" chance="2500">
+      <!--soul orb-->
+    </item>
+  </loot>
 </monster>

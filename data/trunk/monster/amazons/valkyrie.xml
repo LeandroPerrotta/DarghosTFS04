@@ -25,36 +25,61 @@
   </attacks>
   <defenses armor="16" defense="14"/>
   <elements>
-	<element icePercent="10"/>
-	<element holyPercent="7"/>
-	<element firePercent="10"/>
-	<element physicalPercent="-8"/>
-	<element deathPercent="-7"/>
+    <element icePercent="10"/>
+    <element holyPercent="7"/>
+    <element firePercent="10"/>
+    <element physicalPercent="-8"/>
+    <element deathPercent="-7"/>
   </elements>
   <immunities>
   </immunities>
   <voices interval="5000" chance="10">
-	<voice sentence="Another head for me!"/>
+    <voice sentence="Another head for me!"/>
     <voice sentence="Stand still!"/>
     <voice sentence="One more head for me!"/>
     <voice sentence="Head off!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="12" chance1="100000" chancemax="0"/> --Gold
-    <item id="2464" chance="6666"/> --Chain Armor
-    <item id="2125" chance="4500"/> --Crystal Necklace
-    <item id="2387" chance="4000"/> --Double Axe
-    <item id="2458" chance="5500"/> --Chain Helmet
-    <item id="1987" chance="100000"> --BAG
+    <item id="2148" countmax="12" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2464" chance="6666">
+      <!--chain armor-->
+    </item>
+    <item id="2125" chance="4500">
+      <!--crystal necklace-->
+    </item>
+    <item id="2387" chance="4000">
+      <!--double axe-->
+    </item>
+    <item id="2458" chance="5500">
+      <!--chain helmet-->
+    </item>
+    <item id="1987" chance="100000">
       <inside>
-        <item id="2674" countmax="4" chance1="10000" chancemax="0"/> --Apples
-        <item id="3965" chance="10000"/> --Hunting Spear
-        <item id="2666" countmax="3" chance1="20000" chancemax="0"/> --MEat
-        <item id="2147" countmax="1" chance1="1500" chancemax="0"/> --Small Ruby
-        <item id="2145" countmax="1" chance1="1500" chancemax="0"/> --Small Diamond
-        <item id="2200" chance="2000"/> --Protection Amulet
-        <item id="2463" chance="1800"/> --Plate ARmor
+        <item id="2674" countmax="4" chance1="10000" chancemax="0">
+          <!--red apple-->
+        </item>
+        <item id="3965" chance="10000">
+          <!--hunting spear-->
+        </item>
+        <item id="2666" countmax="3" chance1="20000" chancemax="0">
+          <!--meat-->
+        </item>
+        <item id="2147" countmax="1" chance1="1500" chancemax="0">
+          <!--small ruby-->
+        </item>
+        <item id="2145" countmax="1" chance1="1500" chancemax="0">
+          <!--small diamond-->
+        </item>
+        <item id="2200" chance="2000">
+          <!--protection amulet-->
+        </item>
+        <item id="2463" chance="1800">
+          <!--plate armor-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

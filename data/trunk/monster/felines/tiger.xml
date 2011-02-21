@@ -26,13 +26,21 @@
     </defense>
   </defenses>
   <elements>
-	<element deathPercent="-10"/>
-	<element icePercent="-8"/>
+    <element deathPercent="-10"/>
+    <element icePercent="-8"/>
   </elements>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2671" countmax="2" chance1="33333" chancemax="0"/>
-    <item id="2666" countmax="3" chance1="33333" chancemax="0"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2671" countmax="2" chance1="33333" chancemax="0">
+      <!--ham-->
+    </item>
+    <item id="2666" countmax="3" chance1="33333" chancemax="0">
+      <!--meat-->
+    </item>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
   </loot>
 </monster>

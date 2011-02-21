@@ -28,8 +28,8 @@
     <attack name="physical" interval="1000" chance="25" range="7" min="-105" max="-235">
       <attribute key="shootEffect" value="suddendeath"/>
     </attack>
-<attack name="poison" interval="1000" chance="20" range="7" radius="6" target="0" min="-135" max="-255">
-  <attribute key="areaEffect" value="bluebubble"/>
+    <attack name="poison" interval="1000" chance="20" range="7" radius="6" target="0" min="-135" max="-255">
+      <attribute key="areaEffect" value="bluebubble"/>
     </attack>
   </attacks>
   <defenses armor="25" defense="35">
@@ -47,22 +47,45 @@
   </immunities>
   <voices interval="5000" chance="10">
     <voice sentence="Wooof!"/>
-    </voices>
+  </voices>
   <loot>
-   <item id="2148" countmax="100" chance1="100000" chancemax="0"/> --Gold Coin
-   <item id="2148" countmax="20" chance1="100000" chancemax="0"/> --Gold Coin
-   <item id="5944" chance="5555"/> --Soul Orb
-   <item id="6570" chance="5538" countmax="4"/> --Blue Surprise Bag
-   <item id="6571" chance="1538"/> --Red Surprise Bag
-   <item id="2671" countmax="8" chance1="50000" chancemax="0"/> --Ham
-   <item id="2230" chance="25000"/> --Bone
-   <item id="6500" chance="7200"/> --Demonic Essence
-   <item id="1987" chance="100000">
- 	<inside>
-               <item id="2430" chance="2857"/> --Knight Axe
-                <item id="2383" chance="2500"/> --Spike Sword
-                <item id="6558" chance="8888"/> --Concentrated Demonic Blood
-    </inside>
- 	</item>
- </loot>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2148" countmax="20" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="5944" chance="5555">
+      <!--soul orb-->
+    </item>
+    <item id="6570" chance="5538" countmax="4">
+      <!--surprise bag-->
+    </item>
+    <item id="6571" chance="1538">
+      <!--surprise bag-->
+    </item>
+    <item id="2671" countmax="8" chance1="50000" chancemax="0">
+      <!--ham-->
+    </item>
+    <item id="2230" chance="25000">
+      <!--bone-->
+    </item>
+    <item id="6500" chance="7200">
+      <!--demonic essence-->
+    </item>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="2430" chance="2857">
+          <!--knight axe-->
+        </item>
+        <item id="2383" chance="2500">
+          <!--spike sword-->
+        </item>
+        <item id="6558" chance="8888">
+          <!--concentrated demonic blood-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
+  </loot>
 </monster>

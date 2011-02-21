@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Loyal Elf" nameDescription="a elf" race="blood" experience="8075" speed="230" manacost="0">
   <health now="220" max="220"/>
   <look type="63" head="20" body="30" legs="40" feet="50" corpse="6011"/>
@@ -36,10 +36,10 @@
     </defense>
   </defenses>
   <elements>
-	<element firePercent="50"/>
-	<element energyPercent="45"/>
-	<element deathPercent="30"/>
-	<element holyPercent="-11"/>
+    <element firePercent="50"/>
+    <element energyPercent="45"/>
+    <element deathPercent="30"/>
+    <element holyPercent="-11"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
@@ -52,6 +52,8 @@
     <voice sentence="Vihil Ealuel!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
   </loot>
 </monster>

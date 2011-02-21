@@ -41,12 +41,12 @@
   </attacks>
   <defenses armor="200" defense="100"/>
   <elements>
-	<element earthPercent="20"/>
-	<element firePercent="-10"/>
+    <element earthPercent="20"/>
+    <element firePercent="-10"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
-  </immunities>   
+  </immunities>
   <summons maxSummons="3">
     <summon name="Shaman Totem" interval="500" chance="100" max="4"/>
   </summons>
@@ -56,6 +56,8 @@
     <voice sentence="Spirits fill this totem with fire!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
   </loot>
 </monster>

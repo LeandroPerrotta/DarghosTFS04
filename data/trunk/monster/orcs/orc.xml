@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="orc" nameDescription="a orc" race="blood" experience="25" speed="150" manacost="300">
   <health now="70" max="70"/>
   <look type="5" head="0" body="0" legs="0" feet="0" corpse="5966"/>
@@ -22,10 +22,10 @@
   </attacks>
   <defenses armor="4" defense="8"/>
   <elements>
-	<element energyPercent="20"/>
-	<element holyPercent="10"/>
-	<element earthPercent="-20"/>
-	<element deathPercent="-5"/>
+    <element energyPercent="20"/>
+    <element holyPercent="10"/>
+    <element earthPercent="-20"/>
+    <element deathPercent="-5"/>
   </elements>
   <voices interval="5000" chance="10">
     <voice sentence="Grak brrretz!"/>
@@ -33,17 +33,34 @@
     <voice sentence="Prek tars, dekklep zurk."/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="12" chance1="100000" chancemax="0"/>
-    <item id="2666" countmax="2" chance1="33333" chancemax="0"/>
-    <item id="2484" chance="10000"/>
-    <item id="2480" chance="10000"/>
-    <item id="2385" chance="10000"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2148" countmax="12" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2666" countmax="2" chance1="33333" chancemax="0">
+      <!--meat-->
+    </item>
+    <item id="2484" chance="10000">
+      <!--studded armor-->
+    </item>
+    <item id="2480" chance="10000">
+      <!--legion helmet-->
+    </item>
+    <item id="2385" chance="10000">
+      <!--sabre-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2526" chance="10000"/>
-        <item id="2386" chance="10000"/>
+        <item id="2526" chance="10000">
+          <!--studded shield-->
+        </item>
+        <item id="2386" chance="10000">
+          <!--axe-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

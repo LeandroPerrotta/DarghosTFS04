@@ -32,29 +32,46 @@
     </defense>
   </defenses>
   <elements>
-	<element earthPercent="100"/>
-	<element physicalPercent="30"/>
-	<element holyPercent="20"/>
-	<element energyPercent="20"/>
-	<element deathPercent="-5"/>
-	<element firePercent="-10"/>
+    <element earthPercent="100"/>
+    <element physicalPercent="30"/>
+    <element holyPercent="20"/>
+    <element energyPercent="20"/>
+    <element deathPercent="-5"/>
+    <element firePercent="-10"/>
   </elements>
   <immunities>
     <immunity paralyze="1"/>
     <immunity invisible="1"/>
   </immunities>
   <loot>
-    <item id="2148" countmax="20" chance1="100000" chancemax="0"/>
-    <item id="2483" chance="10000"/>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="2148" countmax="20" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2483" chance="10000">
+      <!--scale armor-->
+    </item>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="1295" chance="10000"/>
-        <item id="1294" countmax="5" chance1="20000" chancemax="0"/>
-        <item id="2395" chance="2500"/>
-        <item id="2050" chance="20000"/>
-        <item id="2580" chance="5000"/>
+        <item id="1295" chance="10000">
+          <!--stone-->
+        </item>
+        <item id="1294" countmax="5" chance1="20000" chancemax="0">
+          <!--small stone-->
+        </item>
+        <item id="2395" chance="2500">
+          <!--carlin sword-->
+        </item>
+        <item id="2050" chance="20000">
+          <!--torch-->
+        </item>
+        <item id="2580" chance="5000">
+          <!--fishing rod-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

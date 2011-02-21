@@ -22,14 +22,23 @@
   </attacks>
   <defenses armor="1" defense="4"/>
   <elements>
-	<element earthPercent="10"/>
-	<element holyPercent="10"/>
-	<element icePercent="-5"/>
-	<elemetn deathPercent="-5"/>
+    <element earthPercent="10"/>
+    <element holyPercent="10"/>
+    <element icePercent="-5"/>
+    <elemetn deathPercent="-5"/>
   </elements>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2666" countmax="3" chance1="90000" chancemax="0"/>
-    <item id="5897" countmax="1" chance1="6666" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+      <!--worm-->
+    </item>
+    <item id="2666" countmax="3" chance1="90000" chancemax="0">
+      <!--meat-->
+      <!--meat-->
+    </item>
+    <item id="5897" countmax="1" chance1="6666" chancemax="0">
+      <!--wolf paw-->
+      <!--wolf paw-->
+    </item>
   </loot>
 </monster>

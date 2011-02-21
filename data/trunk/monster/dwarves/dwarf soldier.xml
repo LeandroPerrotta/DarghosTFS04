@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="dwarf soldier" nameDescription="a dwarf soldier" race="blood" experience="70" speed="170" manacost="360">
   <health now="135" max="135"/>
   <look type="71" head="20" body="30" legs="40" feet="50" corpse="6014"/>
@@ -25,31 +25,60 @@
   </attacks>
   <defenses armor="9" defense="20"/>
   <elements>
-	<element earthPercent="75"/>
-	<element firePercent="-5"/>
-	<element deathPercent="-5"/>
+    <element earthPercent="75"/>
+    <element firePercent="-5"/>
+    <element deathPercent="-5"/>
   </elements>
   <voices interval="5000" chance="10">
     <voice sentence="Hail Durin!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="15" chance1="100000" chancemax="0"/>
-    <item id="2543" countmax="10" chance1="20000" chancemax="0"/>
-    <item id="2481" chance="10000"/>
-    <item id="2455" chance="10000"/>
-    <item id="2554" chance="3333"/>
-    <item id="2464" chance="20000"/>
-    <item id="2643" chance="25000"/>
-    <item id="2696" chance="15000"/>
-    <item id="7363" countmax="8" chance1="6000" chancemax="0"/>
-    <item id="5880" chance="2500" countmax="2"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2148" countmax="15" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2543" countmax="10" chance1="20000" chancemax="0">
+      <!--bolt-->
+    </item>
+    <item id="2481" chance="10000">
+      <!--soldier helmet-->
+    </item>
+    <item id="2455" chance="10000">
+      <!--crossbow-->
+    </item>
+    <item id="2554" chance="3333">
+      <!--shovel-->
+    </item>
+    <item id="2464" chance="20000">
+      <!--chain armor-->
+    </item>
+    <item id="2643" chance="25000">
+      <!--leather boots-->
+    </item>
+    <item id="2696" chance="15000">
+      <!--cheese-->
+    </item>
+    <item id="7363" countmax="8" chance1="6000" chancemax="0">
+      <!--piercing bolt-->
+    </item>
+    <item id="5880" chance="2500" countmax="2">
+      <!--iron ore-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2525" chance="1666"/>
-        <item id="2378" chance="3333"/>
-        <item id="2213" chance="2500"/>
+        <item id="2525" chance="1666">
+          <!--dwarven shield-->
+        </item>
+        <item id="2378" chance="3333">
+          <!--battle axe-->
+        </item>
+        <item id="2213" chance="2500">
+          <!--dwarven ring-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

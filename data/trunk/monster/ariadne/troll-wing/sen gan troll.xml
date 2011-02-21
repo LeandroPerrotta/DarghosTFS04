@@ -18,25 +18,27 @@
     <flag runonhealth="1500"/>
   </flags>
   <attacks>
-      <attack name="melee" interval="2000" skill="250" attack="75"/>
+    <attack name="melee" interval="2000" skill="250" attack="75"/>
     <attack name="poisoncondition" interval="2000" chance="17" radius="7" target="0" min="-300" max="-600">
       <attribute key="areaEffect" value="poison"/>
     </attack>
   </attacks>
   <defenses armor="200" defense="100"/>
   <elements>
-	<element earthPercent="20"/>
-	<element firePercent="-10"/>
+    <element earthPercent="20"/>
+    <element firePercent="-10"/>
   </elements>
   <immunities>
     <immunity invisible="1"/>
-  </immunities>   
+  </immunities>
   <voices interval="5000" chance="10">
     <voice sentence="Me eat me mom!"/>
     <voice sentence="Ariadne good! Thorn bad!"/>
     <voice sentence="Me helps Ariadne to kill humans!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
   </loot>
 </monster>

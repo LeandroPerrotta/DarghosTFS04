@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="destroyer" nameDescription="a destroyer" race="blood" experience="2000" speed="270" manacost="0">
   <health now="3700" max="3700"/>
   <look type="236" corpse="6320"/>
@@ -29,13 +29,13 @@
     </defense>
   </defenses>
   <elements>
-	<element energyPercent="100"/>
-	<element firePercent="45"/>
-	<element physicalPercent="20"/>
-	<element earthPercent="20"/>
-	<element deathPercent="20"/>
-	<element icePercent="-15"/>
-	<element holyPercent="-10"/>
+    <element energyPercent="100"/>
+    <element firePercent="45"/>
+    <element physicalPercent="20"/>
+    <element earthPercent="20"/>
+    <element deathPercent="20"/>
+    <element icePercent="-15"/>
+    <element holyPercent="-10"/>
   </elements>
   <immunities>
     <immunity paralyze="1"/>
@@ -46,19 +46,40 @@
     <voice sentence="It's a good day to destroy!"/>
   </voices>
   <loot>
-	<item id="2148" countmax="82" chance1="100000" chancemax="0"/>
-	<item id="2645" chance="2222"/>
-	<item id="2152" countmax="3" chance1="200000" chancemax="0"/>
-	<item id="2393" chance="660"/>
-	<item id="5741" chance="1000"/>
-	<item id="2666" countmax="5" chance1="30000" chancemax="0"/>
-	<item id="1987" chance="100000">
-		<inside>
-			<item id="2463" chance="6666"/>
-			<item id="2416" chance="9999"/>
-			<item id="2489" chance="2500"/>
-			<item id="2150" countmax="2" chance1="7500" chancemax="0"/>
-		</inside>
-	</item>
+    <item id="2148" countmax="82" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2645" chance="2222">
+      <!--steel boots-->
+    </item>
+    <item id="2152" countmax="3" chance1="200000" chancemax="0">
+      <!--platinum coin-->
+    </item>
+    <item id="2393" chance="660">
+      <!--giant sword-->
+    </item>
+    <item id="5741" chance="1000">
+      <!--skull helmet-->
+    </item>
+    <item id="2666" countmax="5" chance1="30000" chancemax="0">
+      <!--meat-->
+    </item>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="2463" chance="6666">
+          <!--plate armor-->
+        </item>
+        <item id="2416" chance="9999">
+          <!--crowbar-->
+        </item>
+        <item id="2489" chance="2500">
+          <!--dark armor-->
+        </item>
+        <item id="2150" countmax="2" chance1="7500" chancemax="0">
+          <!--small amethyst-->
+        </item>
+      </inside>
+      <!--bag-->
+    </item>
   </loot>
 </monster>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Ashmunrah" nameDescription="a ashmunrah" race="UNDEAD" experience="3100" speed="320" manacost="0">
   <health now="5000" max="5000"/>
   <look type="87" head="20" body="30" legs="40" feet="50" corpse="6031"/>
@@ -19,14 +19,11 @@
   </flags>
   <attacks>
     <attack name="melee" interval="2000" min="-0" max="-600" poison="55"/>
-
     <attack name="lifedrain" interval="3000" chance="7" range="1" min="-100" max="-700"/>
-
     <attack name="poison" interval="2000" chance="12" range="7" min="-100" max="-500">
       <attribute key="shootEffect" value="poison"/>
       <attribute key="areaEffect" value="poison"/>
     </attack>
-
     <attack name="physical" interval="3000" chance="12" range="7" min="-120" max="-750">
       <attribute key="shootEffect" value="energy"/>
       <attribute key="areaEffect" value="mortarea"/>
@@ -50,9 +47,9 @@
     </defense>
   </defenses>
   <elements>
-	<element earthPercent="100"/>
-	<element deathPercent="100"/>
-	<element holyPercent="-17"/>
+    <element earthPercent="100"/>
+    <element deathPercent="100"/>
+    <element holyPercent="-17"/>
   </elements>
   <immunities>
     <immunity lifedrain="1"/>
@@ -68,26 +65,61 @@
     <voice sentence="Ahhhh all those long years."/>
   </voices>
   <loot>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="2446" chance="220"/>
-    <item id="2176" chance="2000"/>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2446" chance="220">
+      <!--pharaoh sword-->
+    </item>
+    <item id="2176" chance="2000">
+      <!--orb-->
+    </item>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2148" countmax="70" chance1="100000" chancemax="0"/>
-        <item id="2550" chance="10000"/>
-        <item id="2688" countmax="5" chance1="4000" chancemax="0"/>
-        <item id="2540" chance="900"/>
-        <item id="2539" chance="200"/>
-        <item id="2533" chance="400"/>
-        <item id="2486" chance="300"/>
-        <item id="2658" chance="100"/>
-        <item id="2187" chance="800"/>
-        <item id="2147" countmax="2" chance1="4000" chancemax="0"/>
-        <item id="2678" countmax="4" chance1="4000" chancemax="0"/>
-        <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-        <item id="2690" countmax="4" chance1="4000" chancemax="0"/>
+        <item id="2148" countmax="70" chance1="100000" chancemax="0">
+          <!--gold coin-->
+        </item>
+        <item id="2550" chance="10000">
+          <!--scythe-->
+        </item>
+        <item id="2688" countmax="5" chance1="4000" chancemax="0">
+          <!--candy cane-->
+        </item>
+        <item id="2540" chance="900">
+          <!--scarab shield-->
+        </item>
+        <item id="2539" chance="200">
+          <!--phoenix shield-->
+        </item>
+        <item id="2533" chance="400">
+          <!--griffin shield-->
+        </item>
+        <item id="2486" chance="300">
+          <!--noble armor-->
+        </item>
+        <item id="2658" chance="100">
+          <!--white dress-->
+        </item>
+        <item id="2187" chance="800">
+          <!--wand of inferno-->
+        </item>
+        <item id="2147" countmax="2" chance1="4000" chancemax="0">
+          <!--small ruby-->
+        </item>
+        <item id="2678" countmax="4" chance1="4000" chancemax="0">
+          <!--coconut-->
+        </item>
+        <item id="2148" countmax="100" chance1="100000" chancemax="0">
+          <!--gold coin-->
+        </item>
+        <item id="2690" countmax="4" chance1="4000" chancemax="0">
+          <!--roll-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

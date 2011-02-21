@@ -17,34 +17,61 @@
     <flag targetdistance="1"/>
     <flag runonhealth="15"/>
   </flags>
-<attacks>
+  <attacks>
     <attack name="melee" interval="2000" skill="19" attack="12"/>
-</attacks>
+  </attacks>
   <defenses armor="7" defense="9"/>
   <voices interval="5000" chance="10">
     <voice sentence="Hmmm, turtles"/>
     <voice sentence="Hmmm, dogs"/>
-	<voice sentence="Hmmm, wormds"/>
+    <voice sentence="Hmmm, wormds"/>
     <voice sentence="Groar"/>
     <voice sentence="Gruntz!"/>
   </voices>
   <loot>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0"/>
-    <item id="2148" countmax="10" chance1="100000" chancemax="0"/>
-    <item id="2389" countmax="1" chance1="33333" chancemax="0"/>
-    <item id="2643" chance="10000"/>
-    <item id="2461" chance="20000"/>
-    <item id="2120" chance="23333"/>
-    <item id="2172" chance="3333"/>
-    <item id="5901" countmax="1" chance1="5000" chancemax="0"/>
+    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+      <!--worm-->
+    </item>
+    <item id="2148" countmax="10" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2389" countmax="1" chance1="33333" chancemax="0">
+      <!--spear-->
+    </item>
+    <item id="2643" chance="10000">
+      <!--leather boots-->
+    </item>
+    <item id="2461" chance="20000">
+      <!--leather helmet-->
+    </item>
+    <item id="2120" chance="23333">
+      <!--rope-->
+    </item>
+    <item id="2172" chance="3333">
+      <!--bronze amulet-->
+    </item>
+    <item id="5901" countmax="1" chance1="5000" chancemax="0">
+      <!--wood-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2512" chance="6666"/>
-        <item id="2666" countmax="2" chance1="30000" chancemax="0"/>
-        <item id="2380" chance="10000"/>
-        <item id="2170" chance="1428"/>
-        <item id="2448" chance="10000"/>
+        <item id="2512" chance="6666">
+          <!--wooden shield-->
+        </item>
+        <item id="2666" countmax="2" chance1="30000" chancemax="0">
+          <!--meat-->
+        </item>
+        <item id="2380" chance="10000">
+          <!--hand axe-->
+        </item>
+        <item id="2170" chance="1428">
+          <!--silver amulet-->
+        </item>
+        <item id="2448" chance="10000">
+          <!--studded club-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

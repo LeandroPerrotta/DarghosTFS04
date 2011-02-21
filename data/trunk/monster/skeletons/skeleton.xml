@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="skeleton" nameDescription="a skeleton" race="UNDEAD" experience="35" speed="154" manacost="300">
   <health now="50" max="50"/>
   <look type="33" head="20" body="30" legs="40" feet="50" corpse="5972"/>
@@ -23,21 +23,38 @@
   </attacks>
   <defenses armor="2" defense="9"/>
   <elements>
-	<element deathPercent="100"/>
-	<element holyPercent="-25"/>
+    <element deathPercent="100"/>
+    <element holyPercent="-25"/>
   </elements>
   <loot>
-    <item id="2148" countmax="10" chance1="90000" chancemax="0"/>
-    <item id="2480" chance="6666"/>
+    <item id="2148" countmax="10" chance1="90000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2480" chance="6666">
+      <!--legion helmet-->
+    </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2388" chance="10000"/>
-        <item id="2398" chance="10000"/>
-        <item id="2511" chance="5000"/>
-        <item id="2473" chance="5000"/>
-        <item id="2376" chance="3333"/>
-        <item id="2050" chance="20000"/>
+        <item id="2388" chance="10000">
+          <!--hatchet-->
+        </item>
+        <item id="2398" chance="10000">
+          <!--mace-->
+        </item>
+        <item id="2511" chance="5000">
+          <!--brass shield-->
+        </item>
+        <item id="2473" chance="5000">
+          <!--viking helmet-->
+        </item>
+        <item id="2376" chance="3333">
+          <!--sword-->
+        </item>
+        <item id="2050" chance="20000">
+          <!--torch-->
+        </item>
       </inside>
+      <!--bag-->
     </item>
   </loot>
 </monster>

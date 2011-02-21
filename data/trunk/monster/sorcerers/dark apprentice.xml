@@ -4,7 +4,7 @@
   <look type="134" head="78" body="88" legs="0" feet="88" addons="1" corpse="6080"/>
   <targetchange interval="5000" chance="30"/>
   <strategy attack="100" defense="0"/>
-   <flags>
+  <flags>
     <flag summonable="0"/>
     <flag attackable="1"/>
     <flag hostile="1"/>
@@ -34,9 +34,9 @@
       <attribute key="areaEffect" value="redshimmer"/>
     </defense>
   </defenses>
-	<elements>
-		<element deathPercent="-10"/>
-	</elements>
+  <elements>
+    <element deathPercent="-10"/>
+  </elements>
   <immunities>
     <immunity invisible="1"/>
   </immunities>
@@ -44,13 +44,23 @@
     <voice sentence="Outch!"/>
     <voice sentence="Oops, I did it again."/>
     <voice sentence="From the spirits that I called Sir, deliver me!"/>
-	<voice sentence="I must dispose of my masters enemies!"/>
+    <voice sentence="I must dispose of my masters enemies!"/>
   </voices>
   <loot>
-    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
-    <item id="2260" chance="400"/>
-    <item id="7620" chance="400"/>
-    <item id="6079" chance="400"/>
-    <item id="2188" chance="100"/>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0">
+      <!--gold coin-->
+    </item>
+    <item id="2260" chance="400">
+      <!--blank rune-->
+    </item>
+    <item id="7620" chance="400">
+      <!--mana potion-->
+    </item>
+    <item id="6079" chance="400">
+      <!--dead frog-->
+    </item>
+    <item id="2188" chance="100">
+      <!--wand of decay-->
+    </item>
   </loot>
 </monster>
