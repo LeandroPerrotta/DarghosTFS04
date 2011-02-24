@@ -56,7 +56,7 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 	if(client)
 		client->setPlayer(this);
 
-	pzLocked = isConnecting = addAttackSkillPoint = requestedOutfit = false;
+	pvpBlessing = pzLocked = isConnecting = addAttackSkillPoint = requestedOutfit = mounted = false;
 	saving = true;
 
 	lastAttackBlockType = BLOCK_NONE;
@@ -79,7 +79,7 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 	soulMax = 100;
 	capacity = 400.00;
 	stamina = STAMINA_MAX;
-	lastLoad = lastPing = lastPong = OTSYS_TIME();
+	lastLoad = lastPing = lastPong = lastMountAction = OTSYS_TIME();
 
 	writeItem = NULL;
 	group = NULL;
@@ -93,11 +93,7 @@ Player::Player(const std::string& _name, ProtocolGame* p):
 	setVocation(0);
 	setParty(NULL);
 
-	mount = 0;
-	mounted = false;
-	lastMountStatusChange = 0;
-
-	transferContainer.setParent(NULL);
+	transferContainer.setParent(this);
 	for(int32_t i = 0; i < 11; i++)
 	{
 		inventory[i] = NULL;
@@ -134,6 +130,8 @@ Player::~Player()
 	playerCount--;
 #endif
 	setWriteItem(NULL);
+
+	transferContainer.setParent(NULL);
 	for(int32_t i = 0; i < 11; i++)
 	{
 		if(inventory[i])
@@ -147,7 +145,6 @@ Player::~Player()
 	}
 
 	setNextWalkActionTask(NULL);
-	transferContainer.setParent(NULL);
 	for(DepotMap::iterator it = depots.begin(); it != depots.end(); it++)
 		it->second.first->unRef();
 }
@@ -860,8 +857,9 @@ bool Player::canSeeCreature(const Creature* creature) const
 
 bool Player::canWalkthrough(const Creature* creature) const
 {
-	if(creature == this || hasCustomFlag(PlayerCustomFlag_CanWalkthrough) || creature->isWalkable() ||
-		(creature->getMaster() && creature->getMaster() != this && canWalkthrough(creature->getMaster())))
+	if(creature == this || hasFlag(PlayerFlag_CanPassThroughAllCreatures) || creature->isWalkable() ||
+		std::find(forceWalkthrough.begin(), forceWalkthrough.end(), creature->getID()) != forceWalkthrough.end()
+		|| (creature->getMaster() && creature->getMaster() != this && canWalkthrough(creature->getMaster())))
 		return true;
 
 	const Player* player = creature->getPlayer();
@@ -880,6 +878,26 @@ bool Player::canWalkthrough(const Creature* creature) const
 
 	return (player->isGhost() && getGhostAccess() < player->getGhostAccess())
 		|| (isGhost() && getGhostAccess() > player->getGhostAccess());
+}
+
+void Player::setWalkthrough(const Creature* creature, bool walkthrough)
+{
+	std::vector<uint32_t>::iterator it = std::find(forceWalkthrough.begin(),
+		forceWalkthrough.end(), creature->getID());
+	bool update = false;
+	if(walkthrough && it == forceWalkthrough.end())
+	{
+		forceWalkthrough.push_back(creature->getID());
+		update = true;
+	}
+	else if(!walkthrough && it != forceWalkthrough.end())
+	{
+		forceWalkthrough.erase(it);
+		update = true;
+	}
+
+	if(update)
+		sendCreatureWalkthrough(creature, !walkthrough ? canWalkthrough(creature) : walkthrough);
 }
 
 Depot* Player::getDepot(uint32_t depotId, bool autoCreateDepot)
@@ -1185,7 +1203,7 @@ Item* Player::getWriteItem(uint32_t& _windowTextId, uint16_t& _maxWriteLen)
 	return writeItem;
 }
 
-void Player::setWriteItem(Item* item, uint16_t _maxWriteLen/* = 0*/)
+void Player::setWriteItem(Item* item, uint16_t _maxLen/* = 0*/)
 {
 	windowTextId++;
 	if(writeItem)
@@ -1194,7 +1212,7 @@ void Player::setWriteItem(Item* item, uint16_t _maxWriteLen/* = 0*/)
 	if(item)
 	{
 		writeItem = item;
-		maxWriteLen = _maxWriteLen;
+		maxWriteLen = _maxLen;
 		writeItem->addRef();
 	}
 	else
@@ -1393,9 +1411,10 @@ void Player::onChangeZone(ZoneType_t zone)
 			onAttackedCreatureDisappear(false);
 		}
 
-		if(g_config.getNumber(ConfigManager::UNMOUNT_PLAYER_IN_PZ))
-			dismount();
+		if(g_config.getBool(ConfigManager::UNMOUNT_PLAYER_IN_PZ))
+			dismount(true);
 	}
+
 	sendIcons();
 }
 
@@ -1445,20 +1464,6 @@ void Player::onCreatureDisappear(const Creature* creature, bool isLogout)
 	clearPartyInvitations();
 	if(party)
 		party->leave(this);
-
-	g_game.cancelRuleViolation(this);
-	if(hasFlag(PlayerFlag_CanAnswerRuleViolations))
-	{
-		PlayerVector closeReportList;
-		for(RuleViolationsMap::const_iterator it = g_game.getRuleViolations().begin(); it != g_game.getRuleViolations().end(); ++it)
-		{
-			if(it->second->gamemaster == this)
-				closeReportList.push_back(it->second->reporter);
-		}
-
-		for(PlayerVector::iterator it = closeReportList.begin(); it != closeReportList.end(); ++it)
-			g_game.closeRuleViolation(*it);
-	}
 
 	g_chat.removeUserFromAllChannels(this);
 	if(!isGhost())
@@ -1556,7 +1561,7 @@ void Player::onCreatureMove(const Creature* creature, const Tile* newTile, const
 		int32_t ticks = g_config.getNumber(ConfigManager::STAIRHOP_DELAY);
 		if(ticks > 0)
 		{
-			addExhaust(ticks);
+			addExhaust(ticks, EXHAUST_MELEE);
 			if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT, CONDITION_PACIFIED, ticks))
 				addCondition(condition);
 		}
@@ -2126,9 +2131,7 @@ uint32_t Player::getIP() const
 
 bool Player::onDeath()
 {
-	Item* preventLoss = NULL;
-	Item* preventDrop = NULL;
-
+	Item *preventLoss = NULL, *preventDrop = NULL;
 	if(getZone() == ZONE_HARDCORE)
 	{
 		setDropLoot(LOOT_DROP_NONE);
@@ -2163,18 +2166,42 @@ bool Player::onDeath()
 		return false;
 	}
 
+	uint32_t totalDamage = 0, pvpDamage = 0;
+	for(CountMap::iterator it = damageMap.begin(); it != damageMap.end(); ++it)
+	{
+		totalDamage += it->second.total;
+		// its enough when we use IDs range comparison here instead of overheating autoList
+		// FIXME: any idea to not use hardcoded values?
+		if(((OTSYS_TIME() - it->second.ticks) / 1000) <= g_config.getNumber(
+			ConfigManager::FAIRFIGHT_TIMERANGE) && it->first >= 0x10000000
+			&& it->first < 0x40000000)
+			pvpDamage += it->second.total;
+	}
+
+	bool usePVPBlessing = false;
+	uint8_t pvpPercent = (int32_t)std::ceil((double)pvpDamage * 100 / totalDamage);
+	if(pvpBlessing && pvpPercent >= (uint8_t)g_config.getNumber(
+		ConfigManager::PVP_BLESSING_THRESHOLD))
+	{
+		usePVPBlessing = true;
+		pvpBlessing = false;
+	}
+
 	if(preventLoss)
 	{
 		setLossSkill(false);
-		if(preventLoss->getCharges() > 1) //weird, but transform failed to remove for some hosters
-			g_game.transformItem(preventLoss, preventLoss->getID(), std::max(0, ((int32_t)preventLoss->getCharges() - 1)));
-		else
-			g_game.internalRemoveItem(NULL, preventDrop);
+		if(!usePVPBlessing) // TODO: need to reconsider this, because players will be immune to any loss
+		{
+			if(preventLoss->getCharges() > 1) // weird, but transform failed to remove for some hosters
+				g_game.transformItem(preventLoss, preventLoss->getID(), std::max(0, ((int32_t)preventLoss->getCharges() - 1)));
+			else
+				g_game.internalRemoveItem(NULL, preventDrop);
+		}
 	}
 
-	if(preventDrop && preventDrop != preventLoss)
+	if(preventDrop && preventDrop != preventLoss && !usePVPBlessing)
 	{
-		if(preventDrop->getCharges() > 1) //weird, but transform failed to remove for some hosters
+		if(preventDrop->getCharges() > 1) // weird, but transform failed to remove for some hosters
 			g_game.transformItem(preventDrop, preventDrop->getID(), std::max(0, ((int32_t)preventDrop->getCharges() - 1)));
 		else
 			g_game.internalRemoveItem(NULL, preventDrop);
@@ -2187,7 +2214,7 @@ bool Player::onDeath()
 		removeExperience(lossExperience, false);
 		double percent = 1. - ((double)(experience - lossExperience) / experience);
 
-		//Magic level loss
+		// magic level loss
 		uint64_t sumMana = 0, lostMana = 0;
 		for(uint32_t i = 1; i <= magLevel; ++i)
 			sumMana += vocation->getReqMana(i);
@@ -2208,12 +2235,12 @@ bool Player::onDeath()
 		else
 			magLevelPercent = 0;
 
-		//Skill loss
+		// skill loss
 		uint64_t lostSkillTries, sumSkillTries;
-		for(int16_t i = 0; i < 7; ++i) //for each skill
+		for(int16_t i = 0; i < 7; ++i) // for each skill
 		{
 			lostSkillTries = sumSkillTries = 0;
-			for(uint32_t c = 11; c <= skills[i][SKILL_LEVEL]; ++c) //sum up all required tries for all skill levels
+			for(uint32_t c = 11; c <= skills[i][SKILL_LEVEL]; ++c) // sum up all required tries for all skill levels
 				sumSkillTries += vocation->getReqSkillTries(i, c);
 
 			sumSkillTries += skills[i][SKILL_TRIES];
@@ -2235,9 +2262,11 @@ bool Player::onDeath()
 			skills[i][SKILL_TRIES] = std::max((int32_t)0, (int32_t)(skills[i][SKILL_TRIES] - lostSkillTries));
 		}
 
-		blessings = 0;
+		if(!usePVPBlessing)
+			blessings = 0;
+
 		loginPosition = masterPosition;
-		if(!inventory[SLOT_BACKPACK]) // TODO: you should receive the bag after you login back
+		if(!inventory[SLOT_BACKPACK]) // FIXME: you should receive the bag after you login back...
 			__internalAddThing(SLOT_BACKPACK, Item::CreateItem(g_config.getNumber(ConfigManager::DEATH_CONTAINER)));
 
 		sendIcons();
@@ -2246,7 +2275,7 @@ bool Player::onDeath()
 
 		g_creatureEvents->playerLogout(this, true);
 		g_game.removeCreature(this, false);
-		sendReLoginWindow();
+		sendReLoginWindow(pvpPercent);
 	}
 	else
 	{
@@ -2255,8 +2284,9 @@ bool Player::onDeath()
 		{
 			loginPosition = masterPosition;
 			g_creatureEvents->playerLogout(this, true);
+
 			g_game.removeCreature(this, false);
-			sendReLoginWindow();
+			sendReLoginWindow(pvpPercent);
 		}
 	}
 
@@ -2338,10 +2368,17 @@ Item* Player::createCorpse(DeathList deathList)
 	return corpse;
 }
 
-void Player::addExhaust(uint32_t ticks)
+void Player::addCooldown(uint32_t ticks, uint16_t spellId)
 {
 	if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT,
-		CONDITION_EXHAUST, ticks, 0, false))
+		CONDITION_SPELLCOOLDOWN, ticks, 0, false, spellId))
+		addCondition(condition);
+}
+
+void Player::addExhaust(uint32_t ticks, Exhaust_t exhaust)
+{
+	if(Condition* condition = Condition::createCondition(CONDITIONID_DEFAULT,
+		CONDITION_EXHAUST, ticks, 0, false, (int32_t)exhaust))
 		addCondition(condition);
 }
 
@@ -3691,7 +3728,7 @@ void Player::onAttackedCreature(Creature* target)
 		)
 		return;
 
-	if(targetPlayer->getSkull() != SKULL_NONE)
+	if(targetPlayer->getSkull() != SKULL_NONE || needRevenge(targetPlayer->getID()))
 		targetPlayer->sendCreatureSkull(this);
 	else if(!hasCustomFlag(PlayerCustomFlag_NotGainSkull))
 	{
@@ -3848,14 +3885,14 @@ bool Player::onKilledCreature(Creature* target, DeathEntry& entry)
 	War_t enemy;
 	if(targetPlayer->getEnemy(this, enemy) && (!entry.isLast() || IOGuild::getInstance()->updateWar(enemy)))
 		entry.setWar(enemy);
-
 #endif
 
 	if(!entry.isJustify() || !hasCondition(CONDITION_INFIGHT))
 		return true;
 
-	if(!targetPlayer->hasAttacked(this) && target->getSkull() == SKULL_NONE && targetPlayer != this
-		&& (addUnjustifiedKill(targetPlayer,
+	std::vector<uint32_t>::iterator it = std::find(revengeList.begin(), revengeList.end(), target->getID());
+	if(!targetPlayer->hasAttacked(this) && target->getSkull() == SKULL_NONE && it == revengeList.end()
+		&& targetPlayer != this && (addUnjustifiedKill(targetPlayer,
 #ifndef __WAR_SYSTEM__
 		true
 #else
@@ -3863,6 +3900,9 @@ bool Player::onKilledCreature(Creature* target, DeathEntry& entry)
 #endif
 		) || entry.isLast()))
 		entry.setUnjustified();
+
+	if(it != revengeList.end())
+		revengeList.erase(it);
 
 	addInFightTicks(true, g_config.getNumber(ConfigManager::WHITE_SKULL_TIME));
 	return true;
@@ -3982,6 +4022,13 @@ bool Player::changeOutfit(Outfit_t outfit, bool checkList)
 	if(checkList && (!canWearOutfit(outfitId, outfit.lookAddons) || !requestedOutfit))
 		return false;
 
+	if(outfit.lookMount && outfit.lookMount != getDefaultOutfit().lookMount)
+	{
+		Mount* mount = Mounts::getInstance()->getMountByCid(outfit.lookMount);
+		if(!mount || !mount->isTamed(this))
+			return false;
+	}
+
 	requestedOutfit = false;
 	if(outfitAttributes)
 	{
@@ -4096,19 +4143,24 @@ Skulls_t Player::getSkull() const
 
 Skulls_t Player::getSkullType(const Creature* creature) const
 {
-	if(const Player* player = creature->getPlayer())
+	const Player* player = creature->getPlayer();
+	if(player && player->getSkull() == SKULL_NONE)
 	{
 		if(g_game.getWorldType() != WORLDTYPE_OPEN)
 			return SKULL_NONE;
 
-		if((player == this || (skull != SKULL_NONE && player->getSkull() < SKULL_RED)) && player->hasAttacked(this)
+		if(needRevenge(player->getID()))
+			return SKULL_ORANGE;
+
+		if((player == this || (skull != SKULL_NONE || player->needRevenge(id)))
+			&& player->hasAttacked(this)
 #ifdef __WAR_SYSTEM__
 			&& !player->isEnemy(this, false)
 #endif
 			)
 			return SKULL_YELLOW;
 
-		if(player->getSkull() == SKULL_NONE &&
+		if(
 #ifndef __WAR_SYSTEM__
 			isPartner(player) &&
 #else
@@ -4924,7 +4976,7 @@ bool Player::isPremium() const
 	if(g_config.getBool(ConfigManager::FREE_PREMIUM) || hasFlag(PlayerFlag_IsAlwaysPremium))
 		return true;
 
-	return premiumDays;
+	return (premiumDays != 0);
 }
 
 bool Player::setGuildLevel(GuildLevel_t newLevel, uint32_t rank/* = 0*/)
@@ -5162,71 +5214,66 @@ void Player::sendCritical() const
 		g_game.addAnimatedText(getPosition(), COLOR_DARKRED, "CRITICAL!");
 }
 
-void Player::setMounted(bool doMount)
+void Player::setMounted(bool mounting)
 {
-	if(doMount)
+	if(!mounting)
 	{
-		if(_tile->hasFlag(TILESTATE_PROTECTIONZONE))
-                        sendCancelMessage(RET_ACTIONNOTPERMITTEDINPROTECTIONZONE);
-		else if(!isPremium())
-			sendCancelMessage(RET_YOUNEEDPREMIUMACCOUNT);
-                else if(mount == 0)
-                        sendOutfitWindow();
-                else if(!isMounted())
-                {
-			Mount* myMount = Mounts::getInstance()->getMountById(mount);
-			if(myMount)
-			{
-				mounted = true;
-				lastMountStatusChange = OTSYS_TIME();
+		dismount(true);
+		return;
+	}
 
-		                defaultOutfit.lookMount = myMount->getClientId();
+	if(_tile->hasFlag(TILESTATE_PROTECTIONZONE))
+		sendCancelMessage(RET_ACTIONNOTPERMITTEDINPROTECTIONZONE);
+	else if(!isPremium()) // TODO: configurable for mounts being premium (maybe per mount?...)
+		sendCancelMessage(RET_YOUNEEDPREMIUMACCOUNT);
+	else if(!defaultOutfit.lookMount)
+		sendOutfitWindow();
+	else if(!mounted)
+	{
+		if(Mount* mount = Mounts::getInstance()->getMountByCid(defaultOutfit.lookMount))
+		{
+			mounted = true;
+			if(mount->getSpeed())
+				g_game.changeSpeed(this, mount->getSpeed());
 
-		                if(myMount->getSpeed())
-		                        g_game.changeSpeed(this, myMount->getSpeed());
-
-		                g_game.internalCreatureChangeOutfit(this, defaultOutfit);
-			}
-                }
-        }
-        else
-		dismount();
-}
-
-void Player::dismount()
-{
-	if(isMounted()) {
-		if(!mount) {
-			this->sendCancel("No mount");
-			return;
+			g_game.internalCreatureChangeOutfit(this, defaultOutfit, true);
 		}
-		Mount* myMount = Mounts::getInstance()->getMountById(mount);
-		mounted = false;
-		lastMountStatusChange = OTSYS_TIME();
-
-		if(myMount && myMount->getSpeed() > 0)
-			g_game.changeSpeed(this, -myMount->getSpeed());
-
-		defaultOutfit.lookMount = 0;
-		g_game.internalCreatureChangeOutfit(this, defaultOutfit);
 	}
 }
+
+void Player::dismount(bool update)
+{
+	if(!mounted)
+		return;
+
+	mounted = false;
+	if(!defaultOutfit.lookMount)
+		return;
+
+	Mount* mount = Mounts::getInstance()->getMountByCid(defaultOutfit.lookMount);
+	if(mount && mount->getSpeed() > 0)
+		g_game.changeSpeed(this, -(int32_t)mount->getSpeed());
+
+	if(update)
+		g_game.internalCreatureChangeOutfit(this, defaultOutfit, true);
+}
+
 bool Player::tameMount(uint8_t mountId)
 {
 	if(!Mounts::getInstance()->getMountById(mountId))
 		return false;
 
+	int32_t key = PSTRG_MOUNTS_RANGE_START + (mountId / 31), value = 0;
+	std::string tmp;
+
 	mountId--;
-	int key = PSTRG_MOUNTS_RANGE_START + (mountId / 31);
-	int32_t value = 0;
-	std::string tmp = "";
 	if(getStorage(boost::lexical_cast<std::string>(key), tmp))
 	{
 		value = atoi(tmp.c_str());
-		value |= static_cast<int32_t>(pow(2, mountId % 31));
+		value |= (int32_t)pow(2., mountId % 31);
 	} 
 	else
-		value = static_cast<int32_t>(pow(2, mountId % 31));
+		value = (int32_t)pow(2., mountId % 31);
 
 	setStorage(boost::lexical_cast<std::string>(key), boost::lexical_cast<std::string>(value));
 	return true;
@@ -5234,25 +5281,23 @@ bool Player::tameMount(uint8_t mountId)
 
 bool Player::untameMount(uint8_t mountId)
 {
-        if(!Mounts::getInstance()->getMountById(mountId))
-                return false;
+	if(!Mounts::getInstance()->getMountById(mountId))
+		return false;
 
-        mountId--;
-        int key = PSTRG_MOUNTS_RANGE_START + (mountId / 31);
-        int32_t value = 0;
-	std::string tmp = "";
-        if(!getStorage(boost::lexical_cast<std::string>(key), tmp))
-                return true;
+	int32_t key = PSTRG_MOUNTS_RANGE_START + (mountId / 31), value = 0;
+	std::string tmp;
+
+	mountId--;
+	if(!getStorage(boost::lexical_cast<std::string>(key), tmp))
+		return true;
 
 	value = atoi(tmp.c_str());
-        value ^= (int32_t)pow(2, mountId % 31);
-        setStorage(boost::lexical_cast<std::string>(key), boost::lexical_cast<std::string>(value));
+	value ^= (int32_t)std::pow(2., mountId % 31);
 
-	// If it's our current mount, unmount it
-	if(mount == (mountId + 1)) {
-		dismount();
-		mount = 0;
-	}
+	Mount* mount = Mounts::getInstance()->getMountByCid(defaultOutfit.lookMount);
+	if(mount->getId() == (mountId + 1))
+		dismount(true);
 
-        return true;
+	setStorage(boost::lexical_cast<std::string>(key), boost::lexical_cast<std::string>(value));
+	return true;
 }

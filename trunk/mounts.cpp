@@ -27,13 +27,13 @@ bool Mount::isTamed(Player* player) const
 		return true;
 
 	uint8_t tmpId = id - 1;
+	std::string value;
 
-	std::string value = "";
-	int key = PSTRG_MOUNTS_RANGE_START + (tmpId / 31);
+	int32_t key = PSTRG_MOUNTS_RANGE_START + (tmpId / 31);
 	if(!player->getStorage(boost::lexical_cast<std::string>(key), value))
 		return false;
 
-	int32_t tmp = static_cast<int32_t>(pow(2, tmpId % 31));
+	int32_t tmp = (int32_t)std::pow(2., tmpId % 31);
 	return (tmp & atoi(value.c_str())) == tmp;
 }
 void Mounts::clear()
@@ -96,7 +96,7 @@ bool Mounts::parseMountNode(xmlNodePtr p)
 		name = strValue;
 
 	uint16_t clientId = 0;
-	if(readXMLInteger(p, "clientid", intValue))
+	if(readXMLInteger(p, "clientid", intValue) || readXMLInteger(p, "clientId", intValue) || readXMLInteger(p, "cid", intValue))
 		clientId = intValue;
 
 	int32_t speed = 0;
@@ -114,32 +114,33 @@ bool Mounts::parseMountNode(xmlNodePtr p)
 		return false;
 
 	mounts.push_back(mount);
-
 	mountCount++;
 	return true;
 }
 
 Mount* Mounts::getMountById(uint16_t id) const
 {
-	if(id)
+	if(!id)
+		return NULL;
+
+	for(MountList::const_iterator it = mounts.begin(); it != mounts.end(); it++)
 	{
-		for(MountList::const_iterator it = mounts.begin(); it != mounts.end(); it++)
-		{
-			if((*it)->getId() == id)
-				return (*it);
-		}
+		if((*it)->getId() == id)
+			return (*it);
 	}
+
 	return NULL;
 }
 Mount* Mounts::getMountByCid(uint16_t id) const
 {
-	if(id)
+	if(!id)
+		return NULL;
+
+	for(MountList::const_iterator it = mounts.begin(); it != mounts.end(); it++)
 	{
-		for(MountList::const_iterator it = mounts.begin(); it != mounts.end(); it++)
-		{
-			if((*it)->getClientId() == id)
-				return (*it);
-		}
+		if((*it)->getClientId() == id)
+			return (*it);
 	}
+
 	return NULL;
 }

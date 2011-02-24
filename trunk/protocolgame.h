@@ -159,12 +159,9 @@ class ProtocolGame : public Protocol
 		void parseOpenPriv(NetworkMessage& msg);
 		void parseCloseChannel(NetworkMessage& msg);
 		void parseCloseNpc(NetworkMessage& msg);
-		void parseProcessRuleViolation(NetworkMessage& msg);
-		void parseCloseRuleViolation(NetworkMessage& msg);
-		void parseCancelRuleViolation(NetworkMessage& msg);
 
 		//rule violation
-		void parseViolationWindow(NetworkMessage& msg);
+		//void parseViolationWindow(NetworkMessage& msg);
 		void parseViolationReport(NetworkMessage& msg);
 
 		//Send functions
@@ -173,12 +170,8 @@ class ProtocolGame : public Protocol
 		void sendCreatePrivateChannel(uint16_t channelId, const std::string& channelName);
 		void sendChannelsDialog();
 		void sendChannel(uint16_t channelId, const std::string& channelName);
-		void sendRuleViolationsChannel(uint16_t channelId);
 		void sendOpenPrivateChannel(const std::string& receiver);
-		void sendToChannel(const Creature* creature, SpeakClasses type, const std::string& text, uint16_t channelId, uint32_t time = 0);
-		void sendRemoveReport(const std::string& name);
-		void sendLockRuleViolation();
-		void sendRuleViolationCancel(const std::string& name);
+		void sendToChannel(const Creature* creature, SpeakClasses type, const std::string& text, uint16_t channelId);
 		void sendIcons(int32_t icons);
 		void sendFYIBox(const std::string& message);
 
@@ -198,7 +191,7 @@ class ProtocolGame : public Protocol
 		void sendCreatureOutfit(const Creature* creature, const Outfit_t& outfit);
 		void sendStats();
 		void sendTextMessage(MessageClasses mclass, const std::string& message);
-		void sendReLoginWindow();
+		void sendReLoginWindow(uint8_t pvpPercent);
 
 		void sendTutorial(uint8_t tutorialId);
 		void sendAddMarker(const Position& pos, MapMarks_t markType, const std::string& desc);
@@ -206,7 +199,7 @@ class ProtocolGame : public Protocol
 		void sendCreatureSkull(const Creature* creature);
 		void sendCreatureShield(const Creature* creature);
 		void sendCreatureEmblem(const Creature* creature) {reloadCreature(creature);}
-		void sendCreatureImpassable(const Creature* creature);
+		void sendCreatureWalkthrough(const Creature* creature, bool walkthrough);
 
 		void sendShop(const ShopInfoList& shop);
 		void sendCloseShop();
@@ -215,7 +208,6 @@ class ProtocolGame : public Protocol
 		void sendCloseTrade();
 
 		void sendTextWindow(uint32_t windowTextId, Item* item, uint16_t maxLen, bool canWrite);
-		void sendTextWindow(uint32_t windowTextId, uint32_t itemId, const std::string& text);
 		void sendHouseWindow(uint32_t windowTextId, House* house, uint32_t listId, const std::string& text);
 
 		void sendOutfitWindow();
@@ -226,7 +218,8 @@ class ProtocolGame : public Protocol
 		void sendVIPLogOut(uint32_t guid);
 		void sendVIP(uint32_t guid, const std::string& name, bool isOnline);
 
-		void sendSpellCooldown(uint16_t spellId, uint32_t cooldown, bool isGroup);
+		void sendSpellCooldown(Spells_t icon, uint32_t cooldown);
+		void sendSpellGroupCooldown(SpellGroup_t groupId, uint32_t cooldown);
 
 		void sendCreatureLight(const Creature* creature);
 		void sendWorldLight(const LightInfo& lightInfo);
@@ -279,7 +272,7 @@ class ProtocolGame : public Protocol
 		void AddCreature(NetworkMessage_ptr msg, const Creature* creature, bool known, uint32_t remove);
 		void AddPlayerStats(NetworkMessage_ptr msg);
 		void AddCreatureSpeak(NetworkMessage_ptr msg, const Creature* creature, SpeakClasses type,
-			std::string text, uint16_t channelId, uint32_t time = 0, Position* pos = NULL);
+			std::string text, uint16_t channelId, Position* pos = NULL);
 		void AddCreatureHealth(NetworkMessage_ptr msg, const Creature* creature);
 		void AddCreatureOutfit(NetworkMessage_ptr msg, const Creature* creature, const Outfit_t& outfit, bool outfitWindow = false);
 		void AddPlayerSkills(NetworkMessage_ptr msg);

@@ -1081,8 +1081,6 @@ uint32_t DatabaseManager::updateDatabase()
 					db->query(query.str());
 
 					query << "CREATE TABLE `server_config` (`config` VARCHAR(35) NOT NULL DEFAULT '', `value` VARCHAR(255) NOT NULL DEFAULT '', UNIQUE (`config`));";
-					db->query(query.str());
-
 					registerDatabaseConfig("encryption", g_config.getNumber(ConfigManager::ENCRYPTION));
 					break;
 				}
@@ -1090,7 +1088,6 @@ uint32_t DatabaseManager::updateDatabase()
 				case DATABASE_ENGINE_MYSQL:
 				{
 					query << "ALTER TABLE `server_config` CHANGE `value` `value` VARCHAR(255) NOT NULL DEFAULT '';";
-					db->query(query.str());
 					break;
 				}
 
@@ -1098,7 +1095,9 @@ uint32_t DatabaseManager::updateDatabase()
 					break;
 			}
 
+			db->query(query.str());
 			query.str("");
+
 			registerDatabaseConfig("db_version", 25);
 			return 25;
 		}
@@ -1111,14 +1110,12 @@ uint32_t DatabaseManager::updateDatabase()
 				case DATABASE_ENGINE_SQLITE:
 				{
 					query << "ALTER TABLE `accounts` ADD `salt` VARCHAR(40) NOT NULL DEFAULT '';";
-					db->query(query.str());
 					break;
 				}
 
 				case DATABASE_ENGINE_MYSQL:
 				{
 					query << "ALTER TABLE `accounts` ADD `salt` VARCHAR(40) NOT NULL DEFAULT '' AFTER `password`;";
-					db->query(query.str());
 					break;
 				}
 
@@ -1126,7 +1123,9 @@ uint32_t DatabaseManager::updateDatabase()
 					break;
 			}
 
+			db->query(query.str());
 			query.str("");
+
 			registerDatabaseConfig("db_version", 26);
 			return 26;
 		}
@@ -1134,8 +1133,21 @@ uint32_t DatabaseManager::updateDatabase()
 		case 26:
 		{
 			std::clog << "> Updating database to version 27..." << std::endl;
-			db->query(std::string("ALTER TABLE `player_storage` CHANGE `key` `key` VARCHAR(32) NOT NULL DEFAULT '0'"));
-			db->query(std::string("ALTER TABLE `global_storage` CHANGE `key` `key` VARCHAR(32) NOT NULL DEFAULT '0'"));
+			if(db->getDatabaseEngine() != DATABASE_ENGINE_SQLITE)
+			{
+				query << "ALTER TABLE `player_storage` CHANGE `key` `key` VARCHAR(32) NOT NULL DEFAULT '0'";
+				db->query(query.str());
+				query.str("");
+
+				query << "ALTER TABLE `global_storage` CHANGE `key` `key` VARCHAR(32) NOT NULL DEFAULT '0'";
+				db->query(query.str());
+				query.str("");
+			}
+			else
+			{
+				// TODO
+			}
+
 			registerDatabaseConfig("db_version", 27);
 			return 27;
 		}
@@ -1147,13 +1159,13 @@ uint32_t DatabaseManager::updateDatabase()
 			{
 				case DATABASE_ENGINE_SQLITE:
 				{
-					db->query(std::string("ALTER TABLE `players` ADD `currmount` INT NOT NULL DEFAULT 0;"));
+					//query << "ALTER TABLE `players` ADD `currmount` INT NOT NULL DEFAULT 0;";
 					break;
 				}
 
 				case DATABASE_ENGINE_MYSQL:
 				{
-					db->query(std::string("ALTER TABLE `players` ADD `currmount` INT NOT NULL DEFAULT 0 AFTER `lookaddons`;"));
+					query << "ALTER TABLE `players` ADD `currmount` INT NOT NULL DEFAULT 0 AFTER `lookaddons`;";
 					break;
 				}
 
@@ -1161,9 +1173,95 @@ uint32_t DatabaseManager::updateDatabase()
 					break;
 			}
 
+			db->query(query.str());
 			query.str("");
-			registerDatabaseConfig("db_version", 28);		
+
+			registerDatabaseConfig("db_version", 28);
 			return 28;
+		}
+
+		case 28:
+		{
+			std::clog << "> Updating database to version 29..." << std::endl;
+			switch(db->getDatabaseEngine())
+			{
+				case DATABASE_ENGINE_SQLITE:
+				{
+					query << "ALTER TABLE `players` ADD `lookmount` INT NOT NULL DEFAULT 0;";
+					break;
+				}
+
+				case DATABASE_ENGINE_MYSQL:
+				{
+					query << "ALTER TABLE `players` CHANGE `currmount` `lookmount` INT NOT NULL DEFAULT 0";
+					break;
+				}
+
+				default:
+					break;
+			}
+
+			db->query(query.str());
+			query.str("");
+
+			registerDatabaseConfig("db_version", 29);
+			return 29;
+		}
+
+		case 29:
+		{
+			std::cout << "> Updating database to version 30..." << std::endl;
+			switch(db->getDatabaseEngine())
+			{
+				case DATABASE_ENGINE_SQLITE:
+				{
+					query << "CREATE TABLE \"tile_store\" ( \"house_id\" INTEGER NOT NULL, \"world_id\" INTEGER NOT NULL DEFAULT 0, \"data\" LONGBLOB NOT NULL, FOREIGN KEY (\"house_id\") REFERENCES \"houses\" (\"id\") );";
+					break;
+				}
+
+				case DATABASE_ENGINE_MYSQL:
+				{
+					query << "CREATE TABLE `tile_store` ( `house_id` INT UNSIGNED NOT NULL, `world_id` TINYINT(4) UNSIGNED NOT NULL DEFAULT 0, `data` LONGBLOB NOT NULL, FOREIGN (`house_id`) REFERENCES `houses` (`id`) ON DELETE CASCADE ) ENGINE = InnoDB;";
+					break;
+				}
+
+				default:
+					break;
+			}
+
+			db->query(query.str());
+			query.str("");
+
+			registerDatabaseConfig("db_version", 30);
+			return 30;
+		}
+
+		case 30:
+		{
+			std::cout << "> Updating database to version 31..." << std::endl;
+			switch(db->getDatabaseEngine())
+			{
+				case DATABASE_ENGINE_SQLITE:
+				{
+					query << "ALTER TABLE `players` ADD `pvp_blessing` BOOLEAN NOT NULL DEFAULT FALSE;";
+					break;
+				}
+
+				case DATABASE_ENGINE_MYSQL:
+				{
+					query << "ALTER TABLE `players` ADD `pvp_blessing` TINYINT(1) NOT NULL DEFAULT 0 AFTER `blessings`;";
+					break;
+				}
+
+				default:
+					break;
+			}
+
+			db->query(query.str());
+			query.str("");
+
+			registerDatabaseConfig("db_version", 31);
+			return 31;
 		}
 
 		default:

@@ -224,7 +224,9 @@ class Player : public Creature, public Cylinder
 		bool hasCustomFlag(PlayerCustomFlags value) const {return group != NULL && group->hasCustomFlag(value);}
 
 		void addBlessing(int16_t blessing) {blessings += blessing;}
-		bool hasBlessing(int16_t value) const {return (blessings & ((int16_t)1 << value));}
+		bool hasBlessing(int16_t blessing) const {return ((blessings & ((int16_t)1 << blessing)) != 0);}
+		void setPVPBlessing(bool value) {pvpBlessing = value;}
+		bool hasPVPBlessing() const {return pvpBlessing;}
 		uint16_t getBlessings() const;
 
 		OperatingSystem_t getOperatingSystem() const {return operatingSystem;}
@@ -232,7 +234,7 @@ class Player : public Creature, public Cylinder
 		uint32_t getClientVersion() const {return clientVersion;}
 		void setClientVersion(uint32_t version) {clientVersion = version;}
 
-		bool hasClient() const {return client;}
+		bool hasClient() const {return (client != NULL);}
 		bool isVirtual() const {return (getID() == 0);}
 		void disconnect() {if(client) client->disconnect();}
 		uint32_t getIP() const;
@@ -266,7 +268,7 @@ class Player : public Creature, public Cylinder
 		void setIdleTime(uint32_t amount) {idleTime = amount;}
 
 		bool checkLoginDelay(uint32_t playerId) const;
-		bool isTrading() const {return tradePartner;}
+		bool isTrading() const {return (tradePartner != NULL);}
 
 		uint32_t getAccount() const {return accountId;}
 		std::string getAccountName() const {return account;}
@@ -365,6 +367,7 @@ class Player : public Creature, public Cylinder
 		virtual bool canSee(const Position& pos) const;
 		virtual bool canSeeCreature(const Creature* creature) const;
 		virtual bool canWalkthrough(const Creature* creature) const;
+		void setWalkthrough(const Creature* creature, bool walkthrough);
 
 		virtual bool canSeeInvisibility() const {return hasFlag(PlayerFlag_CanSenseInvisibility);}
 
@@ -474,7 +477,14 @@ class Player : public Creature, public Cylinder
 		virtual float getAttackFactor() const;
 		virtual float getDefenseFactor() const;
 
-		void addExhaust(uint32_t ticks);
+		void addRevenge(uint32_t playerId) {revengeList.push_back(playerId);}
+		bool needRevenge(uint32_t playerId) const
+		{
+			return std::find(revengeList.begin(), revengeList.end(), playerId) != revengeList.end();
+		}
+
+		void addCooldown(uint32_t ticks, uint16_t spellId);
+		void addExhaust(uint32_t ticks, Exhaust_t exhaust);
 		void addInFightTicks(bool pzLock, int32_t ticks = 0);
 		void addDefaultRegeneration(uint32_t addTicks);
 
@@ -556,11 +566,13 @@ class Player : public Creature, public Cylinder
 		void sendCreatureShield(const Creature* creature)
 			{if(client) client->sendCreatureShield(creature);}
 		void sendCreatureEmblem(const Creature* creature)
-		{if(client) client->sendCreatureEmblem(creature);}
-		void sendCreatureImpassable(const Creature* creature)
-			{if(client) client->sendCreatureImpassable(creature);}
-		void sendSpellCooldown(uint16_t spellId, uint32_t cooldown, bool isGroup)
-			{if(client) client->sendSpellCooldown(spellId, cooldown, isGroup);}
+			{if(client) client->sendCreatureEmblem(creature);}
+		void sendCreatureWalkthrough(const Creature* creature, bool walkthrough)
+			{if(client) client->sendCreatureWalkthrough(creature, walkthrough);}
+		void sendSpellCooldown(Spells_t icon, uint32_t cooldown)
+			{if(client) client->sendSpellCooldown(icon, cooldown);}
+		void sendSpellGroupCooldown(SpellGroup_t groupId, uint32_t cooldown)
+			{if(client) client->sendSpellGroupCooldown(groupId, cooldown);}
 
 		//container
 		void sendAddContainerItem(const Container* container, const Item* item);
@@ -579,13 +591,14 @@ class Player : public Creature, public Cylinder
 
 		//mount
 		bool isMounted() const {return mounted;}
-		uint16_t getMountId() const {return mount;}
-		void setMountId(uint8_t mountId) {mount = mountId;}
-		void setMounted(bool value);
-		void dismount();
+		void setMounted(bool mounting);
+		void dismount(bool update);
+
 		bool tameMount(uint8_t mountId);
 		bool untameMount(uint8_t mountId);
-		int64_t getLastMountStatusChange() const {return lastMountStatusChange; }
+
+		void setLastMountAction(int64_t _time) {lastMountAction = _time;}
+		int64_t getLastMountAction() const {return lastMountAction; }
 
 		//event methods
 		virtual void onUpdateTileItem(const Tile* tile, const Position& pos, const Item* oldItem,
@@ -665,14 +678,12 @@ class Player : public Creature, public Cylinder
 			{if(client) client->sendSkills();}
 		void sendTextMessage(MessageClasses type, const std::string& message) const
 			{if(client) client->sendTextMessage(type, message);}
-		void sendReLoginWindow() const
-			{if(client) client->sendReLoginWindow();}
+		void sendReLoginWindow(uint8_t pvpPercent) const
+			{if(client) client->sendReLoginWindow(pvpPercent);}
 		void sendTextWindow(Item* item, uint16_t maxLen, bool canWrite) const
 			{if(client) client->sendTextWindow(windowTextId, item, maxLen, canWrite);}
-		void sendTextWindow(uint32_t itemId, const std::string& text) const
-			{if(client) client->sendTextWindow(windowTextId, itemId, text);}
-		void sendToChannel(Creature* creature, SpeakClasses type, const std::string& text, uint16_t channelId, uint32_t time = 0) const
-			{if(client) client->sendToChannel(creature, type, text, channelId, time);}
+		void sendToChannel(Creature* creature, SpeakClasses type, const std::string& text, uint16_t channelId) const
+			{if(client) client->sendToChannel(creature, type, text, channelId); }
 		void sendShop() const
 			{if(client) client->sendShop(shopOffer);}
 		void sendGoods() const
@@ -695,14 +706,6 @@ class Player : public Creature, public Cylinder
 			{if(client) client->sendCloseContainer(cid);}
 		void sendChannel(uint16_t channelId, const std::string& channelName)
 			{if(client) client->sendChannel(channelId, channelName);}
-		void sendRuleViolationsChannel(uint16_t channelId)
-			{if(client) client->sendRuleViolationsChannel(channelId);}
-		void sendRemoveReport(const std::string& name)
-			{if(client) client->sendRemoveReport(name);}
-		void sendLockRuleViolation()
-			{if(client) client->sendLockRuleViolation();}
-		void sendRuleViolationCancel(const std::string& name)
-			{if(client) client->sendRuleViolationCancel(name);}
 		void sendTutorial(uint8_t tutorialId)
 			{if(client) client->sendTutorial(tutorialId);}
 		void sendAddMarker(const Position& pos, MapMarks_t markType, const std::string& desc)
@@ -724,7 +727,7 @@ class Player : public Creature, public Cylinder
 		uint32_t getNextActionTime() const;
 
 		Item* getWriteItem(uint32_t& _windowTextId, uint16_t& _maxWriteLen);
-		void setWriteItem(Item* item, uint16_t _maxWriteLen = 0);
+		void setWriteItem(Item* item, uint16_t _maxLen = 0);
 
 		House* getEditHouse(uint32_t& _windowTextId, uint32_t& _listId);
 		void setEditHouse(House* house, uint32_t listId = 0);
@@ -834,6 +837,7 @@ class Player : public Creature, public Cylinder
 		bool outfitAttributes;
 		bool addAttackSkillPoint;
 		bool mounted;
+		bool pvpBlessing;
 
 		OperatingSystem_t operatingSystem;
 		AccountManager_t accountManager;
@@ -848,7 +852,6 @@ class Player : public Creature, public Cylinder
 		int16_t blessings;
 		uint16_t maxWriteLen;
 		uint16_t sex;
-		uint8_t mount;
 
 		int32_t premiumDays;
 		int32_t soul;
@@ -892,12 +895,12 @@ class Player : public Creature, public Cylinder
 		time_t skullEnd;
 		time_t lastLogin;
 		time_t lastLogout;
-
+		
 		int64_t lastLoad;
 		int64_t lastPong;
 		int64_t lastPing;
 		int64_t nextAction;
-		int64_t lastMountStatusChange;
+		int64_t lastMountAction;
 		uint64_t stamina;
 		uint64_t experience;
 		uint64_t manaSpent;
@@ -928,6 +931,9 @@ class Player : public Creature, public Cylinder
 		House* editHouse;
 		Npc* shopOwner;
 		Item* weapon;
+
+		std::vector<uint32_t> forceWalkthrough;
+		std::vector<uint32_t> revengeList;
 
 		typedef std::set<uint32_t> AttackedSet;
 		AttackedSet attackedSet;

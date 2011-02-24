@@ -860,7 +860,7 @@ scriptmanager.o: scriptmanager.cpp otpch.h \
  container.h depot.h outfit.h vocation.h group.h protocolgame.h \
  protocol.h connection.h networkmessage.h ioguild.h party.h npc.h \
  talkaction.h globalevent.h scheduler.h dispatcher.h weapons.h combat.h \
- monsters.h spawn.h monster.h quests.h chat.h \
+ monsters.h spawn.h monster.h mounts.h quests.h chat.h \
  /usr/include/c++/4.4/fstream \
  /usr/include/c++/4.4/i486-linux-gnu/bits/basic_file.h \
  /usr/include/c++/4.4/i486-linux-gnu/bits/c++io.h \
@@ -2985,6 +2985,8 @@ monsters.h:
 spawn.h:
 
 monster.h:
+
+mounts.h:
 
 quests.h:
 

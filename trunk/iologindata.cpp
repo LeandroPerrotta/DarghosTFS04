@@ -335,7 +335,7 @@ void IOLoginData::removePremium(Account account)
 	uint64_t timeNow = time(NULL);
 	if(account.premiumDays > 0 && account.premiumDays < 65535)
 	{
-		uint32_t days = (uint32_t)std::ceil((timeNow - account.lastDay) / 86400);
+		uint32_t days = (uint32_t)std::ceil((timeNow - account.lastDay) / 86400.);
 		if(days > 0)
 		{
 			if(account.premiumDays >= days)
@@ -373,11 +373,11 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 	Database* db = Database::getInstance();
 	DBQuery query;
 	query << "SELECT `id`, `account_id`, `group_id`, `world_id`, `sex`, `vocation`, `experience`, `level`, "
-	<< "`maglevel`, `health`, `healthmax`, `blessings`, `mana`, `manamax`, `manaspent`, `soul`, `lookbody`, "
-	<< "`lookfeet`, `lookhead`, `looklegs`, `looktype`, `lookaddons`, `currmount`, `posx`, `posy`, `posz`, `cap`, "
-	<< "`lastlogin`, `lastlogout`, `lastip`, `conditions`, `skull`, `skulltime`, `guildnick`, `rank_id`, "
-	<< "`town_id`, `balance`, `stamina`, `direction`, `loss_experience`, `loss_mana`, `loss_skills`, "
-	<< "`loss_containers`, `loss_items`, `marriage`, `promotion`, `description` FROM `players` WHERE "
+	<< "`maglevel`, `health`, `healthmax`, `blessings`, `pvp_blessing`, `mana`, `manamax`, `manaspent`, `soul`, "
+	<< "`lookbody`, `lookfeet`, `lookhead`, `looklegs`, `looktype`, `lookaddons`, `lookmount`, `posx`, `posy`, "
+	<< "`posz`, `cap`, `lastlogin`, `lastlogout`, `lastip`, `conditions`, `skull`, `skulltime`, `guildnick`, "
+	<< "`rank_id`, `town_id`, `balance`, `stamina`, `direction`, `loss_experience`, `loss_mana`, `loss_skills`, "
+	<< "`loss_containers`, `loss_items`, `marriage`, `promotion`, `description`, `save` FROM `players` WHERE "
 	<< "`name` " << db->getStringComparer() << db->escapeString(name) << " AND `world_id` = "
 	<< g_config.getNumber(ConfigManager::WORLD_ID) << " AND `deleted` = 0 LIMIT 1";
 
@@ -435,7 +435,10 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 	player->balance = result->getDataLong("balance");
 	if(g_config.getBool(ConfigManager::BLESSINGS) && (player->isPremium()
 		|| !g_config.getBool(ConfigManager::BLESSING_ONLY_PREMIUM)))
+	{
 		player->blessings = result->getDataInt("blessings");
+		player->setPVPBlessing(result->getDataInt("pvp_blessing"));
+	}
 
 	uint64_t conditionsSize = 0;
 	const char* conditions = result->getDataStream("conditions", conditionsSize);
@@ -499,8 +502,7 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 	player->defaultOutfit.lookLegs = result->getDataInt("looklegs");
 	player->defaultOutfit.lookFeet = result->getDataInt("lookfeet");
 	player->defaultOutfit.lookAddons = result->getDataInt("lookaddons");
-	player->defaultOutfit.lookMount = 0; // Always initialize unmounted, otherwise they might bug speed
-	player->setMountId(result->getDataInt("currmount"));
+	player->defaultOutfit.lookMount = result->getDataInt("lookmount");
 
 	player->currentOutfit = player->defaultOutfit;
 	Skulls_t skull = SKULL_RED;
@@ -508,6 +510,8 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 		skull = (Skulls_t)result->getDataInt("skull");
 
 	player->setSkullEnd((time_t)result->getDataInt("skulltime"), true, skull);
+	player->saving = result->getDataInt("save") != 0;
+
 	player->town = result->getDataInt("town_id");
 	if(Town* town = Towns::getInstance()->getTown(player->town))
 		player->setMasterPosition(town->getPosition());
@@ -518,11 +522,11 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 	player->setLossPercent(LOSS_CONTAINERS, result->getDataInt("loss_containers"));
 	player->setLossPercent(LOSS_ITEMS, result->getDataInt("loss_items"));
 
-	player->loginPosition = Position(result->getDataInt("posx"), result->getDataInt("posy"), result->getDataInt("posz"));
 	player->lastLogin = result->getDataLong("lastlogin");
 	player->lastLogout = result->getDataLong("lastlogout");
-
 	player->lastIP = result->getDataInt("lastip");
+
+	player->loginPosition = Position(result->getDataInt("posx"), result->getDataInt("posy"), result->getDataInt("posz"));
 	if(!player->loginPosition.x || !player->loginPosition.y)
 		player->loginPosition = player->getMasterPosition();
 
@@ -730,6 +734,53 @@ bool IOLoginData::loadPlayer(Player* player, const std::string& name, bool preLo
 		result->free();
 	}
 
+	query.str("");
+	query << "SELECT `pd`.`player_id`, `pd`.`date` FROM `player_killers` pk LEFT JOIN `killers` k"
+		<< " ON `pk`.`kill_id` = `k`.`id` LEFT JOIN `player_deaths` pd ON `k`.`death_id` = `pd`.`id`"
+		<< " WHERE `pk`.`player_id` = " << player->getGUID() << " AND `k`.`unjustified` = 0 AND "
+		<< "`pd`.`date` >= " << (time(NULL) - (7 * 86400));
+#ifdef __WAR_SYSTEM__
+	query << " AND `k`.`war` = 0";
+#endif
+
+	std::map<uint32_t, time_t> kills;
+	if((result = db->storeQuery(query.str())))
+	{
+		do
+		{
+			if(!kills[result->getDataInt("player_id")] || kills[result->getDataInt("player_id")]
+				< (time_t)result->getDataInt("date")) // pick up the latest date
+			{
+				kills[result->getDataInt("player_id")] = (time_t)result->getDataInt("date");
+			}
+		}
+		while(result->next());
+		result->free();
+	}
+
+	if(!kills.empty())
+	{
+		query.str("");
+		query << "SELECT `pk`.`player_id`, `pd`.`date` FROM `player_killers` pk LEFT JOIN `killers` k"
+			<< " ON `pk`.`kill_id` = `k`.`id` LEFT JOIN `player_deaths` pd ON `k`.`death_id` = `pd`.`id`"
+			<< " WHERE `pd`.`player_id` = " << player->getGUID() << " AND `k`.`unjustified` = 1 AND "
+			<< "`pd`.`date` >= " << (time(NULL) - (7 * 86400));
+	#ifdef __WAR_SYSTEM__
+
+		query << " AND `k`.`war` = 0";
+	#endif
+		if((result = db->storeQuery(query.str())))
+		{
+			do
+			{
+				if(!kills[result->getDataInt("player_id")] || kills[result->getDataInt("player_id")] < (time_t)result->getDataInt("date"))
+					player->addRevenge(result->getDataInt("player_id"));
+			}
+			while(result->next());
+			result->free();
+		}
+	}
+
 	player->updateInventoryWeight();
 	player->updateItemsLight(true);
 	player->updateBaseSpeed();
@@ -774,15 +825,13 @@ bool IOLoginData::savePlayer(Player* player, bool preSave/* = true*/, bool shall
 	Database* db = Database::getInstance();
 	DBQuery query;
 
-	bool save = g_config.getNumber(ConfigManager::SAVE_PLAYER_DATA);
-	
 	DBTransaction trans(db);
 	if(!trans.begin())
 		return false;
 
 	query.str("");
 	query << "UPDATE `players` SET `lastlogin` = " << player->lastLogin << ", `lastip` = " << player->lastIP;
-	if(!save || !player->isSaving())
+	if(!player->isSaving() || !g_config.getBool(ConfigManager::SAVE_PLAYER_DATA))
 	{
 		query << " WHERE `id` = " << player->getGUID() << db->getUpdateLimiter();
 		if(!db->query(query.str()))
@@ -803,7 +852,7 @@ bool IOLoginData::savePlayer(Player* player, bool preSave/* = true*/, bool shall
 	query << "`looklegs` = " << (uint32_t)player->defaultOutfit.lookLegs << ", ";
 	query << "`looktype` = " << (uint32_t)player->defaultOutfit.lookType << ", ";
 	query << "`lookaddons` = " << (uint32_t)player->defaultOutfit.lookAddons << ", ";
-	query << "`currmount` = " << (uint32_t)player->getMountId() << ", ";
+	query << "`lookmount` = " << (uint32_t)player->defaultOutfit.lookMount << ", ";
 	query << "`maglevel` = " << player->magLevel << ", ";
 	query << "`mana` = " << player->mana << ", ";
 	query << "`manamax` = " << player->manaMax << ", ";
@@ -861,7 +910,10 @@ bool IOLoginData::savePlayer(Player* player, bool preSave/* = true*/, bool shall
 	query << "`lastlogout` = " << player->getLastLogout() << ", ";
 	if(g_config.getBool(ConfigManager::BLESSINGS) && (player->isPremium()
 		|| !g_config.getBool(ConfigManager::BLESSING_ONLY_PREMIUM)))
+	{
 		query << "`blessings` = " << player->blessings << ", ";
+		query << "`pvp_blessing` = " << (player->hasPVPBlessing() ? "1" : "0") << ", ";
+	}
 
 	query << "`marriage` = " << player->marriage << ", ";
 	if(g_config.getBool(ConfigManager::INGAME_GUILD_MANAGEMENT))
@@ -898,8 +950,8 @@ bool IOLoginData::savePlayer(Player* player, bool preSave/* = true*/, bool shall
 
 	char buffer[280];
 	DBInsert query_insert(db);
-
-	if(player->learnedInstantSpellList.size()) {
+	if(player->learnedInstantSpellList.size())
+	{
 		query_insert.setQuery("INSERT INTO `player_spells` (`player_id`, `name`) VALUES ");
 		for(LearnedInstantSpellList::const_iterator it = player->learnedInstantSpellList.begin(); it != player->learnedInstantSpellList.end(); ++it)
 		{
@@ -946,7 +998,7 @@ bool IOLoginData::savePlayer(Player* player, bool preSave/* = true*/, bool shall
 	size_t size = s.length();
 	if(size > 0)
 	{*/
-	
+
 		query.str("");
 		query << "DELETE FROM `player_depotitems` WHERE `player_id` = " << player->getGUID();// << " AND `pid` IN (" << s.substr(0, --size) << ")";
 		if(!db->query(query.str()))
@@ -959,8 +1011,8 @@ bool IOLoginData::savePlayer(Player* player, bool preSave/* = true*/, bool shall
 
 			itemList.clear();
 		}
-		
-	
+
+
 	//}
 
 	query.str("");
@@ -1059,10 +1111,11 @@ bool IOLoginData::saveItems(const Player* player, const ItemBlockList& itemList,
 
 		uint32_t attributesSize = 0;
 		const char* attributes = propWriteStream.getStream(attributesSize);
-		char buffer[attributesSize * 3 + 100]; //MUST be (size * 2), else people can crash server when filling writable with native characters
 
-		sprintf(buffer, "%d, %d, %d, %d, %d, %s", player->getGUID(), it->first, runningId, item->getID(),
-			(int32_t)item->getSubType(), db->escapeBlob(attributes, attributesSize).c_str());
+		std::stringstream buffer;
+		buffer << player->getGUID() << ", " << it->first << ", " << runningId << ", " << item->getID() << ", "
+			   << (int32_t)item->getSubType() << ", " << db->escapeBlob(attributes, attributesSize).c_str();
+
 		if(!query_insert.addRow(buffer))
 			return false;
 
@@ -1087,10 +1140,11 @@ bool IOLoginData::saveItems(const Player* player, const ItemBlockList& itemList,
 
 			uint32_t attributesSize = 0;
 			const char* attributes = propWriteStream.getStream(attributesSize);
-			char buffer[attributesSize * 3 + 100]; //MUST be (size * 2), else people can crash server when filling writable with native characters
 
-			sprintf(buffer, "%d, %d, %d, %d, %d, %s", player->getGUID(), stack.second, runningId, item->getID(),
-				(int32_t)item->getSubType(), db->escapeBlob(attributes, attributesSize).c_str());
+			std::stringstream buffer;
+			buffer << player->getGUID() << ", " << stack.second << ", " << runningId << ", " << item->getID() << ", "
+				   << (int32_t)item->getSubType() << ", " << db->escapeBlob(attributes, attributesSize).c_str();
+
 			if(!query_insert.addRow(buffer))
 				return false;
 		}
@@ -1338,7 +1392,7 @@ bool IOLoginData::isPremium(uint32_t guid)
 
 	const uint32_t premium = result->getDataInt("premdays");
 	result->free();
-	return premium;
+	return (premium != 0);
 }
 
 bool IOLoginData::playerExists(uint32_t guid, bool multiworld /*= false*/, bool checkCache /*= true*/)

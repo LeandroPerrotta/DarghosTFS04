@@ -844,8 +844,8 @@ tools.o: tools.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/cryptopp/secblock.h /usr/include/cryptopp/misc.h \
  /usr/include/cryptopp/smartptr.h /usr/include/byteswap.h \
  /usr/include/malloc.h /usr/include/cryptopp/simple.h \
- /usr/include/cryptopp/md5.h /usr/include/cryptopp/adler32.h \
- /usr/include/cryptopp/hmac.h /usr/include/cryptopp/seckey.h \
+ /usr/include/cryptopp/md5.h /usr/include/cryptopp/hmac.h \
+ /usr/include/cryptopp/seckey.h /usr/include/cryptopp/adler32.h \
  /usr/include/cryptopp/hex.h /usr/include/cryptopp/basecode.h \
  /usr/include/cryptopp/filters.h /usr/include/cryptopp/queue.h \
  /usr/include/cryptopp/algparam.h /usr/include/cryptopp/argnames.h \
@@ -2868,11 +2868,11 @@ const.h:
 
 /usr/include/cryptopp/md5.h:
 
-/usr/include/cryptopp/adler32.h:
-
 /usr/include/cryptopp/hmac.h:
 
 /usr/include/cryptopp/seckey.h:
+
+/usr/include/cryptopp/adler32.h:
 
 /usr/include/cryptopp/hex.h:
 

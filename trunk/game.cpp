@@ -92,6 +92,8 @@ Game::Game()
 
 Game::~Game()
 {
+	blacklist.clear();
+	whitelist.clear();
 	delete map;
 }
 
@@ -217,6 +219,8 @@ void Game::setGameState(GameState_t newState)
 				Raids::getInstance()->loadFromXml();
 				Raids::getInstance()->startup();
 				Quests::getInstance()->loadFromXml();
+
+				loadStatuslist();
 
 				loadGameState();
 				g_globalEvents->startup();
@@ -1018,6 +1022,7 @@ bool Game::removeCreature(Creature* creature, bool isLogout /*= true*/)
 		if(!(player = (*it)->getPlayer()) || !player->canSeeCreature(creature))
 			continue;
 
+		player->setWalkthrough(creature, false);
 		player->sendCreatureDisappear(creature, oldStackPosVector[i]);
 		++i;
 	}
@@ -2335,11 +2340,7 @@ bool Game::playerOpenChannel(uint32_t playerId, uint16_t channelId)
 		return false;
 	}
 
-	if(channel->getId() != CHANNEL_RVR)
-		player->sendChannel(channel->getId(), channel->getName());
-	else
-		player->sendRuleViolationsChannel(channel->getId());
-
+	player->sendChannel(channel->getId(), channel->getName());
 	return true;
 }
 
@@ -2365,61 +2366,6 @@ bool Game::playerOpenPrivateChannel(uint32_t playerId, std::string& receiver)
 		player->sendCancel("A player with this name does not exist.");
 
 	return true;
-}
-
-bool Game::playerProcessRuleViolation(uint32_t playerId, const std::string& name)
-{
-	Player* player = getPlayerByID(playerId);
-	if(!player || player->isRemoved())
-		return false;
-
-	if(!player->hasFlag(PlayerFlag_CanAnswerRuleViolations))
-		return false;
-
-	Player* reporter = getPlayerByName(name);
-	if(!reporter)
-		return false;
-
-	RuleViolationsMap::iterator it = ruleViolations.find(reporter->getID());
-	if(it == ruleViolations.end())
-		return false;
-
-	RuleViolation& rvr = *it->second;
-	if(!rvr.isOpen)
-		return false;
-
-	rvr.isOpen = false;
-	rvr.gamemaster = player;
-	if(ChatChannel* channel = g_chat.getChannelById(CHANNEL_RVR))
-	{
-		UsersMap tmpMap = channel->getUsers();
-		for(UsersMap::iterator tit = tmpMap.begin(); tit != tmpMap.end(); ++tit)
-			tit->second->sendRemoveReport(reporter->getName());
-	}
-
-	return true;
-}
-
-bool Game::playerCloseRuleViolation(uint32_t playerId, const std::string& name)
-{
-	Player* player = getPlayerByID(playerId);
-	if(!player || player->isRemoved())
-		return false;
-
-	Player* reporter = getPlayerByName(name);
-	if(!reporter)
-		return false;
-
-	return closeRuleViolation(reporter);
-}
-
-bool Game::playerCancelRuleViolation(uint32_t playerId)
-{
-	Player* player = getPlayerByID(playerId);
-	if(!player || player->isRemoved())
-		return false;
-
-	return cancelRuleViolation(player);
 }
 
 bool Game::playerCloseNpcChannel(uint32_t playerId)
@@ -2870,8 +2816,16 @@ bool Game::playerWriteItem(uint32_t playerId, uint32_t windowTextId, const std::
 			deny = true;
 	}
 
+	player->setWriteItem(NULL);
 	if(deny)
 		return false;
+
+	if((Container*)writeItem->getParent() == &player->transferContainer)
+	{
+		player->transferContainer.__removeThing(writeItem, writeItem->getItemCount());
+		freeThing(writeItem);
+		return true;
+	}	
 
 	if(!text.empty())
 	{
@@ -2893,7 +2847,6 @@ bool Game::playerWriteItem(uint32_t playerId, uint32_t windowTextId, const std::
 	if(newId != 0)
 		transformItem(writeItem, newId);
 
-	player->setWriteItem(NULL);
 	return true;
 }
 
@@ -3703,7 +3656,7 @@ bool Game::playerTurn(uint32_t playerId, Direction dir)
 	ReturnValue ret = tile->__queryAdd(0, player, 1, FLAG_IGNOREBLOCKITEM);
 	if(ret != RET_NOTENOUGHROOM && (ret != RET_NOTPOSSIBLE || player->hasCustomFlag(PlayerCustomFlag_CanMoveAnywhere))
 		&& (ret != RET_PLAYERISNOTINVITED || player->hasFlag(PlayerFlag_CanEditHouses)))
-		return internalTeleport(player, pos, false, FLAG_NOLIMIT, false);
+		return (internalTeleport(player, pos, false, FLAG_NOLIMIT, false) != RET_NOERROR);
 
 	player->sendCancelMessage(ret);
 	return false;
@@ -3725,12 +3678,18 @@ bool Game::playerChangeOutfit(uint32_t playerId, Outfit_t outfit)
 	if(!player || player->isRemoved())
 		return false;
 
+	uint8_t oldMount = player->getDefaultOutfit().lookMount;
 	if(!player->changeOutfit(outfit, true))
 		return false;
 
 	player->setIdleTime(0);
 	if(!player->hasCondition(CONDITION_OUTFIT, -1))
+	{
+		if(player->isMounted() && outfit.lookMount != oldMount)
+			player->dismount(false);
+
 		internalCreatureChangeOutfit(player, outfit);
+	}
 
 	return true;
 }
@@ -3738,21 +3697,16 @@ bool Game::playerChangeOutfit(uint32_t playerId, Outfit_t outfit)
 bool Game::playerChangeMountStatus(uint32_t playerId, bool status)
 {
 	Player* player = getPlayerByID(playerId);
-
 	if(!player || player->isRemoved())
 		return false;
-	
-	if(!status || (OTSYS_TIME() - player->getLastMountStatusChange()) >= g_config.getNumber(ConfigManager::MOUNT_COOLDOWN)) {
-		player->setMounted(status);
-		return true;
-		
-	} else {
-		std::stringstream ss;
-		ss << "Please wait "<< (g_config.getNumber(ConfigManager::MOUNT_COOLDOWN) / 1000) << " seconds before trying to mount again.";
-		player->sendCancel(ss.str());
-	}
 
-	return false;
+	if((OTSYS_TIME() - player->getLastMountAction()) <
+		g_config.getNumber(ConfigManager::MOUNT_COOLDOWN))
+		return false;
+		
+	player->setMounted(status);
+	player->setLastMountAction(OTSYS_TIME());
+	return true;
 }
 
 bool Game::playerSay(uint32_t playerId, uint16_t channelId, SpeakClasses type, const std::string& receiver, const std::string& text)
@@ -3806,7 +3760,6 @@ bool Game::playerSay(uint32_t playerId, uint16_t channelId, SpeakClasses type, c
 			return playerYell(player, text);
 		case SPEAK_PRIVATE:
 		case SPEAK_PRIVATE_RED:
-		case SPEAK_RVR_ANSWER:
 			return playerSpeakTo(player, type, receiver, text);
 		case SPEAK_CHANNEL_O:
 		case SPEAK_CHANNEL_Y:
@@ -3823,10 +3776,6 @@ bool Game::playerSay(uint32_t playerId, uint16_t channelId, SpeakClasses type, c
 			return playerSpeakToNpc(player, text);
 		case SPEAK_BROADCAST:
 			return playerBroadcastMessage(player, SPEAK_BROADCAST, text);
-		case SPEAK_RVR_CHANNEL:
-			return playerReportRuleViolation(player, text);
-		case SPEAK_RVR_CONTINUE:
-			return playerContinueReport(player, text);
 
 		default:
 			break;
@@ -3976,45 +3925,6 @@ bool Game::playerSpeakToNpc(Player* player, const std::string& text)
 		if((tmpNpc = (*it)->getNpc()))
 			(*it)->onCreatureSay(player, SPEAK_PRIVATE_PN, text);
 	}
-	return true;
-}
-
-bool Game::playerReportRuleViolation(Player* player, const std::string& text)
-{
-	//Do not allow reports on multiclones worlds since reports are name-based
-	if(g_config.getNumber(ConfigManager::ALLOW_CLONES))
-	{
-		player->sendTextMessage(MSG_INFO_DESCR, "Rule violation reports are disabled.");
-		return false;
-	}
-
-	cancelRuleViolation(player);
-	boost::shared_ptr<RuleViolation> rvr(new RuleViolation(player, text, time(NULL)));
-	ruleViolations[player->getID()] = rvr;
-
-	ChatChannel* channel = g_chat.getChannelById(CHANNEL_RVR);
-	if(!channel)
-		return false;
-
-	for(UsersMap::const_iterator it = channel->getUsers().begin(); it != channel->getUsers().end(); ++it)
-		it->second->sendToChannel(player, SPEAK_RVR_CHANNEL, text, CHANNEL_RVR, rvr->time);
-
-	return true;
-}
-
-bool Game::playerContinueReport(Player* player, const std::string& text)
-{
-	RuleViolationsMap::iterator it = ruleViolations.find(player->getID());
-	if(it == ruleViolations.end())
-		return false;
-
-	RuleViolation& rvr = *it->second;
-	Player* toPlayer = rvr.gamemaster;
-	if(!toPlayer)
-		return false;
-
-	toPlayer->sendCreatureSay(player, SPEAK_RVR_CONTINUE, text);
-	player->sendTextMessage(MSG_STATUS_SMALL, "Message sent to Gamemaster.");
 	return true;
 }
 
@@ -4920,45 +4830,6 @@ void Game::getWorldLightInfo(LightInfo& lightInfo)
 	lightInfo.color = 0xD7;
 }
 
-bool Game::cancelRuleViolation(Player* player)
-{
-	RuleViolationsMap::iterator it = ruleViolations.find(player->getID());
-	if(it == ruleViolations.end())
-		return false;
-
-	Player* gamemaster = it->second->gamemaster;
-	if(!it->second->isOpen && gamemaster) //Send to the responser
-		gamemaster->sendRuleViolationCancel(player->getName());
-	else if(ChatChannel* channel = g_chat.getChannelById(CHANNEL_RVR))
-	{
-		UsersMap tmpMap = channel->getUsers();
-		for(UsersMap::iterator tit = tmpMap.begin(); tit != tmpMap.end(); ++tit)
-			tit->second->sendRemoveReport(player->getName());
-	}
-
-	//Now erase it
-	ruleViolations.erase(it);
-	return true;
-}
-
-bool Game::closeRuleViolation(Player* player)
-{
-	RuleViolationsMap::iterator it = ruleViolations.find(player->getID());
-	if(it == ruleViolations.end())
-		return false;
-
-	ruleViolations.erase(it);
-	player->sendLockRuleViolation();
-	if(ChatChannel* channel = g_chat.getChannelById(CHANNEL_RVR))
-	{
-		UsersMap tmpMap = channel->getUsers();
-		for(UsersMap::iterator tit = tmpMap.begin(); tit != tmpMap.end(); ++tit)
-			tit->second->sendRemoveReport(player->getName());
-	}
-
-	return true;
-}
-
 void Game::updateCreatureSkull(Creature* creature)
 {
 	const SpectatorVec& list = getSpectators(creature->getPosition());
@@ -4998,7 +4869,7 @@ void Game::updateCreatureEmblem(Creature* creature)
 	}
 }
 
-void Game::updateCreatureImpassable(Creature* creature)
+void Game::updateCreatureWalkthrough(Creature* creature)
 {
 	const SpectatorVec& list = getSpectators(creature->getPosition());
 
@@ -5007,7 +4878,7 @@ void Game::updateCreatureImpassable(Creature* creature)
 	for(SpectatorVec::const_iterator it = list.begin(); it != list.end(); ++it)
 	{
 		if((tmpPlayer = (*it)->getPlayer()))
-			tmpPlayer->sendCreatureImpassable(creature);
+			tmpPlayer->sendCreatureWalkthrough(creature, (*it)->canWalkthrough(creature));
 	}
 }
 
@@ -5120,7 +4991,7 @@ bool Game::playerReportBug(uint32_t playerId, std::string comment)
 	return true;
 }
 
-bool Game::playerViolationWindow(uint32_t playerId, std::string name, uint8_t reason, ViolationAction_t action,
+/*bool Game::playerViolationWindow(uint32_t playerId, std::string name, uint8_t reason, ViolationAction_t action,
 	std::string comment, std::string statement, uint32_t statementId, bool ipBanishment)
 {
 	Player* player = getPlayerByID(playerId);
@@ -5463,7 +5334,7 @@ bool Game::playerViolationWindow(uint32_t playerId, std::string name, uint8_t re
 
 	IOLoginData::getInstance()->saveAccount(account);
 	return true;
-}
+}*/
 
 void Game::kickPlayer(uint32_t playerId, bool displayEffect)
 {
@@ -6416,11 +6287,44 @@ void Game::showHotkeyUseMessage(Player* player, Item* item)
 	const ItemType& it = Item::items[item->getID()];
 	uint32_t count = player->__getItemTypeCount(item->getID(), item->isFluidContainer() ? item->getFluidType() : -1);
 
-	char buffer[40 + it.name.size()];
+	std::stringstream stream;
 	if(count == 1)
-		sprintf(buffer, "Using the last %s...", it.name.c_str());
+		stream << "Using the last " << it.name.c_str() << "...";
 	else
-		sprintf(buffer, "Using one of %d %s...", count, it.pluralName.c_str());
+		stream << "Using one of " << count << " " << it.pluralName.c_str() << "...";
 
-	player->sendTextMessage(MSG_INFO_DESCR, buffer);
+	player->sendTextMessage(MSG_INFO_DESCR, stream.str().c_str());
+}
+
+bool Game::loadStatuslist()
+{
+	xmlDocPtr doc = xmlParseFile("http://forgottenserver.otland.net/statuslist.xml");
+	if(!doc)
+		return false;
+
+	xmlNodePtr p, root = xmlDocGetRootElement(doc);
+	if(!xmlStrcmp(root->name, (const xmlChar*)"statuslist"))
+	{
+		p = root->children;
+		while(p)
+		{
+			if(!xmlStrcmp(p->name, (const xmlChar*)"blacklist"))
+			{
+				std::string ip;
+				if(readXMLString(p, "ip", ip))
+					blacklist.push_back(ip);
+			}
+			else if(!xmlStrcmp(p->name, (const xmlChar*)"whitelist"))
+			{
+				std::string ip;
+				if(readXMLString(p, "ip", ip))
+					whitelist.push_back(ip);
+			}
+
+			p = p->next;
+		}
+	}
+
+	xmlFreeDoc(doc);
+	return true;
 }

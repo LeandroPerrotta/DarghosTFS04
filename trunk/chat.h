@@ -68,7 +68,7 @@ class ChatChannel
 		bool addUser(Player* player);
 		bool removeUser(Player* player);
 
-		bool talk(Player* player, SpeakClasses type, const std::string& text, uint32_t _time = 0);
+		bool talk(Player* player, SpeakClasses type, const std::string& text);
 		bool talk(std::string nick, SpeakClasses type, std::string text);
 
 	protected:
@@ -109,12 +109,12 @@ class PrivateChatChannel : public ChatChannel
 };
 
 typedef std::list<ChatChannel*> ChannelList;
-typedef std::map<uint32_t, std::string> StatementMap;
+//typedef std::map<uint32_t, std::string> StatementMap;
 
 class Chat
 {
 	public:
-		Chat(): statement(0), dummyPrivate(NULL), partyName("Party") {}
+		Chat(): dummyPrivate(NULL), partyName("Party") {}
 		virtual ~Chat();
 
 		bool reload();
@@ -141,10 +141,10 @@ class Chat
 
 		ChannelList getPublicChannels() const;
 		bool isPublicChannel(uint16_t cid) const {return cid != CHANNEL_GUILD && cid
-			!= CHANNEL_PARTY && cid != CHANNEL_RVR && !isPrivateChannel(cid);}
+			!= CHANNEL_PARTY && !isPrivateChannel(cid);}
 
-		uint32_t statement;
-		StatementMap statementMap;
+		//uint32_t statement;
+		//StatementMap statementMap;
 
 	private:
 		void clear();

@@ -26,6 +26,7 @@
 #include <libxml/parser.h>
 
 #include "status.h"
+#include "const.h"
 #include "tools.h"
 
 #include "connection.h"
@@ -45,11 +46,24 @@ IpConnectMap ProtocolStatus::ipConnectMap;
 
 void ProtocolStatus::onRecvFirstMessage(NetworkMessage& msg)
 {
-	IpConnectMap::const_iterator it = ipConnectMap.find(getIP());
-	if(it != ipConnectMap.end() && OTSYS_TIME() < it->second + g_config.getNumber(ConfigManager::STATUSQUERY_TIMEOUT))
+	if(getIP() != LOCALHOST)
 	{
-		getConnection()->close();
-		return;
+		std::string ip = convertIPAddress(getIP());
+		if(!g_game.isInWhitelist(ip))
+		{
+			if(g_game.isInBlacklist(ip))
+			{
+				getConnection()->close();
+				return;
+			}
+
+			IpConnectMap::const_iterator it = ipConnectMap.find(getIP());
+			if(it != ipConnectMap.end() && OTSYS_TIME() < it->second + g_config.getNumber(ConfigManager::STATUSQUERY_TIMEOUT))
+			{
+				getConnection()->close();
+				return;
+			}
+		}
 	}
 
 	ipConnectMap[getIP()] = OTSYS_TIME();
@@ -297,7 +311,7 @@ void Status::getInfo(uint32_t requestedInfo, OutputMessage_ptr output, NetworkMe
 	if(requestedInfo & REQUEST_PLAYER_STATUS_INFO)
 	{
 		output->put<char>(0x22);
-		 const std::string name = msg.getString();
+		const std::string name = msg.getString();
 
 		Player* p = NULL;
 		if(g_game.getPlayerByNameWildcard(name, p) == RET_NOERROR && !p->isGhost())
