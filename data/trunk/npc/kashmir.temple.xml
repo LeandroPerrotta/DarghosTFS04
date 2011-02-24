@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<npc name="Savage" script="data/npc/scripts/game/bless/pvpbless.lua" floorchange="0" walkinterval="2000" speed="220">
+	<health now="150" max="150"/>
+	<look type="273" head="56" body="53" legs="31" feet="0" addons="2"/>
+  
+ 	<parameters>
+		<parameter key="module_keywords" value="1" />
+       	<parameter key="message_greet" value="Hello. How may I help you |PLAYERNAME|?" />
+		<parameter key="keywords" value="job;name" />
+		
+		<parameter key="keyword_reply1" value="My job is to help some newbies into trouble. Also I can bless someone with a {twist of fate}, the bless pvp." />
+		<parameter key="keyword_reply2" value="My name is |NPCNAME|." />		
+	</parameters>    
+</npc>

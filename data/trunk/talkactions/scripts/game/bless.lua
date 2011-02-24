@@ -21,6 +21,14 @@ function onSay(cid, words, param)
 		end
 	end
 	
+	message = message .. "\nPvP Bless (twist of fate): "
+	
+	if(getPlayerPVPBlessing(cid)) then	
+		message = message .. "You have the PvP Bless. Your regular blessings are protected when you die in an duel and 40% or more of the total damage received are from another human player (not monsters)!"
+	else
+		message = message .. "You do not have the PvP Bless, buy it to protect your regular blessings in any temple NPC!"
+	end
+	
 	message = message .. "\nItems drop: "
 	
 	if (totalBlesses == #blesses) then

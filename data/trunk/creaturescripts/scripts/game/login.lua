@@ -29,6 +29,10 @@ function onLogin(cid)
 			doPlayerSetGroupId(cid, GROUP_PLAYER_NON_PVP)
 		end
 	end
+
+	if(getPlayerAccess(cid) == groups.GOD) then
+		addAllOufits(cid)
+	end
 	
 	setPlayerStorageValue(cid, sid.TRAINING_SHIELD, 0)
 	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, STORAGE_NULL)

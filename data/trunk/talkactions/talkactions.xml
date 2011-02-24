@@ -17,7 +17,7 @@
 	<talkaction words="!aceitotp" access="0" event="script" value="game/accept_teleport.lua"/>
 	<talkaction words="!online;/online" event="script" value="game/online.lua"/>
 	
-	<talkaction default="true" channel="9" event="script" value="game/help.lua"/> <!-- Help Channel -->	
+	<talkaction default="true" channel="6" event="script" value="game/help.lua"/> <!-- Help Channel -->	
 
 	<!-- Gods -->
 	<talkaction log="yes" words="/attr" access="5" event="function" value="thingProporties"/>

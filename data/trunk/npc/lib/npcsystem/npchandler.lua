@@ -172,7 +172,7 @@ if(NpcHandler == nil) then
 						return true
 					end
 
-					self:internalReleaseFocus(focus, k)
+					self:unsetFocus(focus, k)
 					return false
 				end
 			end
@@ -222,19 +222,20 @@ if(NpcHandler == nil) then
 			end
 
 			if(pos ~= nil) then
-				self:internalReleaseFocus(focus, pos)
 				closeShopWindow(focus)
+				self:unsetFocus(focus, pos)
 			end
 		elseif(self.focuses == focus) then
-			self:changeFocus(0)
 			if(isCreature(focus)) then
 				closeShopWindow(focus)
 			end
+
+			self:changeFocus(0)
 		end
 	end
 
 	-- Internal un-focusing function, beware using!
-	function NpcHandler:internalReleaseFocus(focus, pos)
+	function NpcHandler:unsetFocus(focus, pos)
 		if(type(self.focuses) ~= "table" or pos == nil or self.focuses[pos] == nil) then
 			return
 		end
@@ -282,29 +283,29 @@ if(NpcHandler == nil) then
 		for _, module in pairs(self.modules) do
 			local tmpRet = true
 			if(id == CALLBACK_CREATURE_APPEAR and module.callbackOnCreatureAppear ~= nil) then
-				tmpRet = module:callbackOnCreatureAppear(unpack(arg))
+				tmpRet = module:callbackOnCreatureAppear(...)
 			elseif(id == CALLBACK_CREATURE_DISAPPEAR and module.callbackOnCreatureDisappear ~= nil) then
-				tmpRet = module:callbackOnCreatureDisappear(unpack(arg))
+				tmpRet = module:callbackOnCreatureDisappear(...)
 			elseif(id == CALLBACK_CREATURE_SAY and module.callbackOnCreatureSay ~= nil) then
-				tmpRet = module:callbackOnCreatureSay(unpack(arg))
+				tmpRet = module:callbackOnCreatureSay(...)
 			elseif(id == CALLBACK_PLAYER_ENDTRADE and module.callbackOnPlayerEndTrade ~= nil) then
-				tmpRet = module:callbackOnPlayerEndTrade(unpack(arg))
+				tmpRet = module:callbackOnPlayerEndTrade(...)
 			elseif(id == CALLBACK_PLAYER_CLOSECHANNEL and module.callbackOnPlayerCloseChannel ~= nil) then
-				tmpRet = module:callbackOnPlayerCloseChannel(unpack(arg))
+				tmpRet = module:callbackOnPlayerCloseChannel(...)
 			elseif(id == CALLBACK_ONBUY and module.callbackOnBuy ~= nil) then
-				tmpRet = module:callbackOnBuy(unpack(arg))
+				tmpRet = module:callbackOnBuy(...)
 			elseif(id == CALLBACK_ONSELL and module.callbackOnSell ~= nil) then
-				tmpRet = module:callbackOnSell(unpack(arg))
+				tmpRet = module:callbackOnSell(...)
 			elseif(id == CALLBACK_ONTHINK and module.callbackOnThink ~= nil) then
-				tmpRet = module:callbackOnThink(unpack(arg))
+				tmpRet = module:callbackOnThink(...)
 			elseif(id == CALLBACK_GREET and module.callbackOnGreet ~= nil) then
-				tmpRet = module:callbackOnGreet(unpack(arg))
+				tmpRet = module:callbackOnGreet(...)
 			elseif(id == CALLBACK_FAREWELL and module.callbackOnFarewell ~= nil) then
-				tmpRet = module:callbackOnFarewell(unpack(arg))
+				tmpRet = module:callbackOnFarewell(...)
 			elseif(id == CALLBACK_MESSAGE_DEFAULT and module.callbackOnMessageDefault ~= nil) then
-				tmpRet = module:callbackOnMessageDefault(unpack(arg))
+				tmpRet = module:callbackOnMessageDefault(...)
 			elseif(id == CALLBACK_MODULE_RESET and module.callbackOnModuleReset ~= nil) then
-				tmpRet = module:callbackOnModuleReset(unpack(arg))
+				tmpRet = module:callbackOnModuleReset(...)
 			end
 
 			if(not tmpRet) then
@@ -358,9 +359,9 @@ if(NpcHandler == nil) then
 					local parseInfo = { [TAG_PLAYERNAME] = getPlayerName(cid) }
 					msg = self:parseMessage(msg, parseInfo)
 
-					self:say(msg, cid)
+					self:say(msg, cid, 0, true)
 					self:releaseFocus(cid)
-					self:say(msg)
+					self:say(msg, 0, 0, true)
 				end
 			end
 		end
@@ -492,7 +493,7 @@ if(NpcHandler == nil) then
 				if(speech.cid ~= nil and isCreature(speech.cid) and speech.start ~= nil and speech.time ~= nil and speech.message ~= nil) then
 					if(os.mtime() >= speech.time) then
 						local talkStart = (NPCHANDLER_CONVBEHAVIOR ~= CONVERSATION_DEFAULT and self.talkStart[speech.cid] or self.talkStart)
-						if(self:isFocused(speech.cid) and talkStart == speech.start) then
+						if(speech.force or (self:isFocused(speech.cid) and talkStart == speech.start)) then
 							if(NPCHANDLER_CONVBEHAVIOR ~= CONVERSATION_DEFAULT) then
 								selfSay(speech.message, speech.cid)
 							else
@@ -579,9 +580,9 @@ if(NpcHandler == nil) then
 						local parseInfo = { [TAG_PLAYERNAME] = getPlayerName(cid) or -1 }
 						msg = self:parseMessage(msg, parseInfo)
 
-						self:say(msg, cid)
+						self:say(msg, cid, 0, true)
 						self:releaseFocus(cid)
-						self:say(msg)
+						self:say(msg, 0, 0, true)
 					end
 				end
 			end
@@ -608,8 +609,8 @@ if(NpcHandler == nil) then
 
 	-- Makes the npc represented by this instance of NpcHandler say something.
 	--	This implements the currently set type of talkdelay.
-	function NpcHandler:say(message, focus, delay)
-		local delay = delay or 0
+	function NpcHandler:say(message, focus, delay, force)
+		local delay, force = delay or 0, force or false
 		if(NPCHANDLER_TALKDELAY == TALKDELAY_NONE and delay <= 0) then
 			if(NPCHANDLER_CONVBEHAVIOR ~= CONVERSATION_DEFAULT) then
 				selfSay(message, focus)
@@ -625,7 +626,8 @@ if(NpcHandler == nil) then
 			cid = focus,
 			message = message,
 			time = os.mtime() + (delay <= 0 and self.talkDelayTime or delay),
-			start = os.time()
+			start = os.time(),
+			force = force
 		})
 	end
 end

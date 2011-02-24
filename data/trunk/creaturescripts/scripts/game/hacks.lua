@@ -29,6 +29,12 @@ function onThink(cid, interval)
 		return
 	end
 
+	if(not darghos_need_eat) then
+		if(getPlayerFood(cid) == 0) then
+			doPlayerFeed(cid, 1200)
+		end
+	end
+
 	checkLight(cid)
 	checkCastMana(cid)
 end

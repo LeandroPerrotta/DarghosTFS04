@@ -45,126 +45,111 @@ setConditionParam(burn, CONDITION_PARAM_STARTVALUE, -10) -- The damage the condi
 setConditionParam(burn, CONDITION_PARAM_TICKINTERVAL, 10000) -- Delay between damages
 setConditionParam(burn, CONDITION_PARAM_FORCEUPDATE, true) -- Re-update condition when adding it(ie. min/max value)
 
-local exhaust = createConditionObject(CONDITION_EXHAUST)
-setConditionParam(exhaust, CONDITION_PARAM_TICKS, (getConfigInfo('timeBetweenExActions') - 100))
-
 function onUse(cid, item, fromPosition, itemEx, toPosition)
-	if(isPlayer(itemEx.uid)) then
-		if(item.type == TYPE_EMPTY) then
-			doPlayerSendCancel(cid, "It is empty.")
-			return true
-		end
+        if(isPlayer(itemEx.uid)) then
+                if(item.type == TYPE_EMPTY) then
+                        doPlayerSendCancel(cid, "It is empty.")
+                        return true
+                end
 
-		if(item.type == TYPE_MANA_FLUID) then
-			if(hasCondition(cid, CONDITION_EXHAUST_HEAL)) then
-				doPlayerSendDefaultCancel(cid, RETURNVALUE_YOUAREEXHAUSTED)
-				return true
-			end
+                if(item.type == TYPE_MANA_FLUID) then
+                        if(not doPlayerAddMana(itemEx.uid, math.random(80, 160))) then
+                                return false
+                        end
 
-			if(not doPlayerAddMana(itemEx.uid, math.random(80, 160))) then
-				return false
-			end
+                        doCreatureSay(itemEx.uid, "Aaaah...", TALKTYPE_MONSTER)
+                        doSendMagicEffect(toPosition, CONST_ME_MAGIC_BLUE)
+                elseif(item.type == TYPE_LIFE_FLUID) then
+                        if(not doCreatureAddHealth(itemEx.uid, math.random(40, 75))) then
+                                return false
+                        end
 
-			doCreatureSay(itemEx.uid, "Aaaah...", TALKTYPE_MONSTER)
-			doSendMagicEffect(toPosition, CONST_ME_MAGIC_BLUE)
-			doAddCondition(cid, exhaust)
-		elseif(item.type == TYPE_LIFE_FLUID) then
-			if(hasCondition(cid, CONDITION_EXHAUST_HEAL)) then
-				doPlayerSendDefaultCancel(cid, RETURNVALUE_YOUAREEXHAUSTED)
-				return true
-			end
+                        doCreatureSay(itemEx.uid, "Aaaah...", TALKTYPE_MONSTER)
+                        doSendMagicEffect(toPosition, CONST_ME_MAGIC_BLUE)
+                elseif(itemEx.uid == cid) then
+                        if(isInArray(alcoholDrinks, item.type)) then
+                                if(not doTargetCombatCondition(0, cid, drunk, CONST_ME_NONE)) then
+                                        return false
+                                end
 
-			if(not doCreatureAddHealth(itemEx.uid, math.random(40, 75))) then
-				return false
-			end
+                                doCreatureSay(cid, "Aaah...", TALKTYPE_MONSTER)
+                        elseif(isInArray(poisonDrinks, item.type)) then
+                                if(not doTargetCombatCondition(0, cid, poison, CONST_ME_NONE)) then
+                                        return false
+                                end
 
-			doCreatureSay(itemEx.uid, "Aaaah...", TALKTYPE_MONSTER)
-			doSendMagicEffect(toPosition, CONST_ME_MAGIC_BLUE)
-			doAddCondition(cid, exhaust)
-		elseif(itemEx.uid == cid) then
-			if(isInArray(alcoholDrinks, item.type)) then
-				if(not doTargetCombatCondition(0, cid, drunk, CONST_ME_NONE)) then
-					return false
-				end
+                                doCreatureSay(cid, "Urgh!", TALKTYPE_MONSTER)
+                        elseif(item.type == TYPE_LAVA) then
+                                if(not doTargetCombatCondition(0, cid, burn, CONST_ME_NONE)) then
+                                        return false
+                                end
 
-				doCreatureSay(cid, "Aaah...", TALKTYPE_MONSTER)
-			elseif(isInArray(poisonDrinks, item.type)) then
-				if(not doTargetCombatCondition(0, cid, poison, CONST_ME_NONE)) then
-					return false
-				end
+                                doCreatureSay(cid, "Urgh!", TALKTYPE_MONSTER)
+                        else
+                                doCreatureSay(cid, "Gulp.", TALKTYPE_MONSTER)
+                        end
+                else
+                        doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTPOSSIBLE)
+                        return true
+                end
 
-				doCreatureSay(cid, "Urgh!", TALKTYPE_MONSTER)
-			elseif(item.type == TYPE_LAVA) then
-				if(not doTargetCombatCondition(0, cid, burn, CONST_ME_NONE)) then
-					return false
-				end
+                doChangeTypeItem(item.uid, TYPE_EMPTY)
+                return true
+        end
 
-				doCreatureSay(cid, "Urgh!", TALKTYPE_MONSTER)
-			else
-				doCreatureSay(cid, "Gulp.", TALKTYPE_MONSTER)
-			end
-		else
-			doPlayerSendDefaultCancel(cid, RETURNVALUE_NOTPOSSIBLE)
-			return true
-		end
+        if(not isCreature(itemEx.uid)) then
+                if(item.type == TYPE_EMPTY) then
+                        if(item.itemid == ITEM_RUM_FLASK) then
+                                local tmp = distillery[itemEx.itemid]
+                                if(tmp ~= nil) then
+                                        doTransformItem(itemEx.uid, tmp)
+                                        doChangeTypeItem(item.uid, TYPE_RUM)
+                                else
+                                        doPlayerSendCancel(cid, "You have to process the bunch into the distillery to get rum.")
+                                end
 
-		doChangeTypeItem(item.uid, TYPE_EMPTY)
-		return true
-	end
+                                return true
+                        end
 
-	if(not isCreature(itemEx.uid)) then
-		if(item.type == TYPE_EMPTY) then
-			if(item.itemid == ITEM_RUM_FLASK) then
-				local tmp = distillery[itemEx.itemid]
-				if(tmp ~= nil) then
-					doTransformItem(itemEx.uid, tmp)
-					doChangeTypeItem(item.uid, TYPE_RUM)
-				else
-					doPlayerSendCancel(cid, "You have to process the bunch into the distillery to get rum.")
-				end
+                        if(isItemFluidContainer(itemEx.itemid) and itemEx.type ~= TYPE_EMPTY) then
+                                doChangeTypeItem(item.uid, itemEx.type)
+                                doChangeTypeItem(itemEx.uid, TYPE_EMPTY)
+                                return true
+                        end
 
-				return true
-			end
+                        local tmp = casks[itemEx.itemid]
+                        if(tmp == nil) then
+                                tmp = getFluidSourceType(itemEx.itemid)
+                        end
 
-			if(isItemFluidContainer(itemEx.itemid) and itemEx.type ~= TYPE_EMPTY) then
-				doChangeTypeItem(item.uid, itemEx.type)
-				doChangeTypeItem(itemEx.uid, TYPE_EMPTY)
-				return true
-			end
+                        if(tmp) then
+                                doChangeTypeItem(item.uid, tmp)
+                                return true
+                        end
 
-			local tmp = casks[itemEx.itemid]
-			if(tmp == nil) then
-				tmp = getFluidSourceType(itemEx.itemid)
-			end
+                        doPlayerSendCancel(cid, "It is empty.")
+                        return true
+                end
 
-			if(tmp) then
-				doChangeTypeItem(item.uid, tmp)
-				return true
-			end
+                local tmp = oilLamps[itemEx.itemid]
+                if(item.type == TYPE_OIL and tmp ~= nil) then
+                        doTransformItem(itemEx.uid, tmp)
+                        doChangeTypeItem(item.uid, TYPE_NONE)
+                        return true
+                end
 
-			doPlayerSendCancel(cid, "It is empty.")
-			return true
-		end
+                if(isItemFluidContainer(itemEx.itemid) and itemEx.type == TYPE_EMPTY) then
+                        doChangeTypeItem(itemEx.uid, itemEx.type)
+                        doChangeTypeItem(item.uid, TYPE_EMPTY)
+                        return true
+                end
 
-		local tmp = oilLamps[itemEx.itemid]
-		if(item.type == TYPE_OIL and tmp ~= nil) then
-			doTransformItem(itemEx.uid, tmp)
-			doChangeTypeItem(item.uid, TYPE_NONE)
-			return true
-		end
+                if(hasProperty(itemEx.uid, CONST_PROP_BLOCKSOLID)) then
+                        return false
+                end
+        end
 
-		if(isItemFluidContainer(itemEx.itemid) and itemEx.type == TYPE_EMPTY) then
-			doChangeTypeItem(itemEx.uid, itemEx.type)
-			doChangeTypeItem(item.uid, TYPE_EMPTY)
-			return true
-		end
-
-		if(hasProperty(itemEx.uid, CONST_PROP_BLOCKSOLID)) then
-			return false
-		end
-	end
-
-	doDecayItem(doCreateItem(POOL, item.type, toPosition))
-	doChangeTypeItem(item.uid, TYPE_EMPTY)
-	return true
+        doDecayItem(doCreateItem(POOL, item.type, toPosition))
+        doChangeTypeItem(item.uid, TYPE_EMPTY)
+        return true
 end

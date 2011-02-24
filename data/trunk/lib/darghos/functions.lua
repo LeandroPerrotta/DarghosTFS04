@@ -635,12 +635,25 @@ function setLoginSkillsRateStage(cid)
 	}
 	
 	local magic = {
-		normal = {
+		["mages"] = {
 			{end_level = 59, multipler = 15}, 
 			{start_level = 60, end_level = 79, multipler = 10}, 
 			{start_level = 80, end_level = 89, multipler = 5}, 
-			{start_level = 90, multipler = 3}
-		}
+			{start_level = 90, end_level = 95, multipler = 3}, 
+			{start_level = 96, multipler = 1}		
+		},
+		
+		["knights"] = {
+			{end_level = 9, multipler = 15}, 
+			{start_level = 10, end_level = 11, multipler = 7}, 
+			{start_level = 12, multipler = 3}		
+		},
+		
+		["paladins"] = {
+			{end_level = 29, multipler = 15}, 
+			{start_level = 30, end_level = 31, multipler = 7}, 
+			{start_level = 32, multipler = 3}		
+		}		
 	}	
 
 	local function readStagesNode(node, cid, newlevel, skillid)
@@ -670,7 +683,13 @@ function setLoginSkillsRateStage(cid)
 	readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, LEVEL_SKILL_SHIELDING), LEVEL_SKILL_SHIELDING)
 	readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, LEVEL_SKILL_FISHING), LEVEL_SKILL_FISHING)
 	
-	readStagesNode(magic.normal, cid, getPlayerMagLevel(cid), LEVEL_MAGIC)			
+	if(isDruid(cid) or isSorcerer(cid)) then
+		readStagesNode(magic["mages"], cid, getPlayerMagLevel(cid), LEVEL_MAGIC)	
+	elseif(isKnight(cid)) then
+		readStagesNode(magic["knights"], cid, getPlayerMagLevel(cid), LEVEL_MAGIC)	
+	elseif(isPaladin(cid)) then
+		readStagesNode(magic["paladins"], cid, getPlayerMagLevel(cid), LEVEL_MAGIC)	
+	end
 end
 
 function setSkillStageOnAdvance(cid, skillid, newlevel)
@@ -686,13 +705,26 @@ function setSkillStageOnAdvance(cid, skillid, newlevel)
 	}
 	
 	local magic = {
-		normal = {
+		["mages"] = {
 			{end_level = 59, multipler = 15}, 
 			{start_level = 60, end_level = 79, multipler = 10}, 
 			{start_level = 80, end_level = 89, multipler = 5}, 
-			{start_level = 90, multipler = 3}
-		}
-	}	
+			{start_level = 90, end_level = 95, multipler = 3}, 
+			{start_level = 96, multipler = 1}		
+		},
+		
+		["knights"] = {
+			{end_level = 9, multipler = 15}, 
+			{start_level = 10, end_level = 11, multipler = 7}, 
+			{start_level = 12, multipler = 3}		
+		},
+		
+		["paladins"] = {
+			{end_level = 29, multipler = 15}, 
+			{start_level = 30, end_level = 31, multipler = 7}, 
+			{start_level = 32, multipler = 3}		
+		}		
+	}
 
 	local function readStagesNode(node, cid, newlevel, skillid)
 		for k,v in pairs(node) do
@@ -714,7 +746,13 @@ function setSkillStageOnAdvance(cid, skillid, newlevel)
 	end
 	
 	if(skillid == LEVEL_MAGIC) then
-		readStagesNode(magic.normal, cid, getPlayerMagLevel(cid), LEVEL_MAGIC)	
+		if(isDruid(cid) or isSorcerer(cid)) then
+			readStagesNode(magic["mages"], cid, getPlayerMagLevel(cid), LEVEL_MAGIC)	
+		elseif(isKnight(cid)) then
+			readStagesNode(magic["knights"], cid, getPlayerMagLevel(cid), LEVEL_MAGIC)	
+		elseif(isPaladin(cid)) then		
+			readStagesNode(magic["paladins"], cid, getPlayerMagLevel(cid), LEVEL_MAGIC)	
+		end	
 	else
 		readStagesNode(skills.normal, cid, getPlayerSkillLevel(cid, skillid), skillid)
 	end
