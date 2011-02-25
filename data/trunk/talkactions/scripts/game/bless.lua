@@ -21,6 +21,7 @@ function onSay(cid, words, param)
 		end
 	end
 	
+	--[[
 	message = message .. "\nPvP Bless (twist of fate): "
 	
 	if(getPlayerPVPBlessing(cid)) then	
@@ -28,6 +29,7 @@ function onSay(cid, words, param)
 	else
 		message = message .. "You do not have the PvP Bless, buy it to protect your regular blessings in any temple NPC!"
 	end
+	]]--
 	
 	message = message .. "\nItems drop: "
 	

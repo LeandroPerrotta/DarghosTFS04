@@ -3442,9 +3442,11 @@
   <spawn centerx="1612" centery="1901" centerz="6" radius="1">
     <monster name="Bog Raider" x="0" y="-1" z="6" spawntime="60"/>
   </spawn>
+	<!--
   <spawn centerx="2020" centery="1902" centerz="6" radius="1">
     <npc name="quendor.temple" x="-1" y="0" z="6" spawntime="60"/>
   </spawn>
+	-->
   <spawn centerx="1986" centery="1904" centerz="6" radius="11">
     <monster name="Minotaur" x="4" y="-9" z="6" spawntime="60"/>
     <monster name="Minotaur" x="7" y="-8" z="6" spawntime="60"/>
@@ -6298,12 +6300,14 @@
     <monster name="Dark Archer" x="2" y="-2" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="966" centery="1267" centerz="7" radius="5"/>
+	<!--
   <spawn centerx="1959" centery="1270" centerz="7" radius="1">
     <npc name="north.temple" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1082" centery="1153" centerz="6" radius="1">
     <npc name="kashmir.temple" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
+	-->
   <spawn centerx="1020" centery="1274" centerz="7" radius="5">
     <monster name="Dark Warrior" x="5" y="-2" z="7" spawntime="60"/>
     <monster name="Dark Warrior" x="-1" y="2" z="7" spawntime="60"/>
@@ -7552,9 +7556,11 @@
     <monster name="Amazon" x="0" y="-1" z="7" spawntime="120"/>
     <monster name="Amazon" x="1" y="2" z="7" spawntime="120"/>
   </spawn>
+	<!--
   <spawn centerx="2383" centery="1856" centerz="7" radius="1">
     <npc name="thorn.temple" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
+	-->
   <spawn centerx="2405" centery="1858" centerz="7" radius="1">
     <npc name="thorn.guards" x="-1" y="1" z="7" spawntime="60"/>
   </spawn>
@@ -8402,9 +8408,11 @@
   <spawn centerx="1374" centery="2004" centerz="7" radius="1">
     <monster name="Island troll" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
+	<!--
   <spawn centerx="3389" centery="2004" centerz="7" radius="1">
     <npc name="aracura.temple" x="-1" y="0" z="7" spawntime="60"/>
   </spawn>
+	-->
   <spawn centerx="1268" centery="2005" centerz="7" radius="1">
     <monster name="Pirate Skeleton" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
@@ -10958,9 +10966,11 @@
     <monster name="Worker Golem" x="0" y="0" z="8" spawntime="60"/>
     <monster name="War Golem" x="-1" y="1" z="8" spawntime="60"/>
   </spawn>
+	<!--
   <spawn centerx="2899" centery="1186" centerz="8" radius="1">
     <npc name="aaragon.temple" x="0" y="-1" z="8" spawntime="60"/>
   </spawn>
+	-->
   <spawn centerx="1062" centery="1188" centerz="8" radius="1">
     <monster name="Grim Reaper" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
