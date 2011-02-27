@@ -1,6 +1,6 @@
 function onKill(cid, target, damage, flags)
 		
-	local cName = getCreatureName(cid)
+	local cName = getCreatureName(target)
 	
 	if(cName == "Ghazran") then
 	
