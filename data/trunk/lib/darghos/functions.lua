@@ -395,7 +395,7 @@ function onLordVankynerDie()
 
 	local door = getThing(uid.CHURCH_CHAMBER_DOOR)
 	
-	doSetItemActionId(door.uid, 0)
+	doSetItemActionId(door.uid, 100)
 	
 	addEvent(LordVankynerEvent, 1000 * 60 * 10)		
 end
