@@ -4,18 +4,6 @@ function onDeath(cid, corpse, deathList)
 		
 		Dungeons.onPlayerDeath(cid)
 		setPlayerStorageValue(cid, sid.GIVE_ITEMS_AFTER_DEATH, 1)
-	else
-		
-		local cName = getCreatureName(cid)
-		
-		if(cName == "Ghazran") then
-		
-			onGhazranDie(corpse)
-			
-		elseif(cName == "Lord Vankyner") then
-		
-			onLordVankynerDie()
-		end
 	end
 	
 	return true

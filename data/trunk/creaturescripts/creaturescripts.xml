@@ -18,6 +18,7 @@
 	<event type="kill" name="Inquisition" event="script" value="game/inquisition.lua"/>
 	<event type="logout" name="CustomPlayerLogout" event="script" value="game/logout.lua"/>
 	<event type="kill" name="CustomBonartesTasks" event="script" value="game/onkillmission.lua"/>
+	<event type="kill" name="onKill" event="script" value="game/kill.lua"/>
 	<event type="kill" name="CustomTasks" event="script" value="game/tasks.lua"/>
 	<event type="advance" name="CustomStages" event="script" value="game/stages.lua"/>
 	<event type="think" name="Hacks" event="script" value="game/hacks.lua"/>
