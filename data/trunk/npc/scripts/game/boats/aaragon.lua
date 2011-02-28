@@ -14,11 +14,12 @@ boatDestiny.addQuendor(keywordHandler, npcHandler)
 boatDestiny.addNorthrend(keywordHandler, npcHandler)    
 boatDestiny.addKashmir(keywordHandler, npcHandler)    
 boatDestiny.addSalazart(keywordHandler, npcHandler)    
-boatDestiny.addThaun(keywordHandler, npcHandler)    
+boatDestiny.addThaun(keywordHandler, npcHandler)
+boatDestiny.addTrainers(keywordHandler, npcHandler)
         
-keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I can take you to Aracura, Quendor, Northrend, Kashmit, Salazart and Thaun.'})
+keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I can take you to Aracura, Quendor, Northrend, Kashmit, Salazart and Thaun also Trainers.'})
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I am the captain of this ship.'})
-keywordHandler:addKeyword({'travel'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I can take you to Aracura, Quendor, Northrend, Kashmit, Salazart and Thaun.'})
+keywordHandler:addKeyword({'travel'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I can take you to Aracura, Quendor, Northrend, Kashmit, Salazart and Thaun also Trainers.'})
 
 -- Makes sure the npc reacts when you say hi, bye etc.
 npcHandler:addModule(FocusModule:new())

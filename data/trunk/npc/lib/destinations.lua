@@ -53,6 +53,13 @@ function boatDestiny.addThaun(keywordHandler, npcHandler)
 	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
 end
 
+function boatDestiny.addTrainers(keywordHandler, npcHandler)
+
+	local travelNode = keywordHandler:addKeyword({'trainers'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to sail to island of trainers for 190 gold coins?'})
+	travelNode:addChildKeyword({'yes'}, StdModule.travel, {npcHandler = npcHandler, premium = true, level = 0, cost = 40, destination = BOAT_DESTINY_TRAINERS })
+	travelNode:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Then stay here!'})
+end
+
 -----------
 -- CARPETS
 -----------

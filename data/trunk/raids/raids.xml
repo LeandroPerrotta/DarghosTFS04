@@ -25,8 +25,8 @@
 		-- Thorn
 		<raid name="thorn_cyclops" file="thorn/thorn_cyclops.xml" interval2="4500" margin="240"/>
 		<raid name="thorn_elf" file="thorn/thorn_elf.xml" interval2="4500" margin="240"/>
-		<raid name="thorn_ariadne" file="thorn/thorn_ariadne.xml" interval2="4500" margin="0"/>
-		<raid name="thashi_aharon" file="bosses/thashi_aharon.xml" interval2="4500" margin="0"/>
+		<raid name="thorn_ariadne" file="thorn/thorn_ariadne.xml" interval2="9999999" margin="0"/>
+		<raid name="thashi_aharon" file="bosses/thashi_aharon.xml" interval2="9999999" margin="0"/>
 		
 		
 		-- Isle of peace
