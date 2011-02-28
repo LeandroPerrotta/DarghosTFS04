@@ -133,3 +133,5 @@
 [24/2/2011 23:54:32] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
 [25/2/2011 15:40:46] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Cannot assign requested address
 [25/2/2011 15:40:46] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use
+[27/2/2011 23:55:19] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Cannot assign requested address
+[27/2/2011 23:55:19] (Error - void ServicePort::open(IPAddressList, uint16_t)) NETWORK: Address already in use

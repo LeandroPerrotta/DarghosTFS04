@@ -57,10 +57,10 @@ function canTeleportPlayers(cid)
 	for k,v in pairs(players) do
 	
 		local thing_pos = getThingPos(v.from)		
-		local player = getTopCreature(thing_pos)
+		local pid = getTopCreature(thing_pos).uid
 		
-		if(player.uid ~= FALSE) then
-			if(getPlayerAccess(player.uid) < ACCESS_ADMIN and isPlayer(player.uid) == FALSE) then
+		if(pid ~= 0) then
+			if(getPlayerAccess(cid) < ACCESS_ADMIN and not isPlayer(pid)) then
 				stats = ERROR.NEED_ALL_PLAYERS
 				break
 			end
@@ -69,12 +69,12 @@ function canTeleportPlayers(cid)
 			break
 		end
 		
-		if(getPlayerStorageValue(player.uid, sid.ANIHI_COMPLETE) ~= -1) then
+		if(getPlayerStorageValue(pid, sid.ANIHI_COMPLETE) ~= -1) then
 			stats = ERROR.PLAYER_ALREADY_MADE_QUEST
 			break
 		end
 		
-		v["cid"] = player.uid
+		v["cid"] = pid
 	end
 	
 	if(stats == ERROR.NONE) then
@@ -113,20 +113,20 @@ end
 local function removeDemons()
 	for k,v in pairs(demons) do
 		local demon_pos = getThingPos(v)
-		local demon = getTopCreature(demon_pos)
+		local demon = getTopCreature(demon_pos).uid
 		
-		if(demon.uid ~= FALSE and isMonster(demon.uid) == TRUE) then
-			doRemoveCreature(demon.uid)
+		if(demon ~= 0 and isMonster(demon) == TRUE) then
+			doRemoveCreature(demon)
 		end
 	end
 	
 	-- we need to check in player pos because the demons can be walk to this tiles
 	for k,v in pairs(players) do
 		local player_pos = getThingPos(v.dest)
-		local player = getTopCreature(player_pos)
+		local pid = getTopCreature(player_pos).uid
 		
-		if(player.uid ~= FALSE and isMonster(player)) then
-			doRemoveCreature(player.uid)
+		if(pid ~= 0 and isMonster(pid)) then
+			doRemoveCreature(pid)
 		end
 	end	
 end
