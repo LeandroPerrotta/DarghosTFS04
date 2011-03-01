@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("dragons (quendor)")
+	]]>
+	</script>
+
 <announce delay="0" type="event" message="It is possible to hear a roar from Quendor."/>
 <announce delay="60000" type="event" message="Fire Dragons overflying Quendor City!"/>
 <announce delay="100000" type="event" message="Dragons are Burning the City."/>

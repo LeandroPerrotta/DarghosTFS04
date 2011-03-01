@@ -1,3 +1,14 @@
+function raidLog(raidname)
+	local out = os.date("%X") .. " | Raid [" .. raidname .. "] started. "
+	
+	local date = os.date("*t")
+	local fileStr = date.day .. "-" .. date.month .. ".log"
+	local patch = getDataDir() .. "logs/raids/"
+	local file = io.open(patch .. fileStr, "a+")
+	
+	file:write(out .. "\n")
+	file:close()
+end
 
 function setPlayerAntiIdle(cid, interval)
 	

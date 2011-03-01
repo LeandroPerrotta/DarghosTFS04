@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("ghouls (quendor)")
+	]]>
+	</script>
+
 <announce delay="0" type="event" message="A dark, weird, and heavy fog apear at Quendor."/>
 <announce delay="60000" type="event" message="Dead to the Undeads! Be ready to fight against the death."/>
 <announce delay="100000" type="event" message="The dead warriors are rising from the ground! Ghouls are attacking Quendor City!"/>

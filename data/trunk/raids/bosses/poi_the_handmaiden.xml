@@ -1,3 +1,9 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("the randmaiden (POI)")
+	]]>
+	</script>
+
 	<singlespawn delay="1000" name="The Handmaiden" x="416" y="488" z="13" />
 </raid>

@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("minotaurs (quendor)")
+	]]>
+	</script>
+
 <announce delay="0" type="event" message="For years the streght of the minotaurs ruled the World of Darghos. They want to show us their real power again. Be ready for anything."/>
 <announce delay="100000" type="event" message="The Minotaurs are entering in Quendor north brigde!"/>
 

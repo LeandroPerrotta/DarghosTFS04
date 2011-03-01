@@ -1,3 +1,9 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("dracola (POI)")
+	]]>
+	</script>
+
 	<singlespawn delay="1000" name="Dracola" x="490" y="588" z="13" />
 </raid>

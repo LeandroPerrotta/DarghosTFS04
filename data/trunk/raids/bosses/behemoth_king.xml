@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("behemoth king")
+	]]>
+	</script>
+
 	<announce delay="0" type="event" message="Um grande estrondo foi possivel de ser ovido vindo do centro do planeta... Quendor deve se organizar."/>
 	<announce delay="360000" type="event" message="Metais pesados estao sendo distorcer, os gigantes glorificam a chegada do rei!"/>
 	

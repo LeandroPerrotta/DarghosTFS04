@@ -1,3 +1,9 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("mr punish (POI)")
+	]]>
+	</script>
+
 	<singlespawn delay="1000" name="Mr. Punish" x="475" y="555" z="13" />
 </raid>

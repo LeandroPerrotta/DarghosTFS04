@@ -41,7 +41,9 @@
 		
 	-- SPECIAL Raids	
 		-- BOSSES
-		<raid name="demodras_poh" file="bosses/demodras_poh.xml" interval2="5000" margin="0"/>
+		<raid name="demodras" file="bosses/demodras.xml" interval2="5000" margin="0"/>
+		<raid name="the_old_widow" file="bosses/the_old_widow.xml" interval2="5000" margin="0"/>
+		<raid name="the_horned_fox" file="bosses/the_horned_fox.xml" interval2="5000" margin="0"/>
 		<raid name="ferumbras" file="bosses/ferumbras.xml" interval2="25000" margin="0"/>
 		<raid name="orshabaal" file="bosses/orshabaal.xml" interval2="8500" margin="0"/>			
 		<raid name="dark_general" file="bosses/dark_general.xml" interval2="9999999" margin="0"/>

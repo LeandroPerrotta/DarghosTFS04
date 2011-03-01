@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("ariadne adepts")
+	]]>
+	</script>
+
 <announce delay="0" type="event" message="Adeptos ao Culto de Ariadne rondam a cidade de Thorn!"/>
 <announce delay="200000" type="event" message="Bruxas comandadas por Ariadne atacam a cidade de Thorn, o rei pede ajuda!"/>
 

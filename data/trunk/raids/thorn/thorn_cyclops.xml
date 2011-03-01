@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("cyclops (thorn)")
+	]]>
+	</script>
+
 <announce delay="0" type="event" message="The Mastersmiths Cyclops are too close from our Capital Thorn. Stay alert."/>
 <announce delay="200000" type="event" message="Help in the Thorn Western Gate! Cyclops are taking the city!"/>
 

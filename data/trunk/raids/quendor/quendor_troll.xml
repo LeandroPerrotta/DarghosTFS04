@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("trolls (quendor)")
+	]]>
+	</script>
+
 <announce delay="0" type="event" message="A strange disturbance has been detected from the sewage of Quendor city."/>
 <announce delay="200000" type="event" message="The trolls are planing a raid to get their old territory."/>
 <announce delay="400000" type="event" message="The trolls are raiding Quendor City!"/>

@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("amazons (quendor)")
+	]]>
+	</script>
+
 <announce delay="0" type="event" message="The rebel ladies plan an attack to Quendor."/>
 <announce delay="60000" type="event" message="Amazons and Valkyries attacking Quendor!"/>
 

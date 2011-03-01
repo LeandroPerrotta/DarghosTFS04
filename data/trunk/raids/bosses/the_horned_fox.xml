@@ -1,0 +1,7 @@
+<raid>	
+	<script delay="0">
+	<![CDATA[
+	startRaid("the horned fox")
+	]]>
+	</script>
+</raid>

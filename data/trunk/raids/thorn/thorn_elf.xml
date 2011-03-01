@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("elfs (thorn)")
+	]]>
+	</script>
+
 	<announce delay="0" type="event" message="Elf Scouts have been sighted near Thorn!"/>
 	<announce delay="180000" type="event" message="The elves are comming to Thorn, seams to be a huge attack!"/>
 	<announce delay="300000" type="event" message="Thorn is under attack!"/>

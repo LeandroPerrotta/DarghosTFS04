@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("dark general")
+	]]>
+	</script>
+
 	<announce delay="0" type="event" message="Dark Army inicia sua marcha para a Cidade de Quendor!"/>
 	<announce delay="60000" type="event" message="Os gritos da marcha ja podem ser ouvidos na cidade de Quendor! Prepare-se para batalha"/>
 	<announce delay="120000" type="event" message="Quendor esta sitiada, mate os soldados invasores!"/>

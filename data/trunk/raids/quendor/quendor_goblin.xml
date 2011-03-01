@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("globins (quendor)")
+	]]>
+	</script>
+
 <announce delay="0" type="event" message="An incoherent army of goblins on the east Quendor Bridge... Show our streght to that pathetic green creature!"/>
 
 <areaspawn delay="1000" centerx="2094" centery="1881" centerz="7" radius="12">

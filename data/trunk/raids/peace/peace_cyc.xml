@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("cyclops (IOP)")
+	]]>
+	</script>
+
 	<announce delay="0" type="event" message="Cyclops atacam Isle of Peace!"/>
 
 	<areaspawn delay="0" centerx="1254" centery="2230" centerz="7" radius="5">

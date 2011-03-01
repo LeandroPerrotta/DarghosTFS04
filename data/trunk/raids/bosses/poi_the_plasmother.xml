@@ -1,3 +1,9 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("the plasmother (POI)")
+	]]>
+	</script>
+
 	<singlespawn delay="1000" name="The Plasmother" x="475" y="624" z="13" />
 </raid>

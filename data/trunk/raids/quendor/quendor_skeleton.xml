@@ -1,4 +1,10 @@
 <raid>
+	<script delay="0">
+	<![CDATA[
+	raidLog("skeletons (quendor)")
+	]]>
+	</script>
+
 <announce delay="0" type="event" message="The cemetery of Quendor is shaking."/>
 <announce delay="60000" type="event" message="Lots of Skeletons are marching to the City!"/>
 <announce delay="100000" type="event" message="Quendor Under Attack!"/>
