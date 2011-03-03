@@ -22,5 +22,6 @@
 	<event type="kill" name="CustomTasks" event="script" value="game/tasks.lua"/>
 	<event type="advance" name="CustomStages" event="script" value="game/stages.lua"/>
 	<event type="think" name="Hacks" event="script" value="game/hacks.lua"/>
+	<event type="kill" name="autolotgold" event="script" value="game/autolotgold.lua"/>  
 	
 </creaturescripts>

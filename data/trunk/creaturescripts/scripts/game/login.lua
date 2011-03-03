@@ -9,6 +9,7 @@ function onLogin(cid)
 	registerCreatureEvent(cid, "CustomPlayerTarget")
 	registerCreatureEvent(cid, "CustomBonartesTasks")
 	registerCreatureEvent(cid, "onKill")
+	registerCreatureEvent(cid, "autolotgold")
 	
 	--if(tasks.hasStartedTask(cid)) then
 		registerCreatureEvent(cid, "CustomTasks")
