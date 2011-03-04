@@ -1,3 +1,12 @@
+function D_onStartServer()
+	local sendPlayerToTemple = getGlobalStorageValue(gid.SEND_PLAYERS_TO_TEMPLE)
+	
+	if(sendPlayerToTemple == 1) then
+		db.executeQuery("UPDATE `player_storage` SET `value` = '1' WHERE `key` = '" .. sid.SEND_TO_TEMPLE .. "';")
+		setGlobalStorageValue(gid.SEND_PLAYERS_TO_TEMPLE, 0)
+	end
+end
+
 function raidLog(raidname)
 	local out = os.date("%X") .. " | Raid [" .. raidname .. "] started. "
 	
