@@ -23245,10 +23245,10 @@
     <monster name="Hero" x="1" y="0" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2121" centery="1913" centerz="10" radius="5">
-    <monster name="Hero" x="1" y="0" z="10" spawntime="60"/>
+    <monster name="Hero" x="1" y="0" z="10" spawntime="3600"/>
   </spawn>
   <spawn centerx="2137" centery="1913" centerz="10" radius="5">
-    <monster name="Hero" x="1" y="0" z="10" spawntime="60"/>
+    <monster name="Hero" x="1" y="0" z="10" spawntime="3600"/>
   </spawn>
   <spawn centerx="3358" centery="1913" centerz="10" radius="5">
     <monster name="Cyclops" x="2" y="0" z="10" spawntime="150"/>
@@ -23279,7 +23279,7 @@
     <monster name="Minotaur" x="-3" y="2" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2137" centery="1926" centerz="10" radius="5">
-    <monster name="Hero" x="0" y="2" z="10" spawntime="60"/>
+    <monster name="Hero" x="0" y="2" z="10" spawntime="3600"/>
   </spawn>
   <spawn centerx="2304" centery="1927" centerz="10" radius="30">
     <monster name="Dragon Lord" x="1" y="0" z="10" spawntime="180"/>
@@ -23294,14 +23294,14 @@
   </spawn>
   <spawn centerx="1508" centery="1928" centerz="10" radius="1"/>
   <spawn centerx="2119" centery="1928" centerz="10" radius="5">
-    <monster name="Hero" x="0" y="1" z="10" spawntime="60"/>
+    <monster name="Hero" x="0" y="1" z="10" spawntime="3600"/>
   </spawn>
   <spawn centerx="2087" centery="1929" centerz="10" radius="5">
     <monster name="Necromancer" x="0" y="2" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2103" centery="1929" centerz="10" radius="5">
-    <monster name="Hero" x="-1" y="0" z="10" spawntime="60"/>
-    <monster name="Hero" x="1" y="0" z="10" spawntime="60"/>
+    <monster name="Hero" x="-1" y="0" z="10" spawntime="3600"/>
+    <monster name="Hero" x="1" y="0" z="10" spawntime="3600"/>
   </spawn>
   <spawn centerx="1843" centery="1932" centerz="10" radius="3">
     <monster name="Minotaur guard" x="0" y="-1" z="10" spawntime="60"/>
@@ -23389,7 +23389,7 @@
     <monster name="Vampire" x="2" y="0" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2067" centery="1946" centerz="10" radius="5">
-    <monster name="Hero" x="0" y="2" z="10" spawntime="60"/>
+    <monster name="Hero" x="0" y="2" z="10" spawntime="3600"/>
   </spawn>
   <spawn centerx="2213" centery="1947" centerz="10" radius="20">
     <monster name="Dwarf Guard" x="-1" y="-5" z="10" spawntime="20"/>
