@@ -38,13 +38,6 @@ function onLogin(cid)
 		addAllOufits(cid)
 	end
 	
-	local sendToTemple = getPlayerStorageValue(cid, sid.SEND_TO_TEMPLE)
-	
-	if(sendToTemple == 1) then
-		doTeleportThing(cid, getPlayerMasterPos(cid))
-		setPlayerStorageValue(cid, sid.SEND_TO_TEMPLE, -1)
-	end
-	
 	setPlayerStorageValue(cid, sid.TRAINING_SHIELD, 0)
 	setPlayerStorageValue(cid, sid.TELEPORT_RUNE_STATE, STORAGE_NULL)
 	setPlayerStorageValue(cid, sid.HACKS_LIGHT, LIGHT_NONE)

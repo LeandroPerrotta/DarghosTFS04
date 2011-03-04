@@ -2,8 +2,9 @@ function D_onStartServer()
 	local sendPlayerToTemple = getGlobalStorageValue(gid.SEND_PLAYERS_TO_TEMPLE)
 	
 	if(sendPlayerToTemple == 1) then
-		db.executeQuery("UPDATE `player_storage` SET `value` = '1' WHERE `key` = '" .. sid.SEND_TO_TEMPLE .. "';")
+		db.executeQuery("UPDATE `players` SET `posx` = '0', `posy` = '0', `posz` = '0';")
 		setGlobalStorageValue(gid.SEND_PLAYERS_TO_TEMPLE, 0)
+		print("Sending players to temple.")
 	end
 end
 
