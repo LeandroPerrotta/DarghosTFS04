@@ -11,7 +11,7 @@ function onThink() 						npcHandler:onThink() end
     
 boatDestiny.addAracura(keywordHandler, npcHandler)    
 boatDestiny.addAaragon(keywordHandler, npcHandler)    
-boatDestiny.addTrainers(keywordHandler, npcHandler)
+boatDestiny.addTrainers(keywordHandler, npcHandler, D_CustomNpcModules.travelTrainingIsland)
         
 keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I can take you to Aracura and Aaragon also Trainers.'})
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I am the captain of this ship.'})

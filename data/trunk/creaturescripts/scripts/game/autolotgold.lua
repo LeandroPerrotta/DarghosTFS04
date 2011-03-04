@@ -40,10 +40,12 @@ function autoloot(cid, target, pos)
  
     local corpses = {}
     for _, item in ipairs(items) do
-        local name = getItemName(item.uid):lower()
-        
-        if (name:find("slain") or name:find("dead")) and isContainer(item.uid) then
-            table.insert(corpses, item.uid)
+    	if(isContainer(item.uid)) then
+	        local name = getItemName(item.uid):lower()
+	        
+	        if (name:find("slain") or name:find("dead")) then
+	            table.insert(corpses, item.uid)
+	        end
         end
     end	
  
@@ -77,7 +79,7 @@ function autoloot(cid, target, pos)
 		end
 	end
 
-    doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, 'All the gold coins found in the creature defeated with an plus extra bonus of ' .. (GOLD_RATE * 100) .. '% (' .. (GOLD_RATE * moneyToAdd) .. ' gps) has sent to their inventory.')      
+    doPlayerSendTextMessage(cid, MESSAGE_EVENT_DEFAULT, 'All the gold coins found in the creature defeated with an plus extra bonus of ' .. (GOLD_RATE * 100) .. '% (' .. (GOLD_RATE * moneyToAdd) .. ' gps) has sent to their inventory.')      
 end
 
 function onKill(cid, target, lastHit)

@@ -16,6 +16,7 @@ function onLogin(cid)
 	--end
 	
 	registerCreatureEvent(cid, "Hacks")
+	registerCreatureEvent(cid, "GainStamina")
 	
 	playerRecord()
 	runPremiumSystem(cid)
@@ -42,6 +43,7 @@ function onLogin(cid)
 	setPlayerStorageValue(cid, sid.HACKS_LIGHT, LIGHT_NONE)
 	setPlayerStorageValue(cid, sid.HACKS_DANCE_EVENT, STORAGE_NULL)
 	setPlayerStorageValue(cid, sid.HACKS_CASTMANA, STORAGE_NULL)
+	setPlayerStorageValue(cid, sid.NEXT_STAMINA_UPDATE, STORAGE_NULL)
 	
 	return TRUE
 end

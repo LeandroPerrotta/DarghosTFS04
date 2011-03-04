@@ -9,12 +9,12 @@ function onCreatureSay(cid, type, msg) 	npcHandler:onCreatureSay(cid, type, msg)
 function onThink() 						npcHandler:onThink() end
 -- OTServ event handling functions end
     
-boatDestiny.addAracura(keywordHandler, npcHandler)
-boatDestiny.addQuendor(keywordHandler, npcHandler)    
-boatDestiny.addSalazart(keywordHandler, npcHandler)
-boatDestiny.addAaragon(keywordHandler, npcHandler)
-boatDestiny.addNorthrend(keywordHandler, npcHandler)
-boatDestiny.addKashmir(keywordHandler, npcHandler)  
+boatDestiny.addAracura(keywordHandler, npcHandler, D_CustomNpcModules.travelTrainingIsland)
+boatDestiny.addQuendor(keywordHandler, npcHandler, D_CustomNpcModules.travelTrainingIsland)    
+boatDestiny.addSalazart(keywordHandler, npcHandler, D_CustomNpcModules.travelTrainingIsland)
+boatDestiny.addAaragon(keywordHandler, npcHandler, D_CustomNpcModules.travelTrainingIsland)
+boatDestiny.addNorthrend(keywordHandler, npcHandler, D_CustomNpcModules.travelTrainingIsland)
+boatDestiny.addKashmir(keywordHandler, npcHandler, D_CustomNpcModules.travelTrainingIsland)  
         
 keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I can take you to Aracura, Quendor, Northrend, Aaragon, Kashmir and Salazart.'})
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I am the captain of this ship.'})

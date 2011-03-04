@@ -15,7 +15,7 @@ boatDestiny.addNorthrend(keywordHandler, npcHandler)
 boatDestiny.addKashmir(keywordHandler, npcHandler)    
 boatDestiny.addSalazart(keywordHandler, npcHandler)    
 boatDestiny.addThaun(keywordHandler, npcHandler)    
-boatDestiny.addTrainers(keywordHandler, npcHandler)
+boatDestiny.addTrainers(keywordHandler, npcHandler, D_CustomNpcModules.travelTrainingIsland)
         
 keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I can take you to Aaaragon, Quendor, Northrend, Kashmit, Salazart and Thaun also Trainers.'})
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I am the captain of this ship.'})
