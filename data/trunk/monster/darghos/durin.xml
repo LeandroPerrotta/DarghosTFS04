@@ -15,22 +15,22 @@
     <flag canpushcreatures="1"/>
     <flag targetdistance="1"/>
     <flag staticattack="90"/>
-    <flag runonhealth="90000"/>
+    <flag runonhealth="40000"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" min="-900" max="-2000"/>
-    <attack name="melee" interval="3000" chance="15" range="7" radius="3" target="0" min="-500" max="-1250">
+    <attack name="melee" interval="1000" min="-800" max="-900"/>
+    <attack name="melee" interval="2000" chance="20" range="7" radius="3" target="0" min="-200" max="-500">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="melee" interval="3000" chance="15" range="7" radius="5" target="0" min="-100" max="-300">
+    <attack name="melee" interval="2000" chance="15" range="7" radius="5" target="0" min="-100" max="-300">
       <attribute key="areaEffect" value="groundshaker"/>
     </attack>
-    <attack name="melee" interval="3000" chance="15" range="7" target="1" min="-200" max="-500">
+    <attack name="melee" interval="2000" chance="15" range="7" target="1" min="-200" max="-500">
       <attribute key="shootEffect" value="whirlwindclub"/>
     </attack>
   </attacks>
   <defenses armor="500" defense="300">
-    <defense name="healing" interval="1000" chance="25" min="513" max="1587">
+    <defense name="healing" interval="1000" chance="25" min="513" max="587">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
@@ -45,8 +45,8 @@
     <immunity drunk="1"/>
     <immunity invisible="1"/>
   </immunities>
-  <summons maxSummons="1">
-    <summon name="Dwarf Geomancer" interval="1000" chance="20" max="5"/>
+  <summons maxSummons="20">
+    <summon name="Dwarf Guard" interval="1000" chance="20" max="20"/>
   </summons>
   <voices interval="5000" chance="10">
     <voice sentence="Your King shall fall!"/>
