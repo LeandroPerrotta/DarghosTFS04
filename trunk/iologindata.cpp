@@ -335,7 +335,7 @@ void IOLoginData::removePremium(Account account)
 	uint64_t timeNow = time(NULL);
 	if(account.premiumDays > 0 && account.premiumDays < 65535)
 	{
-		uint32_t days = (uint32_t)std::ceil((timeNow - account.lastDay) / 86400.);
+		uint32_t days = (uint32_t)std::floor((timeNow - account.lastDay) / 86400.);
 		if(days > 0)
 		{
 			if(account.premiumDays >= days)
@@ -824,7 +824,7 @@ bool IOLoginData::savePlayer(Player* player, bool preSave/* = true*/, bool shall
 	}
 	Database* db = Database::getInstance();
 	DBQuery query;
-
+	
 	DBTransaction trans(db);
 	if(!trans.begin())
 		return false;
@@ -998,7 +998,7 @@ bool IOLoginData::savePlayer(Player* player, bool preSave/* = true*/, bool shall
 	size_t size = s.length();
 	if(size > 0)
 	{*/
-
+	
 		query.str("");
 		query << "DELETE FROM `player_depotitems` WHERE `player_id` = " << player->getGUID();// << " AND `pid` IN (" << s.substr(0, --size) << ")";
 		if(!db->query(query.str()))
@@ -1011,8 +1011,8 @@ bool IOLoginData::savePlayer(Player* player, bool preSave/* = true*/, bool shall
 
 			itemList.clear();
 		}
-
-
+		
+	
 	//}
 
 	query.str("");
@@ -1392,7 +1392,7 @@ bool IOLoginData::isPremium(uint32_t guid)
 
 	const uint32_t premium = result->getDataInt("premdays");
 	result->free();
-	return (premium != 0);
+	return premium > 0;
 }
 
 bool IOLoginData::playerExists(uint32_t guid, bool multiworld /*= false*/, bool checkCache /*= true*/)

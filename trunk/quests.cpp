@@ -39,18 +39,18 @@ bool Mission::isCompleted(Player* player)
 	return atoi(value.c_str()) >= endValue;
 }
 
-std::string Mission::parseStorages(std::string state, std::string value)
+std::string Mission::parseStorages(std::string state, std::string value, Player* player)
 {
-	/*std::string::size_type start, end;
-	while((start = state.find("|STORAGE:")) != std::string::npos)
+	std::string::size_type start = 0, end = 0;
+	while((start = state.find("|STORAGE:", end)) != std::string::npos)
 	{
 		if((end = state.find("|", start)) = std::string::npos)
-			continue;
+			break;
 
-		std::string value, storage = state.substr(start, end - start)
+		std::string value, storage = state.substr(start, end - start);
 		player->getStorage(storage, value);
 		state.replace(start, end, value);
-	} requires testing and probably fixing, inspired by QuaS code*/
+	}
 
 	replaceString(state, "|STATE|", value);
 	return state;
@@ -61,16 +61,16 @@ std::string Mission::getDescription(Player* player)
 	std::string value;
 	player->getStorage(storageId, value);
 	if(state.size())
-		return parseStorages(state, value);
+		return parseStorages(state, value, player);
 
 	if(atoi(value.c_str()) >= endValue)
-		return parseStorages(states.rbegin()->second, value);
+		return parseStorages(states.rbegin()->second, value, player);
 
 	for(int32_t i = endValue; i >= startValue; --i)
 	{
 		player->getStorage(storageId, value);
 		if(atoi(value.c_str()) == i)
-			return parseStorages(states[i - startValue], value);
+			return parseStorages(states[i - startValue], value, player);
 	}
 
 	return "Couldn't retrieve any mission description, please report to a gamemaster.";

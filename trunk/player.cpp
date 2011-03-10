@@ -2191,21 +2191,11 @@ bool Player::onDeath()
 	{
 		setLossSkill(false);
 		if(!usePVPBlessing) // TODO: need to reconsider this, because players will be immune to any loss
-		{
-			if(preventLoss->getCharges() > 1) // weird, but transform failed to remove for some hosters
-				g_game.transformItem(preventLoss, preventLoss->getID(), std::max(0, ((int32_t)preventLoss->getCharges() - 1)));
-			else
-				g_game.internalRemoveItem(NULL, preventDrop);
-		}
+			g_game.transformItem(preventLoss, preventLoss->getID(), std::max((int32_t)0, (int32_t)preventLoss->getCharges() - 1));
 	}
 
 	if(preventDrop && preventDrop != preventLoss && !usePVPBlessing)
-	{
-		if(preventDrop->getCharges() > 1) // weird, but transform failed to remove for some hosters
-			g_game.transformItem(preventDrop, preventDrop->getID(), std::max(0, ((int32_t)preventDrop->getCharges() - 1)));
-		else
-			g_game.internalRemoveItem(NULL, preventDrop);
-	}
+		g_game.transformItem(preventDrop, preventDrop->getID(), std::max((int32_t)0, (int32_t)preventDrop->getCharges() - 1));
 
 	removeConditions(CONDITIONEND_DEATH);
 	if(skillLoss)
@@ -3572,7 +3562,13 @@ void Player::updateItemsLight(bool internal/* = false*/)
 void Player::onAddCondition(ConditionType_t type, bool hadCondition)
 {
 	Creature::onAddCondition(type, hadCondition);
-	if(getLastPosition().x && type != CONDITION_GAMEMASTER) // don't send if player have just logged in (its already done in protocolgame), or condition have no icons
+	if(type == CONDITION_GAMEMASTER)
+		return;
+
+	if(type == CONDITION_INVISIBLE && !hadCondition && mounted)
+		dismount(false);
+	
+	if(getLastPosition().x) // don't send if player have just logged in (its already done in protocolgame), or condition have no icons
 		sendIcons();
 }
 
@@ -5222,9 +5218,9 @@ void Player::setMounted(bool mounting)
 		return;
 	}
 
-	if(_tile->hasFlag(TILESTATE_PROTECTIONZONE))
+	if(_tile->hasFlag(TILESTATE_PROTECTIONZONE) && g_config.getBool(ConfigManager::UNMOUNT_PLAYER_IN_PZ))
 		sendCancelMessage(RET_ACTIONNOTPERMITTEDINPROTECTIONZONE);
-	else if(!isPremium()) // TODO: configurable for mounts being premium (maybe per mount?...)
+	else if(Mounts::getInstance()->isPremium() && !isPremium())
 		sendCancelMessage(RET_YOUNEEDPREMIUMACCOUNT);
 	else if(!defaultOutfit.lookMount)
 		sendOutfitWindow();

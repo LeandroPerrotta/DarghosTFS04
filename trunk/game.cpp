@@ -296,17 +296,14 @@ void Game::saveGameState(bool shallow)
 		io->savePlayer(it->second, false, shallow);
 	}
 
-	std::string storage = "relational";
-	if(g_config.getBool(ConfigManager::HOUSE_STORAGE))
-		storage = "binary";
-
 	map->saveMap();
 	ScriptEnviroment::saveGameState();
 	if(gameState == GAMESTATE_MAINTAIN)
 		setGameState(GAMESTATE_NORMAL);
 
 	std::clog << "> SAVE: Complete in " << (OTSYS_TIME() - start) / (1000.) << " seconds using "
-		<< storage << " house storage." << std::endl;
+		<< asLowerCaseString(g_config.getString(ConfigManager::HOUSE_STORAGE))
+		<< " house storage." << std::endl;
 }
 
 int32_t Game::loadMap(std::string filename)
@@ -2093,9 +2090,9 @@ void Game::addMoney(Cylinder* cylinder, int64_t money, uint32_t flags /*= 0*/)
 	}
 }
 
-Item* Game::transformItem(Item* item, uint16_t newId, int32_t newCount /*= -1*/)
+Item* Game::transformItem(Item* item, uint16_t newId, int32_t newCount/* = -1*/)
 {
-	if(item->getID() == newId && (newCount == -1 || (newCount == item->getSubType() && newCount != 0)))
+	if(item->getID() == newId && (newCount == -1 || newCount == item->getSubType()))
 		return item;
 
 	Cylinder* cylinder = item->getParent();
@@ -2119,8 +2116,8 @@ Item* Game::transformItem(Item* item, uint16_t newId, int32_t newCount /*= -1*/)
 
 	if(curType.alwaysOnTop != newType.alwaysOnTop)
 	{
-		//This only occurs when you transform items on tiles from a downItem to a topItem (or vice versa)
-		//Remove the old, and add the new
+		// This only occurs when you transform items on tiles from a downItem to a topItem (or vice versa)
+		// Remove the old, and add the new
 		ReturnValue ret = internalRemoveItem(NULL, item);
 		if(ret != RET_NOERROR)
 			return item;
@@ -2145,19 +2142,18 @@ Item* Game::transformItem(Item* item, uint16_t newId, int32_t newCount /*= -1*/)
 	if(curType.type == newType.type)
 	{
 		//Both items has the same type so we can safely change id/subtype
-		if(!newCount && (item->isStackable() || item->hasCharges()))
+		if(!newCount)
 		{
-			if(!item->isStackable() && (!item->getDefaultDuration() || item->getDuration() <= 0))
+			if(item->hasCharges() && (!item->getDefaultDuration() || item->getDuration() <= 0))
 			{
 				int32_t tmpId = newId;
-				if(curType.id == newType.id)
+				if(curType.id == newId)
 					tmpId = curType.decayTo;
 
-				if(tmpId != -1)
-				{
-					item = transformItem(item, tmpId);
+				if(tmpId == -1)
 					return item;
-				}
+
+				return transformItem(item, tmpId);
 			}
 
 			internalRemoveItem(NULL, item);
@@ -3701,8 +3697,12 @@ bool Game::playerChangeMountStatus(uint32_t playerId, bool status)
 		return false;
 
 	if((OTSYS_TIME() - player->getLastMountAction()) <
-		g_config.getNumber(ConfigManager::MOUNT_COOLDOWN))
+		g_config.getNumber(ConfigManager::MOUNT_COOLDOWN)
+		|| player->hasCondition(CONDITION_INVISIBLE))
+	{
+		player->sendCancelMessage(RET_NOTPOSSIBLE);
 		return false;
+	}
 		
 	player->setMounted(status);
 	player->setLastMountAction(OTSYS_TIME());

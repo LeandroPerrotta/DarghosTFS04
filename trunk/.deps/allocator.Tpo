@@ -1,4 +1,4 @@
-itemattributes.o: itemattributes.cpp otpch.h \
+allocator.o: allocator.cpp otpch.h \
  /usr/include/libxml2/libxml/xmlmemory.h /usr/include/stdio.h \
  /usr/include/features.h /usr/include/bits/predefs.h \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
@@ -459,7 +459,7 @@ itemattributes.o: itemattributes.cpp otpch.h \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
  /usr/include/boost/iterator/detail/minimum_category.hpp \
  /usr/include/boost/token_functions.hpp thing.h position.h \
- /usr/include/c++/4.4/iostream itemattributes.h otsystem.h definitions.h \
+ /usr/include/c++/4.4/iostream allocator.h otsystem.h definitions.h \
  /usr/include/c++/4.4/bitset /usr/include/c++/4.4/queue \
  /usr/include/c++/4.4/deque /usr/include/c++/4.4/bits/stl_deque.h \
  /usr/include/c++/4.4/bits/deque.tcc \
@@ -815,8 +815,15 @@ itemattributes.o: itemattributes.cpp otpch.h \
  /usr/include/boost/call_traits.hpp \
  /usr/include/boost/detail/call_traits.hpp \
  /usr/include/boost/detail/lcast_precision.hpp /usr/include/sys/timeb.h \
- /usr/include/boost/any.hpp fileloader.h /usr/include/zlib.h \
- /usr/include/zconf.h /usr/include/zlibdefs.h
+ /usr/include/boost/pool/pool.hpp /usr/include/boost/pool/poolfwd.hpp \
+ /usr/include/boost/pool/detail/mutex.hpp \
+ /usr/include/boost/pool/detail/ct_gcd_lcm.hpp \
+ /usr/include/boost/pool/detail/gcd_lcm.hpp \
+ /usr/include/boost/pool/simple_segregated_storage.hpp \
+ /usr/include/c++/4.4/fstream \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/c++io.h \
+ /usr/include/c++/4.4/bits/fstream.tcc
 
 otpch.h:
 
@@ -1928,7 +1935,7 @@ position.h:
 
 /usr/include/c++/4.4/iostream:
 
-itemattributes.h:
+allocator.h:
 
 otsystem.h:
 
@@ -2748,12 +2755,22 @@ definitions.h:
 
 /usr/include/sys/timeb.h:
 
-/usr/include/boost/any.hpp:
+/usr/include/boost/pool/pool.hpp:
 
-fileloader.h:
+/usr/include/boost/pool/poolfwd.hpp:
 
-/usr/include/zlib.h:
+/usr/include/boost/pool/detail/mutex.hpp:
 
-/usr/include/zconf.h:
+/usr/include/boost/pool/detail/ct_gcd_lcm.hpp:
 
-/usr/include/zlibdefs.h:
+/usr/include/boost/pool/detail/gcd_lcm.hpp:
+
+/usr/include/boost/pool/simple_segregated_storage.hpp:
+
+/usr/include/c++/4.4/fstream:
+
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/basic_file.h:
+
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/c++io.h:
+
+/usr/include/c++/4.4/bits/fstream.tcc:

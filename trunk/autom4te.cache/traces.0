@@ -175,9 +175,12 @@ main()
   AC_SUBST(XML_LIBS)
   rm -f conf.xmltest
 ])
-m4trace:/usr/share/aclocal/pkg.m4:26: -1- AC_DEFUN([PKG_PROG_PKG_CONFIG], [m4_pattern_forbid([^_?PKG_[A-Z_]+$])
+m4trace:/usr/share/aclocal/pkg.m4:27: -1- AC_DEFUN([PKG_PROG_PKG_CONFIG], [m4_pattern_forbid([^_?PKG_[A-Z_]+$])
 m4_pattern_allow([^PKG_CONFIG(_PATH)?$])
-AC_ARG_VAR([PKG_CONFIG], [path to pkg-config utility])dnl
+AC_ARG_VAR([PKG_CONFIG], [path to pkg-config utility])
+AC_ARG_VAR([PKG_CONFIG_PATH], [directories to add to pkg-config's search path])
+AC_ARG_VAR([PKG_CONFIG_LIBDIR], [path overriding pkg-config's built-in search path])
+
 if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
 	AC_PATH_TOOL([PKG_CONFIG], [pkg-config])
 fi
@@ -190,13 +193,12 @@ if test -n "$PKG_CONFIG"; then
 		AC_MSG_RESULT([no])
 		PKG_CONFIG=""
 	fi
-		
 fi[]dnl
 ])
-m4trace:/usr/share/aclocal/pkg.m4:56: -1- AC_DEFUN([PKG_CHECK_EXISTS], [AC_REQUIRE([PKG_PROG_PKG_CONFIG])dnl
+m4trace:/usr/share/aclocal/pkg.m4:59: -1- AC_DEFUN([PKG_CHECK_EXISTS], [AC_REQUIRE([PKG_PROG_PKG_CONFIG])dnl
 if test -n "$PKG_CONFIG" && \
     AC_RUN_LOG([$PKG_CONFIG --exists --print-errors "$1"]); then
-  m4_ifval([$2], [$2], [:])
+  m4_default([$2], [:])
 m4_ifvaln([$3], [else
   $3])dnl
 fi])
@@ -222,16 +224,17 @@ and $1[]_LIBS to avoid the need to call pkg-config.
 See the pkg-config man page for more details.])
 
 if test $pkg_failed = yes; then
+   	AC_MSG_RESULT([no])
         _PKG_SHORT_ERRORS_SUPPORTED
         if test $_pkg_short_errors_supported = yes; then
-	        $1[]_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "$2"`
+	        $1[]_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "$2" 2>&1`
         else 
-	        $1[]_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "$2"`
+	        $1[]_PKG_ERRORS=`$PKG_CONFIG --print-errors "$2" 2>&1`
         fi
 	# Put the nasty error message in config.log where it belongs
 	echo "$$1[]_PKG_ERRORS" >&AS_MESSAGE_LOG_FD
 
-	ifelse([$4], , [AC_MSG_ERROR(dnl
+	m4_default([$4], [AC_MSG_ERROR(
 [Package requirements ($2) were not met:
 
 $$1_PKG_ERRORS
@@ -239,34 +242,33 @@ $$1_PKG_ERRORS
 Consider adjusting the PKG_CONFIG_PATH environment variable if you
 installed software in a non-standard prefix.
 
-_PKG_TEXT
-])],
-		[AC_MSG_RESULT([no])
-                $4])
+_PKG_TEXT])dnl
+        ])
 elif test $pkg_failed = untried; then
-	ifelse([$4], , [AC_MSG_FAILURE(dnl
+     	AC_MSG_RESULT([no])
+	m4_default([$4], [AC_MSG_FAILURE(
 [The pkg-config script could not be found or is too old.  Make sure it
 is in your PATH or set the PKG_CONFIG environment variable to the full
 path to pkg-config.
 
 _PKG_TEXT
 
-To get pkg-config, see <http://pkg-config.freedesktop.org/>.])],
-		[$4])
+To get pkg-config, see <http://pkg-config.freedesktop.org/>.])dnl
+        ])
 else
 	$1[]_CFLAGS=$pkg_cv_[]$1[]_CFLAGS
 	$1[]_LIBS=$pkg_cv_[]$1[]_LIBS
         AC_MSG_RESULT([yes])
-	ifelse([$3], , :, [$3])
+	$3
 fi[]dnl
 ])
 m4trace:/usr/share/aclocal-1.11/amversion.m4:14: -1- AC_DEFUN([AM_AUTOMAKE_VERSION], [am__api_version='1.11'
 dnl Some users find AM_AUTOMAKE_VERSION and mistake it for a way to
 dnl require some minimum version.  Point them to the right macro.
-m4_if([$1], [1.11], [],
+m4_if([$1], [1.11.1], [],
       [AC_FATAL([Do not call $0, use AM_INIT_AUTOMAKE([$1]).])])dnl
 ])
-m4trace:/usr/share/aclocal-1.11/amversion.m4:33: -1- AC_DEFUN([AM_SET_CURRENT_AUTOMAKE_VERSION], [AM_AUTOMAKE_VERSION([1.11])dnl
+m4trace:/usr/share/aclocal-1.11/amversion.m4:33: -1- AC_DEFUN([AM_SET_CURRENT_AUTOMAKE_VERSION], [AM_AUTOMAKE_VERSION([1.11.1])dnl
 m4_ifndef([AC_AUTOCONF_VERSION],
   [m4_copy([m4_PACKAGE_VERSION], [AC_AUTOCONF_VERSION])])dnl
 _AM_AUTOCONF_VERSION(m4_defn([AC_AUTOCONF_VERSION]))])
@@ -894,8 +896,8 @@ m4trace:configure.ac:2: -1- m4_pattern_allow([^target_alias$])
 m4trace:configure.ac:3: -1- AM_INIT_AUTOMAKE([1.10 foreign silent-rules])
 m4trace:configure.ac:3: -1- m4_pattern_allow([^AM_[A-Z]+FLAGS$])
 m4trace:configure.ac:3: -1- AM_SET_CURRENT_AUTOMAKE_VERSION
-m4trace:configure.ac:3: -1- AM_AUTOMAKE_VERSION([1.11])
-m4trace:configure.ac:3: -1- _AM_AUTOCONF_VERSION([2.64])
+m4trace:configure.ac:3: -1- AM_AUTOMAKE_VERSION([1.11.1])
+m4trace:configure.ac:3: -1- _AM_AUTOCONF_VERSION([2.67])
 m4trace:configure.ac:3: -1- m4_pattern_allow([^INSTALL_PROGRAM$])
 m4trace:configure.ac:3: -1- m4_pattern_allow([^INSTALL_SCRIPT$])
 m4trace:configure.ac:3: -1- m4_pattern_allow([^INSTALL_DATA$])
@@ -1099,14 +1101,14 @@ m4trace:configure.ac:139: -1- m4_pattern_allow([^HAVE_REALLOC$])
 m4trace:configure.ac:139: -1- m4_pattern_allow([^HAVE_REALLOC$])
 m4trace:configure.ac:139: -1- m4_pattern_allow([^LIB@&t@OBJS$])
 m4trace:configure.ac:139: -1- m4_pattern_allow([^realloc$])
-m4trace:configure.ac:143: -1- AM_PATH_XML2([2.6.5], [], [as_fn_error "You need libxml2 >= 2.6.5 to compile theforgottenserver!" "$LINENO" 5])
+m4trace:configure.ac:143: -1- AM_PATH_XML2([2.6.5], [], [as_fn_error $? "You need libxml2 >= 2.6.5 to compile theforgottenserver!" "$LINENO" 5 ])
 m4trace:configure.ac:143: -1- m4_pattern_allow([^XML2_CONFIG$])
 m4trace:configure.ac:143: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
-You should run autoupdate.], [../../lib/autoconf/general.m4:2751: AC_TRY_RUN is expanded from...
+You should run autoupdate.], [../../lib/autoconf/general.m4:2752: AC_TRY_RUN is expanded from...
 /usr/share/aclocal/libxml2.m4:12: AM_PATH_XML2 is expanded from...
 configure.ac:143: the top level])
 m4trace:configure.ac:143: -1- _m4_warn([obsolete], [The macro `AC_TRY_LINK' is obsolete.
-You should run autoupdate.], [../../lib/autoconf/general.m4:2674: AC_TRY_LINK is expanded from...
+You should run autoupdate.], [../../lib/autoconf/general.m4:2675: AC_TRY_LINK is expanded from...
 /usr/share/aclocal/libxml2.m4:12: AM_PATH_XML2 is expanded from...
 configure.ac:143: the top level])
 m4trace:configure.ac:143: -1- m4_pattern_allow([^XML_CPPFLAGS$])
@@ -1140,6 +1142,8 @@ m4trace:configure.ac:205: -1- PKG_PROG_PKG_CONFIG
 m4trace:configure.ac:205: -1- m4_pattern_forbid([^_?PKG_[A-Z_]+$])
 m4trace:configure.ac:205: -1- m4_pattern_allow([^PKG_CONFIG(_PATH)?$])
 m4trace:configure.ac:205: -1- m4_pattern_allow([^PKG_CONFIG$])
+m4trace:configure.ac:205: -1- m4_pattern_allow([^PKG_CONFIG_PATH$])
+m4trace:configure.ac:205: -1- m4_pattern_allow([^PKG_CONFIG_LIBDIR$])
 m4trace:configure.ac:205: -1- m4_pattern_allow([^PKG_CONFIG$])
 m4trace:configure.ac:205: -1- m4_pattern_allow([^LUA_CFLAGS$])
 m4trace:configure.ac:205: -1- m4_pattern_allow([^LUA_LIBS$])

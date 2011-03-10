@@ -1,11 +1,11 @@
 position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/stdio.h /usr/include/features.h /usr/include/bits/predefs.h \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
- /usr/include/gnu/stubs.h /usr/include/gnu/stubs-32.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.1/include/stddef.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.5/include/stddef.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.1/include/stdarg.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.5/include/stdarg.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
  /usr/include/bits/stdio2.h /usr/include/libxml2/libxml/xmlversion.h \
  /usr/include/libxml2/libxml/xmlexports.h \
@@ -36,9 +36,9 @@ position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/boost/config/compiler/gcc.hpp \
  /usr/include/boost/config/select_stdlib_config.hpp \
  /usr/include/c++/4.4/cstddef \
- /usr/include/c++/4.4/i486-linux-gnu/bits/c++config.h \
- /usr/include/c++/4.4/i486-linux-gnu/bits/os_defines.h \
- /usr/include/c++/4.4/i486-linux-gnu/bits/cpu_defines.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/c++config.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/os_defines.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/cpu_defines.h \
  /usr/include/boost/config/no_tr1/utility.hpp \
  /usr/include/c++/4.4/utility /usr/include/c++/4.4/bits/stl_relops.h \
  /usr/include/c++/4.4/bits/stl_pair.h /usr/include/c++/4.4/bits/move.h \
@@ -98,10 +98,10 @@ position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/c++/4.4/bits/postypes.h /usr/include/c++/4.4/cwchar \
  /usr/include/bits/wchar.h /usr/include/bits/wchar2.h \
  /usr/include/c++/4.4/bits/allocator.h \
- /usr/include/c++/4.4/i486-linux-gnu/bits/c++allocator.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/c++allocator.h \
  /usr/include/c++/4.4/ext/new_allocator.h \
  /usr/include/c++/4.4/bits/localefwd.h \
- /usr/include/c++/4.4/i486-linux-gnu/bits/c++locale.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/c++locale.h \
  /usr/include/c++/4.4/clocale /usr/include/locale.h \
  /usr/include/bits/locale.h /usr/include/c++/4.4/iosfwd \
  /usr/include/c++/4.4/cctype /usr/include/ctype.h \
@@ -109,22 +109,24 @@ position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/c++/4.4/cxxabi-forced.h \
  /usr/include/c++/4.4/bits/basic_string.h \
  /usr/include/c++/4.4/ext/atomicity.h \
- /usr/include/c++/4.4/i486-linux-gnu/bits/gthr.h \
- /usr/include/c++/4.4/i486-linux-gnu/bits/gthr-default.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/gthr.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
- /usr/include/signal.h /usr/include/bits/setjmp.h \
- /usr/include/c++/4.4/i486-linux-gnu/bits/atomic_word.h \
+ /usr/include/bits/setjmp.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/atomic_word.h \
  /usr/include/c++/4.4/bits/basic_string.tcc /usr/include/c++/4.4/memory \
  /usr/include/c++/4.4/bits/stl_raw_storage_iter.h \
- /usr/include/c++/4.4/backward/auto_ptr.h /usr/include/c++/4.4/typeinfo \
+ /usr/include/c++/4.4/backward/auto_ptr.h \
+ /usr/include/boost/detail/sp_typeinfo.hpp /usr/include/c++/4.4/typeinfo \
  /usr/include/boost/assert.hpp /usr/include/boost/integer.hpp \
  /usr/include/boost/integer_fwd.hpp /usr/include/c++/4.4/climits \
- /usr/lib/gcc/i486-linux-gnu/4.4.1/include-fixed/limits.h \
- /usr/lib/gcc/i486-linux-gnu/4.4.1/include-fixed/syslimits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.5/include-fixed/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/4.4.5/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
  /usr/include/boost/limits.hpp /usr/include/c++/4.4/limits \
+ /usr/include/boost/cstdint.hpp /usr/include/stdint.h \
  /usr/include/boost/integer_traits.hpp \
  /usr/include/boost/type_traits/has_trivial_copy.hpp \
  /usr/include/boost/type_traits/config.hpp \
@@ -281,9 +283,9 @@ position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/c++/4.4/streambuf /usr/include/c++/4.4/bits/streambuf.tcc \
  /usr/include/c++/4.4/bits/basic_ios.h \
  /usr/include/c++/4.4/bits/locale_facets.h \
- /usr/include/c++/4.4/i486-linux-gnu/bits/ctype_base.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/ctype_base.h \
  /usr/include/c++/4.4/bits/streambuf_iterator.h \
- /usr/include/c++/4.4/i486-linux-gnu/bits/ctype_inline.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/ctype_inline.h \
  /usr/include/c++/4.4/bits/locale_facets.tcc \
  /usr/include/c++/4.4/bits/basic_ios.tcc \
  /usr/include/c++/4.4/bits/ostream.tcc /usr/include/c++/4.4/istream \
@@ -293,8 +295,8 @@ position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/c++/4.4/bits/stl_bvector.h \
  /usr/include/c++/4.4/bits/vector.tcc /usr/include/c++/4.4/map \
  /usr/include/c++/4.4/bits/stl_tree.h /usr/include/c++/4.4/bits/stl_map.h \
- /usr/include/c++/4.4/bits/stl_multimap.h /usr/include/boost/cstdint.hpp \
- /usr/include/stdint.h /usr/include/boost/scoped_ptr.hpp \
+ /usr/include/c++/4.4/bits/stl_multimap.h \
+ /usr/include/boost/scoped_ptr.hpp \
  /usr/include/boost/smart_ptr/scoped_ptr.hpp \
  /usr/include/boost/checked_delete.hpp \
  /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
@@ -307,7 +309,6 @@ position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/boost/smart_ptr/detail/sp_counted_base.hpp \
  /usr/include/boost/smart_ptr/detail/sp_has_sync.hpp \
  /usr/include/boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp \
- /usr/include/boost/detail/sp_typeinfo.hpp \
  /usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
  /usr/include/boost/smart_ptr/detail/sp_convertible.hpp \
  /usr/include/boost/smart_ptr/detail/spinlock_pool.hpp \
@@ -317,8 +318,8 @@ position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/boost/memory_order.hpp /usr/include/c++/4.4/locale \
  /usr/include/c++/4.4/bits/locale_facets_nonio.h \
  /usr/include/c++/4.4/ctime \
- /usr/include/c++/4.4/i486-linux-gnu/bits/time_members.h \
- /usr/include/c++/4.4/i486-linux-gnu/bits/messages_members.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/time_members.h \
+ /usr/include/c++/4.4/x86_64-linux-gnu/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/4.4/bits/codecvt.h \
  /usr/include/c++/4.4/bits/locale_facets_nonio.tcc \
  /usr/include/boost/regex_fwd.hpp \
@@ -370,13 +371,26 @@ position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/boost/regex/v4/basic_regex_parser.hpp \
  /usr/include/boost/regex/v4/sub_match.hpp \
  /usr/include/boost/regex/v4/regex_format.hpp \
+ /usr/include/boost/type_traits/is_function.hpp \
+ /usr/include/boost/type_traits/detail/false_result.hpp \
+ /usr/include/boost/type_traits/detail/is_function_ptr_helper.hpp \
+ /usr/include/boost/type_traits/is_class.hpp \
+ /usr/include/boost/type_traits/is_convertible.hpp \
+ /usr/include/boost/type_traits/add_reference.hpp \
+ /usr/include/boost/type_traits/is_abstract.hpp \
+ /usr/include/boost/type_traits/remove_pointer.hpp \
+ /usr/include/boost/mpl/and.hpp \
+ /usr/include/boost/mpl/aux_/config/use_preprocessed.hpp \
+ /usr/include/boost/mpl/aux_/nested_type_wknd.hpp \
+ /usr/include/boost/mpl/aux_/include_preprocessed.hpp \
+ /usr/include/boost/mpl/aux_/config/compiler.hpp \
+ /usr/include/boost/preprocessor/stringize.hpp \
+ /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
+ /usr/include/boost/mpl/not.hpp \
  /usr/include/boost/regex/v4/match_results.hpp \
  /usr/include/boost/regex/v4/protected_call.hpp \
  /usr/include/boost/regex/v4/perl_matcher.hpp \
  /usr/include/boost/regex/v4/iterator_category.hpp \
- /usr/include/boost/type_traits/is_convertible.hpp \
- /usr/include/boost/type_traits/add_reference.hpp \
- /usr/include/boost/type_traits/is_abstract.hpp \
  /usr/include/boost/regex/v4/perl_matcher_non_recursive.hpp \
  /usr/include/boost/regex/v4/perl_matcher_common.hpp \
  /usr/include/boost/regex/v4/instances.hpp \
@@ -397,15 +411,10 @@ position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/boost/mpl/placeholders.hpp /usr/include/boost/mpl/arg.hpp \
  /usr/include/boost/mpl/arg_fwd.hpp \
  /usr/include/boost/mpl/aux_/na_assert.hpp \
- /usr/include/boost/mpl/assert.hpp /usr/include/boost/mpl/not.hpp \
- /usr/include/boost/mpl/aux_/nested_type_wknd.hpp \
+ /usr/include/boost/mpl/assert.hpp \
  /usr/include/boost/mpl/aux_/config/pp_counter.hpp \
  /usr/include/boost/mpl/aux_/arity_spec.hpp \
  /usr/include/boost/mpl/aux_/arg_typedef.hpp \
- /usr/include/boost/mpl/aux_/config/use_preprocessed.hpp \
- /usr/include/boost/mpl/aux_/include_preprocessed.hpp \
- /usr/include/boost/mpl/aux_/config/compiler.hpp \
- /usr/include/boost/preprocessor/stringize.hpp \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
  /usr/include/boost/iterator/detail/config_undef.hpp \
@@ -415,15 +424,8 @@ position.o: position.cpp otpch.h /usr/include/libxml2/libxml/xmlmemory.h \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
  /usr/include/boost/iterator/iterator_traits.hpp \
  /usr/include/boost/iterator/detail/facade_iterator_category.hpp \
- /usr/include/boost/mpl/and.hpp \
- /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
  /usr/include/boost/detail/indirect_traits.hpp \
- /usr/include/boost/type_traits/is_function.hpp \
- /usr/include/boost/type_traits/detail/false_result.hpp \
- /usr/include/boost/type_traits/detail/is_function_ptr_helper.hpp \
- /usr/include/boost/type_traits/is_class.hpp \
  /usr/include/boost/type_traits/remove_reference.hpp \
- /usr/include/boost/type_traits/remove_pointer.hpp \
  /usr/include/boost/iterator/detail/enable_if.hpp \
  /usr/include/boost/implicit_cast.hpp \
  /usr/include/boost/type_traits/add_const.hpp \
@@ -474,9 +476,9 @@ otpch.h:
 
 /usr/include/gnu/stubs.h:
 
-/usr/include/gnu/stubs-32.h:
+/usr/include/gnu/stubs-64.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.1/include/stddef.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.4.5/include/stddef.h:
 
 /usr/include/bits/types.h:
 
@@ -488,7 +490,7 @@ otpch.h:
 
 /usr/include/wchar.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.1/include/stdarg.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.4.5/include/stdarg.h:
 
 /usr/include/bits/stdio_lim.h:
 
@@ -584,11 +586,11 @@ otpch.h:
 
 /usr/include/c++/4.4/cstddef:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/c++config.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/c++config.h:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/os_defines.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/os_defines.h:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/cpu_defines.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/cpu_defines.h:
 
 /usr/include/boost/config/no_tr1/utility.hpp:
 
@@ -736,13 +738,13 @@ otpch.h:
 
 /usr/include/c++/4.4/bits/allocator.h:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/c++allocator.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/c++allocator.h:
 
 /usr/include/c++/4.4/ext/new_allocator.h:
 
 /usr/include/c++/4.4/bits/localefwd.h:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/c++locale.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/c++locale.h:
 
 /usr/include/c++/4.4/clocale:
 
@@ -764,9 +766,9 @@ otpch.h:
 
 /usr/include/c++/4.4/ext/atomicity.h:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/gthr.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/gthr.h:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/gthr-default.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/gthr-default.h:
 
 /usr/include/pthread.h:
 
@@ -774,11 +776,9 @@ otpch.h:
 
 /usr/include/bits/sched.h:
 
-/usr/include/signal.h:
-
 /usr/include/bits/setjmp.h:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/atomic_word.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/atomic_word.h:
 
 /usr/include/c++/4.4/bits/basic_string.tcc:
 
@@ -787,6 +787,8 @@ otpch.h:
 /usr/include/c++/4.4/bits/stl_raw_storage_iter.h:
 
 /usr/include/c++/4.4/backward/auto_ptr.h:
+
+/usr/include/boost/detail/sp_typeinfo.hpp:
 
 /usr/include/c++/4.4/typeinfo:
 
@@ -798,9 +800,9 @@ otpch.h:
 
 /usr/include/c++/4.4/climits:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.1/include-fixed/limits.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.4.5/include-fixed/limits.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.4.1/include-fixed/syslimits.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.4.5/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
 
@@ -817,6 +819,10 @@ otpch.h:
 /usr/include/boost/limits.hpp:
 
 /usr/include/c++/4.4/limits:
+
+/usr/include/boost/cstdint.hpp:
+
+/usr/include/stdint.h:
 
 /usr/include/boost/integer_traits.hpp:
 
@@ -1168,11 +1174,11 @@ otpch.h:
 
 /usr/include/c++/4.4/bits/locale_facets.h:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/ctype_base.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/ctype_base.h:
 
 /usr/include/c++/4.4/bits/streambuf_iterator.h:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/ctype_inline.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/ctype_inline.h:
 
 /usr/include/c++/4.4/bits/locale_facets.tcc:
 
@@ -1202,10 +1208,6 @@ otpch.h:
 
 /usr/include/c++/4.4/bits/stl_multimap.h:
 
-/usr/include/boost/cstdint.hpp:
-
-/usr/include/stdint.h:
-
 /usr/include/boost/scoped_ptr.hpp:
 
 /usr/include/boost/smart_ptr/scoped_ptr.hpp:
@@ -1232,8 +1234,6 @@ otpch.h:
 
 /usr/include/boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp:
 
-/usr/include/boost/detail/sp_typeinfo.hpp:
-
 /usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
 
 /usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
@@ -1254,9 +1254,9 @@ otpch.h:
 
 /usr/include/c++/4.4/ctime:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/time_members.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/time_members.h:
 
-/usr/include/c++/4.4/i486-linux-gnu/bits/messages_members.h:
+/usr/include/c++/4.4/x86_64-linux-gnu/bits/messages_members.h:
 
 /usr/include/libintl.h:
 
@@ -1374,6 +1374,38 @@ otpch.h:
 
 /usr/include/boost/regex/v4/regex_format.hpp:
 
+/usr/include/boost/type_traits/is_function.hpp:
+
+/usr/include/boost/type_traits/detail/false_result.hpp:
+
+/usr/include/boost/type_traits/detail/is_function_ptr_helper.hpp:
+
+/usr/include/boost/type_traits/is_class.hpp:
+
+/usr/include/boost/type_traits/is_convertible.hpp:
+
+/usr/include/boost/type_traits/add_reference.hpp:
+
+/usr/include/boost/type_traits/is_abstract.hpp:
+
+/usr/include/boost/type_traits/remove_pointer.hpp:
+
+/usr/include/boost/mpl/and.hpp:
+
+/usr/include/boost/mpl/aux_/config/use_preprocessed.hpp:
+
+/usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
+
+/usr/include/boost/mpl/aux_/include_preprocessed.hpp:
+
+/usr/include/boost/mpl/aux_/config/compiler.hpp:
+
+/usr/include/boost/preprocessor/stringize.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+
+/usr/include/boost/mpl/not.hpp:
+
 /usr/include/boost/regex/v4/match_results.hpp:
 
 /usr/include/boost/regex/v4/protected_call.hpp:
@@ -1381,12 +1413,6 @@ otpch.h:
 /usr/include/boost/regex/v4/perl_matcher.hpp:
 
 /usr/include/boost/regex/v4/iterator_category.hpp:
-
-/usr/include/boost/type_traits/is_convertible.hpp:
-
-/usr/include/boost/type_traits/add_reference.hpp:
-
-/usr/include/boost/type_traits/is_abstract.hpp:
 
 /usr/include/boost/regex/v4/perl_matcher_non_recursive.hpp:
 
@@ -1438,23 +1464,11 @@ otpch.h:
 
 /usr/include/boost/mpl/assert.hpp:
 
-/usr/include/boost/mpl/not.hpp:
-
-/usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
-
 /usr/include/boost/mpl/aux_/config/pp_counter.hpp:
 
 /usr/include/boost/mpl/aux_/arity_spec.hpp:
 
 /usr/include/boost/mpl/aux_/arg_typedef.hpp:
-
-/usr/include/boost/mpl/aux_/config/use_preprocessed.hpp:
-
-/usr/include/boost/mpl/aux_/include_preprocessed.hpp:
-
-/usr/include/boost/mpl/aux_/config/compiler.hpp:
-
-/usr/include/boost/preprocessor/stringize.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
 
@@ -1474,23 +1488,9 @@ otpch.h:
 
 /usr/include/boost/iterator/detail/facade_iterator_category.hpp:
 
-/usr/include/boost/mpl/and.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
-
 /usr/include/boost/detail/indirect_traits.hpp:
 
-/usr/include/boost/type_traits/is_function.hpp:
-
-/usr/include/boost/type_traits/detail/false_result.hpp:
-
-/usr/include/boost/type_traits/detail/is_function_ptr_helper.hpp:
-
-/usr/include/boost/type_traits/is_class.hpp:
-
 /usr/include/boost/type_traits/remove_reference.hpp:
-
-/usr/include/boost/type_traits/remove_pointer.hpp:
 
 /usr/include/boost/iterator/detail/enable_if.hpp:
 

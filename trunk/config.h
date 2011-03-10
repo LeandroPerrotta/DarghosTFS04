@@ -163,8 +163,14 @@
 /* Define to 1 if you have the <openssl/err.h> header file. */
 #define HAVE_OPENSSL_ERR_H 1
 
+/* Define to 1 if you have the <openssl/md5.h> header file. */
+/* #undef HAVE_OPENSSL_MD5_H */
+
 /* Define to 1 if you have the <openssl/rsa.h> header file. */
 #define HAVE_OPENSSL_RSA_H 1
+
+/* Define to 1 if you have the <openssl/sha.h> header file. */
+/* #undef HAVE_OPENSSL_SHA_H */
 
 /* Define to 1 if you have the `pow' function. */
 #define HAVE_POW 1

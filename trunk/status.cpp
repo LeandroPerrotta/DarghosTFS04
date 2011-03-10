@@ -15,7 +15,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ////////////////////////////////////////////////////////////////////////
 
-#define __SPOOF_PLAYERS__
+//#define __SPOOF_PLAYERS__
 
 #ifdef __SPOOF_PLAYERS__
 	#define PLAYERS_TO_SPOOF 25
