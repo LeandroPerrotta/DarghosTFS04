@@ -68,13 +68,13 @@
     <item id="2413" chance="5000">
       <!--broadsword-->
     </item>
-    <item id="2498" chance="100">
+    <item id="2498" chance="300">
       <!--royal helmet-->
     </item>
-    <item id="2492" chance="100">
+    <item id="2492" chance="180">
       <!--dragon scale mail-->
     </item>
-    <item id="7588" chance="940">
+    <item id="7588" chance="1000">
       <!--strong health potion-->
     </item>
     <item id="7378" countmax="3" chance1="16000">
@@ -94,13 +94,13 @@
         <item id="2148" countmax="100" chance1="100000">
           <!--gold coin-->
         </item>
-        <item id="2392" chance="260">
+        <item id="2392" chance="300">
           <!--fire sword-->
         </item>
         <item id="2146" countmax="1" chance1="4850">
           <!--small sapphire-->
         </item>
-        <item id="2479" chance="420">
+        <item id="2479" chance="400">
           <!--strange helmet-->
         </item>
         <item id="2177" chance="780">

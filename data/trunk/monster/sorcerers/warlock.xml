@@ -49,10 +49,10 @@
     <defense name="healing" interval="1000" chance="25" min="100" max="240">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-    <defense name="invisible" interval="1000" chance="15" duration="2800">
+    <defense name="invisible" interval="2800" chance="10" duration="2800">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
-    <defense name="invisible" interval="5000" chance="5" duration="12000">
+    <defense name="invisible" interval="24000" chance="50" duration="12000">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
@@ -93,7 +93,7 @@
     <item id="2600" chance="11840">
       <!--inkwell-->
     </item>
-    <item id="2124" chance="1140">
+    <item id="2124" chance="500">
       <!--crystal ring-->
     </item>
     <item id="2689" countmax="1" chance="9840">
@@ -102,16 +102,16 @@
     <item id="2167" chance="1710">
       <!--energy ring-->
     </item>
-    <item id="2197" chance="290">
+    <item id="2197" chance="200">
       <!--stone skin amulet-->
     </item>
     <item id="2151" countmax="1" chance="1140">
       <!--talon-->
     </item>
-    <item id="7591" chance="4140">
+    <item id="7591" chance="5555">
       <!--great health potion-->
     </item>
-    <item id="7590" chance="5280">
+    <item id="7590" chance="4545">
       <!--great mana potion-->
     </item>
     <item id="1987" chance="100000">
@@ -137,22 +137,19 @@
         <item id="2792" countmax="1" chance="3570">
           <!--dark mushroom-->
         </item>
-        <item id="2656" chance="1570">
+        <item id="2656" chance="1111">
           <!--blue robe-->
         </item>
-        <item id="7898" chance="100">
+        <item id="7898" chance="1000">
           <!--lightning robe-->
         </item>
-        <item id="7895" chance="100">
-          <!--lightning legs-->
-        </item>
-        <item id="2466" chance="140">
+        <item id="2466" chance="270">
           <!--golden armor-->
         </item>
-        <item id="2436" chance="6000">
+        <item id="2436" chance="6250">
           <!--skull staff-->
         </item>
-        <item id="2123" chance="710">
+        <item id="2123" chance="400">
           <!--ring of the sky-->
         </item>
         <item id="2114" chance="100">

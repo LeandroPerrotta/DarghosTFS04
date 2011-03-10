@@ -75,25 +75,25 @@
 		<item id="8842" countmax="1" chance="4990">
 			<!--cucumber-->
 		</item>
-		<item id="2498" chance="330">
+		<item id="2498" chance="285">
 			<!--royal helmet-->
 		</item>
-		<item id="2195" chance="100">
+		<item id="2195" chance="150">
 			<!--boots of haste-->
 		</item>
-		<item id="2475" chance="530">
+		<item id="2475" chance="780">
 			<!--warrior helmet-->
 		</item>
-		<item id="2476" chance="950">
+		<item id="2476" chance="1000">
 			<!--knight armor-->
 		</item>
-		<item id="2536" chance="200">
+		<item id="2536" chance="150">
 			<!--medusa shield-->
 		</item>
-		<item id="2214" chance="1410">
+		<item id="2214" chance="1200">
 			<!--ring of healing-->
 		</item>
-		<item id="7589" chance="260">
+		<item id="7589" chance="430">
 			<!--strong mana potion-->
 		</item>
 		<item id="2146" countmax="2" chance="5290">
@@ -108,7 +108,7 @@
 		<item id="11199" chance="9690">
 			<!--hydra head-->
 		</item>
-		<item id="2197" chance="1020">
+		<item id="2197" chance="850">
 			<!--stone skin amulet-->
 		</item>
 	</loot>

@@ -1,13 +1,3 @@
-function D_onStartServer()
-	local sendPlayerToTemple = getGlobalStorageValue(gid.SEND_PLAYERS_TO_TEMPLE)
-	
-	if(sendPlayerToTemple == 1) then
-		db.executeQuery("UPDATE `players` SET `posx` = '0', `posy` = '0', `posz` = '0';")
-		setGlobalStorageValue(gid.SEND_PLAYERS_TO_TEMPLE, 0)
-		print("Sending players to temple.")
-	end
-end
-
 function raidLog(raidname)
 	local out = os.date("%X") .. " | Raid [" .. raidname .. "] started. "
 	
@@ -473,17 +463,6 @@ function chestScripts(cid, questActionId)
 		setPlayerStorageValue(cid, QUESTLOG.DIVINE_ANKH.CHAMBER_TEMPTATION, 4)
 	end
 end
-
---[[
-	@ Fun��o chamada quando o server � iniciado
-]]--
-function onServerStart()
-
-	Dungeons.onServerStart()
-	
-	summonLordVankyner()
-end
-
 
 --[[
 	* GLOBAL SERVER SAVE

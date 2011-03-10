@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <globalevents>
 	<globalevent name="spoof" interval="150000" event="script" value="game/spoof.lua"/> <!-- a cada 2 minutos e meio -->
+	<globalevent name="custom_init" type="startup" event="script" value="game/init.lua"/>
+	<globalevent name="custom_globalsave" time="12:25:00" event="script" value="game/globalsave.lua"/>
 	
 	<globalevent name="save" interval="3600000" event="script" value="save.lua"/>
 	<globalevent name="clean" interval="43200000" event="script" value="clean.lua"/>
@@ -8,6 +10,4 @@
 	<globalevent name="init" type="startup" event="script" value="init.lua"/>
 	<globalevent name="globalsave" type="globalsave" event="script" value="init.lua"/>
 	<globalevent name="record" type="record" event="script" value="record.lua"/>
-
-	<!-- <globalevent name="timer_example" time="21:35:11" event="script" value="my_script.lua"/> -->
 </globalevents>

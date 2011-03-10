@@ -50,7 +50,7 @@
     <voice sentence="You're no match for me!"/>
   </voices>
   <loot>
-    <item id="2457" chance="10000">
+    <item id="2457" chance="12500">
       <!--steel helmet-->
     </item>
     <item id="2417" chance="7000">
@@ -65,10 +65,10 @@
     <item id="2489" chance="1428">
       <!--dark armor-->
     </item>
-    <item id="2490" chance="6666">
+    <item id="2490" chance="3200">
       <!--dark helmet-->
     </item>
-    <item id="2381" chance="9000">
+    <item id="2381" chance="10000">
       <!--halberd-->
     </item>
     <item id="2389" countmax="1" chance1="20000" chancemax="0">
@@ -76,19 +76,19 @@
     </item>
     <item id="1987" chance="100000">
       <inside>
-        <item id="2477" chance="1000">
+        <item id="2477" chance="800">
           <!--knight legs-->
         </item>
         <item id="2691" countmax="2" chance="20000">
           <!--brown bread-->
         </item>
-        <item id="2478" chance="13000">
+        <item id="2478" chance="9000">
           <!--brass legs-->
         </item>
-        <item id="2475" countmax="1" chance="2000">
+        <item id="2475" countmax="1" chance="5800">
           <!--warrior helmet-->
         </item>
-        <item id="2463" chance="2500">
+        <item id="2463" chance="10000">
           <!--plate armor-->
         </item>
         <item id="2148" countmax="15" chance1="100000" chancemax="0">
@@ -100,21 +100,24 @@
         <item id="2387" chance="6666">
           <!--double axe-->
         </item>
-        <item id="2377" chance="2857">
+        <item id="2377" chance="9000">
           <!--two handed sword-->
         </item>
-        <item id="2430" chance="1333">
+        <item id="2430" chance="4000">
           <!--knight axe-->
         </item>
-        <item id="2414" chance="909">
+        <item id="2414" chance="411">
           <!--dragon lance-->
         </item>
-        <item id="2195" chance="555">
+        <item id="2195" chance="411">
           <!--boots of haste-->
         </item>
         <item id="2133" countmax="1" chance="800">
           <!--ruby necklace-->
         </item>
+        <item id="7895" chance="800">
+          <!--lightning legs-->
+        </item>        
       </inside>
       <!--bag-->
     </item>

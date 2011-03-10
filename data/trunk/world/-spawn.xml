@@ -732,9 +732,9 @@
     <monster name="Stone Golem" x="1" y="0" z="4" spawntime="60"/>
   </spawn>
   <spawn centerx="3410" centery="2063" centerz="4" radius="10">
-    <monster name="Hero" x="-6" y="-8" z="4" spawntime="60"/>
-    <monster name="Hero" x="-5" y="-1" z="4" spawntime="60"/>
-    <monster name="Hero" x="-9" y="1" z="4" spawntime="60"/>
+    <monster name="Hero" x="-3" y="-8" z="4" spawntime="30"/>
+    <monster name="Hero" x="-6" y="-3" z="4" spawntime="30"/>
+    <monster name="Hero" x="-9" y="1" z="4" spawntime="30"/>
   </spawn>
   <spawn centerx="2366" centery="2076" centerz="4" radius="30">
     <monster name="Pirate Marauder" x="-26" y="-25" z="4" spawntime="120"/>
@@ -1755,10 +1755,10 @@
     <monster name="Stone Golem" x="1" y="1" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="3409" centery="2062" centerz="5" radius="10">
-    <monster name="Wild Warrior" x="-8" y="-7" z="5" spawntime="60"/>
-    <monster name="Hero" x="-3" y="-5" z="5" spawntime="60"/>
+    <monster name="Wild Warrior" x="-6" y="-7" z="5" spawntime="60"/>
+    <monster name="Hero" x="-5" y="-7" z="5" spawntime="30"/>
     <monster name="Wild Warrior" x="-7" y="-1" z="5" spawntime="60"/>
-    <monster name="Hero" x="-3" y="-1" z="5" spawntime="60"/>
+    <monster name="Hero" x="-5" y="1" z="5" spawntime="30"/>
     <monster name="Wild Warrior" x="-8" y="3" z="5" spawntime="60"/>
   </spawn>
   <spawn centerx="2358" centery="2070" centerz="5" radius="30">
@@ -3494,6 +3494,9 @@
   <spawn centerx="2372" centery="1856" centerz="6" radius="1">
     <npc name="thorn.magic" x="-1" y="0" z="6" spawntime="60"/>
   </spawn>
+  <spawn centerx="2383" centery="1856" centerz="6" radius="1">
+    <npc name="thorn.temple" x="0" y="0" z="6" spawntime="60"/>
+  </spawn>
   <spawn centerx="1962" centery="1857" centerz="6" radius="1">
     <npc name="quendor.tables" x="0" y="1" z="6" spawntime="60"/>
   </spawn>
@@ -3574,6 +3577,9 @@
   <spawn centerx="1606" centery="1900" centerz="6" radius="1"/>
   <spawn centerx="1612" centery="1901" centerz="6" radius="1">
     <monster name="Bog Raider" x="0" y="-1" z="6" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2018" centery="1902" centerz="6" radius="1">
+    <npc name="quendor.temple" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="1986" centery="1904" centerz="6" radius="11">
     <monster name="Minotaur" x="4" y="-9" z="6" spawntime="60"/>
@@ -4137,7 +4143,8 @@
     <monster name="Pirate Cutthroat" x="3" y="27" z="6" spawntime="120"/>
   </spawn>
   <spawn centerx="3408" centery="2061" centerz="6" radius="10">
-    <monster name="Black Knight" x="-4" y="-2" z="6" spawntime="60"/>
+    <monster name="Beholder" x="-6" y="-3" z="6" spawntime="60"/>
+    <monster name="Black Knight" x="-4" y="-2" z="6" spawntime="30"/>
   </spawn>
   <spawn centerx="2278" centery="2067" centerz="6" radius="1">
     <npc name="thaun.travel0" x="0" y="-1" z="6" spawntime="60"/>
@@ -6428,6 +6435,9 @@
     <monster name="Dark Archer" x="2" y="-2" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="966" centery="1267" centerz="7" radius="5"/>
+  <spawn centerx="1959" centery="1272" centerz="7" radius="1">
+    <npc name="north.temple" x="0" y="0" z="7" spawntime="60"/>
+  </spawn>
   <spawn centerx="1020" centery="1274" centerz="7" radius="5">
     <monster name="Dark Warrior" x="5" y="-2" z="7" spawntime="60"/>
     <monster name="Dark Warrior" x="-1" y="2" z="7" spawntime="60"/>
@@ -6719,9 +6729,6 @@
   </spawn>
   <spawn centerx="1925" centery="1462" centerz="7" radius="8">
     <monster name="Frost Dragon" x="5" y="5" z="7" spawntime="180"/>
-  </spawn>
-  <spawn centerx="1981" centery="1519" centerz="7" radius="1">
-    <npc name="server_start" x="0" y="0" z="7" spawntime="20"/>
   </spawn>
   <spawn centerx="1895" centery="1688" centerz="7" radius="15">
     <monster name="Black Sheep" x="-9" y="-9" z="7" spawntime="60"/>
@@ -8522,6 +8529,9 @@
   </spawn>
   <spawn centerx="1374" centery="2004" centerz="7" radius="1">
     <monster name="Island troll" x="0" y="0" z="7" spawntime="60"/>
+  </spawn>
+  <spawn centerx="3386" centery="2004" centerz="7" radius="1">
+    <npc name="aracura.temple" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1268" centery="2005" centerz="7" radius="1">
     <monster name="Pirate Skeleton" x="1" y="0" z="7" spawntime="60"/>
@@ -11069,6 +11079,9 @@
     <monster name="Skeleton" x="1" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="2909" centery="1184" centerz="8" radius="4"/>
+  <spawn centerx="2895" centery="1185" centerz="8" radius="1">
+    <npc name="aaragon.temple" x="0" y="0" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="1046" centery="1186" centerz="8" radius="1">
     <monster name="Grim Reaper" x="1" y="0" z="8" spawntime="60"/>
   </spawn>
@@ -11585,6 +11598,163 @@
     <monster name="Frost Dragon Hatchling" x="-15" y="12" z="8" spawntime="60"/>
     <monster name="Frost Dragon" x="-11" y="15" z="8" spawntime="30"/>
   </spawn>
+  <spawn centerx="2144" centery="1499" centerz="8" radius="20">
+    <monster name="Hitdoll S" x="0" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="4" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="6" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="10" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="12" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="14" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="16" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="18" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="20" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-3" y="-7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-3" y="-5" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="4" y="-5" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="-5" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="-5" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-5" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-3" y="-3" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="4" y="-3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="-3" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="-3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-1" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="-1" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="-1" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-1" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="1" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="1" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="1" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="1" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-2" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="0" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="2" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="4" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="5" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="5" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="5" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="5" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-2" y="6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="0" y="6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="4" y="6" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="7" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="9" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="9" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="9" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="11" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="11" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-2" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="0" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="2" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="4" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="8" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="15" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="15" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-2" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="0" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="4" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="6" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="10" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="12" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="14" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="19" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2185" centery="1499" centerz="8" radius="20">
+    <monster name="Hitdoll S" x="-19" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-15" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-13" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-11" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-9" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-5" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-3" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-1" y="-11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="-7" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-5" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="-5" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="-5" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-5" y="-5" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="-5" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="-3" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="-3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-5" y="-3" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="-3" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-1" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="-1" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="-1" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-1" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="1" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="1" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="1" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="1" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-5" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-3" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-1" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="1" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="3" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="5" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="5" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="5" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="5" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-5" y="6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-3" y="6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-1" y="6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="1" y="6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="7" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="7" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="9" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="9" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="9" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="11" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="11" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-7" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-5" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-3" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-1" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="1" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="13" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="15" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="15" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-15" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-13" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-11" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-9" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-5" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-3" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-1" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="1" y="16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="17" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="19" z="8" spawntime="60"/>
+  </spawn>
   <spawn centerx="1392" centery="1504" centerz="8" radius="30">
     <monster name="Scorpion" x="-25" y="-15" z="8" spawntime="30"/>
     <monster name="Scorpion" x="-15" y="-12" z="8" spawntime="30"/>
@@ -11622,6 +11792,153 @@
     <monster name="Scorpion" x="2" y="24" z="8" spawntime="30"/>
     <monster name="Scorpion" x="18" y="24" z="8" spawntime="30"/>
     <monster name="Scorpion" x="29" y="29" z="8" spawntime="30"/>
+  </spawn>
+  <spawn centerx="2144" centery="1540" centerz="8" radius="20">
+    <monster name="Hitdoll W" x="-9" y="-20" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-18" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-2" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="0" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="2" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="4" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="8" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="10" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="12" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="14" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-16" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-16" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-2" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="0" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="4" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="6" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-12" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="-12" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-12" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-10" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="-10" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-10" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="-8" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="-8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-2" y="-7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="0" y="-7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="2" y="-7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="4" y="-7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-6" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="-6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="-6" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-6" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-2" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="0" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="4" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-2" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="-2" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="-2" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="-2" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="0" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="0" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="0" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="0" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-3" y="2" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="4" y="2" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="6" y="2" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="13" y="2" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="16" y="2" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-3" y="4" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-3" y="6" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="3" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="5" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="7" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="9" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="11" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="13" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="15" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="17" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="19" y="8" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2185" centery="1540" centerz="8" radius="20">
+    <monster name="Hitdoll S" x="8" y="-20" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-18" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-15" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-13" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-11" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-9" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-7" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-5" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-3" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-1" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="1" y="-17" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-16" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-9" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-5" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-3" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-1" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="1" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-14" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-12" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="-12" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-12" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-10" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="-10" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-10" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="-8" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-5" y="-7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-3" y="-7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-1" y="-7" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="1" y="-7" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-6" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="-6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="-6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-6" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-5" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-3" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-1" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="1" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="-2" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="-2" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="-2" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="-2" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="0" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="0" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="0" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="8" y="0" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-17" y="2" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="2" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="-7" y="2" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-5" y="2" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="2" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="4" z="8" spawntime="60"/>
+    <monster name="Hitdoll S" x="2" y="6" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-20" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-18" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-16" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-14" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-12" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-10" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-8" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-6" y="8" z="8" spawntime="60"/>
+    <monster name="Hitdoll W" x="-4" y="8" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="1410" centery="1653" centerz="8" radius="1"/>
   <spawn centerx="1405" centery="1658" centerz="8" radius="1"/>
@@ -13252,26 +13569,21 @@
     <monster name="Bog Raider" x="1" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="3161" centery="1935" centerz="8" radius="5">
-    <monster name="Dragon Lord" x="5" y="-2" z="8" spawntime="300"/>
+    <monster name="Dragon Lord" x="1" y="-1" z="8" spawntime="120"/>
     <monster name="dragon lord hatchling" x="2" y="-1" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="-1" y="3" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="-2" y="5" z="8" spawntime="300"/>
   </spawn>
   <spawn centerx="2005" centery="1936" centerz="8" radius="5">
     <monster name="Wild Warrior" x="0" y="0" z="8" spawntime="120"/>
   </spawn>
   <spawn centerx="3175" centery="1937" centerz="8" radius="5">
-    <monster name="Dragon Lord" x="3" y="-3" z="8" spawntime="300"/>
-    <monster name="dragon lord hatchling" x="2" y="-1" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="-3" y="0" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="-2" y="3" z="8" spawntime="300"/>
-    <monster name="dragon lord hatchling" x="2" y="3" z="8" spawntime="60"/>
+    <monster name="Dragon Lord" x="3" y="-3" z="8" spawntime="120"/>
+    <monster name="dragon lord hatchling" x="0" y="-1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="3190" centery="1938" centerz="8" radius="5">
-    <monster name="dragon lord hatchling" x="-2" y="-2" z="8" spawntime="60"/>
     <monster name="dragon lord hatchling" x="3" y="0" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="-4" y="3" z="8" spawntime="300"/>
+    <monster name="Dragon Lord" x="2" y="1" z="8" spawntime="300"/>
     <monster name="dragon lord hatchling" x="-1" y="3" z="8" spawntime="60"/>
+    <monster name="Dragon Lord" x="2" y="3" z="8" spawntime="300"/>
   </spawn>
   <spawn centerx="2045" centery="1940" centerz="8" radius="5">
     <monster name="Ghoul" x="3" y="0" z="8" spawntime="60"/>
@@ -13319,6 +13631,10 @@
   </spawn>
   <spawn centerx="3310" centery="1948" centerz="8" radius="2">
     <monster name="Minotaur guard" x="-1" y="1" z="8" spawntime="60"/>
+  </spawn>
+  <spawn centerx="3156" centery="1949" centerz="8" radius="5">
+    <monster name="dragon lord hatchling" x="-2" y="-1" z="8" spawntime="60"/>
+    <monster name="dragon lord hatchling" x="3" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="2303" centery="1950" centerz="8" radius="5">
     <monster name="Dragon" x="-1" y="-1" z="8" spawntime="60"/>
@@ -13372,11 +13688,8 @@
     <monster name="Dragon" x="-2" y="3" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="3139" centery="1957" centerz="8" radius="5">
-    <monster name="Dragon Lord" x="-3" y="-3" z="8" spawntime="300"/>
+    <monster name="Dragon Lord" x="-3" y="-3" z="8" spawntime="120"/>
     <monster name="dragon lord hatchling" x="-2" y="-2" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="4" y="-1" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="0" y="2" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="4" y="3" z="8" spawntime="300"/>
   </spawn>
   <spawn centerx="2095" centery="1958" centerz="8" radius="20">
     <monster name="Dwarf" x="-7" y="-8" z="8" spawntime="30"/>
@@ -13407,11 +13720,9 @@
   </spawn>
   <spawn centerx="3157" centery="1964" centerz="8" radius="5">
     <monster name="dragon lord hatchling" x="-3" y="-5" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="-1" y="-5" z="8" spawntime="300"/>
-    <monster name="dragon lord hatchling" x="-2" y="-2" z="8" spawntime="60"/>
+    <monster name="Dragon Lord" x="-1" y="-5" z="8" spawntime="120"/>
     <monster name="dragon lord hatchling" x="4" y="3" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="0" y="5" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="5" y="5" z="8" spawntime="300"/>
+    <monster name="Dragon Lord" x="5" y="5" z="8" spawntime="120"/>
   </spawn>
   <spawn centerx="3291" centery="1964" centerz="8" radius="5">
     <monster name="Minotaur guard" x="-1" y="-1" z="8" spawntime="60"/>
@@ -13440,11 +13751,8 @@
     <monster name="Dragon" x="1" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="3123" centery="1966" centerz="8" radius="5">
-    <monster name="Dragon Lord" x="4" y="-4" z="8" spawntime="300"/>
-    <monster name="dragon lord hatchling" x="0" y="-3" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="-2" y="-1" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="-3" y="2" z="8" spawntime="300"/>
-    <monster name="dragon lord hatchling" x="2" y="3" z="8" spawntime="60"/>
+    <monster name="dragon lord hatchling" x="0" y="-2" z="8" spawntime="60"/>
+    <monster name="Dragon Lord" x="-1" y="-1" z="8" spawntime="120"/>
   </spawn>
   <spawn centerx="2231" centery="1971" centerz="8" radius="25">
     <monster name="Cyclops" x="12" y="-19" z="8" spawntime="60"/>
@@ -13455,11 +13763,8 @@
     <monster name="Cyclops" x="1" y="20" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="3172" centery="1971" centerz="8" radius="5">
-    <monster name="Dragon Lord" x="-5" y="-3" z="8" spawntime="300"/>
     <monster name="dragon lord hatchling" x="-2" y="-1" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="1" y="-1" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="0" y="3" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="3" y="5" z="8" spawntime="300"/>
+    <monster name="Dragon Lord" x="0" y="-1" z="8" spawntime="120"/>
   </spawn>
   <spawn centerx="2056" centery="1972" centerz="8" radius="20">
     <monster name="Rotworm" x="9" y="-10" z="8" spawntime="30"/>
@@ -13476,11 +13781,11 @@
     <monster name="dragon lord hatchling" x="-16" y="8" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="3087" centery="1972" centerz="8" radius="30">
-    <monster name="Dragon Lord" x="22" y="-29" z="8" spawntime="300"/>
-    <monster name="dragon lord hatchling" x="22" y="-27" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="27" y="-25" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="28" y="-20" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="27" y="-18" z="8" spawntime="300"/>
+    <monster name="dragon lord hatchling" x="24" y="-30" z="8" spawntime="60"/>
+    <monster name="Dragon Lord" x="22" y="-29" z="8" spawntime="120"/>
+    <monster name="dragon lord hatchling" x="23" y="-28" z="8" spawntime="60"/>
+    <monster name="dragon lord hatchling" x="28" y="-19" z="8" spawntime="60"/>
+    <monster name="dragon lord hatchling" x="28" y="-17" z="8" spawntime="60"/>
     <monster name="Nightmare" x="-18" y="-12" z="8" spawntime="30"/>
     <monster name="Destroyer" x="-14" y="-12" z="8" spawntime="30"/>
     <monster name="Betrayed Wraith" x="5" y="-4" z="8" spawntime="30"/>
@@ -13517,18 +13822,12 @@
     <monster name="Dragon Hatchling" x="1" y="2" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="3180" centery="1981" centerz="8" radius="5">
-    <monster name="dragon lord hatchling" x="-3" y="-4" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="3" y="-1" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="-2" y="4" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="3" y="4" z="8" spawntime="300"/>
+    <monster name="Dragon Lord" x="0" y="-1" z="8" spawntime="300"/>
+    <monster name="dragon lord hatchling" x="-1" y="1" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="3193" centery="1984" centerz="8" radius="5">
-    <monster name="Dragon Lord" x="-4" y="-5" z="8" spawntime="300"/>
-    <monster name="dragon lord hatchling" x="-2" y="-4" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="3" y="-2" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="-2" y="2" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="3" y="3" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="3" y="5" z="8" spawntime="300"/>
+    <monster name="dragon lord hatchling" x="-2" y="-1" z="8" spawntime="60"/>
+    <monster name="Dragon Lord" x="-2" y="1" z="8" spawntime="120"/>
   </spawn>
   <spawn centerx="3346" centery="1985" centerz="8" radius="5">
     <monster name="Skeleton" x="-2" y="-1" z="8" spawntime="120"/>
@@ -13611,12 +13910,11 @@
     <monster name="Dragon Hatchling" x="-2" y="1" z="8" spawntime="60"/>
     <monster name="Dragon" x="1" y="3" z="8" spawntime="180"/>
   </spawn>
-  <spawn centerx="3181" centery="1999" centerz="8" radius="5">
-    <monster name="Dragon Lord" x="-4" y="-5" z="8" spawntime="300"/>
+  <spawn centerx="3181" centery="1999" centerz="8" radius="8">
+    <monster name="Dragon Lord" x="-4" y="-5" z="8" spawntime="120"/>
+    <monster name="Dragon Lord" x="8" y="-4" z="8" spawntime="120"/>
     <monster name="dragon lord hatchling" x="-3" y="-3" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="1" y="0" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="5" y="2" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="5" y="4" z="8" spawntime="300"/>
+    <monster name="dragon lord hatchling" x="7" y="-3" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="3340" centery="1999" centerz="8" radius="5">
     <monster name="Skeleton" x="-2" y="-2" z="8" spawntime="120"/>
@@ -13639,11 +13937,10 @@
     <monster name="Island troll" x="0" y="0" z="8" spawntime="60"/>
   </spawn>
   <spawn centerx="3202" centery="2007" centerz="8" radius="5">
-    <monster name="Dragon Lord" x="-5" y="-5" z="8" spawntime="300"/>
+    <monster name="Dragon Lord" x="-5" y="-5" z="8" spawntime="120"/>
     <monster name="dragon lord hatchling" x="-4" y="-4" z="8" spawntime="60"/>
-    <monster name="dragon lord hatchling" x="-3" y="1" z="8" spawntime="60"/>
     <monster name="dragon lord hatchling" x="3" y="3" z="8" spawntime="60"/>
-    <monster name="Dragon Lord" x="5" y="5" z="8" spawntime="300"/>
+    <monster name="Dragon Lord" x="5" y="5" z="8" spawntime="120"/>
   </spawn>
   <spawn centerx="1374" centery="2008" centerz="8" radius="1">
     <monster name="Island troll" x="0" y="0" z="8" spawntime="60"/>

@@ -29,37 +29,25 @@
     <immunity invisible="0"/>
   </immunities>
   <loot>
-    <item id="2148" countmax="55" chance1="100000" chancemax="0">
+    <item id="2148" countmax="17" chance="50000">
       <!--gold coin-->
     </item>
-    <item id="3976" countmax="10" chance1="50000" chancemax="0">
+    <item id="3976" countmax="3" chance="3000">
       <!--worm-->
     </item>
-    <item id="2148" countmax="32" chance1="100000" chancemax="0">
-      <!--gold coin-->
-    </item>
-    <item id="2480" chance="1500">
-      <!--legion helmet-->
-    </item>
-    <item id="2530" chance="2857">
-      <!--copper shield-->
-    </item>
+    <item id="2666" countmax="1" chance="20000">
+      <!--meat-->
+    </item>    
     <item id="1987" chance="100000">
       <inside>
-        <item id="2666" countmax="1" chance="20000">
-          <!--meat-->
-        </item>
-        <item id="2398" chance="3333">
+        <item id="2398" chance="4100">
           <!--mace-->
         </item>
-        <item id="2671" countmax="2" chance1="20000" chancemax="0">
+        <item id="2671" countmax="1" chance="20000">
           <!--ham-->
         </item>
-        <item id="2376" chance="10000">
+        <item id="2376" chance="3000">
           <!--sword-->
-        </item>
-        <item id="2412" chance="1000">
-          <!--katana-->
         </item>
       </inside>
       <!--bag-->

@@ -1,0 +1,25 @@
+Padrão de lots:
+
+Chances:
+
+//Items abundantes, que irão ser vistos de cada 1 a 15 vezes que o monstro é morto.
+100000 = Sempre (1)
+50000 = Quase sempre (2)
+25000 = Muito Frequente (4)
+12500 = Frequente (8)
+6666 = Pouco Frequente (15)
+
+//Items incomuns, que irão ser vistos de cada 25 a 100 vezes que o monstro é morto.
+4000 = Incomum (25)
+2000 = Muito Incomum (50)
+1333 = Bastante Incomum (75)
+1000 = Quase raro (100)
+
+//Items raros, que irão ser vistos de cada 150 a 300 vezes que o monstro é morto.
+666 = Raro (150)
+500 = Muito raro (200)
+333 = Extremamente raro (300)
+
+//Items raros, que irão ser vistos de cada 500 e 1000 vezes que o monstro é morto.
+200 = Semi Lendário (500)
+100 = Lendário (1000)

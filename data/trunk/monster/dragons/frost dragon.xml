@@ -105,7 +105,7 @@
         <item id="2146" countmax="1" chance1="4200">
           <!--small sapphire-->
         </item>
-        <item id="2528" chance="190">
+        <item id="2528" chance="423">
           <!--tower shield-->
         </item>
         <item id="7441" chance="5360">
@@ -117,10 +117,10 @@
         <item id="2498" chance="300">
           <!--royal helmet-->
         </item>
-        <item id="2492" chance="300">
+        <item id="2492" chance="65">
           <!--dragon scale mail-->
         </item>
-        <item id="2396" chance="100">
+        <item id="2396" chance="350">
           <!--ice rapier-->
         </item>
       </inside>
