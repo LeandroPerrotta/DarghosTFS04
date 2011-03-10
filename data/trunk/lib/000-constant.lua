@@ -289,22 +289,22 @@ TALKTYPE_MONSTER_YELL = 14
 TALKTYPE_LAST = TALKTYPE_MONSTER_YELL
 
 TALKTYPE_TYPES = {
-        ["say"] = TALKTYPE_SAY,
-        ["whisper"] = TALKTYPE_WHISPER,
-        ["yell"] = TALKTYPE_YELL,
-        ["private-playernpc"] = TALKTYPE_PRIVATE_PN,
-        ["private-npcplayer"] = TALKTYPE_PRIVATE_NP,
-        ["private"] = TALKTYPE_PRIVATE,
-        ["channel-yellow"] = TALKTYPE_CHANNEL_Y,
-        ["channel-white"] = TALKTYPE_CHANNEL_W,
-        ["broadcast"] = TALKTYPE_BROADCAST,
-        ["channel-red"] = TALKTYPE_CHANNEL_RN,
-        ["private-red"] = TALKTYPE_PRIVATE_RED,
-        ["channel-orange"] = TALKTYPE_CHANNEL_O,
-        ["monster"] = TALKTYPE_MONSTER,
-        ["monster-yell"] = TALKTYPE_MONSTER_YELL,
+	["say"] = TALKTYPE_SAY,
+	["whisper"] = TALKTYPE_WHISPER,
+	["yell"] = TALKTYPE_YELL,
+	["private-playernpc"] = TALKTYPE_PRIVATE_PN,
+	["private-npcplayer"] = TALKTYPE_PRIVATE_NP,
+	["private"] = TALKTYPE_PRIVATE,
+	["channel-yellow"] = TALKTYPE_CHANNEL_Y,
+	["channel-white"] = TALKTYPE_CHANNEL_W,
+	["broadcast"] = TALKTYPE_BROADCAST,
+	["channel-red"] = TALKTYPE_CHANNEL_RN,
+	["private-red"] = TALKTYPE_PRIVATE_RED,
+	["channel-orange"] = TALKTYPE_CHANNEL_O,
+	["monster"] = TALKTYPE_MONSTER,
+	["monster-yell"] = TALKTYPE_MONSTER_YELL,
 
-        ["channel-redanonymous"] = TALKTYPE_CHANNEL_RA
+	["channel-redanonymous"] = TALKTYPE_CHANNEL_RA
 }
 
 MESSAGE_FIRST = 13
@@ -321,17 +321,17 @@ MESSAGE_STATUS_CONSOLE_RED = 22
 MESSAGE_LAST = MESSAGE_STATUS_CONSOLE_RED
 
 MESSAGE_TYPES = {
-        ["advance"] = MESSAGE_EVENT_ADVANCE,
-        ["event"] = MESSAGE_EVENT_DEFAULT,
-        ["white"] = MESSAGE_EVENT_DEFAULT,
-        ["orange"] = MESSAGE_STATUS_CONSOLE_ORANGE,
-        ["info"] = MESSAGE_INFO_DESCR,
-        ["green"] = MESSAGE_INFO_DESCR,
-        ["small"] = MESSAGE_STATUS_SMALL,
-        ["blue"] = MESSAGE_STATUS_CONSOLE_BLUE,
-        ["red"] = MESSAGE_STATUS_CONSOLE_RED,
-        ["warning"] = MESSAGE_STATUS_WARNING,
-        ["status"] = MESSAGE_STATUS_DEFAULT
+	["advance"] = MESSAGE_EVENT_ADVANCE,
+	["event"] = MESSAGE_EVENT_DEFAULT,
+	["white"] = MESSAGE_EVENT_DEFAULT,
+	["orange"] = MESSAGE_STATUS_CONSOLE_ORANGE,
+	["info"] = MESSAGE_INFO_DESCR,
+	["green"] = MESSAGE_INFO_DESCR,
+	["small"] = MESSAGE_STATUS_SMALL,
+	["blue"] = MESSAGE_STATUS_CONSOLE_BLUE,
+	["red"] = MESSAGE_STATUS_CONSOLE_RED,
+	["warning"] = MESSAGE_STATUS_WARNING,
+	["status"] = MESSAGE_STATUS_DEFAULT
 }
 
 COLOR_BLACK = 0
@@ -456,30 +456,30 @@ SKILL_LAST = SKILL_FISHING
 SKILL__LAST = SKILL__LEVEL
 
 SKILL_NAMES = {
-        [SKILL_FIST] = "fist fighting",
-        [SKILL_CLUB] = "club fighting",
-        [SKILL_SWORD] = "sword fighting",
-        [SKILL_AXE] = "axe fighting",
-        [SKILL_DISTANCE] = "distance fighting",
-        [SKILL_SHIELD] = "shielding",
-        [SKILL_FISHING] = "fishing",
-        [SKILL__LEVEL] = "level",
-        [SKILL__MAGLEVEL] = "magic level"
+	[SKILL_FIST] = "fist fighting",
+	[SKILL_CLUB] = "club fighting",
+	[SKILL_SWORD] = "sword fighting",
+	[SKILL_AXE] = "axe fighting",
+	[SKILL_DISTANCE] = "distance fighting",
+	[SKILL_SHIELD] = "shielding",
+	[SKILL_FISHING] = "fishing",
+	[SKILL__LEVEL] = "level",
+	[SKILL__MAGLEVEL] = "magic level"
 }
 
 SKILL_IDS = {
-        ["fist"] = SKILL_FIST,
-        ["club"] = SKILL_CLUB,
-        ["sword"] = SKILL_SWORD,
-        ["axe"] = SKILL_AXE,
-        ["distance"] = SKILL_DISTANCE,
-        ["dist"] = SKILL_DISTANCE,
-        ["shielding"] = SKILL_SHIELD,
-        ["shield"] = SKILL_SHIELD,
-        ["fishing"] = SKILL_FISHING,
-        ["fish"] = SKILL_FISHING,
-        ["level"] = SKILL__LEVEL,
-        ["magic"] = SKILL__MAGLEVEL
+	["fist"] = SKILL_FIST,
+	["club"] = SKILL_CLUB,
+	["sword"] = SKILL_SWORD,
+	["axe"] = SKILL_AXE,
+	["distance"] = SKILL_DISTANCE,
+	["dist"] = SKILL_DISTANCE,
+	["shielding"] = SKILL_SHIELD,
+	["shield"] = SKILL_SHIELD,
+	["fishing"] = SKILL_FISHING,
+	["fish"] = SKILL_FISHING,
+	["level"] = SKILL__LEVEL,
+	["magic"] = SKILL__MAGLEVEL
 }
 
 GUILD_MEMBER = 1
@@ -744,7 +744,7 @@ PLAYERFLAG_HIDEHEALTH = 47
 PLAYERFLAG_CANPASSTHROUGHALLCREATURES = 48
 
 PLAYERCUSTOMFLAG_ALLOWIDLE = 0
-PLAYERCUSTOMFLAG_CANSEEPOSITION = 1
+PLAYERCUSTOMFLAG_CANSEEPOSITION	= 1
 PLAYERCUSTOMFLAG_CANSEEITEMDETAILS = 2
 PLAYERCUSTOMFLAG_CANSEECREATUREDETAILS = 3
 PLAYERCUSTOMFLAG_NOTSEARCHABLE = 4
@@ -783,47 +783,47 @@ keys = {2086, 2087, 2088, 2089, 2090, 2091, 2092, 10032, 10091}
 enchantableGems = {2147, 2146, 2149, 2150}
 enchantableItems = {2383, 7383, 7384, 7406, 7402, 2429, 2430, 7389, 7380, 2454, 2423, 2445, 7415, 7392, 2391, 2544, 8905}
 enchantingAltars = {
-        {7504, 7505, 7506, 7507},
-        {7508, 7509, 7510, 7511},
-        {7516, 7517, 7518, 7519},
-        {7512, 7513, 7514, 7515}
+	{7504, 7505, 7506, 7507},
+	{7508, 7509, 7510, 7511},
+	{7516, 7517, 7518, 7519},
+	{7512, 7513, 7514, 7515}
 }
 enchantedGems = {7760, 7759, 7761, 7762}
 enchantedItems = {
-        [2383] = {7744, 7763, 7854, 7869},
-        [7383] = {7745, 7764, 7855, 7870},
-        [7384] = {7746, 7765, 7856, 7871},
-        [7406] = {7747, 7766, 7857, 7872},
-        [7402] = {7748, 7767, 7858, 7873},
-        [2429] = {7749, 7768, 7859, 7874},
-        [2430] = {7750, 7769, 7860, 7875},
-        [7389] = {7751, 7770, 7861, 7876},
-        [7380] = {7752, 7771, 7862, 7877},
-        [2454] = {7753, 7772, 7863, 7878},
-        [2423] = {7754, 7773, 7864, 7879},
-        [2445] = {7755, 7774, 7865, 7880},
-        [7415] = {7756, 7775, 7866, 7881},
-        [7392] = {7757, 7776, 7867, 7882},
-        [2391] = {7758, 7777, 7868, 7883},
-        [2544] = {7840, 7839, 7850, 7838},
-        [8905] = {8906, 8907, 8909, 8908}
+	[2383] = {7744, 7763, 7854, 7869},
+	[7383] = {7745, 7764, 7855, 7870},
+	[7384] = {7746, 7765, 7856, 7871},
+	[7406] = {7747, 7766, 7857, 7872},
+	[7402] = {7748, 7767, 7858, 7873},
+	[2429] = {7749, 7768, 7859, 7874},
+	[2430] = {7750, 7769, 7860, 7875},
+	[7389] = {7751, 7770, 7861, 7876},
+	[7380] = {7752, 7771, 7862, 7877},
+	[2454] = {7753, 7772, 7863, 7878},
+	[2423] = {7754, 7773, 7864, 7879},
+	[2445] = {7755, 7774, 7865, 7880},
+	[7415] = {7756, 7775, 7866, 7881},
+	[7392] = {7757, 7776, 7867, 7882},
+	[2391] = {7758, 7777, 7868, 7883},
+	[2544] = {7840, 7839, 7850, 7838},
+	[8905] = {8906, 8907, 8909, 8908}
 }
 
 Config_meta =
 {
-        __index = function(t, k)
-                if(k == "type") then
-                        return function()
-                                return "Config"
-                        end
-                end
+	__index = function(t, k)
+		if(k == "type") then
+			return function()
+				return "Config"
+			end
+		end
 
-                return getConfigValue(k)
-        end,
+		return getConfigValue(k)
+	end,
 
-        __newindex = function(t, k, v)
-                return false
-        end
+	__newindex = function(t, k, v)
+		return false
+	end
 }
 
 CONFIG = {}
@@ -831,19 +831,19 @@ setmetatable(CONFIG, Config_meta)
 
 Storage_meta =
 {
-        __index = function(t, k)
-                if(k == "type") then
-                        return function()
-                                return "Storage"
-                        end
-                end
+	__index = function(t, k)
+		if(k == "type") then
+			return function()
+				return "Storage"
+			end
+		end
 
-                return getStorage(k)
-        end,
+		return getStorage(k)
+	end,
 
-        __newindex = function(t, k, v)
-                return doSetStorage(k, v)
-        end
+	__newindex = function(t, k, v)
+		return doSetStorage(k, v)
+	end
 }
 
 STORAGE = {}
