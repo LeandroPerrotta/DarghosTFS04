@@ -1631,13 +1631,19 @@ ReturnValue ConjureSpell::internalConjureItem(Player* player, uint32_t conjureId
 	if(!fromItem)
 		return RET_YOUNEEDAMAGICITEMTOCASTSPELL;
 
-	item = Item::CreateItem(conjureId, conjureCount);
-	ReturnValue ret = g_game.internalPlayerAddItem(NULL, player, item, false);
-	if(ret != RET_NOERROR)
-		return ret;
+	if(Item::items[conjureId].stackable || fromItem->isStackable())
+	{
+		item = Item::CreateItem(conjureId, conjureCount);
+		ReturnValue ret = g_game.internalPlayerAddItem(NULL, player, item, false);
+		if(ret != RET_NOERROR)
+			return ret;
 
-	g_game.transformItem(fromItem, reagentId, std::max((int32_t)0, ((int32_t)fromItem->getItemCount()) - 1));
-	g_game.startDecay(item);
+		g_game.transformItem(fromItem, reagentId, std::max((int32_t)0, ((int32_t)fromItem->getItemCount()) - 1));
+		g_game.startDecay(item);
+	}
+	else
+		g_game.transformItem(fromItem, conjureId);
+	
 	return RET_NOERROR;
 }
 
@@ -1848,19 +1854,20 @@ bool RuneSpell::Convince(const RuneSpell* spell, Creature* creature, Item*, cons
 bool RuneSpell::Soulfire(const RuneSpell* spell, Creature* creature, Item*, const Position&, const Position& posTo)
 {
 	Player* player = creature->getPlayer();
-	if(!player){
+	if(!player)
 		return false;
-	}
 
 	Thing* thing = g_game.internalGetThing(player, posTo, 0, 0, STACKPOS_LOOK);
-	if(!thing){
+	if(!thing)
+	{
 		player->sendCancelMessage(RET_NOTPOSSIBLE);
 		g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 		return false;
 	}
 
-	Creature* hitCreature = thing->getCreature();
-	if(!hitCreature){
+	Creature* target = thing->getCreature();
+	if(!target)
+	{
 		player->sendCancelMessage(RET_NOTPOSSIBLE);
 		g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 		return false;
@@ -1868,8 +1875,10 @@ bool RuneSpell::Soulfire(const RuneSpell* spell, Creature* creature, Item*, cons
 
 	ConditionDamage* soulfireCondition = new ConditionDamage(CONDITIONID_COMBAT, CONDITION_FIRE, false, 0);
 	soulfireCondition->setParam(CONDITIONPARAM_SUBID, 1);
-	soulfireCondition->addDamage(static_cast<int32_t>(std::ceil((player->getLevel()+player->getMagicLevel()) / 3.)), 9000, -10);
-	if(!hitCreature->addCondition(soulfireCondition)){
+
+	soulfireCondition->addDamage(std::ceil((player->getLevel() + player->getMagicLevel()) / 3.), 9000, -10);
+	if(!target->addCondition(soulfireCondition))
+	{
 		player->sendCancelMessage(RET_NOTPOSSIBLE);
 		g_game.addMagicEffect(player->getPosition(), MAGIC_EFFECT_POFF);
 		return false;
@@ -1878,7 +1887,6 @@ bool RuneSpell::Soulfire(const RuneSpell* spell, Creature* creature, Item*, cons
 	spell->postSpell(player, true, false);
 	return true;
 }
-
 
 ReturnValue RuneSpell::canExecuteAction(const Player* player, const Position& toPos)
 {

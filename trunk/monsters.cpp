@@ -391,8 +391,11 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 
 			uint32_t tickInterval = 2000;
 			ConditionType_t conditionType = CONDITION_NONE;
-			if(readXMLInteger(node, "physical", intValue))
-				conditionType = CONDITION_PHYSICAL;
+			if(readXMLInteger(node, "bleed", intValue) || readXMLInteger(node, "physical", intValue))
+			{
+				conditionType = CONDITION_BLEEDING;
+				tickInterval = 5000;
+			}
 			else if(readXMLInteger(node, "fire", intValue))
 			{
 				conditionType = CONDITION_FIRE;
@@ -403,22 +406,22 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 				conditionType = CONDITION_ENERGY;
 				tickInterval = 10000;
 			}
-			else if(readXMLInteger(node, "earth", intValue))
+			else if(readXMLInteger(node, "poison", intValue) || readXMLInteger(node, "earth", intValue))
 			{
 				conditionType = CONDITION_POISON;
 				tickInterval = 5000;
 			}
-			else if(readXMLInteger(node, "freeze", intValue))
+			else if(readXMLInteger(node, "freeze", intValue) || readXMLInteger(node, "ice", intValue))
 			{
 				conditionType = CONDITION_FREEZING;
 				tickInterval = 8000;
 			}
-			else if(readXMLInteger(node, "dazzle", intValue))
+			else if(readXMLInteger(node, "dazzle", intValue) || readXMLInteger(node, "holy", intValue))
 			{
 				conditionType = CONDITION_DAZZLED;
 				tickInterval = 10000;
 			}
-			else if(readXMLInteger(node, "curse", intValue))
+			else if(readXMLInteger(node, "curse", intValue) || readXMLInteger(node, "death", intValue))
 			{
 				conditionType = CONDITION_CURSED;
 				tickInterval = 4000;
@@ -426,11 +429,6 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 			else if(readXMLInteger(node, "drown", intValue))
 			{
 				conditionType = CONDITION_DROWN;
-				tickInterval = 5000;
-			}
-			else if(readXMLInteger(node, "poison", intValue))
-			{
-				conditionType = CONDITION_POISON;
 				tickInterval = 5000;
 			}
 
@@ -457,6 +455,8 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 			combat->setParam(COMBATPARAM_COMBATTYPE, COMBAT_PHYSICALDAMAGE);
 			combat->setParam(COMBATPARAM_BLOCKEDBYARMOR, 1);
 		}
+		else if(tmpName == "bleed")
+			combat->setParam(COMBATPARAM_COMBATTYPE, COMBAT_PHYSICALDAMAGE);
 		else if(tmpName == "drown")
 			combat->setParam(COMBATPARAM_COMBATTYPE, COMBAT_DROWNDAMAGE);
 		else if(tmpName == "fire")
@@ -786,8 +786,11 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 		{
 			ConditionType_t conditionType = CONDITION_NONE;
 			uint32_t tickInterval = 2000;
-			if(tmpName == "physicalcondition")
-				conditionType = CONDITION_PHYSICAL;
+			if(tmpName == "physicalcondition" || tmpName == "bleedcondition")
+			{
+				conditionType = CONDITION_BLEEDING;
+				tickInterval = 5000;
+			}
 			else if(tmpName == "firecondition")
 			{
 				conditionType = CONDITION_FIRE;
@@ -798,22 +801,22 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 				conditionType = CONDITION_ENERGY;
 				tickInterval = 10000;
 			}
-			else if(tmpName == "earthcondition")
+			else if(tmpName == "earthcondition" || tmpName == "poisoncondition")
 			{
 				conditionType = CONDITION_POISON;
 				tickInterval = 5000;
 			}
-			else if(tmpName == "freezecondition")
+			else if(tmpName == "icecondition" || tmpName == "freezecondition")
 			{
 				conditionType = CONDITION_FREEZING;
 				tickInterval = 8000;
 			}
-			else if(tmpName == "cursecondition")
+			else if(tmpName == "deathcondition" || tmpName == "cursecondition")
 			{
 				conditionType = CONDITION_CURSED;
 				tickInterval = 4000;
 			}
-			else if(tmpName == "dazzlecondition")
+			else if(tmpName == "holycondition" || tmpName == "dazzlecondition")
 			{
 				conditionType = CONDITION_DAZZLED;
 				tickInterval = 10000;
@@ -821,11 +824,6 @@ bool Monsters::deserializeSpell(xmlNodePtr node, spellBlock_t& sb, const std::st
 			else if(tmpName == "drowncondition")
 			{
 				conditionType = CONDITION_DROWN;
-				tickInterval = 5000;
-			}
-			else if(tmpName == "poisoncondition")
-			{
-				conditionType = CONDITION_POISON;
 				tickInterval = 5000;
 			}
 
@@ -1211,7 +1209,7 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 						if(tmpStrValue == "physical")
 						{
 							mType->damageImmunities |= COMBAT_PHYSICALDAMAGE;
-							mType->conditionImmunities |= CONDITION_PHYSICAL;
+							mType->conditionImmunities |= CONDITION_BLEEDING;
 						}
 						else if(tmpStrValue == "energy")
 						{
@@ -1260,13 +1258,15 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 							mType->conditionImmunities |= CONDITION_DRUNK;
 						else if(tmpStrValue == "invisible")
 							mType->conditionImmunities |= CONDITION_INVISIBLE;
+						else if(tmpStrValue == "bleed")
+							mType->conditionImmunities |= CONDITION_BLEEDING;
 						else
 							SHOW_XML_WARNING("Unknown immunity name " << strValue);
 					}
 					else if(readXMLString(tmpNode, "physical", strValue) && booleanString(strValue))
 					{
 						mType->damageImmunities |= COMBAT_PHYSICALDAMAGE;
-						//mType->conditionImmunities |= CONDITION_PHYSICAL;
+						mType->conditionImmunities |= CONDITION_BLEEDING;
 					}
 					else if(readXMLString(tmpNode, "energy", strValue) && booleanString(strValue))
 					{
@@ -1316,6 +1316,8 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 						mType->conditionImmunities |= CONDITION_DRUNK;
 					else if(readXMLString(tmpNode, "invisible", strValue) && booleanString(strValue))
 						mType->conditionImmunities |= CONDITION_INVISIBLE;
+					else if(readXMLString(tmpNode, "bleed", strValue) && booleanString(strValue))
+						mType->conditionImmunities |= CONDITION_BLEEDING;
 				}
 			}
 		}

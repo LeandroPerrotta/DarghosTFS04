@@ -18,7 +18,7 @@
 #ifndef __MAP__
 #define __MAP__
 #include "tools.h"
-
+ 
 #include "fileloader.h"
 #include "position.h"
 
@@ -30,7 +30,7 @@ class Player;
 class Game;
 class Tile;
 class Map;
-
+ 
 struct FindPathParams;
 struct AStarNode
 {
@@ -38,7 +38,7 @@ struct AStarNode
 	AStarNode* parent;
 	int32_t f, g, h;
 };
-
+ 
 using boost::shared_ptr;
 #define MAP_MAX_LAYERS 16
 
@@ -53,37 +53,37 @@ class AStarNodes
 	public:
 		AStarNodes();
 		virtual ~AStarNodes() {}
-
+ 
 		void openNode(AStarNode* node);
 		void closeNode(AStarNode* node);
 
 		uint32_t countOpenNodes();
 		uint32_t countClosedNodes();
-
+ 
 		AStarNode* getBestNode();
 		AStarNode* createOpenNode();
 		AStarNode* getNodeInList(uint16_t x, uint16_t y);
-
+ 
 		bool isInList(uint16_t x, uint16_t y);
 		int32_t getEstimatedDistance(uint16_t x, uint16_t y, uint16_t xGoal, uint16_t yGoal);
 
 		int32_t getMapWalkCost(const Creature* creature, AStarNode* node,
 			const Tile* neighbourTile, const Position& neighbourPos);
 		static int32_t getTileWalkCost(const Creature* creature, const Tile* tile);
-
+ 
 	private:
 		AStarNode nodes[MAX_NODES];
-
+ 
 		std::bitset<MAX_NODES> openNodes;
 		uint32_t curNode;
 };
-
+ 
 template<class T> class lessPointer: public std::binary_function<T*, T*, bool>
 {
 	public:
 		bool operator()(T*& t1, T*& t2) {return *t1 < *t2;}
 };
-
+ 
 #define FLOOR_BITS 3
 #define FLOOR_SIZE (1 << FLOOR_BITS)
 #define FLOOR_MASK (FLOOR_SIZE - 1)
@@ -102,12 +102,12 @@ class QTreeNode
 	public:
 		QTreeNode();
 		virtual ~QTreeNode();
-
+ 
 		bool isLeaf() const {return m_isLeaf;}
-
+ 
 		QTreeLeafNode* getLeaf(uint16_t x, uint16_t y);
 		static QTreeLeafNode* getLeafStatic(QTreeNode* root, uint16_t x, uint16_t y);
-
+ 
 		QTreeLeafNode* createLeaf(uint16_t x, uint16_t y, uint16_t level);
 
 	protected:
@@ -116,8 +116,8 @@ class QTreeNode
 
 		friend class Map;
 };
-
-
+ 
+ 
 class QTreeLeafNode : public QTreeNode
 {
 	public:
@@ -129,7 +129,7 @@ class QTreeLeafNode : public QTreeNode
 
 		QTreeLeafNode* stepSouth(){return m_leafS;}
 		QTreeLeafNode* stepEast(){return m_leafE;}
-
+ 
 		void addCreature(Creature* c);
 		void removeCreature(Creature* c);
 

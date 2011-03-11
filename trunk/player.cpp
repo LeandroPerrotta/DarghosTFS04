@@ -503,7 +503,7 @@ void Player::sendIcons() const
 	if(!client)
 		return;
 
-	uint32_t icons = 0;
+	uint32_t icons = ICON_NONE;
 	for(ConditionList::const_iterator it = conditions.begin(); it != conditions.end(); ++it)
 	{
 		if(!isSuppress((*it)->getType()))
@@ -511,10 +511,10 @@ void Player::sendIcons() const
 	}
 
 	if(getZone() == ZONE_PROTECTION)
-		icons |= ICON_PROTECTIONZONE;
+		icons |= ICON_PZ;
 
 	if(pzLocked)
-		icons |= ICON_PZ;
+		icons |= ICON_PZBLOCK;
 
 	client->sendIcons(icons);
 }
@@ -870,8 +870,8 @@ bool Player::canWalkthrough(const Creature* creature) const
 #ifdef __WAR_SYSTEM__
 		!player->isEnemy(this, true) &&
 #endif
-		player->getVocation()->isAttackable()) || (player->getVocation()->isAttackable() &&
-		player->getLevel() < (uint32_t)g_config.getNumber(ConfigManager::PROTECTION_LEVEL))) && player->getTile()->ground &&
+		player->getVocation()->isAttackable()) || player->getTile()->hasFlag(TILESTATE_PROTECTIONZONE) || (player->getVocation()->isAttackable()
+		&& player->getLevel() < (uint32_t)g_config.getNumber(ConfigManager::PROTECTION_LEVEL))) && player->getTile()->ground &&
 		Item::items[player->getTile()->ground->getID()].walkStack) && (!player->hasCustomFlag(PlayerCustomFlag_GamemasterPrivileges)
 		|| player->getAccess() <= getAccess()))
 		return true;
@@ -1415,6 +1415,7 @@ void Player::onChangeZone(ZoneType_t zone)
 			dismount(true);
 	}
 
+	g_game.updateCreatureWalkthrough(this);
 	sendIcons();
 }
 
@@ -1452,6 +1453,15 @@ void Player::onCreatureDisappear(const Creature* creature, bool isLogout)
 	{
 		loginPosition = getPosition();
 		lastLogout = time(NULL);
+	}
+
+	Item* item = NULL;
+	for(int32_t slot = SLOT_FIRST; slot < SLOT_LAST; ++slot)
+	{
+		if(!(item = getInventoryItem((slots_t)slot)))
+			continue;
+
+		g_moveEvents->onPlayerDeEquip(this, item, (slots_t)slot, false);
 	}
 
 	if(eventWalk)
@@ -3605,6 +3615,9 @@ void Player::onAddCombatCondition(ConditionType_t type, bool)
 		case CONDITION_PARALYZE:
 			tmp = "paralyzed";
 			break;
+		case CONDITION_BLEEDING:
+			tmp = "bleeding";
+			break;
 		/*case CONDITION_MANASHIELD:
 			tmp = "protected by a magic shield";
 			break;
@@ -4049,20 +4062,18 @@ bool Player::canWearOutfit(uint32_t outfitId, uint32_t addons)
 
 	std::string value;
 	getStorage(it->second.storageId, value);
+	if(value == it->second.storageValue)
+		return true;
 
-	bool ret = value == it->second.storageValue;
-	if(ret)
-		return ret;
+	int32_t intValue = atoi(value.c_str());
+	if(!intValue && value != "0")
+		return false;
 
-	int32_t tmp = atoi(value.c_str());
-	if(!tmp && value != "0")
-		return ret;
-
-	tmp = atoi(it->second.storageValue.c_str());
+	int32_t tmp = atoi(it->second.storageValue.c_str());
 	if(!tmp && it->second.storageValue != "0")
-		return ret;
+		return false;
 
-	return atoi(value.c_str()) >= tmp;
+	return intValue >= tmp;
 }
 
 bool Player::addOutfit(uint32_t outfitId, uint32_t addons)

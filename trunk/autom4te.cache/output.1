@@ -716,6 +716,8 @@ enable_otserv_allocator
 enable_homedir_conf
 enable_root_permission
 enable_luajit
+enable_nocrypto
+enable_groundcache
 enable_debug
 enable_mysql
 enable_pgsql
@@ -1367,8 +1369,9 @@ Optional Features:
   --enable-otserv-allocator	enable otserv custom allocator
   --enable-homedir-conf		enable home directory configuration
   --enable-root-permission	enable running on root user
-  --enable-login-server  enable running in a login server mode
   --enable-luajit		enable luajit instead of lua
+  --enable-nocrypto		enable openssl for hashing instead of crypto++
+  --enable-groundcache		enable caching of ground items
   --enable-debug		enable debuging
   --enable-mysql		enable MySQL support
   --enable-pgsql		enable PostgreSQL support
@@ -3692,22 +3695,32 @@ if test "${enable_root_permission+set}" = set; then :
 fi
 
 
-# check do we want to be a login server for multiworld
-loginServer=no
-@%:@ Check whether --enable-login-server was given.
-if test "${enable_login_server+set}" = set; then :
-  enableval=$enable_login_server; OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__LOGIN_SERVER__"
-	loginServer=yes
-
-fi
-
-
 # check if we want to use luajit instead of lua
 luaJIT=no
 @%:@ Check whether --enable-luajit was given.
 if test "${enable_luajit+set}" = set; then :
   enableval=$enable_luajit; OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__LUAJIT__"
 	luaJIT=yes
+
+fi
+
+
+# check if we want to use openssl for hashing instead of crypto++
+noCrypto=no
+@%:@ Check whether --enable-nocrypto was given.
+if test "${enable_nocrypto+set}" = set; then :
+  enableval=$enable_nocrypto; OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__NO_CRYPTOPP__"
+	noCrypto=yes
+
+fi
+
+
+# check if we want to cache ground items
+groundCache=no
+@%:@ Check whether --enable-groundcache was given.
+if test "${enable_groundcache+set}" = set; then :
+  enableval=$enable_groundcache; OPTIONAL_FLAGS="$OPTIONAL_FLAGS -D__GROUND_CACHE__"
+	groundCache=yes
 
 fi
 
@@ -5777,7 +5790,8 @@ fi
 # AC_CHECK_HEADERS([boost/tr1/unordered_set.hpp], , [AC_MSG_ERROR("boost::unordered_set header not found. Please update your boost to at least 1.40.")])
 
 # check for Crypto++
-for ac_header in cryptopp/sha.h cryptopp/md5.h cryptopp/adler32.h cryptopp/hex.h cryptopp/base64.h cryptopp/hmac.h cryptopp/cryptlib.h
+if test "$noCrypto" = "no" ; then
+	for ac_header in cryptopp/sha.h cryptopp/md5.h cryptopp/adler32.h cryptopp/hex.h cryptopp/base64.h cryptopp/hmac.h cryptopp/cryptlib.h
 do :
   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
 ac_fn_cxx_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
@@ -5792,7 +5806,7 @@ fi
 
 done
 
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lcryptopp" >&5
+	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lcryptopp" >&5
 $as_echo_n "checking for main in -lcryptopp... " >&6; }
 if test "${ac_cv_lib_cryptopp_main+set}" = set; then :
   $as_echo_n "(cached) " >&6
@@ -5833,9 +5847,11 @@ else
   as_fn_error $? "\"Linking against Crypto++ library failed\"" "$LINENO" 5 
 fi
 
+fi
 
 # check for OpenSSL
-for ac_header in openssl/rsa.h openssl/bn.h openssl/err.h
+if test "$noCrypto" = "yes" ; then
+	for ac_header in openssl/rsa.h openssl/bn.h openssl/err.h openssl/sha.h openssl/md5.h
 do :
   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
 ac_fn_cxx_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
@@ -5850,6 +5866,23 @@ fi
 
 done
 
+else
+	for ac_header in openssl/rsa.h openssl/bn.h openssl/err.h
+do :
+  as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ac_fn_cxx_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
+if eval test \"x\$"$as_ac_Header"\" = x"yes"; then :
+  cat >>confdefs.h <<_ACEOF
+@%:@define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
+_ACEOF
+ 
+else
+  as_fn_error $? "\"Required OpenSSL headers not found.\"" "$LINENO" 5 
+fi
+
+done
+
+fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for main in -lcrypto" >&5
 $as_echo_n "checking for main in -lcrypto... " >&6; }
 if test "${ac_cv_lib_crypto_main+set}" = set; then :
@@ -5890,7 +5923,6 @@ _ACEOF
 else
   as_fn_error $? "\"Linking against OpenSSL library failed\"" "$LINENO" 5 
 fi
-
 
 
 # check for Lua
@@ -8376,15 +8408,16 @@ echo
 #echo The Forgotten Server 0.4
 echo $PACKAGE $VERSION
 echo
+echo Using LuaJIT................ : $luaJIT
+echo Using ground cache.......... : $groundCache
 echo Server diagnostics.......... : $serverDiag
-echo Login server mode........... : $loginServer
-echo OTAdmin protocol............ : $otAdmin
+echo Home-directory configuration : $homedirConf
 echo Root run permission......... : $rootPermission
 echo Login server mode........... : $loginServer
-echo Home-directory configuration : $homedirConf
+echo Disabled Crypto++........... : $noCrypto
+echo OTAdmin protocol............ : $otAdmin
 echo OTServ custom allocator..... : $otservAllocator
 echo Debug build................. : $debugBuild
-echo Using LuaJIT................ : $luaJIT
 echo
 echo Build with MySQL............ : $useMySQL
 echo Build with SQLite........... : $useSQLite

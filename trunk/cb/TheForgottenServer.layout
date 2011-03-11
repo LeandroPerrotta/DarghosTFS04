@@ -10,7 +10,7 @@
 	<File name="../beds.cpp" open="0" top="0" tabpos="9">
 		<Cursor position="2368" topLine="78" />
 	</File>
-	<File name="../chat.cpp" open="1" top="1" tabpos="6">
+	<File name="../chat.cpp" open="1" top="0" tabpos="6">
 		<Cursor position="18399" topLine="624" />
 	</File>
 	<File name="../combat.cpp" open="0" top="0" tabpos="22">
@@ -34,8 +34,8 @@
 	<File name="../creatureevent.cpp" open="0" top="0" tabpos="15">
 		<Cursor position="35617" topLine="1278" />
 	</File>
-	<File name="../databasemanager.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="37249" topLine="1055" />
+	<File name="../databasemanager.cpp" open="1" top="1" tabpos="7">
+		<Cursor position="40408" topLine="1175" />
 	</File>
 	<File name="../definitions.h" open="0" top="0" tabpos="21">
 		<Cursor position="991" topLine="13" />

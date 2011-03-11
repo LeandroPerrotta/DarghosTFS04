@@ -29,7 +29,7 @@
 
 #define VERSION_CHECK "http://forgottenserver.otland.net/version.xml"
 #define VERSION_PATCH 0
-#define VERSION_TIMESTAMP 1299713301
+#define VERSION_TIMESTAMP 1299857798
 #define VERSION_BUILD 0
 #define VERSION_DATABASE 30
 
