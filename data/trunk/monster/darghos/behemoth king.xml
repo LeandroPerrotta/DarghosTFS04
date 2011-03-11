@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Behemoth King" nameDescription="a behemoth king" race="blood" species="hard" experience="7000000" speed="400" manacost="0">
-  <health now="1200000" max="1200000"/>
+<monster name="Behemoth King" nameDescription="a behemoth king" race="blood" species="hard" experience="700000" speed="400" manacost="0">
+  <health now="70000" max="70000"/>
   <look type="55" head="20" body="30" legs="40" feet="50" corpse="2931"/>
   <targetchange interval="8000" chance="12"/>
   <strategy attack="65" defense="35"/>
@@ -19,17 +19,17 @@
     <flag runonhealth="45000"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="2000" skill="350" attack="85"/>
-    <attack name="physical" interval="2000" chance="20" range="7" min="-1400" max="-1750">
+    <attack name="melee" interval="500" min="-50" max="-100"/>
+    <attack name="physical" interval="2000" chance="20" range="7" min="-100" max="-500">
       <attribute key="shootEffect" value="largerock"/>
     </attack>
-    <attack name="earth" interval="2000" chance="33" radius="5" target="0" min="-450" max="-605">
+    <attack name="earth" interval="2000" chance="33" radius="5" target="0" min="-150" max="-205">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
     <attack name="speed" interval="2000" chance="6" range="7" speedchange="-1000" duration="20000">
       <attribute key="areaEffect" value="redshimmer"/>
     </attack>
-    <attack name="earth" interval="2000" chance="42" radius="9" target="0" min="-135" max="-320">
+    <attack name="earth" interval="2000" chance="42" radius="9" target="0" min="-35" max="-120">
       <attribute key="areaEffect" value="plantattack"/>
     </attack>
   </attacks>
@@ -42,11 +42,11 @@
     </defense>
   </defenses>
   <elements>
-    <element physicalPercent="45"/>
+    <element physicalPercent="50"/>
     <element deathPercent="0"/>
-    <element earthPercent="70"/>
-    <element icePercent="-25"/>
-    <element firePercent="0"/>
+    <element earthPercent="90"/>
+    <element icePercent="-35"/>
+    <element firePercent="90"/>
   </elements>
   <immunities>
     <immunity physical="0"/>
@@ -68,43 +68,43 @@
     <voice sentence="I NEED TO EAT YOU!"/>
   </voices>
   <loot capacity="900">
-    <item id="2646" countmax="1" chance="500">
+    <item id="2646" countmax="1" chance="1000">
       <!--golden boots-->
     </item>
-    <item id="2471" countmax="1" chance="500">
+    <item id="2471" countmax="1" chance="1000">
       <!--golden helmet-->
     </item>
-    <item id="2400" countmax="1" chance="500">
+    <item id="2400" countmax="1" chance="1000">
       <!--magic sword-->
     </item>
-    <item id="6553" countmax="1" chance="500">
+    <item id="6553" countmax="1" chance="1000">
       <!--ruthless axe-->
     </item>
     <item id="2173" countmax="1" chance="500">
       <!--amulet of loss-->
     </item>
-    <item id="2414" countmax="1" chance="500">
+    <item id="2414" countmax="1" chance="1000">
       <!--dragon lance-->
     </item>
-    <item id="2377" countmax="1" chance="500">
+    <item id="2377" countmax="1" chance="1000">
       <!--two handed sword-->
     </item>
-    <item id="7416" countmax="1" chance="500">
+    <item id="7416" countmax="1" chance="1000">
       <!--bloody edge-->
     </item>
-    <item id="2472" countmax="1" chance="500">
+    <item id="2472" countmax="1" chance="6666">
       <!--magic plate armor-->
     </item>
-    <item id="2391" countmax="1" chance="500">
-      <!--war hammer-->
+    <item id="5887" countmax="1" chance="6666">
+      <!--piece of royal steel-->
     </item>
-    <item id="2426" countmax="1" chance="500">
+    <item id="2426" countmax="1" chance="6666">
       <!--naginata-->
     </item>
-    <item id="2393" countmax="1" chance="500">
+    <item id="2393" countmax="1" chance="6666">
       <!--giant sword-->
     </item>
-    <item id="2392" countmax="1" chance="500">
+    <item id="2392" countmax="1" chance="1000">
       <!--fire sword-->
     </item>
     <item id="2476" countmax="1" chance="500">
@@ -116,7 +116,7 @@
     <item id="2520" countmax="1" chance="500">
       <!--demon shield-->
     </item>
-    <item id="2514" countmax="1" chance="500">
+    <item id="2514" countmax="1" chance="1000">
       <!--mastermind shield-->
     </item>
     <item id="2474" countmax="1" chance="500">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Mechanical Catapult" nameDescription="a mechanical catapult" race="undead" experience="700000" speed="0" manacost="0">
+<monster name="Mechanical Catapult" nameDescription="a mechanical catapult" race="undead" experience="10000" speed="0" manacost="0">
   <health now="45000" max="45000"/>
   <look typeex="5608" corpse="5608"/>
   <targetchange interval="2000" chance="50"/>
@@ -17,7 +17,7 @@
     <flag runonhealth="100"/>
   </flags>
   <attacks>
-    <attack name="physical" interval="500" chance="100" range="20" radius="3" target="1" min="-60" max="-90">
+    <attack name="physical" interval="500" chance="100" range="20" radius="3" target="1" min="-10" max="-50">
       <attribute key="shootEffect" value="largerock"/>
       <attribute key="areaEffect" value="groundshaker"/>
     </attack>

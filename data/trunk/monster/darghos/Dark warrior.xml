@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Dark Warrior" nameDescription="a warrior" race="blood" experience="9500" speed="600" manacost="320">
-  <health now="10000" max="10000"/>
+  <health now="3500" max="3500"/>
   <look type="268" head="95" body="95" legs="95" feet="95" addons="2" corpse="6080"/>
   <targetchange interval="2000" chance="0"/>
   <strategy attack="100" defense="0"/>
@@ -18,8 +18,8 @@
     <flag runonhealth="0"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="500" min="-100" max="-200"/>
-    <attack name="physical" interval="4000" chance="50" range="7" radius="4" target="1" min="-100" max="-220">
+    <attack name="melee" interval="500" min="-10" max="-40"/>
+    <attack name="physical" interval="4000" chance="50" range="7" radius="4" target="1" min="-30" max="-100">
       <attribute key="shootEffect" value="bolt"/>
       <attribute key="areaEffect" value="blackspark"/>
     </attack>

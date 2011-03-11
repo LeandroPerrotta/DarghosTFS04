@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Nature Ancient" nameDescription="Mother Nature" race="fire" experience="3500000" speed="60" manacost="0">
-  <health now="1000000" max="1000000"/>
+<monster name="Nature Ancient" nameDescription="Mother Nature" race="fire" experience="500000" speed="60" manacost="0">
+  <health now="200000" max="200000"/>
   <look typeex="2699" corpse="2720"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>

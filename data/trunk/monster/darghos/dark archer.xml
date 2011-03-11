@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Dark Archer" nameDescription="an archer" race="blood" experience="3000" speed="215" manacost="0">
-  <health now="3000" max="3000"/>
+  <health now="1500" max="1500"/>
   <look type="129" head="95" body="95" legs="95" feet="95" addons="3" corpse="6080"/>
   <targetchange interval="5000" chance="8"/>
   <strategy attack="100" defense="0"/>
@@ -18,11 +18,11 @@
     <flag runonhealth="1500"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="1000" skill="120" attack="100"/>
-    <attack name="physical" interval="4000" chance="70" range="7" min="-20" max="-100">
+    <attack name="melee" interval="2000" min="-100" max="-200"/>
+    <attack name="physical" interval="2000" chance="100" range="7" min="-20" max="-70">
       <attribute key="shootEffect" value="arrow"/>
     </attack>
-    <attack name="physical" interval="4000" chance="50" range="7" min="-200" max="-200">
+    <attack name="physical" interval="4000" chance="50" range="7" min="-70" max="-80">
       <attribute key="shootEffect" value="suddendeath"/>
     </attack>
   </attacks>
