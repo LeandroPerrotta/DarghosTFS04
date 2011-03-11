@@ -5,8 +5,8 @@ setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_SUDDENDEATH)
 setCombatParam(combat, COMBAT_PARAM_TARGETCASTERORTOPMOST, TRUE)
 
 function onGetFormulaValues(cid, level, maglevel)
-	local min = (((level/5)+(maglevel*4))+60)
-	local max = (((level/5)+(maglevel*7))+60)
+	local min = ( (level * 0.2) + (maglevel * 4.605) + 28 )
+	local max = ( (level * 0.2) + (maglevel * 7.395) + 46 )
 	
 	local baseMin = min
 	local baseMax = max
