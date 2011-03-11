@@ -69,7 +69,7 @@
     </item>
     <item id="1988" chance="100000">
       <inside>
-        <item id="5880" chance="3000" countmax="100">
+        <item id="5892" chance="3000" countmax="1">
           <!--iron ore-->
         </item>
         <item id="2148" countmax="15" chance1="90000" chancemax="0">
