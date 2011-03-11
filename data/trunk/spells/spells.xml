@@ -293,6 +293,7 @@
 	</instant>	
 	
 	<!-- Healing -->
+	<!-- 
 	<instant name="Cure Burning" words="exana flam" lvl="30" mana="30" aggressive="0" selftarget="1" exhaustion="1000" groups="2,1000" icon="145" needlearn="0" event="script" value="healing/cure burning.lua">
     		<vocation id="2"/>
     		<vocation id="6"/>
@@ -301,6 +302,7 @@
   		<vocation id="3"/>
   		<vocation id="7"/>
  	</instant>
+ 	-->
  	<instant name="Cure Poison" words="exana pox" lvl="10" exhaustion="1000" groups="2,1000" icon="29" mana="30" selftarget="1" aggressive="0" script="healing/antidote.lua"/>
 		
 	<instant name="Light Healing" words="exura" lvl="9" exhaustion="1000" groups="2,1000" icon="1" mana="20" selftarget="1" aggressive="0" script="healing/light_healing.lua"/>
