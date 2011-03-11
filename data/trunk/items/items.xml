@@ -2197,14 +2197,16 @@
 		<attribute key="weight" value="420" />
 		<attribute key="slotType" value="necklace" />
 	</item>
-	<item id="2197" article="a" name="stone skin amulet">
+	<item id="2197" article="a" name="stone skin amulet (em manutencao, nao funciona!)">
 		<attribute key="weight" value="760" />
 		<attribute key="slotType" value="necklace" />
+		<!--
 		<attribute key="charges" value="5" />
 		<attribute key="showcharges" value="1" />
 		<attribute key="absorbPercentPhysical" value="80" />
 		<attribute key="absorbPercentDeath" value="80" />
 		<attribute key="showattributes" value="1" />
+		-->
 	</item>
 	<item id="2198" article="an" name="elven amulet">
 		<attribute key="weight" value="270" />
