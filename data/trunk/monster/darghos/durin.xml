@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Durin" nameDescription="The King of Dwarfs" race="blood" experience="100000" speed="700" manacost="650">
-  <health now="30000" max="30000"/>
+  <health now="60000" max="60000"/>
   <look type="70" head="20" body="30" legs="40" feet="50" corpse="6013"/>
   <targetchange interval="2000" chance="8"/>
   <strategy attack="100" defense="0"/>
@@ -18,19 +18,19 @@
     <flag runonhealth="400"/>
   </flags>
   <attacks>
-    <attack name="melee" interval="1500" min="-300" max="-500"/>
-    <attack name="melee" interval="2000" chance="20" range="7" radius="3" target="0" min="-100" max="-300">
+    <attack name="melee" interval="1000" min="-300" max="-800"/>
+    <attack name="melee" interval="2000" chance="90" range="7" radius="3" target="0" min="-100" max="-300">
       <attribute key="areaEffect" value="blackspark"/>
     </attack>
-    <attack name="melee" interval="2000" chance="15" range="7" radius="5" target="0" min="-100" max="-300">
+    <attack name="melee" interval="2000" chance="95" range="7" radius="5" target="0" min="-100" max="-300">
       <attribute key="areaEffect" value="groundshaker"/>
     </attack>
-    <attack name="melee" interval="2000" chance="15" range="7" target="1" min="-100" max="-150">
+    <attack name="melee" interval="2000" chance="90" range="7" target="1" min="-100" max="-150">
       <attribute key="shootEffect" value="whirlwindclub"/>
     </attack>
   </attacks>
   <defenses armor="500" defense="300">
-    <defense name="healing" interval="1000" chance="25" min="513" max="587">
+    <defense name="healing" interval="1000" chance="25" min="513" max="787">
       <attribute key="areaEffect" value="blueshimmer"/>
     </defense>
   </defenses>
