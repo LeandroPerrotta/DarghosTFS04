@@ -3,10 +3,28 @@ function onUse(cid, item, frompos, item2, topos)
 	-- Divine Ankh Configurations
 	local _vampireCorpses = {6006, 2956}
 	local _ghoulCorpses = {5976, 3113}
+	local checkPos = {x=2121, y=1883, 7}
+	local checkRange = 100
 
 	local courseChurch = getPlayerStorageValue(cid, QUESTLOG.DIVINE_ANKH.COURSE_CHURCH)
 
 	if(courseChurch == 2) then
+	
+		local pos = getCreaturePosition(cid)
+		pos.z = 7
+		
+		local fromPos = checkPos
+		fromPos.x = fromPos.x - (checkRange / 2)
+		fromPos.y = fromPos.y - (checkRange / 2)
+		
+		local toPos = checkPos
+		toPos.x = toPos.x + (checkRange / 2)
+		toPos.y = toPos.y + (checkRange / 2)
+		
+		if(not isInRange(pos, fromPos, toPos)) then
+			doPlayerSay(cid, "Eu estou muito longe da igreja! Devo retornar a suas proximidades!", TALKTYPE_ORANGE_1)
+			return
+		end
 	
 		local creatureToSummon = ""
 	
