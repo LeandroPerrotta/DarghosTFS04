@@ -92,7 +92,7 @@
 
 	<!-- Houses -->
 	<talkaction words="alevo grav" filter="word-spaced" event="function" value="houseBuy"/>
-	<talkaction words="alito som" filter="word-spaced" event="function" value="houseSell"/>
+	<!-- <talkaction words="alito som" filter="word-spaced" event="function" value="houseSell"/> -->
 	<talkaction words="alana sio" filter="word-spaced" event="function" value="houseKick"/>
 	<talkaction words="aleta grav" filter="word-spaced" event="function" value="houseDoorList"/>
 	<talkaction words="aleta sio" filter="word-spaced" event="function" value="houseGuestList"/>
