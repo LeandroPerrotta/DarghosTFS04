@@ -3010,6 +3010,7 @@
 		<attribute key="range" value="5" />
 		<attribute key="breakChance" value="0" />
 		<attribute key="ammoAction" value="moveback" />
+		<attribute key="maxHitChance" value="76" />
 	</item>
 	<item id="2390" article="a" name="magic longsword">
 		<attribute key="description" value="It is the magic Cyclopmania Sword." />
@@ -3081,6 +3082,7 @@
 		<attribute key="attack" value="30" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="throwingstar" />
+		<attribute key="maxHitChance" value="76" />
 		<attribute key="range" value="5" />
 		<attribute key="breakChance" value="10" />
 		<attribute key="ammoAction" value="moveback" />
@@ -3930,8 +3932,8 @@
 	<item id="2543" article="a" name="bolt" plural="bolts">
 		<attribute key="weight" value="80" />
 		<attribute key="slotType" value="ammo" />
-		<attribute key="attack" value="30" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="attack" value="29" />
+		<attribute key="maxHitChance" value="87" />
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="bolt" />
@@ -3941,7 +3943,7 @@
 		<attribute key="weight" value="70" />
 		<attribute key="slotType" value="ammo" />
 		<attribute key="attack" value="25" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="arrow" />
@@ -3951,7 +3953,7 @@
 		<attribute key="weight" value="80" />
 		<attribute key="slotType" value="ammo" />
 		<attribute key="attack" value="22" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="poisonarrow" />
@@ -3971,7 +3973,7 @@
 		<attribute key="weight" value="80" />
 		<attribute key="slotType" value="ammo" />
 		<attribute key="attack" value="40" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="powerbolt" />
@@ -7038,6 +7040,7 @@
 		<attribute key="shootType" value="huntingspear" />
 		<attribute key="range" value="5" />
 		<attribute key="breakChance" value="6" />
+		<attribute key="maxHitChance" value="80" />
 		<attribute key="ammoAction" value="moveback" />
 	</item>
 	<item id="3966" article="a" name="banana staff">
@@ -8838,6 +8841,8 @@
 		<attribute key="slotType" value="two-handed" />
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="range" value="6" />
+		<attribute key="hitChance" value="2" />
+		<attribute key="attack" value="2" />
 	</item>
 	<item id="5804" article="a" name="nose ring">
 		<attribute key="weight" value="50" />
@@ -10996,7 +11001,7 @@
 		<attribute key="weight" value="90" />
 		<attribute key="slotType" value="ammo" />
 		<attribute key="attack" value="43" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="infernalbolt" />
@@ -11886,7 +11891,7 @@
 		<attribute key="weight" value="80" />
 		<attribute key="slotType" value="ammo" />
 		<attribute key="attack" value="33" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="87" />
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="piercingbolt" />
@@ -11895,7 +11900,7 @@
 	<item id="7364" article="a" name="sniper arrow" plural="sniper arrows">
 		<attribute key="weight" value="70" />
 		<attribute key="slotType" value="ammo" />
-		<attribute key="attack" value="28" />
+		<attribute key="attack" value="29" />
 		<attribute key="maxHitChance" value="100" />
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
@@ -11906,7 +11911,7 @@
 		<attribute key="weight" value="70" />
 		<attribute key="slotType" value="ammo" />
 		<attribute key="attack" value="38" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="94" />
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="onyxarrow" />
@@ -11920,6 +11925,7 @@
 		<attribute key="range" value="5" />
 		<attribute key="breakChance" value="9" />
 		<attribute key="ammoAction" value="moveback" />
+		<attribute key="maxHitChance" value="76" />
 	</item>
 	<item id="7367" article="an" name="enchanted spear" plural="enchanted spears">
 		<attribute key="weight" value="2000" />
@@ -11929,6 +11935,7 @@
 		<attribute key="range" value="5" />
 		<attribute key="breakChance" value="2" />
 		<attribute key="ammoAction" value="moveback" />
+		<attribute key="maxHitChance" value="80" />
 	</item>
 	<item id="7368" article="an" name="assassin star" plural="assassin stars">
 		<attribute key="weight" value="200" />
@@ -11938,6 +11945,7 @@
 		<attribute key="range" value="4" />
 		<attribute key="breakChance" value="33" />
 		<attribute key="ammoAction" value="moveback" />
+		<attribute key="maxHitChance" value="96" />
 	</item>
 	<item id="7369" article="a" name="golden trophy">
 		<attribute key="weight" value="3500" />
@@ -11959,6 +11967,7 @@
 		<attribute key="range" value="5" />
 		<attribute key="breakChance" value="2" />
 		<attribute key="ammoAction" value="moveback" />
+		<attribute key="maxHitChance" value="80" />
 	</item>
 	<item id="7379" name="brutetamer's staff">
 		<attribute key="weight" value="3800" />
@@ -13487,9 +13496,10 @@
 	<item id="7838" article="a" name="flash arrow" plural="flash arrows">
 		<attribute key="weight" value="70" />
 		<attribute key="slotType" value="ammo" />
-		<attribute key="attack" value="25" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="attack" value="29" />
+		<attribute key="maxHitChance" value="91" />
 		<attribute key="weaponType" value="ammunition" />
+		<attribute key="elementEnergy" value="0" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="ammoAction" value="removecount" />
 		<attribute key="shootType" value="flasharrow" />
@@ -13497,9 +13507,10 @@
 	<item id="7839" article="a" name="shiver arrow" plural="shiver arrows">
 		<attribute key="weight" value="70" />
 		<attribute key="slotType" value="ammo" />
-		<attribute key="attack" value="25" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="attack" value="29" />
+		<attribute key="maxHitChance" value="91" />
 		<attribute key="weaponType" value="ammunition" />
+		<attribute key="elementIce" value="0" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="ammoAction" value="removecount" />
 		<attribute key="shootType" value="shiverarrow" />
@@ -13507,9 +13518,10 @@
 	<item id="7840" article="a" name="flaming arrow" plural="flaming arrows">
 		<attribute key="weight" value="70" />
 		<attribute key="slotType" value="ammo" />
-		<attribute key="attack" value="25" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="attack" value="29" />
+		<attribute key="maxHitChance" value="91" />
 		<attribute key="weaponType" value="ammunition" />
+		<attribute key="elementFire" value="0" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="ammoAction" value="removecount" />
 		<attribute key="shootType" value="flammingarrow" />
@@ -13549,9 +13561,10 @@
 	<item id="7850" article="an" name="earth arrow" plural="earth arrows">
 		<attribute key="weight" value="70" />
 		<attribute key="slotType" value="ammo" />
-		<attribute key="attack" value="25" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="attack" value="29" />
+		<attribute key="maxHitChance" value="91" />
 		<attribute key="weaponType" value="ammunition" />
+		<attribute key="elementEarth" value="0" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="ammoAction" value="removecount" />
 		<attribute key="shootType" value="eartharrow" />
