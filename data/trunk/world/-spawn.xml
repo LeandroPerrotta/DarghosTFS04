@@ -2474,17 +2474,13 @@
   </spawn>
   <spawn centerx="1053" centery="1179" centerz="6" radius="5"/>
   <spawn centerx="1005" centery="1180" centerz="6" radius="1"/>
-  <spawn centerx="1034" centery="1181" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="0" y="3" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1034" centery="1181" centerz="6" radius="5"/>
   <spawn centerx="979" centery="1182" centerz="6" radius="1"/>
   <spawn centerx="985" centery="1183" centerz="6" radius="1"/>
   <spawn centerx="1009" centery="1184" centerz="6" radius="1">
     <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="1021" centery="1185" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="0" y="2" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1021" centery="1185" centerz="6" radius="5"/>
   <spawn centerx="1050" centery="1188" centerz="6" radius="5">
     <monster name="Dark Warrior" x="-1" y="1" z="6" spawntime="60"/>
   </spawn>
@@ -2499,12 +2495,8 @@
   <spawn centerx="1009" centery="1193" centerz="6" radius="1">
     <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="1033" centery="1193" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="5" y="-4" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="1015" centery="1196" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="3" y="-3" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1033" centery="1193" centerz="6" radius="5"/>
+  <spawn centerx="1015" centery="1196" centerz="6" radius="5"/>
   <spawn centerx="2885" centery="1196" centerz="6" radius="1">
     <npc name="aaragon.distance" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
@@ -2522,14 +2514,8 @@
   <spawn centerx="933" centery="1204" centerz="6" radius="1">
     <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="965" centery="1206" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="-1" y="0" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="-5" y="1" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="965" centery="1206" centerz="6" radius="5"/>
   <spawn centerx="987" centery="1206" centerz="6" radius="1"/>
-  <spawn centerx="1000" centery="1206" centerz="6" radius="1">
-    <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
-  </spawn>
   <spawn centerx="1015" centery="1206" centerz="6" radius="5">
     <monster name="Barbarian Skullhunter" x="-5" y="4" z="6" spawntime="60"/>
   </spawn>
@@ -2544,9 +2530,6 @@
   </spawn>
   <spawn centerx="2941" centery="1206" centerz="6" radius="2">
     <npc name="aaragon.tapete" x="1" y="0" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="975" centery="1207" centerz="6" radius="1">
-    <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="1894" centery="1207" centerz="6" radius="15">
     <monster name="Mammoth" x="9" y="-3" z="6" spawntime="60"/>
@@ -2566,22 +2549,11 @@
     <npc name="aaragon.box" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="938" centery="1210" centerz="6" radius="5">
-    <monster name="Dark Sorcerer" x="-1" y="-2" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="-1" y="-1" z="6" spawntime="60"/>
-    <monster name="Dark Sorcerer" x="3" y="4" z="6" spawntime="60"/>
     <monster name="Dark Warrior" x="2" y="5" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="3" y="5" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="991" centery="1210" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="-2" y="-4" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="-4" y="0" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="3" y="2" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="991" centery="1210" centerz="6" radius="5"/>
   <spawn centerx="2812" centery="1210" centerz="6" radius="5">
     <monster name="Wyvern" x="-2" y="1" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="967" centery="1212" centerz="6" radius="1">
-    <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="2917" centery="1212" centerz="6" radius="1">
     <npc name="aaragon.pillow" x="0" y="0" z="6" spawntime="60"/>
@@ -2589,14 +2561,8 @@
   <spawn centerx="928" centery="1213" centerz="6" radius="1">
     <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="954" centery="1214" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="3" y="0" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="3" y="1" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="4" y="1" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="940" centery="1215" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="4" y="0" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="954" centery="1214" centerz="6" radius="5"/>
+  <spawn centerx="940" centery="1215" centerz="6" radius="5"/>
   <spawn centerx="1919" centery="1215" centerz="6" radius="15">
     <monster name="Mammoth" x="11" y="-12" z="6" spawntime="60"/>
     <monster name="Mammoth" x="2" y="-11" z="6" spawntime="60"/>
@@ -2615,21 +2581,10 @@
     <monster name="Giant Spider" x="-1" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="971" centery="1219" centerz="6" radius="5"/>
-  <spawn centerx="1004" centery="1219" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="2" y="-3" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="-1" y="1" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="3" y="2" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="961" centery="1222" centerz="6" radius="1">
-    <monster name="Dark Warrior" x="1" y="0" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="988" centery="1222" centerz="6" radius="5">
-    <monster name="Dark Archer" x="-3" y="-4" z="6" spawntime="60"/>
-    <monster name="Dark Archer" x="0" y="5" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="1028" centery="1223" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="-2" y="0" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1004" centery="1219" centerz="6" radius="5"/>
+  <spawn centerx="961" centery="1222" centerz="6" radius="1"/>
+  <spawn centerx="988" centery="1222" centerz="6" radius="5"/>
+  <spawn centerx="1028" centery="1223" centerz="6" radius="5"/>
   <spawn centerx="1048" centery="1223" centerz="6" radius="5">
     <monster name="Barbarian Headsplitter" x="4" y="-1" z="6" spawntime="60"/>
     <monster name="Smuggler" x="2" y="1" z="6" spawntime="60"/>
@@ -2638,15 +2593,7 @@
   <spawn centerx="929" centery="1224" centerz="6" radius="1">
     <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="941" centery="1234" centerz="6" radius="1">
-    <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="960" centery="1235" centerz="6" radius="1">
-    <monster name="Dark Warrior" x="1" y="0" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="969" centery="1235" centerz="6" radius="5">
-    <monster name="Dark Archer" x="-3" y="5" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="969" centery="1235" centerz="6" radius="5"/>
   <spawn centerx="1085" centery="1235" centerz="6" radius="1">
     <monster name="Giant Spider" x="-1" y="0" z="6" spawntime="60"/>
   </spawn>
@@ -2659,18 +2606,9 @@
   <spawn centerx="1069" centery="1237" centerz="6" radius="1">
     <monster name="Giant Spider" x="-1" y="0" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="1036" centery="1238" centerz="6" radius="5">
-    <monster name="Dark Archer" x="3" y="-4" z="6" spawntime="60"/>
-    <monster name="Dark Archer" x="-1" y="0" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="986" centery="1239" centerz="6" radius="5">
-    <monster name="Dark Archer" x="5" y="-1" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="998" centery="1239" centerz="6" radius="5">
-    <monster name="Dark Sorcerer" x="4" y="-1" z="6" spawntime="60"/>
-    <monster name="Dark Sorcerer" x="-4" y="0" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="2" y="0" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1036" centery="1238" centerz="6" radius="5"/>
+  <spawn centerx="986" centery="1239" centerz="6" radius="5"/>
+  <spawn centerx="998" centery="1239" centerz="6" radius="5"/>
   <spawn centerx="1888" centery="1239" centerz="6" radius="15">
     <monster name="Mammoth" x="12" y="-9" z="6" spawntime="60"/>
     <monster name="Mammoth" x="-9" y="-5" z="6" spawntime="60"/>
@@ -2679,9 +2617,7 @@
     <monster name="Mammoth" x="-8" y="5" z="6" spawntime="60"/>
     <monster name="Mammoth" x="8" y="10" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="1009" centery="1240" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="-5" y="-1" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1009" centery="1240" centerz="6" radius="5"/>
   <spawn centerx="2862" centery="1240" centerz="6" radius="5">
     <monster name="Bat" x="-3" y="-2" z="6" spawntime="60"/>
     <monster name="Bat" x="2" y="2" z="6" spawntime="60"/>
@@ -2689,25 +2625,13 @@
   <spawn centerx="2819" centery="1241" centerz="6" radius="2">
     <monster name="Cyclops" x="2" y="1" z="6" spawntime="30"/>
   </spawn>
-  <spawn centerx="1019" centery="1242" centerz="6" radius="5">
-    <monster name="Dark Archer" x="4" y="-5" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="4" y="-4" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="-4" y="-1" z="6" spawntime="60"/>
-  </spawn>
-  <spawn centerx="944" centery="1245" centerz="6" radius="1">
-    <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1019" centery="1242" centerz="6" radius="5"/>
+  <spawn centerx="945" centery="1245" centerz="6" radius="1"/>
   <spawn centerx="2813" centery="1247" centerz="6" radius="2">
     <monster name="Cyclops" x="-2" y="-2" z="6" spawntime="30"/>
   </spawn>
-  <spawn centerx="955" centery="1248" centerz="6" radius="1">
-    <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
-  </spawn>
   <spawn centerx="965" centery="1249" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="-4" y="-4" z="6" spawntime="60"/>
-    <monster name="Dark Sorcerer" x="0" y="-3" z="6" spawntime="60"/>
     <monster name="Dark Warrior" x="0" y="0" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="5" y="5" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="1758" centery="1249" centerz="6" radius="5">
     <monster name="Frost Troll" x="4" y="-1" z="6" spawntime="60"/>
@@ -2723,10 +2647,7 @@
   <spawn centerx="2825" centery="1251" centerz="6" radius="2">
     <monster name="Cyclops" x="1" y="-2" z="6" spawntime="30"/>
   </spawn>
-  <spawn centerx="1017" centery="1252" centerz="6" radius="5">
-    <monster name="Dark Archer" x="2" y="-3" z="6" spawntime="60"/>
-    <monster name="Dark Archer" x="-1" y="1" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1017" centery="1252" centerz="6" radius="5"/>
   <spawn centerx="1769" centery="1252" centerz="6" radius="5">
     <monster name="Frost Troll" x="-3" y="-1" z="6" spawntime="60"/>
     <monster name="Frost Troll" x="4" y="-1" z="6" spawntime="60"/>
@@ -2750,12 +2671,7 @@
     <monster name="Frost Troll" x="2" y="0" z="6" spawntime="60"/>
     <monster name="Frost Troll" x="-1" y="1" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="991" centery="1257" centerz="6" radius="5">
-    <monster name="Dark Archer" x="-4" y="-4" z="6" spawntime="60"/>
-    <monster name="Dark Archer" x="-3" y="-1" z="6" spawntime="60"/>
-    <monster name="Dark Archer" x="2" y="-1" z="6" spawntime="60"/>
-    <monster name="Dark Warrior" x="-1" y="0" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="991" centery="1257" centerz="6" radius="5"/>
   <spawn centerx="1951" centery="1257" centerz="6" radius="1">
     <npc name="north.vase" x="1" y="0" z="6" spawntime="60"/>
   </spawn>
@@ -2782,10 +2698,7 @@
   <spawn centerx="1984" centery="1260" centerz="6" radius="1">
     <npc name="north.bank" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="972" centery="1262" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="3" y="-1" z="6" spawntime="60"/>
-    <monster name="Dark Archer" x="1" y="0" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="972" centery="1262" centerz="6" radius="5"/>
   <spawn centerx="2938" centery="1262" centerz="6" radius="5">
     <monster name="Bog Raider" x="0" y="-1" z="6" spawntime="60"/>
   </spawn>
@@ -2802,12 +2715,8 @@
     <monster name="Mammoth" x="-12" y="4" z="6" spawntime="60"/>
     <monster name="Mammoth" x="8" y="10" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="968" centery="1272" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="0" y="-3" z="6" spawntime="60"/>
-    <monster name="Dark Archer" x="0" y="1" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="968" centery="1272" centerz="6" radius="5"/>
   <spawn centerx="1025" centery="1273" centerz="6" radius="5">
-    <monster name="Dark Archer" x="0" y="-2" z="6" spawntime="60"/>
     <monster name="Valkyrie" x="0" y="-1" z="6" spawntime="60"/>
     <monster name="Valkyrie" x="-1" y="2" z="6" spawntime="60"/>
   </spawn>
@@ -2829,7 +2738,6 @@
     <monster name="Bog Raider" x="1" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="1023" centery="1280" centerz="6" radius="5">
-    <monster name="Dark Archer" x="-1" y="1" z="6" spawntime="60"/>
     <monster name="Valkyrie" x="-2" y="2" z="6" spawntime="60"/>
     <monster name="Valkyrie" x="-3" y="3" z="6" spawntime="60"/>
   </spawn>
@@ -2837,9 +2745,7 @@
     <monster name="Bog Raider" x="2" y="-1" z="6" spawntime="60"/>
     <monster name="Bog Raider" x="-1" y="2" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="978" centery="1281" centerz="6" radius="5">
-    <monster name="Dark Warrior" x="1" y="0" z="6" spawntime="60"/>
-  </spawn>
+  <spawn centerx="978" centery="1281" centerz="6" radius="5"/>
   <spawn centerx="2972" centery="1290" centerz="6" radius="5">
     <monster name="Bog Raider" x="-1" y="1" z="6" spawntime="60"/>
     <monster name="Bog Raider" x="-5" y="5" z="6" spawntime="60"/>
@@ -5736,25 +5642,14 @@
     <monster name="Bandit" x="1" y="1" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1195" centery="1183" centerz="7" radius="2"/>
-  <spawn centerx="1021" centery="1184" centerz="7" radius="1">
-    <monster name="Dark Archer" x="0" y="-1" z="7" spawntime="60"/>
-  </spawn>
-  <spawn centerx="1031" centery="1184" centerz="7" radius="5">
-    <monster name="Dark Archer" x="5" y="-3" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-5" y="-1" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-5" y="3" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="1" y="5" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1021" centery="1184" centerz="7" radius="1"/>
+  <spawn centerx="1031" centery="1184" centerz="7" radius="5"/>
   <spawn centerx="1044" centery="1184" centerz="7" radius="5">
     <monster name="Crazed Beggar" x="1" y="0" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="3" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1056" centery="1184" centerz="7" radius="5">
-    <monster name="Dark Archer" x="-5" y="-5" z="7" spawntime="60"/>
     <monster name="Crazed Beggar" x="-4" y="-1" z="7" spawntime="60"/>
     <monster name="Gang Member" x="3" y="-1" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="0" y="1" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="3" y="1" z="7" spawntime="60"/>
     <monster name="Valkyrie" x="1" y="4" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1211" centery="1184" centerz="7" radius="2">
@@ -5841,18 +5736,12 @@
     <monster name="spider" x="0" y="-1" z="7" spawntime="60"/>
     <monster name="Worker Golem" x="1" y="1" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1002" centery="1190" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="-2" y="3" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1002" centery="1190" centerz="7" radius="5"/>
   <spawn centerx="1177" centery="1190" centerz="7" radius="2"/>
   <spawn centerx="1209" centery="1190" centerz="7" radius="2">
     <monster name="Worker Golem" x="-1" y="1" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1023" centery="1191" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="-2" y="-2" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-3" y="-1" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-2" y="5" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1023" centery="1191" centerz="7" radius="5"/>
   <spawn centerx="1082" centery="1191" centerz="7" radius="1">
     <monster name="Zombie" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
@@ -5865,11 +5754,7 @@
   <spawn centerx="967" centery="1193" centerz="7" radius="5">
     <monster name="Elf Scout" x="-5" y="3" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1053" centery="1194" centerz="7" radius="5">
-    <monster name="Dark Archer" x="4" y="-4" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="-5" y="3" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="1" y="4" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1053" centery="1194" centerz="7" radius="5"/>
   <spawn centerx="1144" centery="1194" centerz="7" radius="2"/>
   <spawn centerx="1165" centery="1195" centerz="7" radius="2">
     <monster name="spider" x="-1" y="-1" z="7" spawntime="60"/>
@@ -5883,15 +5768,10 @@
     <monster name="Nomad" x="3" y="-2" z="7" spawntime="60"/>
     <monster name="Goblin" x="0" y="-1" z="7" spawntime="60"/>
     <monster name="Smuggler" x="-5" y="1" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="5" y="1" z="7" spawntime="60"/>
     <monster name="Nomad" x="2" y="3" z="7" spawntime="60"/>
     <monster name="Dark Warrior" x="-1" y="4" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="5" y="4" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="997" centery="1197" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="-5" y="1" z="7" spawntime="60"/>
-    <monster name="Troll Champion" x="0" y="2" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="997" centery="1197" centerz="7" radius="5"/>
   <spawn centerx="1726" centery="1197" centerz="7" radius="20">
     <monster name="Barbarian Skullhunter" x="-10" y="-7" z="7" spawntime="60"/>
     <monster name="Barbarian Bloodwalker" x="-9" y="-5" z="7" spawntime="60"/>
@@ -5938,30 +5818,19 @@
     <monster name="Poison spider" x="-1" y="-1" z="7" spawntime="60"/>
     <monster name="Worker Golem" x="1" y="-1" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1037" centery="1199" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="-3" y="-4" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="5" y="-2" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="1" y="1" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="-2" y="2" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1037" centery="1199" centerz="7" radius="5"/>
   <spawn centerx="974" centery="1200" centerz="7" radius="5">
     <monster name="Goblin" x="-4" y="1" z="7" spawntime="60"/>
     <monster name="Smuggler" x="-2" y="1" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1020" centery="1200" centerz="7" radius="5">
-    <monster name="Dark Archer" x="-3" y="-4" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="3" y="-3" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-3" y="-2" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-4" y="1" z="7" spawntime="60"/>
     <monster name="Dark Warrior" x="4" y="4" z="7" spawntime="60"/>
     <monster name="Crazed Beggar" x="5" y="5" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1118" centery="1200" centerz="7" radius="1">
     <monster name="Zombie" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="958" centery="1201" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="2" y="5" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="958" centery="1201" centerz="7" radius="5"/>
   <spawn centerx="1073" centery="1201" centerz="7" radius="1">
     <monster name="Zombie" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
@@ -5971,40 +5840,22 @@
   </spawn>
   <spawn centerx="1059" centery="1202" centerz="7" radius="5">
     <monster name="Crazed Beggar" x="4" y="-3" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="3" y="-1" z="7" spawntime="60"/>
-    <monster name="Dark Sorcerer" x="-1" y="4" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="2" y="4" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="-3" y="5" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="947" centery="1204" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="5" y="-5" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="947" centery="1204" centerz="7" radius="5"/>
   <spawn centerx="1110" centery="1205" centerz="7" radius="1">
     <monster name="Zombie" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1039" centery="1207" centerz="7" radius="5">
-    <monster name="Dark Archer" x="2" y="3" z="7" spawntime="60"/>
     <monster name="Amazon" x="-1" y="5" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="938" centery="1209" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="1" y="0" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="0" y="5" z="7" spawntime="60"/>
-  </spawn>
-  <spawn centerx="951" centery="1209" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="5" y="5" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="938" centery="1209" centerz="7" radius="5"/>
+  <spawn centerx="951" centery="1209" centerz="7" radius="5"/>
   <spawn centerx="1056" centery="1209" centerz="7" radius="5">
-    <monster name="Dark Archer" x="0" y="1" z="7" spawntime="60"/>
     <monster name="Amazon" x="0" y="3" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="963" centery="1210" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="3" y="-4" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="963" centery="1210" centerz="7" radius="5"/>
   <spawn centerx="1016" centery="1212" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="-4" y="-2" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="3" y="-1" z="7" spawntime="60"/>
     <monster name="Dark Archer" x="0" y="0" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-2" y="2" z="7" spawntime="60"/>
     <monster name="Crazed Beggar" x="2" y="2" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1104" centery="1212" centerz="7" radius="1">
@@ -6046,17 +5897,11 @@
   </spawn>
   <spawn centerx="987" centery="1214" centerz="7" radius="5">
     <monster name="Crazed Beggar" x="4" y="-4" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="1" y="-3" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="2" y="1" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1032" centery="1214" centerz="7" radius="5">
-    <monster name="Dark Archer" x="1" y="-1" z="7" spawntime="60"/>
     <monster name="Amazon" x="-4" y="1" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-2" y="1" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1046" centery="1214" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="-1" y="-4" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="2" y="2" z="7" spawntime="60"/>
     <monster name="Valkyrie" x="-2" y="3" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="955" centery="1215" centerz="7" radius="5"/>
@@ -6092,13 +5937,8 @@
   <spawn centerx="1075" centery="1219" centerz="7" radius="1">
     <monster name="Zombie" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="978" centery="1220" centerz="7" radius="5">
-    <monster name="Dark Archer" x="3" y="1" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="978" centery="1220" centerz="7" radius="5"/>
   <spawn centerx="1000" centery="1220" centerz="7" radius="5">
-    <monster name="Dark Archer" x="-3" y="-5" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-2" y="-2" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-2" y="3" z="7" spawntime="60"/>
     <monster name="Valkyrie" x="-1" y="4" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1115" centery="1220" centerz="7" radius="1">
@@ -6117,19 +5957,14 @@
     <monster name="Bear" x="1" y="-4" z="7" spawntime="60"/>
     <monster name="Bear" x="3" y="3" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1036" centery="1222" centerz="7" radius="5">
-    <monster name="Dark Archer" x="1" y="-1" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="2" y="5" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1036" centery="1222" centerz="7" radius="5"/>
   <spawn centerx="955" centery="1223" centerz="7" radius="5">
     <monster name="Orc Warrior" x="1" y="1" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1072" centery="1224" centerz="7" radius="1">
     <monster name="Zombie" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1012" centery="1226" centerz="7" radius="5">
-    <monster name="Dark Archer" x="0" y="4" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1012" centery="1226" centerz="7" radius="5"/>
   <spawn centerx="1837" centery="1226" centerz="7" radius="5">
     <npc name="global.aosoth" x="0" y="-1" z="7" spawntime="60"/>
   </spawn>
@@ -6138,19 +5973,12 @@
   </spawn>
   <spawn centerx="939" centery="1227" centerz="7" radius="5"/>
   <spawn centerx="1021" centery="1227" centerz="7" radius="5">
-    <monster name="Dark Archer" x="1" y="3" z="7" spawntime="60"/>
     <monster name="Valkyrie" x="2" y="4" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="974" centery="1228" centerz="7" radius="5">
-    <monster name="Dark Archer" x="-2" y="-1" z="7" spawntime="60"/>
     <monster name="Dark Archer" x="-3" y="5" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1043" centery="1228" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="-1" y="-1" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="4" y="0" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="2" y="2" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="0" y="4" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1043" centery="1228" centerz="7" radius="5"/>
   <spawn centerx="1076" centery="1228" centerz="7" radius="1">
     <monster name="Necromancer" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
@@ -6168,11 +5996,8 @@
   </spawn>
   <spawn centerx="1030" centery="1232" centerz="7" radius="5">
     <monster name="Crazed Beggar" x="3" y="-2" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="2" y="1" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="0" y="4" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="991" centery="1233" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="5" y="-5" z="7" spawntime="60"/>
     <monster name="Dark Archer" x="1" y="-2" z="7" spawntime="60"/>
     <monster name="Dark Archer" x="3" y="-2" z="7" spawntime="60"/>
     <monster name="Dark Archer" x="-4" y="-1" z="7" spawntime="60"/>
@@ -6251,7 +6076,6 @@
   </spawn>
   <spawn centerx="1009" centery="1237" centerz="7" radius="5">
     <monster name="Smuggler" x="0" y="-5" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="5" y="2" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="2975" centery="1237" centerz="7" radius="6">
     <monster name="Hunter" x="3" y="-3" z="7" spawntime="60"/>
@@ -6271,9 +6095,7 @@
     <monster name="Orc Spearman" x="-1" y="4" z="7" spawntime="60"/>
     <monster name="Orc Spearman" x="2" y="4" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1000" centery="1241" centerz="7" radius="5">
-    <monster name="Dark Archer" x="1" y="-3" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1000" centery="1241" centerz="7" radius="5"/>
   <spawn centerx="1088" centery="1242" centerz="7" radius="1">
     <monster name="Nightstalker" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
@@ -6295,13 +6117,8 @@
   </spawn>
   <spawn centerx="1026" centery="1244" centerz="7" radius="5">
     <monster name="Valkyrie" x="3" y="-4" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="4" y="0" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="0" y="4" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="5" y="4" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1037" centery="1244" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="-1" y="0" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1037" centery="1244" centerz="7" radius="5"/>
   <spawn centerx="2936" centery="1244" centerz="7" radius="6">
     <monster name="Black Sheep" x="4" y="-3" z="7" spawntime="60"/>
     <monster name="Black Sheep" x="-2" y="-1" z="7" spawntime="60"/>
@@ -6323,12 +6140,7 @@
     <monster name="Ghoul" x="1" y="1" z="7" spawntime="60"/>
     <monster name="Ghoul" x="-2" y="3" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1008" centery="1249" centerz="7" radius="5">
-    <monster name="Dark Archer" x="5" y="-3" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="-4" y="1" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="1" y="3" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="-2" y="4" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1008" centery="1249" centerz="7" radius="5"/>
   <spawn centerx="2766" centery="1249" centerz="7" radius="5"/>
   <spawn centerx="965" centery="1250" centerz="7" radius="5"/>
   <spawn centerx="1084" centery="1250" centerz="7" radius="1">
@@ -6397,9 +6209,7 @@
     <monster name="Ghoul" x="-4" y="4" z="7" spawntime="60"/>
     <monster name="Ghoul" x="5" y="5" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1027" centery="1261" centerz="7" radius="5">
-    <monster name="Dark Archer" x="0" y="3" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1027" centery="1261" centerz="7" radius="5"/>
   <spawn centerx="1983" centery="1261" centerz="7" radius="1">
     <npc name="north.weapons" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
@@ -6407,7 +6217,6 @@
   <spawn centerx="984" centery="1262" centerz="7" radius="5">
     <monster name="Smuggler" x="2" y="-5" z="7" spawntime="60"/>
     <monster name="Crazed Beggar" x="-4" y="-1" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="3" y="-1" z="7" spawntime="60"/>
     <monster name="Valkyrie" x="-3" y="2" z="7" spawntime="60"/>
     <monster name="Smuggler" x="-4" y="5" z="7" spawntime="60"/>
   </spawn>
@@ -6415,10 +6224,7 @@
     <monster name="Deer" x="2" y="-2" z="7" spawntime="60"/>
     <monster name="Deer" x="0" y="2" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="995" centery="1263" centerz="7" radius="5">
-    <monster name="Dark Archer" x="0" y="-2" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="1" y="4" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="995" centery="1263" centerz="7" radius="5"/>
   <spawn centerx="1983" centery="1264" centerz="7" radius="1">
     <npc name="north.acessorios" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
@@ -6431,17 +6237,12 @@
     <monster name="Ghoul" x="1" y="1" z="7" spawntime="60"/>
     <monster name="Ghoul" x="4" y="2" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1016" centery="1266" centerz="7" radius="5">
-    <monster name="Dark Archer" x="2" y="-2" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1016" centery="1266" centerz="7" radius="5"/>
   <spawn centerx="966" centery="1267" centerz="7" radius="5"/>
   <spawn centerx="1959" centery="1272" centerz="7" radius="1">
     <npc name="north.temple" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="1020" centery="1274" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="5" y="-2" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="-1" y="2" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="1020" centery="1274" centerz="7" radius="5"/>
   <spawn centerx="2860" centery="1276" centerz="7" radius="5">
     <monster name="Skeleton" x="0" y="-2" z="7" spawntime="60"/>
     <monster name="Skeleton" x="2" y="0" z="7" spawntime="60"/>
@@ -6452,24 +6253,15 @@
     <monster name="Deer" x="-4" y="-2" z="7" spawntime="60"/>
     <monster name="Deer" x="1" y="0" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="979" centery="1277" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="3" y="-1" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="-2" y="0" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="979" centery="1277" centerz="7" radius="5"/>
   <spawn centerx="997" centery="1280" centerz="7" radius="5">
     <monster name="Dark Archer" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="1988" centery="1280" centerz="7" radius="1">
     <npc name="north.postman" x="0" y="0" z="7" spawntime="60"/>
   </spawn>
-  <spawn centerx="971" centery="1284" centerz="7" radius="5">
-    <monster name="Dark Warrior" x="-2" y="-3" z="7" spawntime="60"/>
-    <monster name="Dark Warrior" x="-2" y="-1" z="7" spawntime="60"/>
-  </spawn>
-  <spawn centerx="1009" centery="1284" centerz="7" radius="5">
-    <monster name="Dark Archer" x="1" y="-4" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-4" y="3" z="7" spawntime="60"/>
-  </spawn>
+  <spawn centerx="971" centery="1284" centerz="7" radius="5"/>
+  <spawn centerx="1009" centery="1284" centerz="7" radius="5"/>
   <spawn centerx="1756" centery="1286" centerz="7" radius="30">
     <monster name="Husky" x="-14" y="-18" z="7" spawntime="60"/>
     <monster name="Husky" x="9" y="-18" z="7" spawntime="60"/>
@@ -6480,8 +6272,6 @@
     <monster name="Husky" x="22" y="22" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="994" centery="1291" centerz="7" radius="5">
-    <monster name="Dark Archer" x="4" y="-4" z="7" spawntime="60"/>
-    <monster name="Dark Archer" x="-3" y="1" z="7" spawntime="60"/>
     <monster name="Crazed Beggar" x="3" y="1" z="7" spawntime="60"/>
   </spawn>
   <spawn centerx="2866" centery="1295" centerz="7" radius="6">
