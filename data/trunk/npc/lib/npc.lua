@@ -4,6 +4,7 @@ dofile(getDataDir() .. 'npc/lib/npc_dialog.lua')
 dofile(getDataDir() .. 'npc/lib/npc_tasks.lua')
 dofile(getDataDir() .. 'npc/lib/npc_system.lua')
 dofile(getDataDir() .. 'npc/lib/custom_modules.lua')
+dofile(getDataDir() .. 'npc/lib/addonItems.lua')
 
 function selfSayChannel(cid, message)
 	return selfSay(message, cid, false)

@@ -23327,15 +23327,6 @@
     <monster name="Dwarf Soldier" x="2" y="-1" z="10" spawntime="120"/>
     <monster name="Cyclops" x="1" y="1" z="10" spawntime="150"/>
   </spawn>
-  <spawn centerx="2105" centery="1913" centerz="10" radius="5">
-    <monster name="Hero" x="1" y="0" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="2121" centery="1913" centerz="10" radius="5">
-    <monster name="Hero" x="1" y="0" z="10" spawntime="3600"/>
-  </spawn>
-  <spawn centerx="2137" centery="1913" centerz="10" radius="5">
-    <monster name="Hero" x="1" y="0" z="10" spawntime="3600"/>
-  </spawn>
   <spawn centerx="3358" centery="1913" centerz="10" radius="5">
     <monster name="Cyclops" x="2" y="0" z="10" spawntime="150"/>
     <monster name="Dwarf Soldier" x="-3" y="1" z="10" spawntime="120"/>
@@ -23364,9 +23355,6 @@
     <monster name="Minotaur" x="1" y="1" z="10" spawntime="60"/>
     <monster name="Minotaur" x="-3" y="2" z="10" spawntime="60"/>
   </spawn>
-  <spawn centerx="2137" centery="1926" centerz="10" radius="5">
-    <monster name="Hero" x="0" y="2" z="10" spawntime="3600"/>
-  </spawn>
   <spawn centerx="2304" centery="1927" centerz="10" radius="30">
     <monster name="Dragon Lord" x="1" y="0" z="10" spawntime="180"/>
     <monster name="dragon lord hatchling" x="8" y="2" z="10" spawntime="60"/>
@@ -23380,14 +23368,17 @@
   </spawn>
   <spawn centerx="1508" centery="1928" centerz="10" radius="1"/>
   <spawn centerx="2119" centery="1928" centerz="10" radius="5">
-    <monster name="Hero" x="0" y="1" z="10" spawntime="3600"/>
+    <monster name="Wild Warrior" x="2" y="-1" z="10" spawntime="60"/>
+    <monster name="Priestess" x="-1" y="0" z="10" spawntime="60"/>
+    <monster name="Hero" x="0" y="0" z="10" spawntime="420"/>
+    <monster name="Priestess" x="2" y="0" z="10" spawntime="60"/>
+    <monster name="Wild Warrior" x="-1" y="2" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2087" centery="1929" centerz="10" radius="5">
+    <monster name="Wild Warrior" x="-2" y="1" z="10" spawntime="60"/>
+    <monster name="Hero" x="-1" y="1" z="10" spawntime="600"/>
     <monster name="Necromancer" x="0" y="2" z="10" spawntime="60"/>
-  </spawn>
-  <spawn centerx="2103" centery="1929" centerz="10" radius="5">
-    <monster name="Hero" x="-1" y="0" z="10" spawntime="3600"/>
-    <monster name="Hero" x="1" y="0" z="10" spawntime="3600"/>
+    <monster name="Wild Warrior" x="1" y="3" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="1843" centery="1932" centerz="10" radius="3">
     <monster name="Minotaur guard" x="0" y="-1" z="10" spawntime="60"/>
@@ -23432,8 +23423,10 @@
   </spawn>
   <spawn centerx="2107" centery="1944" centerz="10" radius="5">
     <monster name="Necromancer" x="-1" y="1" z="10" spawntime="60"/>
+    <monster name="Priestess" x="1" y="1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2131" centery="1944" centerz="10" radius="5">
+    <monster name="Priestess" x="-1" y="0" z="10" spawntime="60"/>
     <monster name="Necromancer" x="0" y="1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2180" centery="1944" centerz="10" radius="20">
@@ -23462,6 +23455,7 @@
     <monster name="Dragon Lord" x="-4" y="29" z="10" spawntime="180"/>
   </spawn>
   <spawn centerx="2018" centery="1946" centerz="10" radius="5">
+    <monster name="Priestess" x="-1" y="-1" z="10" spawntime="60"/>
     <monster name="Beholder" x="-3" y="0" z="10" spawntime="60"/>
     <monster name="Beholder" x="3" y="0" z="10" spawntime="60"/>
   </spawn>
@@ -23474,9 +23468,7 @@
     <monster name="Monk" x="-1" y="-1" z="10" spawntime="60"/>
     <monster name="Vampire" x="2" y="0" z="10" spawntime="60"/>
   </spawn>
-  <spawn centerx="2067" centery="1946" centerz="10" radius="5">
-    <monster name="Hero" x="0" y="2" z="10" spawntime="3600"/>
-  </spawn>
+  <spawn centerx="2067" centery="1946" centerz="10" radius="5"/>
   <spawn centerx="2213" centery="1947" centerz="10" radius="20">
     <monster name="Dwarf Guard" x="-1" y="-5" z="10" spawntime="30"/>
     <monster name="Dwarf Guard" x="-6" y="1" z="10" spawntime="30"/>
@@ -23539,7 +23531,11 @@
     <monster name="Cultist Master" x="1" y="1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2007" centery="1971" centerz="10" radius="5">
+    <monster name="Hero" x="-3" y="-1" z="10" spawntime="900"/>
     <monster name="Beholder" x="1" y="-1" z="10" spawntime="60"/>
+    <monster name="Hero" x="-1" y="0" z="10" spawntime="420"/>
+    <monster name="Wild Warrior" x="1" y="0" z="10" spawntime="60"/>
+    <monster name="Priestess" x="-3" y="1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2510" centery="1971" centerz="10" radius="5">
     <monster name="Cultist Warden" x="2" y="0" z="10" spawntime="60"/>
@@ -23551,6 +23547,12 @@
     <monster name="Cultist Master" x="2" y="0" z="10" spawntime="60"/>
     <monster name="Cultist Warden" x="1" y="1" z="10" spawntime="60"/>
     <monster name="Cultist Master" x="2" y="3" z="10" spawntime="60"/>
+  </spawn>
+  <spawn centerx="2084" centery="1975" centerz="10" radius="5">
+    <monster name="Wild Warrior" x="1" y="-2" z="10" spawntime="60"/>
+    <monster name="Hero" x="0" y="0" z="10" spawntime="900"/>
+    <monster name="Wild Warrior" x="2" y="0" z="10" spawntime="60"/>
+    <monster name="Priestess" x="-2" y="1" z="10" spawntime="60"/>
   </spawn>
   <spawn centerx="2364" centery="1976" centerz="10" radius="30">
     <monster name="dragon lord hatchling" x="-8" y="-16" z="10" spawntime="60"/>
@@ -26808,12 +26810,6 @@
     <monster name="Minotaur" x="2" y="-2" z="11" spawntime="60"/>
     <monster name="Minotaur" x="-2" y="1" z="11" spawntime="60"/>
   </spawn>
-  <spawn centerx="2084" centery="1966" centerz="11" radius="20">
-    <monster name="Hero" x="14" y="-9" z="11" spawntime="180"/>
-    <monster name="Hero" x="-7" y="2" z="11" spawntime="180"/>
-    <monster name="Hero" x="7" y="2" z="11" spawntime="180"/>
-    <monster name="Hero" x="14" y="11" z="11" spawntime="180"/>
-  </spawn>
   <spawn centerx="3293" centery="1995" centerz="11" radius="10">
     <monster name="Fire Elemental" x="-5" y="-4" z="11" spawntime="60"/>
     <monster name="Fire Elemental" x="5" y="-4" z="11" spawntime="60"/>
@@ -28559,30 +28555,6 @@
     <monster name="Fire Devil" x="0" y="-1" z="12" spawntime="60"/>
     <monster name="Fire Devil" x="-1" y="1" z="12" spawntime="60"/>
     <monster name="Fire Devil" x="1" y="1" z="12" spawntime="60"/>
-  </spawn>
-  <spawn centerx="2084" centery="1939" centerz="12" radius="30">
-    <monster name="Hero" x="13" y="-26" z="12" spawntime="180"/>
-    <monster name="Hero" x="-5" y="-11" z="12" spawntime="180"/>
-    <monster name="Hero" x="-5" y="13" z="12" spawntime="180"/>
-    <monster name="Hero" x="-29" y="19" z="12" spawntime="180"/>
-    <monster name="Hero" x="0" y="21" z="12" spawntime="180"/>
-  </spawn>
-  <spawn centerx="2128" centery="1967" centerz="12" radius="30">
-    <monster name="Hero" x="8" y="-21" z="12" spawntime="180"/>
-    <monster name="Hero" x="24" y="-10" z="12" spawntime="180"/>
-    <monster name="Hero" x="20" y="17" z="12" spawntime="180"/>
-  </spawn>
-  <spawn centerx="2040" centery="1968" centerz="12" radius="30">
-    <monster name="Hero" x="4" y="-22" z="12" spawntime="180"/>
-    <monster name="Hero" x="-23" y="1" z="12" spawntime="180"/>
-    <monster name="Hero" x="4" y="10" z="12" spawntime="180"/>
-    <monster name="Hero" x="25" y="16" z="12" spawntime="180"/>
-  </spawn>
-  <spawn centerx="2084" centery="1999" centerz="12" radius="30">
-    <monster name="Hero" x="6" y="-17" z="12" spawntime="180"/>
-    <monster name="Hero" x="-5" y="-5" z="12" spawntime="180"/>
-    <monster name="Hero" x="6" y="8" z="12" spawntime="180"/>
-    <monster name="Hero" x="-13" y="23" z="12" spawntime="180"/>
   </spawn>
   <spawn centerx="3272" centery="2030" centerz="12" radius="30">
     <monster name="dragon lord hatchling" x="9" y="8" z="12" spawntime="60"/>
