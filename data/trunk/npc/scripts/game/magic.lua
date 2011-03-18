@@ -10,6 +10,8 @@ function onThink()                                      npcHandler:onThink()    
 local shopModule = ShopModule:new()
 npcHandler:addModule(shopModule)
 
+shopModule:addBuyableItem({'spellbook'}, 2175, 150, 1, 'spellbook')
+
 shopModule:addBuyableItem({'small health'}, 8704, 20, 1, 'small health potion')
 shopModule:addBuyableItem({'health potion'}, 7618, 45, 1, 'health potion')
 shopModule:addBuyableItem({'mana potion'}, 7620, 50, 1, 'mana potion')
@@ -20,6 +22,10 @@ shopModule:addBuyableItem({'great mana'}, 7590, 120, 1, 'great mana potion')
 shopModule:addBuyableItem({'great spirit'}, 8472, 190, 1, 'great spirit potion')
 shopModule:addBuyableItem({'ultimate health'}, 8473, 310, 1, 'ultimate health potion')
 shopModule:addBuyableItem({'antidote potion'}, 8474, 50, 1, 'antidote potion')
+
+shopModule:addSellableItem({'empty potion flask (small)'}, 7634, 5, 'empty potion flask (small)')
+shopModule:addSellableItem({'empty potion flask (medium)'}, 7635, 7, 'empty potion flask (medium)')
+shopModule:addSellableItem({'empty potion flask (large)'}, 7636, 10, 'empty potion flask (large)')
 
 shopModule:addBuyableItem({'animate dead'}, 2316, 375, 1, 'animate dead rune')
 shopModule:addBuyableItem({'blank rune'}, 2260, 10, 1, 'blank rune')
