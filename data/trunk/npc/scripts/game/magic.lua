@@ -23,9 +23,9 @@ shopModule:addBuyableItem({'great spirit'}, 8472, 190, 1, 'great spirit potion')
 shopModule:addBuyableItem({'ultimate health'}, 8473, 310, 1, 'ultimate health potion')
 shopModule:addBuyableItem({'antidote potion'}, 8474, 50, 1, 'antidote potion')
 
-shopModule:addSellableItem({'empty potion flask (medium)'}, 7634, 5, 'empty potion flask (medium)')
-shopModule:addSellableItem({'empty potion flask (large)'}, 7635, 7, 'empty potion flask (large)')
-shopModule:addSellableItem({'empty potion flask (small)'}, 7636, 10, 'empty potion flask (small)')
+shopModule:addSellableItem({'empty potion flask (medium)'}, 7634, 7, 'empty potion flask (medium)')
+shopModule:addSellableItem({'empty potion flask (large)'}, 7635, 10, 'empty potion flask (large)')
+shopModule:addSellableItem({'empty potion flask (small)'}, 7636, 5, 'empty potion flask (small)')
 
 shopModule:addBuyableItem({'animate dead'}, 2316, 375, 1, 'animate dead rune')
 shopModule:addBuyableItem({'blank rune'}, 2260, 10, 1, 'blank rune')
