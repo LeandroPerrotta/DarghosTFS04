@@ -2,19 +2,24 @@
 <movements>
 
 	<!-- SPECIAL QUEST TILES -->
+	<!-- 
 	<movevent type="StepIn" actionid="7400" event="script" value="game/dungeons.lua"/>		
 	<movevent type="StepIn" actionid="7401" event="script" value="game/dungeons.lua"/>		
+	-->
 
 	<!-- FIELD DAMAGE -->
+	<!-- 
 	<movevent type="StepIn" actionid="8300" event="script" value="game/field_damage.lua"/>	
 	<movevent type="StepIn" actionid="8301" event="script" value="game/field_damage.lua"/>	
 	<movevent type="StepIn" actionid="8302" event="script" value="game/field_damage.lua"/>	
 	<movevent type="StepIn" actionid="8303" event="script" value="game/field_damage.lua"/>	
 	<movevent type="StepIn" actionid="8304" event="script" value="game/field_damage.lua"/>	
 	<movevent type="StepIn" actionid="8305" event="script" value="game/field_damage.lua"/>
+	-->
 
 	<!-- INQUISITION QUEST -->
 	
+	<!-- 
 	<movevent type="StepIn" actionid="4033" event="script" value="game/inquisition_hall.lua"/>		
 	<movevent type="StepIn" actionid="4034" event="script" value="game/inquisition_hall.lua"/>		
 	<movevent type="StepIn" actionid="4035" event="script" value="game/inquisition_hall.lua"/>		
@@ -27,6 +32,7 @@
 	<movevent type="StepIn" uniqueid="1025" event="script" value="game/inquisition_hall.lua"/>		
 	<movevent type="StepIn" uniqueid="1027" event="script" value="game/inquisition_hall.lua"/>		
 	<movevent type="StepIn" uniqueid="1034" event="script" value="game/inquisition_hall.lua"/>
+	-->
 
 	<!-- MEDUSA TP -->	
 	<movevent type="StepIn" actionid="4040" event="script" value="game/medusa_tp.lua"/>
