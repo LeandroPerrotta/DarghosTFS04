@@ -8,7 +8,7 @@
 	<talkaction log="yes" words="/poll" logged="1" access="5" event="script" value="game/createpoll.lua"/>
 	
 	<talkaction words="!fulllight" access="0" event="script" value="game/hack_light.lua"/>	
-	<talkaction words="!antikick;!afk" access="0" event="script" value="game/hack_dance.lua"/>	
+	<!-- <talkaction words="!antikick;!afk" access="0" event="script" value="game/hack_dance.lua"/>	-->
 	<talkaction words="!trainmana;!manatrain;!castmana;!manacast" access="0" event="script" value="game/hack_castmana.lua"/>	
 	
 	<talkaction words="!blesses" access="0" event="script" value="game/bless.lua"/>	
