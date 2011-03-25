@@ -35,7 +35,18 @@ local raids = {
 		monsters = {
 			{name="The Horned Fox", quanty=1}
 		}	
-	}	
+	},
+	
+	["tiquandas revenge"] = {
+		respawns = {
+			{centerx=2356, centery=2269, centerz=7, radius=3},
+			{centerx=2589, centery=2476, centerz=7, radius=3},
+		},
+		
+		monsters = {
+			{name="Tiquandas Revenge", quanty=1}
+		}	
+	}
 }
 
 local MAX_TRIES_PER_MONSTER = 10

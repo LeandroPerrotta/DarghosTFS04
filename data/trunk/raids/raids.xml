@@ -52,6 +52,7 @@
 		<raid name="demodras" file="bosses/demodras.xml" interval2="2880" margin="0"/>
 		<raid name="the_old_widow" file="bosses/the_old_widow.xml" interval2="2880" margin="0"/>
 		<raid name="the_horned_fox" file="bosses/the_horned_fox.xml" interval2="2880" margin="0"/>
+		<raid name="tiquadas_revenge" file="bosses/tiquandas_revenge.xml" interval2="2880" margin="0"/>
 		<raid name="ferumbras" file="bosses/ferumbras.xml" interval2="28800" margin="0"/>
 		<raid name="orshabaal" file="bosses/orshabaal.xml" interval2="7200" margin="0"/>			
 		<raid name="morgaroth" file="bosses/morgaroth.xml" interval2="86400" margin="0"/>			
