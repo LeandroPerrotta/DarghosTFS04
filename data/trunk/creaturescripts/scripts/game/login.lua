@@ -26,6 +26,7 @@ function onLogin(cid)
 	OnKillCreatureMission(cid)
 	Dungeons.onLogin(cid)
 	--defineFirstItems(cid)
+	restoreAddon(cid)
 	
 	-- island of peace non pvp for TFS via onLogin
 	if(darghos_distro == DISTROS_TFS) then

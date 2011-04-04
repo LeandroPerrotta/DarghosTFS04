@@ -1,3 +1,199 @@
+function restoreAddon(cid)
+
+	local patch = getDataDir() .. "lib/darghos/addons.json"
+	local file = io.open(patch, "r")
+	local jsonStr = file:read("*all")
+	
+	local json = require("json")
+	local data = json.decode(jsonStr)
+	
+	local player_id = tostring(getPlayerGUID(cid))
+	
+	if(data[player_id] == nil) then
+		return
+	end
+	
+	for k,v in pairs(data[player_id]) do
+	
+		local outfitId = v["outfitId"]
+		local addons = v["addons"]
+		
+		if(addons == 3) then
+		
+			doPlayerAddOutfitId(cid, outfitId, 3)
+		else
+		
+			if(addons == 1) then
+			
+				local hasAddon = playerHasAddonById(cid, outfitId, 2)
+				
+				if(not hastAddon) then
+					doPlayerAddOutfitId(cid, outfitId, 1)
+				else
+					doPlayerAddOutfitId(cid, outfitId, 3)
+				end
+			elseif(addons == 2) then
+
+				local hasAddon = playerHasAddonById(cid, outfitId, 1)
+				
+				if(not hastAddon) then
+					doPlayerAddOutfitId(cid, outfitId, 2)
+				else
+					doPlayerAddOutfitId(cid, outfitId, 3)
+				end
+			end
+		end
+	end
+	
+	data[player_id] = nil
+	
+	jsonStr = json.encode(data)
+	
+	local file = io.open(patch, "w+")
+	file:write(jsonStr)
+	file:close()
+end
+
+function playerHasAddonById(cid, outfit, addon)
+
+	local storage = nil
+
+	if(outfit == 1) then
+		if(addon == 1) then
+			storage = sid.FIRST_CITIZEN
+		else
+			storage = sid.SECOND_CITIZEN
+		end
+	elseif(outfit == 2) then
+		if(addon == 1) then
+			storage = sid.FIRST_HUNTER
+		else
+			storage = sid.SECOND_HUNTER
+		end	
+	elseif(outfit == 3) then
+		if(addon == 1) then
+			storage = sid.FIRST_MAGE
+		else
+			storage = sid.SECOND_MAGE
+		end	
+	elseif(outfit == 4) then
+		if(addon == 1) then
+			storage = sid.FIRST_KNIGHT
+		else
+			storage = sid.SECOND_KNIGHT
+		end	
+	elseif(outfit == 5) then
+		if(addon == 1) then
+			storage = sid.FIRST_NOBLEMAN
+		else
+			storage = sid.SECOND_NOBLEMAN
+		end	
+	elseif(outfit == 6) then
+		if(addon == 1) then
+			storage = sid.FIRST_SUMMONER
+		else
+			storage = sid.SECOND_SUMMONER
+		end	
+	elseif(outfit == 7) then
+		if(addon == 1) then
+			storage = sid.FIRST_WARRIOR
+		else
+			storage = sid.SECOND_WARRIOR
+		end	
+	elseif(outfit == 8) then
+		if(addon == 1) then
+			storage = sid.FIRST_BARBARIAN
+		else
+			storage = sid.SECOND_BARBARIAN
+		end	
+	elseif(outfit == 9) then
+		if(addon == 1) then
+			storage = sid.FIRST_DRUID
+		else
+			storage = sid.SECOND_DRUID
+		end	
+	elseif(outfit == 10) then
+		if(addon == 1) then
+			storage = sid.FIRST_WIZARD
+		else
+			storage = sid.SECOND_WIZARD
+		end	
+	elseif(outfit == 11) then
+		if(addon == 1) then
+			storage = sid.FIRST_ORIENTAL
+		else
+			storage = sid.SECOND_ORIENTAL
+		end	
+	elseif(outfit == 12) then
+		if(addon == 1) then
+			storage = sid.FIRST_PIRATE
+		else
+			storage = sid.SECOND_PIRATE
+		end	
+	elseif(outfit == 13) then
+		if(addon == 1) then
+			storage = sid.FIRST_ASSASSIN
+		else
+			storage = sid.SECOND_ASSASSIN
+		end	
+	elseif(outfit == 14) then
+		if(addon == 1) then
+			storage = sid.FIRST_BEGGAR
+		else
+			storage = sid.SECOND_BEGGAR
+		end	
+	elseif(outfit == 15) then
+		if(addon == 1) then
+			storage = sid.FIRST_SHAMAN
+		else
+			storage = sid.SECOND_SHAMAN
+		end	
+	elseif(outfit == 16) then
+		if(addon == 1) then
+			storage = sid.FIRST_NORSEMAN
+		else
+			storage = sid.SECOND_NORSEMAN
+		end	
+	elseif(outfit == 17) then
+		if(addon == 1) then
+			storage = sid.FIRST_NIGHTMARE
+		else
+			storage = sid.SECOND_NIGHTMARE
+		end	
+	elseif(outfit == 18) then
+		if(addon == 1) then
+			storage = sid.FIRST_JESTER
+		else
+			storage = sid.SECOND_JESTER
+		end	
+	elseif(outfit == 19) then
+		if(addon == 1) then
+			storage = sid.FIRST_BROTHERHOOD
+		else
+			storage = sid.SECOND_BROTHERHOOD
+		end	
+	elseif(outfit == 20) then
+		if(addon == 1) then
+			storage = sid.FIRST_DEMONHUNTER
+		else
+			storage = sid.SECOND_DEMONHUNTER
+		end	
+	elseif(outfit == 21) then
+		storage = sid.UNIQUE_YALAHARIAN
+	else
+		print("Unknown addon type.")
+		return
+	end
+
+	local v = getPlayerStorageValue(cid, storage)
+	
+	if(v ~= -1) then
+		return true
+	else
+		return false
+	end
+end
+
 function raidLog(raidname)
 	local out = os.date("%X") .. " | Raid [" .. raidname .. "] started. "
 	
