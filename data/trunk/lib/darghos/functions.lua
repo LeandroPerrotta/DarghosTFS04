@@ -225,18 +225,6 @@ function setPlayerAntiIdle(cid, interval)
 	end
 end
 
-function getPlayerAntiIdle(cid)
-	local idle = getPlayerStorageValue(cid, sid.HACKS_DANCE_EVENT)
-	
-	if(idle == STORAGE_NULL) then
-		idle = false
-	else
-		idle = true
-	end
-	
-	return idle
-end
-
 function setPlayerLight(cid, lightmode)
 
 	if(lightmode == LIGHT_FULL) then
