@@ -83,6 +83,50 @@
 
 	<movevent type="StepIn" itemid="1387" event="script" value="game/teleport.lua"/>		
 
+	<!-- CUSTOM ITEMS -->
+	<!-- Boots -->
+	<movevent type="Equip" itemid="13336" slot="feet" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13336" slot="feet" event="function" value="onDeEquipItem"/>
+	<movevent type="Equip" itemid="13335" slot="feet" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13335" slot="feet" event="function" value="onDeEquipItem"/>	
+	<movevent type="Equip" itemid="13337" slot="feet" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13337" slot="feet" event="function" value="onDeEquipItem"/>
+	<movevent type="Equip" itemid="13338" slot="feet" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13338" slot="feet" event="function" value="onDeEquipItem"/>	
+	<!-- Rings -->
+	<movevent type="Equip" itemid="13339" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="13342" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13342" slot="ring" event="function" value="onDeEquipItem"/>
+	
+	<movevent type="Equip" itemid="13340" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="13343" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13343" slot="ring" event="function" value="onDeEquipItem"/>
+	
+	<movevent type="Equip" itemid="13341" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="13344" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13344" slot="ring" event="function" value="onDeEquipItem"/>
+	
+	<movevent type="Equip" itemid="13345" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="13346" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13346" slot="ring" event="function" value="onDeEquipItem"/>
+	
+	<movevent type="Equip" itemid="13347" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="13348" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13348" slot="ring" event="function" value="onDeEquipItem"/>
+	
+	<movevent type="Equip" itemid="13349" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="Equip" itemid="13350" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13350" slot="ring" event="function" value="onDeEquipItem"/>
+	
+	<movevent type="Equip" itemid="13351" slot="ring" event="function" value="onEquipItem">
+		<vocation id="1"/>
+		<vocation id="5" showInDescription="0"/>
+		<vocation id="2"/>
+		<vocation id="6" showInDescription="0"/>
+	</movevent>	
+	<movevent type="Equip" itemid="13352" slot="ring" event="function" value="onEquipItem"/>
+	<movevent type="DeEquip" itemid="13352" slot="ring" event="function" value="onDeEquipItem"/>
+
 	<!-- Decaying tiles -->
 	<movevent type="StepIn" itemid="293" event="script" value="decay.lua"/>
 	<movevent type="StepIn" itemid="461" event="script" value="decay.lua"/>

@@ -18602,4 +18602,168 @@
 		<attribute key="description" value="Esta runa magica é capaz de lhe transportar para sua cidade natal."/>
 		<attribute key="weight" value="120"/>
 	</item>
+
+	<item id="13335" article="a" name="pair of boots of hastealing">
+		<attribute key="weight" value="800" />
+		<attribute key="slotType" value="feet" />
+		<attribute key="transformEquipTo" value="13336" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
+	</item>
+
+	<item id="13336" article="a" name="pair of boots of hastealing">
+		<attribute key="weight" value="800" />
+		<attribute key="slotType" value="feet" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="transformDeEquipTo" value="13335" />
+		<attribute key="speed" value="40" />
+		<attribute key="armor" value="3" />
+		<attribute key="duration" value="25200" />
+		<attribute key="healthGain" value="7"/>
+		<attribute key="healthTicks" value="1000"/>
+		<attribute key="manaGain" value="10"/>
+		<attribute key="manaTicks" value="1500"/>
+		<attribute key="showduration" value="1" />
+		<attribute key="showattributes" value="1" />
+	</item>
+
+	<item id="13337" article="a" name="pair of softhaste boots">
+		<attribute key="weight" value="800" />
+		<attribute key="slotType" value="feet" />
+		<attribute key="transformEquipTo" value="13338" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
+	</item>
+
+	<item id="13338" article="a" name="pair of softhaste boots">
+		<attribute key="weight" value="800" />
+		<attribute key="slotType" value="feet" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="transformDeEquipTo" value="13337" />
+		<attribute key="speed" value="40" />
+		<attribute key="armor" value="3" />
+		<attribute key="duration" value="12600" />
+		<attribute key="healthGain" value="12" />
+		<attribute key="healthTicks" value="2000" />
+		<attribute key="manaGain" value="18" />
+		<attribute key="manaTicks" value="1000" />
+		<attribute key="showduration" value="1" />
+		<attribute key="showattributes" value="1" />
+	</item>
+
+	<item id="13339" article="a" name="strong sword ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="transformEquipTo" value="13342" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13340" article="an" name="strong axe ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="transformEquipTo" value="13343" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13341" article="a" name="strong club ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="transformEquipTo" value="13344" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13342" article="a" name="strong sword ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="transformDeEquipTo" value="13339" />
+		<attribute key="skillSword" value="20" />
+		<attribute key="duration" value="25200" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13343" article="an" name="strong axe ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="transformDeEquipTo" value="13340" />
+		<attribute key="skillAxe" value="20" />
+		<attribute key="duration" value="25200" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13344" article="a" name="strong club ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="transformDeEquipTo" value="13341" />
+		<attribute key="skillClub" value="20" />
+		<attribute key="duration" value="25200" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13345" article="a" name="iron ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="transformEquipTo" value="13346" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13346" article="a" name="iron ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="transformDeEquipTo" value="13345" />
+		<attribute key="skillShield" value="20" />
+		<attribute key="duration" value="25200" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13347" article="a" name="eagle-eyes ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="transformEquipTo" value="13348" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13348" article="a" name="eagle-eyes ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="transformDeEquipTo" value="13347" />
+		<attribute key="skillDist" value="15" />
+		<attribute key="duration" value="25200" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13349" article="a" name="bullseye ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="transformEquipTo" value="13350" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13350" article="a" name="bullseye ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="transformDeEquipTo" value="13349" />
+		<attribute key="skillShield" value="10" />
+		<attribute key="skillClub" value="10" />
+		<attribute key="skillAxe" value="10" />
+		<attribute key="skillSword" value="10" />
+		<attribute key="duration" value="25200" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13351" article="a" name="warlock ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="transformEquipTo" value="13352" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
+	</item>
+	<item id="13352" article="a" name="warlock ring">
+		<attribute key="weight" value="90" />
+		<attribute key="slotType" value="ring" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="transformDeEquipTo" value="13351" />
+		<attribute key="magiclevelpoints" value="6" />
+		<attribute key="duration" value="25200" />
+		<attribute key="showduration" value="1" />
+	</item>
 </items>

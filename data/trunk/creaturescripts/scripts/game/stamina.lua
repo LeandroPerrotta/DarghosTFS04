@@ -3,7 +3,7 @@ function onThink(cid, interval)
 		return
 	end
 
-	local onIsland = (getPlayerStorageValue(cid, sid.RECOVERING_STAMINA) == 1) and true or false
+	local onIsland = (getPlayerStorageValue(cid, sid.IS_ON_TRAINING_ISLAND) == 1) and true or false
 	
 	if(not onIsland) then
 		return
@@ -12,7 +12,7 @@ function onThink(cid, interval)
 	local tile = getTileInfo(getCreaturePosition(cid))
 	
 	if(not tile.optional) then
-		setPlayerStorageValue(cid, sid.RECOVERING_STAMINA, STORAGE_NULL)
+		setPlayerStorageValue(cid, sid.IS_ON_TRAINING_ISLAND, STORAGE_NULL)
 		setPlayerStorageValue(cid, sid.NEXT_STAMINA_UPDATE, STORAGE_NULL)		
 		
 		return

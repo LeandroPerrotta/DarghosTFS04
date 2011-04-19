@@ -123,9 +123,9 @@ function D_CustomNpcModules.travelTrainingIsland(cid, message, keywords, paramet
 		npcHandler:releaseFocus(cid)
 		
 		if(parameters.entering ~= nil and parameters.entering) then
-			setPlayerStorageValue(cid, sid.RECOVERING_STAMINA, 1)
+			setPlayerStorageValue(cid, sid.IS_ON_TRAINING_ISLAND, 1)
 		else
-			setPlayerStorageValue(cid, sid.RECOVERING_STAMINA, STORAGE_NULL)
+			setPlayerStorageValue(cid, sid.IS_ON_TRAINING_ISLAND, STORAGE_NULL)
 			setPlayerStorageValue(cid, sid.NEXT_STAMINA_UPDATE, STORAGE_NULL)
 		end
 
