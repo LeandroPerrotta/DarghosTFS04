@@ -16,6 +16,7 @@
 	<monster name="Behemoth King" file="darghos/behemoth king.xml" />
 	<monster name="Behemoth Minion" file="darghos/Behemoth Minion.xml" />
 	<monster name="Dark warrior" file="darghos/Dark warrior.xml" />
+	<monster name="Dark pikeman" file="darghos/Dark pikeman.xml" />
 	<monster name="Dark General" file="darghos/Dark General.xml" />
 	<monster name="Dark Archer" file="darghos/dark archer.xml" />
 	<monster name="Dark Eye" file="darghos/Dark Eye.xml" />
