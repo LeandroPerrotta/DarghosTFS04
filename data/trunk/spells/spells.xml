@@ -393,7 +393,7 @@
 	<instant name="Swift Foot" words="utamo tempo san" lvl="55" prem="1" exhaustion="1000" groups="3,2000" icon="134" mana="400" selftarget="1" aggressive="0" script="support/swift_foot.lua">
 		<vocation name="Paladin"/>   <vocation name="Royal Paladin"/>		
 	</instant>
-	<instant name="Sharpshooter" words="utito tempo san" lvl="60" prem="1" exhaustion="1000" groups="3,2000" icon="135" mana="450" selftarget="1" aggressive="0" script="support/sharpshooter.lua">
+	<instant name="Sharpshooter" words="utito tempo san" lvl="60" prem="1" exhaustion="1000" groups="3,10000;2,10000;1,10000" icon="135" mana="450" selftarget="1" aggressive="0" script="support/sharpshooter.lua">
 		<vocation name="Paladin"/>   <vocation name="Royal Paladin"/>		
 	</instant>
 	
