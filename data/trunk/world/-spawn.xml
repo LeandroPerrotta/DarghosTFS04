@@ -3346,7 +3346,6 @@
   <spawn centerx="1981" centery="1832" centerz="6" radius="1">
     <npc name="salazart.joia" x="-1" y="0" z="6" spawntime="60"/>
   </spawn>
-  <spawn centerx="2005" centery="1841" centerz="6" radius="3"/>
   <spawn centerx="2102" centery="1842" centerz="6" radius="5">
     <monster name="Valkyrie" x="-1" y="-3" z="6" spawntime="120"/>
     <monster name="Amazon" x="3" y="0" z="6" spawntime="120"/>
@@ -3359,6 +3358,9 @@
     <monster name="Bat" x="-2" y="-1" z="6" spawntime="59"/>
     <monster name="Bat" x="-11" y="2" z="6" spawntime="59"/>
     <monster name="Bat" x="-7" y="3" z="6" spawntime="59"/>
+  </spawn>
+  <spawn centerx="2005" centery="1845" centerz="6" radius="3">
+    <npc name="quendor.magic" x="0" y="0" z="6" spawntime="60"/>
   </spawn>
   <spawn centerx="2210" centery="1849" centerz="6" radius="5">
     <monster name="Valkyrie" x="3" y="-2" z="6" spawntime="60"/>
