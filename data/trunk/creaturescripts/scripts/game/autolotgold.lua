@@ -51,7 +51,14 @@ function autoloot(cid, target, pos)
  
  	if(#corpses > 0) then
  		for k,corpse in pairs(corpses) do
-	        scanContainer(cid, corpse)	
+ 			
+ 			local alreadyLooted = getItemAttribute(corpse, "corpseLooted")
+ 			
+ 			if(not alreadyLooted) then
+	       		scanContainer(cid, corpse)	
+	       		doItemSetAttribute(corpse, "corpseLooted", true)
+	        end
+	        
 	    end
  	end
     
